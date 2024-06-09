@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.9)  9 JUN 2024 16:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.9)  9 JUN 2024 18:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -873,9 +873,7 @@ Dictionary: translator-numbers-dictionary, Language: English
 (/usr/local/texlive/2024/texmf-dist/tex/latex/translator/translator-theorem-dic
 tionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
-)
-No file slides.nav.
-
+) (./slides.nav)
 Overfull \hbox (258.3705pt too wide) in paragraph at lines 10--10
  [][][][]  
  []
@@ -897,14 +895,14 @@ Overfull \hbox (258.3705pt too wide) in paragraph at lines 21--21
  [][][][]  
  []
 
-</Users/frank/Desktop/Project/Slides/Images/introduction_image.jpg, id=60, 803.
+</Users/frank/Desktop/Project/Slides/Images/introduction_image.jpg, id=62, 803.
 0pt x 602.25pt>
 File: /Users/frank/Desktop/Project/Slides/Images/introduction_image.jpg Graphic
  file (type jpg)
 <use /Users/frank/Desktop/Project/Slides/Images/introduction_image.jpg>
 Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/introductio
 n_image.jpg  used on input line 21.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+(pdftex.def)             Requested size: 102.68962pt x 77.0087pt.
 
 Overfull \hbox (258.3705pt too wide) has occurred while \output is active
  [][][][]  
@@ -917,14 +915,14 @@ Overfull \hbox (258.3705pt too wide) in paragraph at lines 31--31
  [][][][]  
  []
 
-</Users/frank/Desktop/Project/Slides/Images/why_this_study_matters.jpg, id=89, 
+</Users/frank/Desktop/Project/Slides/Images/why_this_study_matters.jpg, id=91, 
 803.0pt x 602.25pt>
 File: /Users/frank/Desktop/Project/Slides/Images/why_this_study_matters.jpg Gra
 phic file (type jpg)
 <use /Users/frank/Desktop/Project/Slides/Images/why_this_study_matters.jpg>
 Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/why_this_st
 udy_matters.jpg  used on input line 31.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+(pdftex.def)             Requested size: 102.68962pt x 77.0087pt.
 
 Overfull \hbox (258.3705pt too wide) has occurred while \output is active
  [][][][]  
@@ -937,14 +935,14 @@ Overfull \hbox (258.3705pt too wide) in paragraph at lines 41--41
  [][][][]  
  []
 
-</Users/frank/Desktop/Project/Slides/Images/gen_z_background.jpg, id=117, 803.0
-pt x 602.25pt>
+</Users/frank/Desktop/Project/Slides/Images/gen_z_background.jpg, id=119, 1798.
+72pt x 1027.84pt>
 File: /Users/frank/Desktop/Project/Slides/Images/gen_z_background.jpg Graphic f
 ile (type jpg)
 <use /Users/frank/Desktop/Project/Slides/Images/gen_z_background.jpg>
 Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/gen_z_backg
 round.jpg  used on input line 41.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+(pdftex.def)             Requested size: 102.68962pt x 58.67218pt.
 
 Overfull \hbox (258.3705pt too wide) has occurred while \output is active
  [][][][]  
@@ -953,18 +951,18 @@ Overfull \hbox (258.3705pt too wide) has occurred while \output is active
 [4
 
  </Users/frank/Desktop/Project/Slides/Images/gen_z_background.jpg>]
-Overfull \hbox (258.3705pt too wide) in paragraph at lines 51--51
+Overfull \hbox (258.3705pt too wide) in paragraph at lines 50--50
  [][][][]  
  []
 
-</Users/frank/Desktop/Project/Slides/Images/financial_challenges.jpg, id=146, 8
-03.0pt x 602.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/financial_challenges.jpg Graph
-ic file (type jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/financial_challenges.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/financial_c
-hallenges.jpg  used on input line 51.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+</Users/frank/Desktop/Project/Slides/Images/data_sources.jpg, id=148, 803.0pt x
+ 602.25pt>
+File: /Users/frank/Desktop/Project/Slides/Images/data_sources.jpg Graphic file 
+(type jpg)
+<use /Users/frank/Desktop/Project/Slides/Images/data_sources.jpg>
+Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/data_source
+s.jpg  used on input line 50.
+(pdftex.def)             Requested size: 102.68962pt x 77.0087pt.
 
 Overfull \hbox (258.3705pt too wide) has occurred while \output is active
  [][][][]  
@@ -972,19 +970,19 @@ Overfull \hbox (258.3705pt too wide) has occurred while \output is active
 
 [5
 
- </Users/frank/Desktop/Project/Slides/Images/financial_challenges.jpg>]
-Overfull \hbox (258.3705pt too wide) in paragraph at lines 61--61
+ </Users/frank/Desktop/Project/Slides/Images/data_sources.jpg>]
+Overfull \hbox (258.3705pt too wide) in paragraph at lines 60--60
  [][][][]  
  []
 
-</Users/frank/Desktop/Project/Slides/Images/homeownership_aspirations.jpg, id=1
-74, 803.0pt x 602.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/homeownership_aspirations.jpg 
-Graphic file (type jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/homeownership_aspirations.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/homeownersh
-ip_aspirations.jpg  used on input line 61.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+</Users/frank/Desktop/Project/Slides/Images/home_costs.jpg, id=176, 803.0pt x 6
+02.25pt>
+File: /Users/frank/Desktop/Project/Slides/Images/home_costs.jpg Graphic file (t
+ype jpg)
+<use /Users/frank/Desktop/Project/Slides/Images/home_costs.jpg>
+Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/home_costs.
+jpg  used on input line 60.
+(pdftex.def)             Requested size: 102.68962pt x 77.0087pt.
 
 Overfull \hbox (258.3705pt too wide) has occurred while \output is active
  [][][][]  
@@ -992,19 +990,19 @@ Overfull \hbox (258.3705pt too wide) has occurred while \output is active
 
 [6
 
- </Users/frank/Desktop/Project/Slides/Images/homeownership_aspirations.jpg>]
+ </Users/frank/Desktop/Project/Slides/Images/home_costs.jpg>]
 Overfull \hbox (258.3705pt too wide) in paragraph at lines 70--70
  [][][][]  
  []
 
-</Users/frank/Desktop/Project/Slides/Images/data_sources.jpg, id=202, 803.0pt x
- 602.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/data_sources.jpg Graphic file 
-(type jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/data_sources.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/data_source
-s.jpg  used on input line 70.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+</Users/frank/Desktop/Project/Slides/Images/financial_challenges.jpg, id=204, 8
+03.0pt x 602.25pt>
+File: /Users/frank/Desktop/Project/Slides/Images/financial_challenges.jpg Graph
+ic file (type jpg)
+<use /Users/frank/Desktop/Project/Slides/Images/financial_challenges.jpg>
+Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/financial_c
+hallenges.jpg  used on input line 70.
+(pdftex.def)             Requested size: 102.68962pt x 77.0087pt.
 
 Overfull \hbox (258.3705pt too wide) has occurred while \output is active
  [][][][]  
@@ -1012,19 +1010,19 @@ Overfull \hbox (258.3705pt too wide) has occurred while \output is active
 
 [7
 
- </Users/frank/Desktop/Project/Slides/Images/data_sources.jpg>]
+ </Users/frank/Desktop/Project/Slides/Images/financial_challenges.jpg>]
 Overfull \hbox (258.3705pt too wide) in paragraph at lines 80--80
  [][][][]  
  []
 
-</Users/frank/Desktop/Project/Slides/Images/investment_strategies.jpg, id=231, 
+</Users/frank/Desktop/Project/Slides/Images/investment_strategies.jpg, id=233, 
 803.0pt x 602.25pt>
 File: /Users/frank/Desktop/Project/Slides/Images/investment_strategies.jpg Grap
 hic file (type jpg)
 <use /Users/frank/Desktop/Project/Slides/Images/investment_strategies.jpg>
 Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/investment_
 strategies.jpg  used on input line 80.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+(pdftex.def)             Requested size: 102.68962pt x 77.0087pt.
 
 Overfull \hbox (258.3705pt too wide) has occurred while \output is active
  [][][][]  
@@ -1037,14 +1035,14 @@ Overfull \hbox (258.3705pt too wide) in paragraph at lines 90--90
  [][][][]  
  []
 
-</Users/frank/Desktop/Project/Slides/Images/edward_thorp.jpg, id=260, 803.0pt x
- 602.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/edward_thorp.jpg Graphic file 
-(type jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/edward_thorp.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/edward_thor
-p.jpg  used on input line 90.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+</Users/frank/Desktop/Project/Slides/Images/methodology.jpg, id=262, 803.0pt x 
+602.25pt>
+File: /Users/frank/Desktop/Project/Slides/Images/methodology.jpg Graphic file (
+type jpg)
+<use /Users/frank/Desktop/Project/Slides/Images/methodology.jpg>
+Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/methodology
+.jpg  used on input line 90.
+(pdftex.def)             Requested size: 102.68962pt x 77.0087pt.
 
 Overfull \hbox (258.3705pt too wide) has occurred while \output is active
  [][][][]  
@@ -1052,19 +1050,19 @@ Overfull \hbox (258.3705pt too wide) has occurred while \output is active
 
 [9
 
- </Users/frank/Desktop/Project/Slides/Images/edward_thorp.jpg>]
+ </Users/frank/Desktop/Project/Slides/Images/methodology.jpg>]
 Overfull \hbox (258.3705pt too wide) in paragraph at lines 100--100
  [][][][]  
  []
 
-</Users/frank/Desktop/Project/Slides/Images/economic_variables.jpg, id=288, 803
-.0pt x 602.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/economic_variables.jpg Graphic
- file (type jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/economic_variables.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/economic_va
-riables.jpg  used on input line 100.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+</Users/frank/Desktop/Project/Slides/Images/edward_thorp.jpg, id=290, 496.85625
+pt x 621.32124pt>
+File: /Users/frank/Desktop/Project/Slides/Images/edward_thorp.jpg Graphic file 
+(type jpg)
+<use /Users/frank/Desktop/Project/Slides/Images/edward_thorp.jpg>
+Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/edward_thor
+p.jpg  used on input line 100.
+(pdftex.def)             Requested size: 102.68962pt x 128.41454pt.
 
 Overfull \hbox (258.3705pt too wide) has occurred while \output is active
  [][][][]  
@@ -1072,19 +1070,19 @@ Overfull \hbox (258.3705pt too wide) has occurred while \output is active
 
 [10
 
- </Users/frank/Desktop/Project/Slides/Images/economic_variables.jpg>]
+ </Users/frank/Desktop/Project/Slides/Images/edward_thorp.jpg>]
 Overfull \hbox (258.3705pt too wide) in paragraph at lines 110--110
  [][][][]  
  []
 
-</Users/frank/Desktop/Project/Slides/Images/behavioral_economics.jpg, id=316, 8
-03.0pt x 602.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/behavioral_economics.jpg Graph
-ic file (type jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/behavioral_economics.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/behavioral_
-economics.jpg  used on input line 110.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+</Users/frank/Desktop/Project/Slides/Images/economic_variables.jpg, id=318, 803
+.0pt x 602.25pt>
+File: /Users/frank/Desktop/Project/Slides/Images/economic_variables.jpg Graphic
+ file (type jpg)
+<use /Users/frank/Desktop/Project/Slides/Images/economic_variables.jpg>
+Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/economic_va
+riables.jpg  used on input line 110.
+(pdftex.def)             Requested size: 102.68962pt x 77.0087pt.
 
 Overfull \hbox (258.3705pt too wide) has occurred while \output is active
  [][][][]  
@@ -1092,19 +1090,19 @@ Overfull \hbox (258.3705pt too wide) has occurred while \output is active
 
 [11
 
- </Users/frank/Desktop/Project/Slides/Images/behavioral_economics.jpg>]
+ </Users/frank/Desktop/Project/Slides/Images/economic_variables.jpg>]
 Overfull \hbox (258.3705pt too wide) in paragraph at lines 120--120
  [][][][]  
  []
 
-</Users/frank/Desktop/Project/Slides/Images/mpt.jpg, id=344, 803.0pt x 602.25pt
->
-File: /Users/frank/Desktop/Project/Slides/Images/mpt.jpg Graphic file (type jpg
-)
-<use /Users/frank/Desktop/Project/Slides/Images/mpt.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/mpt.jpg  us
-ed on input line 120.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+</Users/frank/Desktop/Project/Slides/Images/behavioral_economics.jpg, id=346, 8
+03.0pt x 602.25pt>
+File: /Users/frank/Desktop/Project/Slides/Images/behavioral_economics.jpg Graph
+ic file (type jpg)
+<use /Users/frank/Desktop/Project/Slides/Images/behavioral_economics.jpg>
+Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/behavioral_
+economics.jpg  used on input line 120.
+(pdftex.def)             Requested size: 102.68962pt x 77.0087pt.
 
 Overfull \hbox (258.3705pt too wide) has occurred while \output is active
  [][][][]  
@@ -1112,19 +1110,19 @@ Overfull \hbox (258.3705pt too wide) has occurred while \output is active
 
 [12
 
- </Users/frank/Desktop/Project/Slides/Images/mpt.jpg>]
+ </Users/frank/Desktop/Project/Slides/Images/behavioral_economics.jpg>]
 Overfull \hbox (258.3705pt too wide) in paragraph at lines 130--130
  [][][][]  
  []
 
-</Users/frank/Desktop/Project/Slides/Images/home_costs.jpg, id=373, 803.0pt x 6
-02.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/home_costs.jpg Graphic file (t
-ype jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/home_costs.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/home_costs.
-jpg  used on input line 130.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+</Users/frank/Desktop/Project/Slides/Images/mpt.jpg, id=375, 803.0pt x 602.25pt
+>
+File: /Users/frank/Desktop/Project/Slides/Images/mpt.jpg Graphic file (type jpg
+)
+<use /Users/frank/Desktop/Project/Slides/Images/mpt.jpg>
+Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/mpt.jpg  us
+ed on input line 130.
+(pdftex.def)             Requested size: 102.68962pt x 77.0087pt.
 
 Overfull \hbox (258.3705pt too wide) has occurred while \output is active
  [][][][]  
@@ -1132,19 +1130,19 @@ Overfull \hbox (258.3705pt too wide) has occurred while \output is active
 
 [13
 
- </Users/frank/Desktop/Project/Slides/Images/home_costs.jpg>]
+ </Users/frank/Desktop/Project/Slides/Images/mpt.jpg>]
 Overfull \hbox (258.3705pt too wide) in paragraph at lines 140--140
  [][][][]  
  []
 
-</Users/frank/Desktop/Project/Slides/Images/methodology.jpg, id=402, 803.0pt x 
-602.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/methodology.jpg Graphic file (
-type jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/methodology.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/methodology
-.jpg  used on input line 140.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+</Users/frank/Desktop/Project/Slides/Images/monte_carlo_simulations.jpg, id=404
+, 803.0pt x 602.25pt>
+File: /Users/frank/Desktop/Project/Slides/Images/monte_carlo_simulations.jpg Gr
+aphic file (type jpg)
+<use /Users/frank/Desktop/Project/Slides/Images/monte_carlo_simulations.jpg>
+Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/monte_carlo
+_simulations.jpg  used on input line 140.
+(pdftex.def)             Requested size: 102.68962pt x 77.0087pt.
 
 Overfull \hbox (258.3705pt too wide) has occurred while \output is active
  [][][][]  
@@ -1152,19 +1150,19 @@ Overfull \hbox (258.3705pt too wide) has occurred while \output is active
 
 [14
 
- </Users/frank/Desktop/Project/Slides/Images/methodology.jpg>]
+ </Users/frank/Desktop/Project/Slides/Images/monte_carlo_simulations.jpg>]
 Overfull \hbox (258.3705pt too wide) in paragraph at lines 150--150
  [][][][]  
  []
 
-</Users/frank/Desktop/Project/Slides/Images/monte_carlo_simulations.jpg, id=430
-, 803.0pt x 602.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/monte_carlo_simulations.jpg Gr
-aphic file (type jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/monte_carlo_simulations.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/monte_carlo
-_simulations.jpg  used on input line 150.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+</Users/frank/Desktop/Project/Slides/Images/markov_chain_monte_carlo.jpg, id=43
+2, 803.0pt x 602.25pt>
+File: /Users/frank/Desktop/Project/Slides/Images/markov_chain_monte_carlo.jpg G
+raphic file (type jpg)
+<use /Users/frank/Desktop/Project/Slides/Images/markov_chain_monte_carlo.jpg>
+Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/markov_chai
+n_monte_carlo.jpg  used on input line 150.
+(pdftex.def)             Requested size: 102.68962pt x 77.0087pt.
 
 Overfull \hbox (258.3705pt too wide) has occurred while \output is active
  [][][][]  
@@ -1172,19 +1170,19 @@ Overfull \hbox (258.3705pt too wide) has occurred while \output is active
 
 [15
 
- </Users/frank/Desktop/Project/Slides/Images/monte_carlo_simulations.jpg>]
+ </Users/frank/Desktop/Project/Slides/Images/markov_chain_monte_carlo.jpg>]
 Overfull \hbox (258.3705pt too wide) in paragraph at lines 160--160
  [][][][]  
  []
 
-</Users/frank/Desktop/Project/Slides/Images/markov_chain_monte_carlo.jpg, id=45
-8, 803.0pt x 602.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/markov_chain_monte_carlo.jpg G
-raphic file (type jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/markov_chain_monte_carlo.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/markov_chai
-n_monte_carlo.jpg  used on input line 160.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+</Users/frank/Desktop/Project/Slides/Images/sensitivity_analysis.jpg, id=460, 8
+03.0pt x 602.25pt>
+File: /Users/frank/Desktop/Project/Slides/Images/sensitivity_analysis.jpg Graph
+ic file (type jpg)
+<use /Users/frank/Desktop/Project/Slides/Images/sensitivity_analysis.jpg>
+Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/sensitivity
+_analysis.jpg  used on input line 160.
+(pdftex.def)             Requested size: 102.68962pt x 77.0087pt.
 
 Overfull \hbox (258.3705pt too wide) has occurred while \output is active
  [][][][]  
@@ -1192,19 +1190,19 @@ Overfull \hbox (258.3705pt too wide) has occurred while \output is active
 
 [16
 
- </Users/frank/Desktop/Project/Slides/Images/markov_chain_monte_carlo.jpg>]
+ </Users/frank/Desktop/Project/Slides/Images/sensitivity_analysis.jpg>]
 Overfull \hbox (258.3705pt too wide) in paragraph at lines 170--170
  [][][][]  
  []
 
-</Users/frank/Desktop/Project/Slides/Images/sensitivity_analysis.jpg, id=487, 8
-03.0pt x 602.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/sensitivity_analysis.jpg Graph
-ic file (type jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/sensitivity_analysis.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/sensitivity
-_analysis.jpg  used on input line 170.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+</Users/frank/Desktop/Project/Slides/Images/gradient_descent.jpg, id=489, 803.0
+pt x 602.25pt>
+File: /Users/frank/Desktop/Project/Slides/Images/gradient_descent.jpg Graphic f
+ile (type jpg)
+<use /Users/frank/Desktop/Project/Slides/Images/gradient_descent.jpg>
+Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/gradient_de
+scent.jpg  used on input line 170.
+(pdftex.def)             Requested size: 102.68962pt x 77.0087pt.
 
 Overfull \hbox (258.3705pt too wide) has occurred while \output is active
  [][][][]  
@@ -1212,19 +1210,19 @@ Overfull \hbox (258.3705pt too wide) has occurred while \output is active
 
 [17
 
- </Users/frank/Desktop/Project/Slides/Images/sensitivity_analysis.jpg>]
+ </Users/frank/Desktop/Project/Slides/Images/gradient_descent.jpg>]
 Overfull \hbox (258.3705pt too wide) in paragraph at lines 180--180
  [][][][]  
  []
 
-</Users/frank/Desktop/Project/Slides/Images/gradient_descent.jpg, id=515, 803.0
-pt x 602.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/gradient_descent.jpg Graphic f
-ile (type jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/gradient_descent.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/gradient_de
-scent.jpg  used on input line 180.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+</Users/frank/Desktop/Project/Slides/Images/linear_algebra.jpg, id=517, 803.0pt
+ x 602.25pt>
+File: /Users/frank/Desktop/Project/Slides/Images/linear_algebra.jpg Graphic fil
+e (type jpg)
+<use /Users/frank/Desktop/Project/Slides/Images/linear_algebra.jpg>
+Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/linear_alge
+bra.jpg  used on input line 180.
+(pdftex.def)             Requested size: 102.68962pt x 77.0087pt.
 
 Overfull \hbox (258.3705pt too wide) has occurred while \output is active
  [][][][]  
@@ -1232,19 +1230,19 @@ Overfull \hbox (258.3705pt too wide) has occurred while \output is active
 
 [18
 
- </Users/frank/Desktop/Project/Slides/Images/gradient_descent.jpg>]
+ </Users/frank/Desktop/Project/Slides/Images/linear_algebra.jpg>]
 Overfull \hbox (258.3705pt too wide) in paragraph at lines 190--190
  [][][][]  
  []
 
-</Users/frank/Desktop/Project/Slides/Images/linear_algebra.jpg, id=543, 803.0pt
- x 602.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/linear_algebra.jpg Graphic fil
-e (type jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/linear_algebra.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/linear_alge
-bra.jpg  used on input line 190.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+</Users/frank/Desktop/Project/Slides/Images/risk_return_analysis.jpg, id=545, 8
+03.0pt x 602.25pt>
+File: /Users/frank/Desktop/Project/Slides/Images/risk_return_analysis.jpg Graph
+ic file (type jpg)
+<use /Users/frank/Desktop/Project/Slides/Images/risk_return_analysis.jpg>
+Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/risk_return
+_analysis.jpg  used on input line 190.
+(pdftex.def)             Requested size: 102.68962pt x 77.0087pt.
 
 Overfull \hbox (258.3705pt too wide) has occurred while \output is active
  [][][][]  
@@ -1252,19 +1250,19 @@ Overfull \hbox (258.3705pt too wide) has occurred while \output is active
 
 [19
 
- </Users/frank/Desktop/Project/Slides/Images/linear_algebra.jpg>]
+ </Users/frank/Desktop/Project/Slides/Images/risk_return_analysis.jpg>]
 Overfull \hbox (258.3705pt too wide) in paragraph at lines 200--200
  [][][][]  
  []
 
-</Users/frank/Desktop/Project/Slides/Images/risk_return_analysis.jpg, id=572, 8
-03.0pt x 602.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/risk_return_analysis.jpg Graph
-ic file (type jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/risk_return_analysis.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/risk_return
-_analysis.jpg  used on input line 200.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+</Users/frank/Desktop/Project/Slides/Images/lifecycle_investing.jpg, id=574, 80
+3.0pt x 602.25pt>
+File: /Users/frank/Desktop/Project/Slides/Images/lifecycle_investing.jpg Graphi
+c file (type jpg)
+<use /Users/frank/Desktop/Project/Slides/Images/lifecycle_investing.jpg>
+Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/lifecycle_i
+nvesting.jpg  used on input line 200.
+(pdftex.def)             Requested size: 102.68962pt x 77.0087pt.
 
 Overfull \hbox (258.3705pt too wide) has occurred while \output is active
  [][][][]  
@@ -1272,19 +1270,19 @@ Overfull \hbox (258.3705pt too wide) has occurred while \output is active
 
 [20
 
- </Users/frank/Desktop/Project/Slides/Images/risk_return_analysis.jpg>]
+ </Users/frank/Desktop/Project/Slides/Images/lifecycle_investing.jpg>]
 Overfull \hbox (258.3705pt too wide) in paragraph at lines 210--210
  [][][][]  
  []
 
-</Users/frank/Desktop/Project/Slides/Images/lifecycle_investing.jpg, id=601, 80
+</Users/frank/Desktop/Project/Slides/Images/simulation_outcomes.jpg, id=603, 80
 3.0pt x 602.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/lifecycle_investing.jpg Graphi
+File: /Users/frank/Desktop/Project/Slides/Images/simulation_outcomes.jpg Graphi
 c file (type jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/lifecycle_investing.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/lifecycle_i
-nvesting.jpg  used on input line 210.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+<use /Users/frank/Desktop/Project/Slides/Images/simulation_outcomes.jpg>
+Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/simulation_
+outcomes.jpg  used on input line 210.
+(pdftex.def)             Requested size: 102.68962pt x 77.0087pt.
 
 Overfull \hbox (258.3705pt too wide) has occurred while \output is active
  [][][][]  
@@ -1292,19 +1290,19 @@ Overfull \hbox (258.3705pt too wide) has occurred while \output is active
 
 [21
 
- </Users/frank/Desktop/Project/Slides/Images/lifecycle_investing.jpg>]
+ </Users/frank/Desktop/Project/Slides/Images/simulation_outcomes.jpg>]
 Overfull \hbox (258.3705pt too wide) in paragraph at lines 220--220
  [][][][]  
  []
 
-</Users/frank/Desktop/Project/Slides/Images/simulation_outcomes.jpg, id=629, 80
-3.0pt x 602.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/simulation_outcomes.jpg Graphi
-c file (type jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/simulation_outcomes.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/simulation_
-outcomes.jpg  used on input line 220.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+</Users/frank/Desktop/Project/Slides/Images/asset_allocation.jpg, id=631, 1027.
+84pt x 1027.84pt>
+File: /Users/frank/Desktop/Project/Slides/Images/asset_allocation.jpg Graphic f
+ile (type jpg)
+<use /Users/frank/Desktop/Project/Slides/Images/asset_allocation.jpg>
+Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/asset_alloc
+ation.jpg  used on input line 220.
+(pdftex.def)             Requested size: 102.68962pt x 102.68024pt.
 
 Overfull \hbox (258.3705pt too wide) has occurred while \output is active
  [][][][]  
@@ -1312,186 +1310,9 @@ Overfull \hbox (258.3705pt too wide) has occurred while \output is active
 
 [22
 
- </Users/frank/Desktop/Project/Slides/Images/simulation_outcomes.jpg>]
-Overfull \hbox (258.3705pt too wide) in paragraph at lines 230--230
- [][][][]  
- []
-
-</Users/frank/Desktop/Project/Slides/Images/economic_impact.jpg, id=657, 803.0p
-t x 602.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/economic_impact.jpg Graphic fi
-le (type jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/economic_impact.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/economic_im
-pact.jpg  used on input line 230.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
-
-Overfull \hbox (258.3705pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[23
-
- </Users/frank/Desktop/Project/Slides/Images/economic_impact.jpg>]
-Overfull \hbox (258.3705pt too wide) in paragraph at lines 240--240
- [][][][]  
- []
-
-</Users/frank/Desktop/Project/Slides/Images/asset_allocation.jpg, id=685, 803.0
-pt x 602.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/asset_allocation.jpg Graphic f
-ile (type jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/asset_allocation.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/asset_alloc
-ation.jpg  used on input line 240.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
-
-Overfull \hbox (258.3705pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[24
-
  </Users/frank/Desktop/Project/Slides/Images/asset_allocation.jpg>]
-Overfull \hbox (258.3705pt too wide) in paragraph at lines 250--250
- [][][][]  
- []
-
-</Users/frank/Desktop/Project/Slides/Images/behavioral_insights.jpg, id=714, 80
-3.0pt x 602.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/behavioral_insights.jpg Graphi
-c file (type jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/behavioral_insights.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/behavioral_
-insights.jpg  used on input line 250.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
-
-Overfull \hbox (258.3705pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[25
-
- </Users/frank/Desktop/Project/Slides/Images/behavioral_insights.jpg>]
-Overfull \hbox (258.3705pt too wide) in paragraph at lines 260--260
- [][][][]  
- []
-
-</Users/frank/Desktop/Project/Slides/Images/down_payment.jpg, id=743, 803.0pt x
- 602.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/down_payment.jpg Graphic file 
-(type jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/down_payment.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/down_paymen
-t.jpg  used on input line 260.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
-
-Overfull \hbox (258.3705pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[26
-
- </Users/frank/Desktop/Project/Slides/Images/down_payment.jpg>]
-Overfull \hbox (258.3705pt too wide) in paragraph at lines 270--270
- [][][][]  
- []
-
-</Users/frank/Desktop/Project/Slides/Images/home_cost_trends.jpg, id=771, 803.0
-pt x 602.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/home_cost_trends.jpg Graphic f
-ile (type jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/home_cost_trends.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/home_cost_t
-rends.jpg  used on input line 270.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
-
-Overfull \hbox (258.3705pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[27
-
- </Users/frank/Desktop/Project/Slides/Images/home_cost_trends.jpg>]
-Overfull \hbox (258.3705pt too wide) in paragraph at lines 280--280
- [][][][]  
- []
-
-</Users/frank/Desktop/Project/Slides/Images/conclusion.jpg, id=799, 803.0pt x 6
-02.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/conclusion.jpg Graphic file (t
-ype jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/conclusion.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/conclusion.
-jpg  used on input line 280.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
-
-Overfull \hbox (258.3705pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[28
-
- </Users/frank/Desktop/Project/Slides/Images/conclusion.jpg>]
-Overfull \hbox (258.3705pt too wide) in paragraph at lines 289--289
- [][][][]  
- []
-
-</Users/frank/Desktop/Project/Slides/Images/qa_image.jpg, id=828, 803.0pt x 602
-.25pt>
-File: /Users/frank/Desktop/Project/Slides/Images/qa_image.jpg Graphic file (typ
-e jpg)
-<use /Users/frank/Desktop/Project/Slides/Images/qa_image.jpg>
-Package pdftex.def Info: /Users/frank/Desktop/Project/Slides/Images/qa_image.jp
-g  used on input line 289.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
-./slides.tex:289: Misplaced alignment tab character &.
-\insertframetitle ->{Q&
-                       A\ifnum \beamer@autobreakcount >0 \relax {}\space \be...
-l.289 \end{frame}
-                 
-? 
-
-Overfull \hbox (258.3705pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[29
-
- </Users/frank/Desktop/Project/Slides/Images/qa_image.jpg>]
-\tf@nav=\write6
-\openout6 = `slides.nav'.
-
-\tf@toc=\write7
-\openout7 = `slides.toc'.
-
-\tf@snm=\write8
-\openout8 = `slides.snm'.
-
- (./slides.aux)
- ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-02-20>
- ***********
-Package rerunfilecheck Info: File `slides.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
- ) 
-Here is how much of TeX's memory you used:
- 21732 strings out of 474116
- 432136 string characters out of 5743683
- 1938187 words of memory out of 5000000
- 43609 multiletter control sequences out of 15000+600000
- 560175 words of font info for 43 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 128i,15n,123p,398b,567s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
-></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb>
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></
-usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-Output written on slides.pdf (29 pages, 368709 bytes).
-PDF statistics:
- 888 PDF objects out of 1000 (max. 8388607)
- 770 compressed objects within 8 object streams
- 59 named destinations out of 1000 (max. 500000)
- 225 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+./slides.tex:230: Argument of \frame has an extra }.
+<inserted text> 
+                \par 
+l.230 \endframe}
+          
