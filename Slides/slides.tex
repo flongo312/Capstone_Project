@@ -1,7 +1,12 @@
 \documentclass{beamer}
 \usetheme{Madrid}
-
 \usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 
 \title{An Economic Analysis of Optimal Investment Strategies for Accumulating Housing Down Payments Among Generation Z in the United States}
 \author{Frank Paul Longo II}
@@ -11,271 +16,275 @@
 
 \frame{\titlepage}
 
+\begin{frame}{Agenda}
+    \tableofcontents
+\end{frame}
+
+\section{Introduction}
 \begin{frame}{Introduction}
     \begin{itemize}
-        \item \textbf{Objective:} Identify optimal investment strategies for Generation Z to accumulate housing down payments.
-        \item \textbf{Focus:} Practical solutions for achieving financial stability and homeownership.
+        \item \textbf{Objective:} Identify and analyze optimal investment strategies tailored for Generation Z to accumulate funds for housing down payments.
+        \item \textbf{Focus:} Provide actionable financial strategies addressing unique economic challenges and opportunities faced by Generation Z.
     \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/introduction_image.jpg}
 \end{frame}
 
-\begin{frame}{Why This Study Matters}
+\section{Significance of the Study}
+\begin{frame}{Significance of the Study}
     \begin{itemize}
-        \item \textbf{Financial Milestone:} Homeownership is a key goal for financial stability.
-        \item \textbf{Challenges:} Generation Z faces unique challenges such as high student debt, rising living costs, and inflation.
-        \item \textbf{Goal:} Provide practical investment strategies to overcome these challenges.
+        \item \textbf{Achieving Homeownership:} A critical financial milestone contributing significantly to long-term economic stability and wealth accumulation.
+        \item \textbf{Addressing Challenges:} Generation Z encounters unprecedented financial hurdles, including high student debt, escalating living costs, and persistent inflation.
+        \item \textbf{Strategic Goal:} Develop robust investment strategies to help Generation Z overcome these challenges and realize their homeownership aspirations.
     \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/why_this_study_matters.jpg}
 \end{frame}
 
-\begin{frame}{Background on Generation Z}
+\section{Why Generation Z Needs This Help}
+\begin{frame}{Why Generation Z Needs This Help}
     \begin{itemize}
-        \item \textbf{Born:} Between 1997 and 2012.
-        \item \textbf{Characteristics:} Digital natives, socially conscious, and financially aware.
-        \item \textbf{Financial Habits:} High value on financial security, but burdened with debt.
+        \item \textbf{High Student Debt:} Average student loan debt of approximately \$30,000.
+        \item \textbf{Escalating Living Costs:} Rising cost of living, including rent, utilities, and daily expenses.
+        \item \textbf{Inflation:} Erodes the purchasing power of savings.
+        \item \textbf{Economic Uncertainty:} Job market volatility and economic recessions.
+        \item \textbf{Financial Literacy:} Many lack the financial literacy required to navigate investment options effectively.
     \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/gen_z_background.jpg}
 \end{frame}
 
-\begin{frame}{Data Sources}
+\section{Statistics on Generation Z}
+\begin{frame}{Statistics on Generation Z}
     \begin{itemize}
-        \item \textbf{YFinance:} Financial data for stock and investment analysis.
-        \item \textbf{FRED:} Economic data including inflation, interest rates, and unemployment.
+        \item \textbf{Population Size:} Over 68 million individuals in the United States.
+        \item \textbf{Education:} The most educated generation, with 59\% pursuing higher education.
+        \item \textbf{Employment:} About 40\% work part-time or are self-employed.
+        \item \textbf{Savings Habits:} Approximately 72\% have started saving, but only 29\% feel confident about their financial future.
+        \item \textbf{Investment Interest:} Around 40\% are interested in learning about investing, yet only 17\% actively invest in the stock market.
     \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/data_sources.jpg}
 \end{frame}
 
-\begin{frame}{Home Costs and Down Payment Analysis}
+\section{Profile of Generation Z}
+\begin{frame}{Profile of Generation Z}
     \begin{itemize}
-        \item \textbf{Historical Trends:} Analysis of past housing prices.
-        \item \textbf{Regional Differences:} Variation in home costs across regions.
-        \item \textbf{Down Payment Impact:} How different down payment percentages affect loan costs.
+        \item \textbf{Digital Natives:} Born between 1997 and 2012.
+        \item \textbf{Characteristics:} Digitally savvy, socially conscious, value financial security.
+        \item \textbf{Financial Behaviors:} Cautious financial behavior, strong preference for financial education and planning tools.
     \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/home_costs.jpg}
 \end{frame}
 
-\begin{frame}{Financial Challenges}
-    \begin{itemize}
-        \item \textbf{Student Debt:} Average debt load for graduates is significant.
-        \item \textbf{Living Costs:} Rent, utilities, and daily expenses are rising.
-        \item \textbf{Inflation:} Erodes purchasing power and savings.
-    \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/financial_challenges.jpg}
+\section{Data Sources Utilized}
+\begin{frame}{Data Sources Utilized}
+    \begin{multicols}{2}
+        \begin{itemize}
+            \item \textbf{Yahoo Finance (YFinance):}
+            \begin{itemize}
+                \item Comprehensive financial data on stocks, bonds, and other investment vehicles.
+            \end{itemize}
+            \item \textbf{Federal Reserve Economic Data (FRED):}
+            \begin{itemize}
+                \item Essential economic indicators such as inflation rates, interest rates, and unemployment statistics.
+            \end{itemize}
+        \end{itemize}
+    \end{multicols}
 \end{frame}
 
-\begin{frame}{Investment Strategies}
+\section{Analysis of Home Costs and Down Payments}
+\begin{frame}{Analysis of Home Costs and Down Payments}
     \begin{itemize}
-        \item \textbf{Conservative:} Focus on low-risk investments like bonds.
-        \item \textbf{Balanced:} Mix of stocks and bonds to balance risk and return.
-        \item \textbf{Aggressive:} High-risk, high-reward investments like equities.
+        \item \textbf{Historical Trends:} Examination of housing price trends using data on housing starts and building permits.
+        \item \textbf{Regional Analysis:} Detailed analysis of housing costs across different regions.
+        \item \textbf{Down Payment Strategies:} Assessing typical down payment requirements and effective strategies for their accumulation.
     \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/investment_strategies.jpg}
 \end{frame}
 
-\begin{frame}{Methodology}
+\section{Navigating Financial Challenges}
+\begin{frame}{Navigating Financial Challenges}
     \begin{itemize}
-        \item \textbf{Data Collection:} Economic data from FRED, behavioral data through surveys.
-        \item \textbf{Simulation Models:} Monte Carlo simulations, Markov Chain Monte Carlo.
-        \item \textbf{Analytical Techniques:} Gradient descent, linear algebra, risk-return analysis, life-cycle investing principles.
+        \item \textbf{Student Debt:} High levels of student loan debt impact the ability to save.
+        \item \textbf{Cost of Living:} Rising costs of rent, utilities, and everyday expenses.
+        \item \textbf{Inflation Impact:} Inflation erodes the purchasing power of savings.
+        \item \textbf{Economic Context:} Using data on unemployment rates and inflation to contextualize financial challenges.
     \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/methodology.jpg}
 \end{frame}
 
-\begin{frame}{Quantitative Approaches by Edward Thorp}
+\section{Understanding Risk Tolerances}
+\begin{frame}{Understanding Risk Tolerances}
     \begin{itemize}
-        \item \textbf{Pioneer in Quantitative Finance:} Developed methods to gain a financial edge.
-        \item \textbf{Card Counting:} Applied in blackjack to improve odds.
-        \item \textbf{Statistical Arbitrage:} Using statistical models to predict price movements.
+        \item \textbf{Conservative:} Focuses on low-risk assets such as government bonds.
+        \item \textbf{Balanced:} Involves a diversified portfolio combining equities and fixed-income securities.
+        \item \textbf{Aggressive:} Targets high-risk, high-reward investments in stocks and alternative assets.
     \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/edward_thorp.jpg}
 \end{frame}
 
-\begin{frame}{Economic Variables}
+\section{Key Economic Indicators from FRED}
+\begin{frame}{Key Economic Indicators from FRED}
     \begin{itemize}
-        \item \textbf{Inflation:} General increase in prices, reducing purchasing power.
-        \item \textbf{Interest Rates:} Cost of borrowing money, affects investment returns.
-        \item \textbf{Unemployment Rates:} Percentage of the labor force that is jobless, affects economic stability.
+        \item \textbf{Inflation:} General increase in prices and its impact on purchasing power.
+        \item \textbf{Interest Rates:} Influence on mortgage rates and investment returns.
+        \item \textbf{Unemployment Rates:} Labor market conditions and their implications for income and savings.
+        \item \textbf{GDP Growth:} Economic growth rates and market trends.
+        \item \textbf{Consumer Confidence:} Indicator of economic health and spending behaviors.
+        \item \textbf{Housing Market Data:} Insights into home sales, prices, and housing starts.
     \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/economic_variables.jpg}
 \end{frame}
 
-\begin{frame}{Behavioral Economics}
+\section{Comprehensive Financial Data from Yahoo Finance}
+\begin{frame}{Comprehensive Financial Data from Yahoo Finance}
     \begin{itemize}
-        \item \textbf{Psychological Factors:} Influence economic decisions.
-        \item \textbf{Generation Z Traits:} Tech-savvy, risk-averse, and value-driven.
-        \item \textbf{Financial Habits:} Impact of peer influence and social media on spending and saving.
+        \item \textbf{Stock Market Indices:} Historical and real-time data on major indices such as the S&P 500, NASDAQ, and Dow Jones.
+        \item \textbf{Bonds:} Data on government bonds (e.g., U.S. Treasuries) and corporate bonds, including yields, maturities, and credit ratings.
+        \item \textbf{Mutual Funds and ETFs:} Performance data, expense ratios, and asset allocations.
+        \item \textbf{REITs:} Real Estate Investment Trusts as potential vehicles for down payment savings, offering exposure to real estate markets.
+        \item \textbf{Market Volatility:} Understanding market risk through volatility indices like the VIX.
+        \item \textbf{Dividend-Paying Stocks:} Stocks offering dividends to generate passive income.
     \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/behavioral_economics.jpg}
 \end{frame}
 
-\begin{frame}{Modern Portfolio Theory (MPT)}
+\section{Financial Literacy: Essential Concepts}
+\begin{frame}{Financial Literacy: Essential Concepts}
     \begin{itemize}
-        \item \textbf{Diversification:} Spreading investments to reduce risk.
-        \item \textbf{Efficient Frontier:} Optimal portfolios offering the highest return for a given risk level.
-        \item \textbf{Capital Market Line:} Represents risk-return trade-offs.
+        \item \textbf{Stocks:} Equity investments representing ownership in a company. Stocks can provide capital gains and dividends.
+        \item \textbf{Bonds:} Debt investments where an investor loans money to an entity (corporate or governmental) that borrows the funds for a defined period at a fixed interest rate.
+        \item \textbf{Mutual Funds:} Investment vehicles that pool money from many investors to purchase a diversified portfolio of stocks, bonds, or other securities.
+        \item \textbf{ETFs (Exchange-Traded Funds):} Similar to mutual funds but traded on stock exchanges like individual stocks.
+        \item \textbf{REITs (Real Estate Investment Trusts):} Companies that own, operate, or finance income-producing real estate.
+        \item \textbf{Dollar Cost Averaging:} Investing a fixed amount of money at regular intervals, regardless of the asset's price, to reduce the impact of volatility.
+        \item \textbf{Compounding Interest:} The process where the value of an investment grows exponentially over time due to earning interest on both the principal and the accumulated interest.
     \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/mpt.jpg}
 \end{frame}
 
-\begin{frame}{Monte Carlo Simulations}
+\section{The Digital Age of Investing}
+\begin{frame}{The Digital Age of Investing}
     \begin{itemize}
-        \item \textbf{Purpose:} Generate probability distributions of achieving target down payment amounts.
-        \item \textbf{Parameters:} Varying market conditions, economic factors.
-        \item \textbf{Example:} Simulating future investment scenarios with different economic conditions.
+        \item \textbf{Democratization of Finance:} Platforms like Robinhood and Coinbase have made investing more accessible to retail investors, particularly Generation Z.
+        \item \textbf{Robinhood:} A commission-free trading platform that allows users to invest in stocks, ETFs, options, and cryptocurrencies.
+        \item \textbf{Coinbase:} A digital currency exchange platform enabling users to buy, sell, and store various cryptocurrencies.
+        \item \textbf{Impact:} These platforms have lowered the barriers to entry for investing, encouraging more participation from younger, tech-savvy individuals.
+        \item \textbf{Statistics:} Over 13 million users on Robinhood are aged 18-34, and more than 20\% of Coinbase users are under 30.
+        \item \textbf{Features:} User-friendly interfaces, educational resources, and the ability to start investing with small amounts of capital.
     \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/monte_carlo_simulations.jpg}
 \end{frame}
 
-\begin{frame}{Markov Chain Monte Carlo}
+\section{Applying Linear Algebra in Portfolio Allocation}
+\begin{frame}{Applying Linear Algebra in Portfolio Allocation}
     \begin{itemize}
-        \item \textbf{Purpose:} Model the stochastic processes underlying investment returns.
-        \item \textbf{Advantages:} Improved accuracy in complex models.
-        \item \textbf{Example:} Generating samples from the probability distribution by constructing a Markov chain.
+        \item \textbf{Purpose:} Leveraging linear algebra to solve complex portfolio allocation problems.
+        \item \textbf{Matrix Operations:} Analyzing the covariance matrix of asset returns to optimize portfolio diversification.
+        \item \textbf{Efficient Portfolios:} Using the covariance matrix to calculate portfolios that minimize risk for a given return.
+        \item \textbf{Formula:}
+        \begin{equation*}
+            \text{Minimize } \sigma_p = \sqrt{w^T \Sigma w}
+        \end{equation*}
+        \item \textbf{Explanation:} In this formula, \( \sigma_p \) represents the portfolio's standard deviation (a measure of risk), \( w \) is a vector of asset weights, and \( \Sigma \) is the covariance matrix of asset returns. The goal is to minimize risk while maintaining the desired portfolio weights.
     \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/markov_chain_monte_carlo.jpg}
 \end{frame}
 
-\begin{frame}{Sensitivity Analysis}
+\section{Exploring Modern Portfolio Theory (MPT)}
+\begin{frame}{Exploring Modern Portfolio Theory (MPT)}
     \begin{itemize}
-        \item \textbf{Purpose:} Determine how different values of an independent variable affect a particular dependent variable.
-        \item \textbf{Techniques:} Varying parameters to see changes in results.
-        \item \textbf{Example:} Sensitivity of down payment accumulation to interest rate changes.
+        \item \textbf{Diversification Principle:} Spreading investments to reduce risk while enhancing returns.
+        \item \textbf{Efficient Frontier:} Identifying portfolios that offer maximum return for a given level of risk.
+        \item \textbf{Formula:}
+        \begin{equation*}
+            \text{Efficient Frontier} = \max \left( \frac{E(R_p) - R_f}{\sigma_p} \right)
+        \end{equation*}
+        \item \textbf{Explanation:} This formula calculates the Sharpe ratio, where \( E(R_p) \) is the expected return of the portfolio, \( R_f \) is the risk-free rate, and \( \sigma_p \) is the standard deviation of the portfolio's return. A higher Sharpe ratio indicates a better risk-adjusted return.
+        \item \textbf{Capital Market Line (CML):} Describes the relationship between risk and return for efficient portfolios.
+        \item \textbf{Formula:}
+        \begin{equation*}
+            E(R_p) = R_f + \frac{\sigma_p}{\sigma_m} \left( E(R_m) - R_f \right)
+        \end{equation*}
+        \item \textbf{Explanation:} In this formula, \( E(R_p) \) is the expected return of the portfolio, \( \sigma_p \) is the portfolio's standard deviation, \( \sigma_m \) is the market portfolio's standard deviation, and \( E(R_m) \) is the expected return of the market portfolio. This formula helps investors understand how adding risk can potentially increase returns.
     \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/sensitivity_analysis.jpg}
 \end{frame}
 
-\begin{frame}{Gradient Descent}
+\section{Monte Carlo Simulation in Financial Planning}
+\begin{frame}{Monte Carlo Simulation in Financial Planning}
     \begin{itemize}
-        \item \textbf{Purpose:} Optimize investment strategies by minimizing a cost function.
-        \item \textbf{Application:} Finding the optimal asset allocation.
-        \item \textbf{Example:} Using gradient descent to optimize the parameters of an investment model.
+        \item \textbf{Purpose:} To model the probability distributions of achieving target down payment amounts.
+        \item \textbf{Scenario Analysis:} Incorporating various economic variables and market scenarios to simulate outcomes.
+        \item \textbf{Example:} Assessing how different investment strategies impact down payment accumulation under varying economic conditions.
+        \item \textbf{Formula:}
+        \begin{equation*}
+            X_t = X_0 \exp \left( \left( \mu - \frac{\sigma^2}{2} \right)t + \sigma W_t \right)
+        \end{equation*}
+        \item \textbf{Explanation:} Here, \( X_t \) is the value of the investment at time \( t \), \( X_0 \) is the initial investment value, \( \mu \) is the drift rate (average return), \( \sigma \) is the volatility (risk), and \( W_t \) is a Wiener process (random movement). This formula models how investment value evolves over time under uncertainty.
     \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/gradient_descent.jpg}
 \end{frame}
 
-\begin{frame}{Linear Algebra}
+\section{Risk-Return Analysis Techniques}
+\begin{frame}{Risk-Return Analysis Techniques}
     \begin{itemize}
-        \item \textbf{Purpose:} Solve portfolio allocation problems.
-        \item \textbf{Application:} Matrix operations for asset returns and risks.
-        \item \textbf{Example:} Calculating the covariance matrix of asset returns.
+        \item \textbf{Objective:} To evaluate the trade-off between risk and expected return for various investment strategies.
+        \item \textbf{Sharpe Ratio:} A key metric to compare risk-adjusted returns of different portfolios.
+        \item \textbf{Formula:}
+        \begin{equation*}
+            \text{Sharpe Ratio} = \frac{E(R_p) - R_f}{\sigma_p}
+        \end{equation*}
+        \item \textbf{Explanation:} This formula measures the excess return per unit of risk. \( E(R_p) \) is the expected return of the portfolio, \( R_f \) is the risk-free rate, and \( \sigma_p \) is the portfolio's standard deviation. A higher Sharpe ratio indicates a better risk-adjusted return.
+        \item \textbf{Application:} Using historical data on stock market performance and bond yields to calculate and compare Sharpe ratios.
     \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/linear_algebra.jpg}
 \end{frame}
 
-\begin{frame}{Risk-Return Analysis}
+\section{Lifecycle Investing Strategies}
+\begin{frame}{Lifecycle Investing Strategies}
     \begin{itemize}
-        \item \textbf{Purpose:} Assess the trade-off between risk and expected return.
-        \item \textbf{Techniques:} Sharpe ratio, volatility measures.
-        \item \textbf{Example:} Comparing the risk-return profiles of different investment portfolios.
+        \item \textbf{Purpose:} To adjust risk exposure over time in line with an investor's changing risk tolerance and investment horizon.
+        \item \textbf{Dynamic Asset Allocation:} Transitioning from high-risk to low-risk investments as the investment goal approaches.
+        \item \textbf{Example:} A lifecycle investment plan that shifts from equities to bonds and cash equivalents as the target date for a down payment nears.
+        \item \textbf{Formula:}
+        \begin{equation*}
+            \text{Allocation}_t = \frac{1}{T-t} \left( \frac{\alpha}{\beta} \right)
+        \end{equation*}
+        \item \textbf{Explanation:} In this formula, \( T \) is the total investment period, \( t \) is the current time, \( \alpha \) is the expected return, and \( \beta \) is the risk measure. This approach maximizes returns during the early stages and gradually reduces risk to protect accumulated wealth as the goal date approaches.
     \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/risk_return_analysis.jpg}
 \end{frame}
 
-\begin{frame}{Lifecycle Investing}
+\section{Financial Metrics for Project Evaluation}
+\begin{frame}{Financial Metrics for Project Evaluation}
     \begin{itemize}
-        \item \textbf{Purpose:} Adjust risk exposure as individuals approach their home purchase date.
-        \item \textbf{Strategies:} Gradual shift from high-risk to low-risk investments.
-        \item \textbf{Example:} Dynamic asset allocation based on time horizon.
+        \item \textbf{Beta (β):} Measures a stock's volatility relative to the overall market. A beta greater than 1 indicates higher volatility than the market, while a beta less than 1 indicates lower volatility.
+        \item \textbf{Alpha (α):} Represents the excess return of an investment relative to the return of a benchmark index. Positive alpha indicates outperformance, while negative alpha indicates underperformance.
+        \item \textbf{Formula for Beta:}
+        \begin{equation*}
+            \beta = \frac{\text{Cov}(R_i, R_m)}{\text{Var}(R_m)}
+        \end{equation*}
+        \item \textbf{Explanation:} Here, \( \text{Cov}(R_i, R_m) \) is the covariance between the return of the investment and the market return, and \( \text{Var}(R_m) \) is the variance of the market return. Beta helps investors understand an investment's sensitivity to market movements.
+        \item \textbf{Formula for Alpha:}
+        \begin{equation*}
+            \alpha = R_i - \left( R_f + \beta (R_m - R_f) \right)
+        \end{equation*}
+        \item \textbf{Explanation:} In this formula, \( R_i \) is the return of the investment, \( R_f \) is the risk-free rate, \( \beta \) is the beta of the investment, and \( R_m \) is the market return. Alpha measures the performance of an investment relative to a benchmark.
     \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/lifecycle_investing.jpg}
 \end{frame}
 
-\begin{frame}{Simulation Outcomes}
-    \begin{itemize}
-        \item \textbf{Results:} Probability distributions of achieving target down payment amounts.
-        \item \textbf{Insights:} Impact of different investment strategies and economic variables.
-        \item \textbf{Recommendations:} Optimal strategies for Generation Z based on simulation outcomes.
-    \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/simulation_outcomes.jpg}
-\end{frame}
-
-\begin{frame}{Optimized Asset Allocation}
-    \begin{itemize}
-        \item \textbf{Purpose:} Determine the best mix of assets for down payment savings.
-        \item \textbf{Techniques:} Modern Portfolio Theory, lifecycle investing.
-        \item \textbf{Example:} Optimal asset allocation for a young professional saving for a home.
-    \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/asset_allocation.jpg}
-\end{frame}
-
-\begin{frame}{Behavioral Insights}
-    \begin{itemize}
-        \item \textbf{Purpose:} Understand how Generation Z’s behavior affects their investment decisions.
-        \item \textbf{Techniques:} Behavioral finance principles, surveys.
-        \item \textbf{Example:} Impact of social media on saving and spending habits.
-    \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/behavioral_insights.jpg}
-\endframe}
-
-\begin{frame}{Down Payment Accumulation}
-    \begin{itemize}
-        \item \textbf{Strategies:} Effective ways to save for a down payment.
-        \item \textbf{Techniques:} Automatic savings, high-yield savings accounts, investing in REITs.
-        \item \textbf{Example:} Using a combination of savings and investments to reach down payment goals.
-    \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/down_payment.jpg}
-\end{frame}
-
-\begin{frame}{Trends in Home Costs}
-    \begin{itemize}
-        \item \textbf{Historical Analysis:} Trends in housing prices over the last few decades.
-        \item \textbf{Future Predictions:} Expected trends in housing costs.
-        \item \textbf{Impact on Strategy:} How housing cost trends affect investment strategies.
-    \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/home_cost_trends.jpg}
-\end{frame}
-
-\begin{frame}{Economic Impact}
-    \begin{itemize}
-        \item \textbf{Implications:} How investment strategies affect the broader economy.
-        \item \textbf{Policy Recommendations:} Suggestions for economic policies to support Generation Z.
-        \item \textbf{Future Research:} Areas for further study and analysis.
-    \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/economic_impact.jpg}
-\end{frame}
-
+\section{Conclusion}
 \begin{frame}{Conclusion}
     \begin{itemize}
-        \item \textbf{Summary:} Recap of findings and recommendations.
-        \item \textbf{Next Steps:} Future research and practical applications.
-        \item \textbf{Acknowledgements:} Thanking contributors and supporters.
+        \item \textbf{Summary:} We have explored optimal investment strategies tailored for Generation Z to accumulate housing down payments, incorporating modern financial theories and data-driven insights.
+        \item \textbf{Key Findings:} Identified effective strategies such as diversified portfolios, the application of MPT, and lifecycle investing to navigate the unique financial challenges faced by Generation Z.
+        \item \textbf{Future Directions:} Ongoing research will focus on refining these strategies and exploring their practical applications to further assist Generation Z in achieving their homeownership goals.
+        \item \textbf{Acknowledgements:} I extend my gratitude to all contributors and supporters, including my parents, for their invaluable assistance and encouragement.
     \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/conclusion.jpg}
 \end{frame}
 
-\begin{frame}{Q&A}
+\section{Q\&A}
+\begin{frame}{Q\&A}
     \begin{itemize}
-        \item \textbf{Discussion:} Open floor for questions and discussions.
-        \item \textbf{Clarifications:} Address any uncertainties or elaborations needed.
+        \item \textbf{Discussion:} I now open the floor for any questions and discussions.
+        \item \textbf{Clarifications:} Please feel free to ask for any clarifications or additional details regarding the presented research and findings.
     \end{itemize}
-    \centering
-    \includegraphics[width=0.3\textwidth]{/Users/frank/Desktop/Project/Slides/Images/qa_image.jpg}
+\end{frame}
+
+\section{References}
+\begin{frame}{References}
+    \begin{itemize}
+        \item Federal Reserve Economic Data (FRED). (n.d.). Retrieved from \url{https://fred.stlouisfed.org/}
+        \item Yahoo Finance. (n.d.). Retrieved from \url{https://finance.yahoo.com/}
+        \item Robinhood. (n.d.). Retrieved from \url{https://robinhood.com/}
+        \item Coinbase. (n.d.). Retrieved from \url{https://www.coinbase.com/}
+        \item U.S. Census Bureau. (n.d.). Generation Z data. Retrieved from \url{https://www.census.gov/}
+        \item Investment Company Institute. (n.d.). Retrieved from \url{https://www.ici.org/}
+        \item Sharpe, W. F. (1966). Mutual Fund Performance. Journal of Business, 39(1), 119-138.
+        \item Markowitz, H. (1952). Portfolio Selection. Journal of Finance, 7(1), 77-91.
+        \item Merton, R. C. (1973). Theory of Rational Option Pricing. Bell Journal of Economics and Management Science, 4(1), 141-183.
+    \end{itemize}
 \end{frame}
 
 \end{document}
