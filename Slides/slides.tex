@@ -1,5 +1,9 @@
 \documentclass{beamer}
 \usetheme{Madrid}
+\usecolortheme{seahorse}
+\usefonttheme{professionalfonts}
+\setbeamertemplate{navigation symbols}{}
+
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{hyperref}
@@ -16,7 +20,7 @@
 
 \frame{\titlepage}
 
-\begin{frame}{Agenda}
+\begin{frame}{Roadmap}
     \tableofcontents
 \end{frame}
 
@@ -25,6 +29,12 @@
     \begin{itemize}
         \item \textbf{Objective:} Identify and analyze optimal investment strategies tailored for Generation Z to accumulate funds for housing down payments.
         \item \textbf{Focus:} Provide actionable financial strategies addressing unique economic challenges and opportunities faced by Generation Z.
+        \item \textbf{Motivation:} 
+        \begin{itemize}
+            \item Initially intended to analyze options trading strategies, such as writing (selling) covered calls.
+            \item Found that options trading has a high barrier to entry for everyday retail investors, which includes Generation Z.
+            \item Shifted focus to more accessible investment strategies that align with the financial capabilities and needs of Generation Z.
+        \end{itemize}
     \end{itemize}
 \end{frame}
 
@@ -50,27 +60,32 @@
 
 \section{Statistics on Generation Z}
 \begin{frame}{Statistics on Generation Z}
-    \begin{itemize}
-        \item \textbf{Population Size:} Over 68 million individuals in the United States.
-        \item \textbf{Education:} The most educated generation, with 59\% pursuing higher education.
-        \item \textbf{Employment:} About 40\% work part-time or are self-employed.
-        \item \textbf{Savings Habits:} Approximately 72\% have started saving, but only 29\% feel confident about their financial future.
-        \item \textbf{Investment Interest:} Around 40\% are interested in learning about investing, yet only 17\% actively invest in the stock market.
-    \end{itemize}
+    \begin{columns}
+        \column{0.5\textwidth}
+        \begin{itemize}
+            \item \textbf{Population Size:} Over 68 million individuals in the United States.
+            \item \textbf{Education:} The most educated generation, with 59\% pursuing higher education.
+            \item \textbf{Employment:} About 40\% work part-time or are self-employed.
+        \end{itemize}
+        \column{0.5\textwidth}
+        \begin{itemize}
+            \item \textbf{Savings Habits:} Approximately 72\% have started saving, but only 29\% feel confident about their financial future.
+            \item \textbf{Investment Interest:} Around 40\% are interested in learning about investing, yet only 17\% actively invest in the stock market.
+        \end{itemize}
+    \end{columns}
 \end{frame}
 
 \section{Profile of Generation Z}
 \begin{frame}{Profile of Generation Z}
-    \begin{itemize}
-        \item \textbf{Digital Natives:} Born between 1997 and 2012.
-        \item \textbf{Characteristics:} Digitally savvy, socially conscious, value financial security.
-        \item \textbf{Financial Behaviors:} Cautious financial behavior, strong preference for financial education and planning tools.
-    \end{itemize}
+        \begin{itemize}
+            \item \textbf{Digital Natives:} Born between 1997 and 2012.
+            \item \textbf{Characteristics:} Digitally savvy, socially conscious, value financial security.
+            \item \textbf{Financial Behaviors:} Cautious financial behavior, strong preference for financial education and planning tools.
+        \end{itemize}
 \end{frame}
 
 \section{Data Sources Utilized}
 \begin{frame}{Data Sources Utilized}
-    \begin{multicols}{2}
         \begin{itemize}
             \item \textbf{Yahoo Finance (YFinance):}
             \begin{itemize}
@@ -81,15 +96,51 @@
                 \item Essential economic indicators such as inflation rates, interest rates, and unemployment statistics.
             \end{itemize}
         \end{itemize}
-    \end{multicols}
 \end{frame}
 
-\section{Analysis of Home Costs and Down Payments}
-\begin{frame}{Analysis of Home Costs and Down Payments}
+\begin{frame}{Overview of Economic Indicators Data from FRED}
+    \begin{columns}
+        \column{0.5\textwidth}
+        \begin{itemize}
+            \item \textbf{Consumer Price Index (CPI)}
+            \item \textbf{Producer Price Index (PPI)}
+            \item \textbf{Unemployment Rate}
+            \item \textbf{Nonfarm Payroll Employment}
+            \item \textbf{Industrial Production Index}
+        \end{itemize}
+        \column{0.5\textwidth}
+        \begin{itemize}
+            \item \textbf{Retail Sales}
+            \item \textbf{Housing Starts and Building Permits}
+            \item \textbf{Personal Income and PCE}
+            \item \textbf{Capacity Utilization}
+            \item \textbf{Durable Goods Orders}
+        \end{itemize}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Overview of Financial Data from Yahoo Finance}
     \begin{itemize}
-        \item \textbf{Historical Trends:} Examination of housing price trends using data on housing starts and building permits.
-        \item \textbf{Regional Analysis:} Detailed analysis of housing costs across different regions.
-        \item \textbf{Down Payment Strategies:} Assessing typical down payment requirements and effective strategies for their accumulation.
+        \item \textbf{Stock Data (AAPL - Apple Inc.)}
+        \begin{itemize}
+            \item \textbf{Open, High, Low, Close}
+            \item \textbf{Adj Close}
+            \item \textbf{Volume}
+        \end{itemize}
+        \item \textbf{Cryptocurrency Data (ADA-USD - Cardano)}
+        \begin{itemize}
+            \item \textbf{Open, High, Low, Close}
+            \item \textbf{Volume}
+        \end{itemize}
+        \item \textbf{Mutual Funds (AEPGX - American Funds EuroPacific Growth Fund; AGTHX - American Funds Growth Fund of America)}
+        \begin{itemize}
+            \item \textbf{NAV}
+        \end{itemize}
+        \item \textbf{Bonds (AGG - iShares Core U.S. Aggregate Bond ETF)}
+        \begin{itemize}
+            \item \textbf{Open, High, Low, Close}
+            \item \textbf{Volume}
+        \end{itemize}
     \end{itemize}
 \end{frame}
 
@@ -99,65 +150,203 @@
         \item \textbf{Student Debt:} High levels of student loan debt impact the ability to save.
         \item \textbf{Cost of Living:} Rising costs of rent, utilities, and everyday expenses.
         \item \textbf{Inflation Impact:} Inflation erodes the purchasing power of savings.
-        \item \textbf{Economic Context:} Using data on unemployment rates and inflation to contextualize financial challenges.
-    \end{itemize}
-\end{frame}
-
-\section{Understanding Risk Tolerances}
-\begin{frame}{Understanding Risk Tolerances}
-    \begin{itemize}
-        \item \textbf{Conservative:} Focuses on low-risk assets such as government bonds.
-        \item \textbf{Balanced:} Involves a diversified portfolio combining equities and fixed-income securities.
-        \item \textbf{Aggressive:} Targets high-risk, high-reward investments in stocks and alternative assets.
-    \end{itemize}
-\end{frame}
-
-\section{Key Economic Indicators from FRED}
-\begin{frame}{Key Economic Indicators from FRED}
-    \begin{itemize}
-        \item \textbf{Inflation:} General increase in prices and its impact on purchasing power.
-        \item \textbf{Interest Rates:} Influence on mortgage rates and investment returns.
-        \item \textbf{Unemployment Rates:} Labor market conditions and their implications for income and savings.
-        \item \textbf{GDP Growth:} Economic growth rates and market trends.
-        \item \textbf{Consumer Confidence:} Indicator of economic health and spending behaviors.
-        \item \textbf{Housing Market Data:} Insights into home sales, prices, and housing starts.
-    \end{itemize}
-\end{frame}
-
-\section{Comprehensive Financial Data from Yahoo Finance}
-\begin{frame}{Comprehensive Financial Data from Yahoo Finance}
-    \begin{itemize}
-        \item \textbf{Stock Market Indices:} Historical and real-time data on major indices such as the S&P 500, NASDAQ, and Dow Jones.
-        \item \textbf{Bonds:} Data on government bonds (e.g., U.S. Treasuries) and corporate bonds, including yields, maturities, and credit ratings.
-        \item \textbf{Mutual Funds and ETFs:} Performance data, expense ratios, and asset allocations.
-        \item \textbf{REITs:} Real Estate Investment Trusts as potential vehicles for down payment savings, offering exposure to real estate markets.
-        \item \textbf{Market Volatility:} Understanding market risk through volatility indices like the VIX.
-        \item \textbf{Dividend-Paying Stocks:} Stocks offering dividends to generate passive income.
     \end{itemize}
 \end{frame}
 
 \section{Financial Literacy: Essential Concepts}
 \begin{frame}{Financial Literacy: Essential Concepts}
+        \begin{itemize}
+            \item \textbf{Stocks:}
+            \begin{itemize}
+                \item Equity investments representing ownership in a company.
+                \item Shareholders can earn returns through capital gains and dividends.
+                \item Example: Purchasing shares of Apple Inc. (AAPL).
+            \end{itemize}
+            \item \textbf{Bonds:}
+            \begin{itemize}
+                \item Debt investments where an investor loans money to an entity (corporate or governmental) for a defined period at a fixed interest rate.
+                \item Bonds pay periodic interest (coupon payments) and return the principal amount at maturity.
+                \item Example: U.S. Treasury bonds.
+            \end{itemize}
+        \end{itemize}
+\end{frame}
+
+            
+            
+\begin{frame}{Financial Literacy: Essential Concepts (cont.)}
+        \begin{itemize}
+            \item \textbf{Mutual Funds:}
+            \begin{itemize}
+                \item Investment vehicles that pool money from many investors to purchase a diversified portfolio of stocks, bonds, or other securities.
+                \item Managed by professional fund managers.
+                \item Example: Vanguard 500 Index Fund.
+            \end{itemize}
+            \item \textbf{ETFs (Exchange-Traded Funds):}
+            \begin{itemize}
+                \item Similar to mutual funds but traded on stock exchanges like individual stocks.
+                \item Provide diversification and are typically more cost-effective.
+                \item Example: SPDR S&P 500 ETF (SPY).
+            \end{itemize}
+        \end{itemize}
+\end{frame}
+
+\begin{frame}{Financial Literacy: Essential Concepts (cont.)}
+        \begin{itemize}
+            \item \textbf{Dollar Cost Averaging:}
+            \begin{itemize}
+                \item Investing a fixed amount of money at regular intervals, regardless of the asset's price.
+                \item Helps mitigate the risk of investing a large amount at an inopportune time.
+                \item Example: Investing \$500 monthly into an S&P 500 ETF.
+            \end{itemize}
+            \item \textbf{Compounding Interest:}
+            \begin{itemize}
+                \item The process where the value of an investment grows exponentially over time due to earning interest on both the principal and the accumulated interest.
+                \item The longer the investment period, the greater the compounding effect.
+                \item Example: A \$1,000 investment earning 5\% interest annually.
+            \end{itemize}
+        \end{itemize}
+\end{frame}
+
+\section{Time Value of Money (TVM)}
+\begin{frame}{Time Value of Money (TVM)}
+    \begin{block}{Definition}
+        Time Value of Money (TVM) is the concept that money available today is worth more than the same amount in the future due to its potential earning capacity.
+    \end{block}
     \begin{itemize}
-        \item \textbf{Stocks:} Equity investments representing ownership in a company. Stocks can provide capital gains and dividends.
-        \item \textbf{Bonds:} Debt investments where an investor loans money to an entity (corporate or governmental) that borrows the funds for a defined period at a fixed interest rate.
-        \item \textbf{Mutual Funds:} Investment vehicles that pool money from many investors to purchase a diversified portfolio of stocks, bonds, or other securities.
-        \item \textbf{ETFs (Exchange-Traded Funds):} Similar to mutual funds but traded on stock exchanges like individual stocks.
-        \item \textbf{REITs (Real Estate Investment Trusts):} Companies that own, operate, or finance income-producing real estate.
-        \item \textbf{Dollar Cost Averaging:} Investing a fixed amount of money at regular intervals, regardless of the asset's price, to reduce the impact of volatility.
-        \item \textbf{Compounding Interest:} The process where the value of an investment grows exponentially over time due to earning interest on both the principal and the accumulated interest.
+        \item \textbf{Importance:}
+        \begin{itemize}
+            \item Influences various financial decisions, such as investing, borrowing, and budgeting.
+            \item Critical for understanding how investments grow over time.
+        \end{itemize}
+        \item \textbf{Key Formula:}
+        \begin{align*}
+            \text{Future Value (FV)} &= \text{Present Value (PV)} \times (1 + r)^n \\
+            \text{Present Value (PV)} &= \frac{\text{Future Value (FV)}}{(1 + r)^n}
+        \end{align*}
+        \item \textbf{Explanation:}
+        \begin{itemize}
+            \item $FV$ is the future value of the investment.
+            \item $PV$ is the present value of the investment.
+            \item $r$ is the annual interest rate (decimal).
+            \item $n$ is the number of years.
+        \end{itemize}
     \end{itemize}
 \end{frame}
 
-\section{The Digital Age of Investing}
-\begin{frame}{The Digital Age of Investing}
+\begin{frame}{Practical Application of TVM}
     \begin{itemize}
-        \item \textbf{Democratization of Finance:} Platforms like Robinhood and Coinbase have made investing more accessible to retail investors, particularly Generation Z.
-        \item \textbf{Robinhood:} A commission-free trading platform that allows users to invest in stocks, ETFs, options, and cryptocurrencies.
-        \item \textbf{Coinbase:} A digital currency exchange platform enabling users to buy, sell, and store various cryptocurrencies.
-        \item \textbf{Impact:} These platforms have lowered the barriers to entry for investing, encouraging more participation from younger, tech-savvy individuals.
-        \item \textbf{Statistics:} Over 13 million users on Robinhood are aged 18-34, and more than 20\% of Coinbase users are under 30.
-        \item \textbf{Features:} User-friendly interfaces, educational resources, and the ability to start investing with small amounts of capital.
+        \item \textbf{Investment Growth:} Let's consider the stock data provided (e.g., Apple Inc. - AAPL).
+        \item \textbf{Historical Data:}
+        \begin{itemize}
+            \item Open: \$115.75, Close: \$118.28 (Aug 20, 2020)
+            \item Calculate the growth rate: 
+            \begin{align*}
+                \text{Growth Rate} &= \frac{\text{Close} - \text{Open}}{\text{Open}} \\
+                &= \frac{118.28 - 115.75}{115.75} \approx 0.0218 \text{ or } 2.18\%
+            \end{align*}
+        \end{itemize}
+        \item \textbf{Future Value Calculation:}
+        \begin{itemize}
+            \item Assume we invest \$1,000 in AAPL at an annual growth rate of 2.18\%.
+            \item Calculate the future value in 5 years:
+            \begin{align*}
+                FV &= PV \times (1 + r)^n \\
+                FV &= 1000 \times (1 + 0.0218)^5 \\
+                FV &\approx 1000 \times 1.113 \\
+                FV &\approx 1113
+            \end{align*}
+            \item The investment would grow to approximately \$1,113 in 5 years.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Using TVM for Housing Down Payments}
+    \begin{itemize}
+        \item \textbf{Saving for a Down Payment:}
+        \begin{itemize}
+            \item Suppose we need \$50,000 for a down payment in 10 years.
+            \item Calculate the present value needed to save annually with a 2.18\% annual return.
+            \item Using the Present Value formula:
+            \begin{align*}
+                PV &= \frac{FV}{(1 + r)^n} \\
+                PV &= \frac{50000}{(1 + 0.0218)^{10}} \\
+                PV &\approx \frac{50000}{1.243} \\
+                PV &\approx 40222
+            \end{align*}
+            \item We need to save approximately \$40,222 today to reach \$50,000 in 10 years.
+        \end{itemize}
+        \item \textbf{Annual Savings Calculation:}
+        \begin{itemize}
+            \item Alternatively, calculate the annual savings required:
+            \begin{align*}
+                \text{Annual Savings} &= \frac{FV}{\left( \frac{(1 + r)^n - 1}{r} \right)} \\
+                \text{Annual Savings} &= \frac{50000}{\left( \frac{(1 + 0.0218)^{10} - 1}{0.0218} \right)} \\
+                \text{Annual Savings} &\approx \frac{50000}{11.080} \\
+                \text{Annual Savings} &\approx 4514
+            \end{align*}
+            \item We need to save approximately \$4,514 annually to reach \$50,000 in 10 years.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\section{Understanding Market Mechanics}
+\begin{frame}{Understanding Market Mechanics}
+    \begin{itemize}
+        \item \textbf{Stock Market:}
+        \begin{itemize}
+            \item A marketplace where stocks, bonds, and other securities are bought and sold.
+            \item Major exchanges include the New York Stock Exchange (NYSE) and NASDAQ.
+            \item Prices are determined by supply and demand dynamics.
+        \end{itemize}
+        \item \textbf{Market Indices:}
+        \begin{itemize}
+            \item Benchmarks used to measure the performance of a segment of the market.
+            \item Examples include the S&P 500, Dow Jones Industrial Average, and NASDAQ Composite.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\section{Key Investment Strategies}
+\begin{frame}{Key Investment Strategies}
+    \begin{itemize}
+        \item \textbf{Diversification:}
+        \begin{itemize}
+            \item Spreading investments across different asset classes to reduce risk.
+            \item A diversified portfolio may include stocks, bonds, real estate, and commodities.
+        \end{itemize}
+        \item \textbf{Asset Allocation:}
+        \begin{itemize}
+            \item Dividing investments among different asset categories based on an investor's risk tolerance, goals, and investment horizon.
+            \item Example: A younger investor might have a higher allocation to stocks, while an older investor might focus more on bonds.
+        \end{itemize}
+        \item \textbf{Risk Management:}
+        \begin{itemize}
+            \item Identifying, assessing, and prioritizing risks followed by coordinated efforts to minimize, monitor, and control the impact of unfortunate events.
+            \item Strategies include diversification, hedging, and using stop-loss orders.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\section{Digital Age Investing}
+\begin{frame}{Digital Age Investing}
+    \begin{itemize}
+        \item \textbf{Online Trading Platforms:}
+        \begin{itemize}
+            \item Platforms like Robinhood, E*TRADE, and TD Ameritrade allow individuals to trade stocks and other securities online.
+            \item Lower fees and commissions compared to traditional brokers.
+        \end{itemize}
+        \item \textbf{Robo-Advisors:}
+        \begin{itemize}
+            \item Automated platforms that provide financial advice or manage investments based on algorithms.
+            \item Examples include Betterment and Wealthfront.
+            \item Offer low-cost, diversified investment portfolios.
+        \end{itemize}
+        \item \textbf{Social Trading:}
+        \begin{itemize}
+            \item Platforms that allow investors to copy the trades of experienced traders.
+            \item Examples include eToro and ZuluTrade.
+            \item Helps novice investors learn and participate in the market.
+        \end{itemize}
     \end{itemize}
 \end{frame}
 
@@ -241,16 +430,12 @@
     \begin{itemize}
         \item \textbf{Beta (β):} Measures a stock's volatility relative to the overall market. A beta greater than 1 indicates higher volatility than the market, while a beta less than 1 indicates lower volatility.
         \item \textbf{Alpha (α):} Represents the excess return of an investment relative to the return of a benchmark index. Positive alpha indicates outperformance, while negative alpha indicates underperformance.
-        \item \textbf{Formula for Beta:}
-        \begin{equation*}
-            \beta = \frac{\text{Cov}(R_i, R_m)}{\text{Var}(R_m)}
-        \end{equation*}
-        \item \textbf{Explanation:} Here, \( \text{Cov}(R_i, R_m) \) is the covariance between the return of the investment and the market return, and \( \text{Var}(R_m) \) is the variance of the market return. Beta helps investors understand an investment's sensitivity to market movements.
-        \item \textbf{Formula for Alpha:}
-        \begin{equation*}
-            \alpha = R_i - \left( R_f + \beta (R_m - R_f) \right)
-        \end{equation*}
-        \item \textbf{Explanation:} In this formula, \( R_i \) is the return of the investment, \( R_f \) is the risk-free rate, \( \beta \) is the beta of the investment, and \( R_m \) is the market return. Alpha measures the performance of an investment relative to a benchmark.
+        \item \textbf{Capital Asset Pricing Model (CAPM):}
+        \begin{itemize}
+            \item Describes the relationship between systematic risk and expected return for assets, particularly stocks.
+            \item Formula: \( E(R_i) = R_f + \beta_i (E(R_m) - R_f) \)
+            \item Explanation: \( E(R_i) \) is the expected return of the investment, \( R_f \) is the risk-free rate, \( \beta_i \) is the beta of the investment, and \( E(R_m) \) is the expected return of the market.
+        \end{itemize}
     \end{itemize}
 \end{frame}
 
@@ -260,14 +445,12 @@
         \item \textbf{Summary:} We have explored optimal investment strategies tailored for Generation Z to accumulate housing down payments, incorporating modern financial theories and data-driven insights.
         \item \textbf{Key Findings:} Identified effective strategies such as diversified portfolios, the application of MPT, and lifecycle investing to navigate the unique financial challenges faced by Generation Z.
         \item \textbf{Future Directions:} Ongoing research will focus on refining these strategies and exploring their practical applications to further assist Generation Z in achieving their homeownership goals.
-        \item \textbf{Acknowledgements:} I extend my gratitude to all contributors and supporters, including my parents, for their invaluable assistance and encouragement.
     \end{itemize}
 \end{frame}
 
 \section{Q\&A}
 \begin{frame}{Q\&A}
     \begin{itemize}
-        \item \textbf{Discussion:} I now open the floor for any questions and discussions.
         \item \textbf{Clarifications:} Please feel free to ask for any clarifications or additional details regarding the presented research and findings.
     \end{itemize}
 \end{frame}
