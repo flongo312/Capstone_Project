@@ -3,11 +3,10 @@ import pandas as pd
 
 # Define the list of securities organized by type
 securities = {
-    'Stocks': ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'META', 'IBM', 'GE', 'TSLA', 'NVDA', 'NFLX'],
-    'ETFs': ['SPY', 'IVV', 'VOO', 'QQQ', 'DIA', 'VTI', 'IWM', 'EFA', 'EEM', 'GLD'],
-    'Mutual Funds': ['VFIAX', 'SWPPX', 'FXAIX', 'VWELX', 'VFINX', 'AGTHX', 'AEPGX', 'ANWPX', 'FCNTX', 'DODGX'],
-    'Bonds': ['BND', 'AGG', 'LQD', 'TLT', 'IEF', 'SHY', 'TIP', 'HYG', 'JNK', 'MUB'],
-    'Cryptocurrencies': ['BTC-USD', 'ETH-USD', 'ADA-USD', 'XRP-USD', 'LTC-USD', 'BCH-USD', 'BNB-USD', 'DOT-USD', 'LINK-USD', 'DOGE-USD']
+    'Stocks': ['AAPL', 'TSLA', 'AMZN', 'GOOGL', 'NVDA', 'META','AMD', 'BAC',],
+    'ETFs': ['SPY', 'QQQ', 'IWM', 'GLD', 'EEM', 'VOO', 'XLF', 'TQQQ', 'DIA', 'LQD'],
+    'Mutual Funds': ['VFIAX', 'VTSAX', 'FXAIX', 'FCNTX', 'AGTHX', 'TRBCX', 'VBTLX'],
+    'Cryptocurrencies': ['BTC-USD', 'LTC-USD']
 }
 
 # Function to fetch the earliest available date for each ticker

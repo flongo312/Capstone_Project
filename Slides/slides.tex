@@ -12,7 +12,7 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 
-\title{An Economic Analysis of Optimal Investment Strategies for Accumulating Housing Down Payments Among Generation Z in the United States}
+\title{An Economic Analysis of Optimal Investment Strategies for Accumulating Housing Down Payments}
 \author{Frank Paul Longo II}
 \date{\today}
 
@@ -26,57 +26,38 @@
 
 \section{Introduction}
 \begin{frame}{Introduction}
-    \begin{itemize}
-        \item \textbf{Objective:} Identify and analyze optimal investment strategies tailored for Generation Z to accumulate funds for housing down payments.
-        \item \textbf{Focus:} Provide actionable financial strategies addressing unique economic challenges and opportunities faced by Generation Z.
-        \item \textbf{Motivation:} 
-        \begin{itemize}
-            \item Initially intended to analyze options trading strategies, such as writing (selling) covered calls.
-            \item Found that options trading has a high barrier to entry for everyday retail investors, which includes Generation Z.
-            \item Shifted focus to more accessible investment strategies that align with the financial capabilities and needs of Generation Z.
-        \end{itemize}
-    \end{itemize}
+  \begin{itemize}
+    \textbf{Objective:** Develop investment strategies tailored to different age groups for first-time homebuyers to accumulate funds for down payments. 
+
+    \textbf{Motivation:** Rising housing costs pose a challenge for many first-time homebuyers, particularly younger individuals. This research aims to identify optimal investment strategies that can help people in various age groups save effectively for a down payment, ultimately accelerating their path to homeownership. (Consider adding a statistic about rising housing costs here)
+
+  \end{itemize}
 \end{frame}
 
-\section{Significance of the Study}
-\begin{frame}{Significance of the Study}
-    \begin{itemize}
-        \item \textbf{Achieving Homeownership:} A critical financial milestone contributing significantly to long-term economic stability and wealth accumulation.
-        \item \textbf{Addressing Challenges:} Generation Z encounters unprecedented financial hurdles, including high student debt, escalating living costs, and persistent inflation.
-        \item \textbf{Strategic Goal:} Develop robust investment strategies to help Generation Z overcome these challenges and realize their homeownership aspirations.
-    \end{itemize}
+
+\section{Why First-time Homebuyers Need This Help}
+\begin{frame}{Statistics on Typical First-time Homebuyer}
+  \begin{itemize}
+    \item **Average Age:** 35 years (as of 2023) [Source: National Association of Realtors (NAR)]
+    \item **Median Income:** \$95,900 (as of 2023) [Source: Self Financial]
+    \item **Marital Status:**
+        * 59% Married Couples [Source: National Association of Realtors (NAR)]
+        * 19% Single Females
+        * 10% Single Males
+        * 9% Unmarried Couples
+    \item **Challenges:**
+        * High student loan debt (national average: \$37,172 in 2023) [Source: EducationData.org]
+        * Rising housing costs exceeding income growth
+        * Difficulty saving a down payment
+    \item **Average Home Cost:** \$348,000 (2022 data) [Source: The Zebra] 
+    \item **Down Payment:**  
+        * **Average Saved:** \$8,220 (6% of average home price in 2023) [Source: Self Financial]
+        * **Typical Percentage:** 8% (may vary depending on loan type) [Source: National Association of Realtors (NAR)]
+  \end{itemize}
 \end{frame}
 
-\section{Why Generation Z Needs This Help}
-\begin{frame}{Why Generation Z Needs This Help}
-    \begin{itemize}
-        \item \textbf{High Student Debt:} Average student loan debt of approximately \$30,000.
-        \item \textbf{Escalating Living Costs:} Rising cost of living, including rent, utilities, and daily expenses.
-        \item \textbf{Creeping Stagflation:} Greatly erodes the purchasing power of savings.
-        \item \textbf{Impending Economic Downturn:} Job market volatility and looming recession.
-        \item \textbf{Lacking Financial Literacy:} Many lack the financial literacy required to navigate investment options effectively.
-    \end{itemize}
-\end{frame}
 
-\section{Statistics on Generation Z}
-\begin{frame}{Statistics on Generation Z}
-    \begin{columns}
-        \column{0.5\textwidth}
-        \begin{itemize}
-            \item \textbf{Population Size:} Over 68 million individuals in the United States.
-            \item \textbf{Education:} The most educated generation, with 59\% pursuing higher education.
-            \item \textbf{Employment:} About 40\% work part-time or are self-employed.
-        \end{itemize}
-        \column{0.5\textwidth}
-        \begin{itemize}
-            \item \textbf{Savings Habits:} Approximately 72\% have started saving, but only 29\% feel confident about their financial future.
-            \item \textbf{Investment Interest:} Around 40\% are interested in learning about investing, yet only 17\% actively invest in the stock market.
-            \item \textbf{Digital Natives:} Born between 1997 and 2012.
-        \end{itemize}
-    \end{columns}
-\end{frame}
-
-\section{Data Sources Utilized}
+\section{Data Sources and Analysis}
 \begin{frame}{Data Sources Utilized}
     \begin{itemize}
         \item \textbf{Yahoo Finance (YFinance):}
@@ -91,32 +72,23 @@
 \end{frame}
 
 \begin{frame}{Overview of Economic Indicators Data from FRED}
-    \begin{columns}
-        \column{0.5\textwidth}
-        \begin{itemize}
-            \item \textbf{Consumer Price Index (CPI)}
-            \item \textbf{Producer Price Index (PPI)}
-            \item \textbf{Unemployment Rate}
-            \item \textbf{Nonfarm Payroll Employment}
-            \item \textbf{Industrial Production Index}
-        \end{itemize}
-        \column{0.5\textwidth}
-        \begin{itemize}
-            \item \textbf{Retail Sales}
-            \item \textbf{Housing Starts and Building Permits}
-            \item \textbf{Personal Income and PCE}
-            \item \textbf{Capacity Utilization}
-            \item \textbf{Durable Goods Orders}
-        \end{itemize}
-    \end{columns}
+  \begin{itemize}
+    \item Consumer Price Index (CPI) 
+    \item Producer Price Index (PPI) 
+    \item Unemployment Rate 
+    \item Gross Domestic Product (GDP) Growth 
+    \item Interest Rates 
+    \item Housing Starts
+    \item Existing Home Sales 
+  \end{itemize}
 \end{frame}
+
 
 \begin{frame}{Overview of Financial Data from Yahoo Finance}
     \begin{itemize}
         \item \textbf{Stocks}
         \item \textbf{Cryptocurrency}
         \item \textbf{Mutual Funds}
-        \item \textbf{Bonds}
         \item \textbf{ETFs}
     \end{itemize}
 \end{frame}
@@ -128,20 +100,11 @@
         \begin{itemize}
             \item Equity investments representing ownership in a company.
             \item Example: Purchasing shares of Apple Inc. (AAPL).
-            \item \textbf{Equation:}
-            \begin{equation*}
-                \text{Stock Return} = \frac{\text{Dividends Paid} + \text{Change in Price}}{\text{Initial Price}}
-            \end{equation*}
         \end{itemize}
-        \item \textbf{Bonds:}
+        \item \textbf{Cryptocurrency:}
         \begin{itemize}
-            \item Debt investments where an investor loans money to an entity (corporate or governmental) for a defined period at a fixed interest rate.
-            \item Example: U.S. Treasury bonds.
-            \item \textbf{Equation:}
-            \begin{equation*}
-                \text{Bond Price} = \sum_{t=1}^{T} \frac{C}{(1 + r)^t} + \frac{F}{(1 + r)^T}
-            \end{equation*}
-            where \( C \) is the coupon payment, \( F \) is the face value, \( r \) is the discount rate, and \( T \) is the time to maturity.
+            \item Digital or virtual currencies that use cryptography for security.
+            \item Example: Bitcoin (BTC) and Ethereum (ETH).
         \end{itemize}
     \end{itemize}
 \end{frame}
@@ -163,221 +126,125 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Financial Literacy: Essential Concepts (cont.)}
-    \begin{itemize}
-        \item \textbf{Dollar Cost Averaging:}
-        \begin{itemize}
-            \item Investing a fixed amount of money at regular intervals, regardless of the asset's price helping to mitigate the risk of investing a large amount at an inopportune time.
-            \item Example: Investing \$500 monthly into an S&P 500 ETF.
-        \end{itemize}
-        \item \textbf{Compounding Interest:}
-        \begin{itemize}
-            \item The process where the value of an investment grows exponentially over time due to earning interest on both the principal and the accumulated interest.
-            \item The longer the investment period, the greater the compounding effect.
-            \item Example: A \$1,000 investment earning 5\% interest annually.
-            \item \textbf{Equation:}
-            \begin{equation*}
-                A = P \left(1 + \frac{r}{n}\right)^{nt}
-            \end{equation*}
-            where \( A \) is the amount of money accumulated after \( n \) years, including interest, \( P \) is the principal amount, \( r \) is the annual interest rate, and \( n \) is the number of times that interest is compounded per year.
-        \end{itemize}
-    \end{itemize}
-\end{frame}
-
 \section{Time Value of Money (TVM)}
 \begin{frame}{Time Value of Money (TVM)}
-    \begin{block}{Definition}
-        Time Value of Money (TVM) is the concept that money available today is worth more than the same amount in the future due to its potential earning capacity.
-    \end{block}
-\end{frame}
+  \begin{block}{Definition}
+    Time Value of Money (TVM) is the concept that money available today is worth more than the same amount in the future due to its potential earning capacity.
 
-\begin{frame}{Time Value of Money (TVM) (cont.)}
-    \begin{itemize}
-        \item \textbf{Importance:}
-        \begin{itemize}
-            \item Influences various financial decisions, such as investing, borrowing, and budgeting.
-            \item Critical for understanding how investments grow over time.
-        \end{itemize}
-        \item \textbf{Key Formula:}
-        \begin{align*}
-            \text{Future Value (FV)} &= \text{Present Value (PV)} \times (1 + r)^n \\
-            \text{Present Value (PV)} &= \frac{\text{Future Value (FV)}}{(1 + r)^n}
-        \end{align*}
-        \item \textbf{Explanation:}
-        \begin{itemize}
-            \item \( FV \) is the future value of the investment.
-            \item \( PV \) is the present value of the investment.
-            \item \( r \) is the annual interest rate (decimal).
-            \item \( n \) is the number of years.
-        \end{itemize}
-    \end{itemize}
-\end{frame}
+    **Formula:** FV = PV * [1 + (i / n)]^(n x t)
 
-\begin{frame}{Practical Application of TVM}
-    \begin{itemize}
-        \item \textbf{Investment Growth:} Let's consider the stock data provided (e.g., Apple Inc. - AAPL).
-        \item \textbf{Historical Data:}
-        \begin{itemize}
-            \item Open: \$115.75, Close: \$118.28 (Aug 20, 2020)
-            \item Calculate the growth rate: 
-            \begin{align*}
-                \text{Growth Rate} &= \frac{\text{Close} - \text{Open}}{\text{Open}} \\
-                &= \frac{118.28 - 115.75}{115.75} \approx 0.0218 \text{ or } 2.18\%
-            \end{align*}
-        \end{itemize}
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Practical Application of TVM (cont.)}
-    \begin{itemize}
-        \item \textbf{Future Value Calculation:}
-        \begin{itemize}
-            \item Assume we invest \$1,000 in AAPL at an annual growth rate of 2.18\%.
-            \item Calculate the future value in 5 years:
-            \begin{align*}
-                FV &= PV \times (1 + r)^n \\
-                FV &= 1000 \times (1 + 0.0218)^5 \\
-                FV &\approx 1000 \times 1.113 \\
-                FV &\approx 1113
-            \end{align*}
-            \item The investment would grow to approximately \$1,113 in 5 years.
-        \end{itemize}
-    \end{itemize}
+    where:
+      * FV = Future Value
+      * PV = Present Value
+      * i = Interest rate per period
+      * n = Number of compounding periods per year
+      * t = Number of years
+  \end{block}
 \end{frame}
 
 \begin{frame}{Using TVM for Housing Down Payments}
     \begin{itemize}
-        \item \textbf{Saving for a Down Payment:}
+        \item \textbf{Monthly Savings Calculation:}
         \begin{itemize}
-            \item Suppose we need \$50,000 for a down payment in 10 years.
-            \item Calculate the present value needed to save annually with a 2.18\% annual return.
-            \item Using the Present Value formula:
-            \begin{align*}
-                PV &= \frac{FV}{(1 + r)^n} \\
-                PV &= \frac{50000}{(1 + 0.0218)^{10}} \\
-                PV &\approx \frac{50000}{1.243} \\
-                PV &\approx 40222
-            \end{align*}
-            \item We need to save approximately \$40,222 today to reach \$50,000 in 10 years.
-        \end{itemize}
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Using TVM for Housing Down Payments (cont.)}
-    \begin{itemize}
-        \item \textbf{Annual Savings Calculation:}
-        \begin{itemize}
-            \item Alternatively, calculate the annual savings required:
-            \begin{align*}
-                \text{Annual Savings} &= \frac{FV}{\left( \frac{(1 + r)^n - 1}{r} \right)} \\
-                \text{Annual Savings} &= \frac{50000}{\left( \frac{(1 + 0.0218)^{10} - 1}{0.0218} \right)} \\
-                \text{Annual Savings} &\approx \frac{50000}{11.080} \\
-                \text{Annual Savings} &\approx 4514
-            \end{align*}
-            \item We need to save approximately \$4,514 annually to reach \$50,000 in 10 years.
-        \end{itemize}
-    \end{itemize}
-\end{frame}
-
-\section{Applying Linear Algebra in Portfolio Allocation}
-\begin{frame}{Applying Linear Algebra in Portfolio Allocation}
-    \begin{itemize}
-        \item \textbf{Purpose:} Leveraging linear algebra to solve complex portfolio allocation problems.
-        \item \textbf{Matrix Operations:} Analyzing the covariance matrix of asset returns to optimize portfolio diversification.
-        \item \textbf{Efficient Portfolios:} Using the covariance matrix to calculate portfolios that minimize risk for a given return.
-        \item \textbf{Formula:}
-        \begin{equation*}
-            \text{Minimize } \sigma_p = \sqrt{w^T \Sigma w}
-        \end{equation*}
-        \item \textbf{Explanation:} In this formula, \( \sigma_p \) represents the portfolio's standard deviation (a measure of risk), \( w \) is a vector of asset weights, and \( \Sigma \) is the covariance matrix of asset returns. The goal is to minimize risk while maintaining the desired portfolio weights.
-    \end{itemize}
-\end{frame}
-
-\section{Exploring Modern Portfolio Theory (MPT)}
-\begin{frame}{Exploring Modern Portfolio Theory (MPT)}
-    \begin{itemize}
-        \item \textbf{Diversification Principle:} Spreading investments to reduce risk while enhancing returns.
-        \item \textbf{Efficient Frontier:} Identifying portfolios that offer maximum return for a given level of risk.
-        \item \textbf{Formula:}
-        \begin{equation*}
-            \text{Efficient Frontier} = \max \left( \frac{E(R_p) - R_f}{\sigma_p} \right)
-        \end{equation*}
-        \item \textbf{Explanation:} This formula calculates the Sharpe ratio, where \( E(R_p) \) is the expected return of the portfolio, \( R_f \) is the risk-free rate, and \( \sigma_p \) is the standard deviation of the portfolio's return. A higher Sharpe ratio indicates a better risk-adjusted return.
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Exploring Modern Portfolio Theory (MPT) (cont.)}
-    \begin{itemize}
-        \item \textbf{Capital Market Line (CML):} Describes the relationship between risk and return for efficient portfolios.
-        \item \textbf{Formula:}
-        \begin{equation*}
-            E(R_p) = R_f + \frac{\sigma_p}{\sigma_m} \left( E(R_m) - R_f \right)
-        \end{equation*}
-        \item \textbf{Explanation:} In this formula, \( E(R_p) \) is the expected return of the portfolio, \( \sigma_p \) is the portfolio's standard deviation, \( \sigma_m \) is the market portfolio's standard deviation, and \( E(R_m) \) is the expected return of the market portfolio. This formula helps investors understand how adding risk can potentially increase returns.
-    \end{itemize}
-\end{frame}
-
-\section{Monte Carlo Simulation in Financial Planning}
-\begin{frame}{Monte Carlo Simulation in Financial Planning}
-    \begin{itemize}
-        \item \textbf{Purpose:} To model the probability distributions of achieving target down payment amounts.
-        \item \textbf{Scenario Analysis:} Incorporating various economic variables and market scenarios to simulate outcomes.
-        \item \textbf{Example:} Assessing how different investment strategies impact down payment accumulation under varying economic conditions.
-        \item \textbf{Formula:}
-        \begin{equation*}
-            X_t = X_0 \exp \left( \left( \mu - \frac{\sigma^2}{2} \right)t + \sigma W_t \right)
-        \end{equation*}
-        \item \textbf{Explanation:} Here, \( X_t \) is the value of the investment at time \( t \), \( X_0 \) is the initial investment value, \( \mu \) is the drift rate (average return), \( \sigma \) is the volatility (risk), and \( W_t \) is a Wiener process (random movement). This formula models how investment value evolves over time under uncertainty.
-    \end{itemize}
-\end{frame}
-
-\section{Lifecycle Investing Strategies}
-\begin{frame}{Lifecycle Investing Strategies}
-    \begin{itemize}
-        \item \textbf{Purpose:} To adjust risk exposure over time in line with an investor's changing risk tolerance and investment horizon.
-        \item \textbf{Dynamic Asset Allocation:} Transitioning from high-risk to low-risk investments as the investment goal approaches.
-        \item \textbf{Example:} A lifecycle investment plan that shifts from equities to bonds and cash equivalents as the target date for a down payment nears.
-        \item \textbf{Formula:}
-        \begin{equation*}
-            \text{Allocation}_t = \frac{1}{T-t} \left( \frac{\alpha}{\beta} \right)
-        \end{equation*}
-        \item \textbf{Explanation:} In this formula, \( T \) is the total investment period, \( t \) is the current time, \( \alpha \) is the expected return, and \( \beta \) is the risk measure. This approach maximizes returns during the early stages and gradually reduces risk to protect accumulated wealth as the goal date approaches.
-    \end{itemize}
-\end{frame}
-
-\section{Financial Metrics for Project Evaluation}
-\begin{frame}{Financial Metrics for Project Evaluation}
-    \begin{itemize}
-        \item \textbf{Beta (β):} Measures a stock's volatility relative to the overall market. A beta greater than 1 indicates higher volatility than the market, while a beta less than 1 indicates lower volatility.
-        \item \textbf{Alpha (α):} Represents the excess return of an investment relative to the return of a benchmark index. Positive alpha indicates outperformance, while negative alpha indicates underperformance.
-        \item \textbf{Capital Asset Pricing Model (CAPM):}
-        \begin{itemize}
-            \item Describes the relationship between systematic risk and expected return for assets, particularly stocks.
+            \item Calculate the monthly savings required to reach a target down payment adjusted for inflation (CPI).
             \item \textbf{Formula:}
             \begin{equation*}
-                E(R_i) = R_f + \beta_i (E(R_m) - R_f)
+                PMT = \frac{FV}{\left( \frac{(1 + r/12)^{12n} - 1}{r/12} \right)}
             \end{equation*}
-            \item \textbf{Explanation:} \( E(R_i) \) is the expected return of the investment, \( R_f \) is the risk-free rate, \( \beta_i \) is the beta of the investment, and \( E(R_m) \) is the expected return of the market.
+            \item Example Calculation for Different Time Intervals:
+            \begin{itemize}
+                \item \textbf{5 Years:}
+                \begin{align*}
+                    FV &= 78000 \times (1 + \text{CPI})^5 \\
+                    PMT &= \frac{FV}{\left( \frac{(1 + 0.0218/12)^{60} - 1}{0.0218/12} \right)} \\
+                \end{align*}
+                \item \textbf{10 Years:}
+                \begin{align*}
+                    FV &= 78000 \times (1 + \text{CPI})^{10} \\
+                    PMT &= \frac{FV}{\left( \frac{(1 + 0.0218/12)^{120} - 1}{0.0218/12} \right)} \\
+                \end{align*}
+                \item \textbf{15 Years:}
+                \begin{align*}
+                    FV &= 78000 \times (1 + \text{CPI})^{15} \\
+                    PMT &= \frac{FV}{\left( \frac{(1 + 0.0218/12)^{180} - 1}{0.0218/12} \right)} \\
+                \end{align*}
+            \end{itemize}
         \end{itemize}
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Financial Metrics for Project Evaluation (cont.)}
+
+
+\section{Theory & Analyses}
+\begin{frame}{Modern Portfolio Theory}
     \begin{itemize}
-        \item \textbf{Sharpe Ratio:} A key metric to compare risk-adjusted returns of different portfolios.
-        \item \textbf{Formula:}
-        \begin{equation*}
-            \text{Sharpe Ratio} = \frac{E(R_p) - R_f}{\sigma_p}
-        \end{equation*}
-        \item \textbf{Explanation:} This formula measures the excess return per unit of risk. \( E(R_p) \) is the expected return of the portfolio, \( R_f \) is the risk-free rate, and \( \sigma_p \) is the portfolio's standard deviation. A higher Sharpe ratio indicates a better risk-adjusted return.
-        \item \textbf{Application:} Using historical data on stock market performance and bond yields to calculate and compare Sharpe ratios.
+        \item \textbf{Objective:} 
+        \item \textbf{Results:} 
     \end{itemize}
 \end{frame}
+
+
+
+\section{Theory & Analyses}
+\begin{frame}{CAPM: Capital Asset Pricing Model}
+    \begin{itemize}
+        \item \textbf{Objective:} 
+        \item \textbf{Results:} 
+    \end{itemize}
+\end{frame}
+
+
+
+\section{Theory & Analyses}
+\begin{frame}{ARIMA}
+    \begin{itemize}
+        \item \textbf{Objective:}
+        \item \textbf{Results:} 
+    \end{itemize}
+\end{frame}
+
+
+
+\section{Theory & Analyses}
+\begin{frame}{GARCH}
+    \begin{itemize}
+        \item \textbf{Objective:} 
+        \item \textbf{Results:} 
+    \end{itemize}
+\end{frame}
+
+
+
+
+\section{Theory & Analyses}
+\begin{frame}{Monte Carlo Simulation}
+    \begin{itemize}
+        \item \textbf{Objective:} 
+        \item \textbf{Results:} 
+    \end{itemize}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Conclusion}
 \begin{frame}{Conclusion}
     \begin{itemize}
-        \item \textbf{Future Directions:} We will explore optimal investment strategies tailored for Generation Z to accumulate housing down payments, incorporating modern financial theories and data-driven insights. Identified effective strategies such as diversified portfolios, the application of MPT, and lifecycle investing to navigate the unique financial challenges faced by Generation Z. Ongoing research will focus on refining these strategies and exploring their practical applications to further assist Generation Z in achieving their homeownership goals.
+        \item \textbf{Future Directions:} We will explore optimal investment strategies tailored for first-time homebuyers to accumulate housing down payments, incorporating modern financial theories and data-driven insights.
+        \item Identified effective strategies include diversified portfolios, the application of MPT, and lifecycle investing to navigate the unique financial challenges faced by first-time homebuyers.
+        \item Ongoing research will focus on refining these strategies and exploring their practical applications to further assist first-time homebuyers in achieving their homeownership goals.
     \end{itemize}
 \end{frame}
 
@@ -395,17 +262,10 @@
         \item Yahoo Finance. (n.d.). Retrieved from \url{https://finance.yahoo.com/}
         \item Robinhood. (n.d.). Retrieved from \url{https://robinhood.com/}
         \item Coinbase. (n.d.). Retrieved from \url{https://www.coinbase.com/}
-                \item U.S. Census Bureau. (n.d.). Generation Z data. Retrieved from \url{https://www.census.gov/}
         \item Investment Company Institute. (n.d.). Retrieved from \url{https://www.ici.org/}
         \item Sharpe, W. F. (1966). Mutual Fund Performance. Journal of Business, 39(1), 119-138.
         \item Markowitz, H. (1952). Portfolio Selection. Journal of Finance, 7(1), 77-91.
         \item Merton, R. C. (1973). Theory of Rational Option Pricing. Bell Journal of Economics and Management Science, 4(1), 141-183.
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{References (cont.)}
-    \begin{itemize}
-        \item Pew Research Center. (2019). Generation Z characteristics. Retrieved from \url{https://www.pewresearch.org/}
         \item National Center for Education Statistics. (2020). Student Loan Debt Statistics. Retrieved from \url{https://nces.ed.gov/}
         \item Federal Reserve Bank of New York. (2020). Household Debt and Credit Report. Retrieved from \url{https://www.newyorkfed.org/microeconomics/hhdc.html}
         \item U.S. Department of Housing and Urban Development. (2020). Housing Market Indicators. Retrieved from \url{https://www.huduser.gov/portal/datasets/hmi.html}
@@ -417,3 +277,4 @@
 \end{frame}
 
 \end{document}
+
