@@ -18,232 +18,474 @@
 
 \begin{document}
 
-\frame{\titlepage}
+\begin{frame}
+    \titlepage
+\end{frame}
 
-\begin{frame}{Roadmap}
+\begin{frame}{Agenda}
     \tableofcontents
 \end{frame}
 
 \section{Introduction}
 \begin{frame}{Introduction}
   \begin{itemize}
-    \textbf{Objective:** Develop investment strategies tailored to different age groups for first-time homebuyers to accumulate funds for down payments. 
-
-    \textbf{Motivation:** Rising housing costs pose a challenge for many first-time homebuyers, particularly younger individuals. This research aims to identify optimal investment strategies that can help people in various age groups save effectively for a down payment, ultimately accelerating their path to homeownership. (Consider adding a statistic about rising housing costs here)
-
+    \item \textbf{Objective:} To develop tailored investment strategies for different age groups of first-time homebuyers to accumulate funds for down payments.
+    \item \textbf{Motivation:} Rising housing costs present significant challenges for many first-time homebuyers, particularly younger individuals. This research aims to identify optimal investment strategies to help people in various age groups save effectively for a down payment, thereby accelerating their path to homeownership.
   \end{itemize}
 \end{frame}
-
 
 \section{Why First-time Homebuyers Need This Help}
-\begin{frame}{Statistics on Typical First-time Homebuyer}
+\begin{frame}{Typical First-time Homebuyer Profile}
   \begin{itemize}
-    \item **Average Age:** 35 years (as of 2023) [Source: National Association of Realtors (NAR)]
-    \item **Median Income:** \$95,900 (as of 2023) [Source: Self Financial]
-    \item **Marital Status:**
-        * 59% Married Couples [Source: National Association of Realtors (NAR)]
-        * 19% Single Females
-        * 10% Single Males
-        * 9% Unmarried Couples
-    \item **Challenges:**
-        * High student loan debt (national average: \$37,172 in 2023) [Source: EducationData.org]
-        * Rising housing costs exceeding income growth
-        * Difficulty saving a down payment
-    \item **Average Home Cost:** \$348,000 (2022 data) [Source: The Zebra] 
-    \item **Down Payment:**  
-        * **Average Saved:** \$8,220 (6% of average home price in 2023) [Source: Self Financial]
-        * **Typical Percentage:** 8% (may vary depending on loan type) [Source: National Association of Realtors (NAR)]
+    \item \textbf{Average Age:} 35 years (as of 2023)
+    \item \textbf{Median Income:} \$95,900 (as of 2023)
+    \item \textbf{Marital Status:}
+    \begin{itemize}
+        \item 59\% Married Couples
+        \item 19\% Single Females
+        \item 10\% Single Males
+        \item 9\% Unmarried Couples
+    \end{itemize}
+    \item \textbf{Challenges:}
+    \begin{itemize}
+        \item High student loan debt (national average: \$37,172 in 2023)
+        \item Rising housing costs exceeding income growth
+        \item Difficulty saving for a down payment
+    \end{itemize}
+    \item \textbf{Average Home Cost:} \$348,000 (2022 data)
+    \item \textbf{Down Payment:}
+    \begin{itemize}
+        \item \textbf{Average Saved:} \$8,220 (6\% of average home price in 2023)
+    \end{itemize}
   \end{itemize}
 \end{frame}
-
 
 \section{Data Sources and Analysis}
 \begin{frame}{Data Sources Utilized}
     \begin{itemize}
         \item \textbf{Yahoo Finance (YFinance):}
         \begin{itemize}
-            \item Comprehensive financial data on stocks, bonds, and other investment vehicles.
-        \end{itemize}
-        \item \textbf{Federal Reserve Economic Data (FRED):}
-        \begin{itemize}
-            \item Essential economic indicators such as inflation rates, interest rates, and unemployment statistics.
+            \item Comprehensive financial data on stocks, cryptocurrency, mutual funds, and ETFs.
         \end{itemize}
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Overview of Economic Indicators Data from FRED}
-  \begin{itemize}
-    \item Consumer Price Index (CPI) 
-    \item Producer Price Index (PPI) 
-    \item Unemployment Rate 
-    \item Gross Domestic Product (GDP) Growth 
-    \item Interest Rates 
-    \item Housing Starts
-    \item Existing Home Sales 
-  \end{itemize}
-\end{frame}
-
-
 \begin{frame}{Overview of Financial Data from Yahoo Finance}
     \begin{itemize}
-        \item \textbf{Stocks}
-        \item \textbf{Cryptocurrency}
-        \item \textbf{Mutual Funds}
-        \item \textbf{ETFs}
+        \item \textbf{Date Range:} 9/7/2014 to present (daily frequency)
+        \item \textbf{Data Fields:}
+        \begin{itemize}
+            \item \textbf{Open:} Price at the beginning of the trading day
+            \item \textbf{High:} Peak price during the trading day
+            \item \textbf{Low:} Lowest price during the trading day
+            \item \textbf{Close:} Price at the end of the trading day
+            \item \textbf{Adj Close:} Closing price adjusted for dividends, stock splits, etc.
+            \item \textbf{Volume:} Number of shares traded during a single trading day
+            \item \textbf{Type:} Security type
+        \end{itemize}
     \end{itemize}
 \end{frame}
 
 \section{Financial Literacy: Essential Concepts}
-\begin{frame}{Financial Literacy: Essential Concepts}
+\begin{frame}{Essential Financial Concepts}
     \begin{itemize}
         \item \textbf{Stocks:}
         \begin{itemize}
             \item Equity investments representing ownership in a company.
-            \item Example: Purchasing shares of Apple Inc. (AAPL).
+            \item \textbf{Example:} Purchasing shares of Apple Inc. (AAPL).
         \end{itemize}
         \item \textbf{Cryptocurrency:}
         \begin{itemize}
             \item Digital or virtual currencies that use cryptography for security.
-            \item Example: Bitcoin (BTC) and Ethereum (ETH).
+            \item \textbf{Example:} Bitcoin (BTC) and Ethereum (ETH).
         \end{itemize}
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Financial Literacy: Essential Concepts (cont.)}
+\begin{frame}{Essential Financial Concepts (cont.)}
     \begin{itemize}
         \item \textbf{Mutual Funds:}
         \begin{itemize}
             \item Investment vehicles that pool money from many investors to purchase a diversified portfolio of stocks, bonds, or other securities.
             \item Managed by professional fund managers.
-            \item Example: Vanguard 500 Index Fund.
+            \item \textbf{Example:} Vanguard 500 Index Fund.
         \end{itemize}
         \item \textbf{ETFs (Exchange-Traded Funds):}
         \begin{itemize}
             \item Similar to mutual funds but traded on stock exchanges like individual stocks.
             \item Provide diversification and are typically more cost-effective.
-            \item Example: SPDR S&P 500 ETF (SPY).
+            \item \textbf{Example:} SPDR S\&P 500 ETF (SPY).
         \end{itemize}
     \end{itemize}
 \end{frame}
 
 \section{Time Value of Money (TVM)}
-\begin{frame}{Time Value of Money (TVM)}
-  \begin{block}{Definition}
-    Time Value of Money (TVM) is the concept that money available today is worth more than the same amount in the future due to its potential earning capacity.
-
-    **Formula:** FV = PV * [1 + (i / n)]^(n x t)
-
-    where:
-      * FV = Future Value
-      * PV = Present Value
-      * i = Interest rate per period
-      * n = Number of compounding periods per year
-      * t = Number of years
+\begin{frame}{Understanding Time Value of Money (TVM)}
+  \begin{block}{Objective}
+    To understand the concept that money available today is worth more than the same amount in the future due to its potential earning capacity.
+  \end{block}
+  \begin{block}{Key Concepts}
+    \begin{itemize}
+      \item \textbf{Present Value (PV):} The current value of a future sum of money.
+      \item \textbf{Future Value (FV):} The value of a current sum of money at a future date, based on an assumed rate of growth.
+      \item \textbf{Discount Rate:} The rate used to discount future cash flows to their present value.
+    \end{itemize}
   \end{block}
 \end{frame}
 
-\begin{frame}{Using TVM for Housing Down Payments}
+\begin{frame}{Time Value of Money (TVM) - Formulas}
+  \begin{block}{Future Value Formula}
+    \begin{equation*}
+      FV = PV \times [1 + (i / n)]^{n \times t}
+    \end{equation*}
+    where:
     \begin{itemize}
-        \item \textbf{Monthly Savings Calculation:}
-        \begin{itemize}
-            \item Calculate the monthly savings required to reach a target down payment adjusted for inflation (CPI).
-            \item \textbf{Formula:}
-            \begin{equation*}
-                PMT = \frac{FV}{\left( \frac{(1 + r/12)^{12n} - 1}{r/12} \right)}
-            \end{equation*}
-            \item Example Calculation for Different Time Intervals:
-            \begin{itemize}
-                \item \textbf{5 Years:}
-                \begin{align*}
-                    FV &= 78000 \times (1 + \text{CPI})^5 \\
-                    PMT &= \frac{FV}{\left( \frac{(1 + 0.0218/12)^{60} - 1}{0.0218/12} \right)} \\
-                \end{align*}
-                \item \textbf{10 Years:}
-                \begin{align*}
-                    FV &= 78000 \times (1 + \text{CPI})^{10} \\
-                    PMT &= \frac{FV}{\left( \frac{(1 + 0.0218/12)^{120} - 1}{0.0218/12} \right)} \\
-                \end{align*}
-                \item \textbf{15 Years:}
-                \begin{align*}
-                    FV &= 78000 \times (1 + \text{CPI})^{15} \\
-                    PMT &= \frac{FV}{\left( \frac{(1 + 0.0218/12)^{180} - 1}{0.0218/12} \right)} \\
-                \end{align*}
-            \end{itemize}
-        \end{itemize}
+      \item \( FV \) = Future Value
+      \item \( PV \) = Present Value
+      \item \( i \) = Interest rate per period
+      \item \( n \) = Number of compounding periods per year
+      \item \( t \) = Number of years
     \end{itemize}
+  \end{block}
+  \begin{block}{Explanation}
+    This formula calculates the amount of money that an investment will grow to over a period of time when interest is compounded periodically. 
+  \end{block}
 \end{frame}
 
-
-
-\section{Theory & Analyses}
-\begin{frame}{Modern Portfolio Theory}
+\begin{frame}{Time Value of Money (TVM) - Present Value Formula}
+  \begin{block}{Present Value Formula}
+    \begin{equation*}
+      PV = \frac{FV}{[1 + (i / n)]^{n \times t}}
+    \end{equation*}
+    where:
     \begin{itemize}
-        \item \textbf{Objective:} 
-        \item \textbf{Results:} 
+      \item \( PV \) = Present Value
+      \item \( FV \) = Future Value
+      \item \( i \) = Interest rate per period
+      \item \( n \) = Number of compounding periods per year
+      \item \( t \) = Number of years
     \end{itemize}
+  \end{block}
+  \begin{block}{Explanation}
+    This formula determines the current worth of a sum of money to be received in the future, given a specific interest rate and compounding frequency.
+  \end{block}
 \end{frame}
 
-
-
-\section{Theory & Analyses}
-\begin{frame}{CAPM: Capital Asset Pricing Model}
+\begin{frame}{Time Value of Money (TVM) - Continuous Compounding}
+  \begin{block}{Continuous Compounding Formula}
+    \begin{equation*}
+      FV = PV \times e^{rt}
+    \end{equation*}
+    where:
     \begin{itemize}
-        \item \textbf{Objective:} 
-        \item \textbf{Results:} 
+      \item \( FV \) = Future Value
+      \item \( PV \) = Present Value
+      \item \( e \) = Euler's number (approximately 2.71828)
+      \item \( r \) = Annual interest rate
+      \item \( t \) = Time in years
     \end{itemize}
+  \end{block}
+  \begin{block}{Explanation}
+    This formula is used when interest is compounded continuously, as opposed to periodically.
+  \end{block}
 \end{frame}
 
-
-
-\section{Theory & Analyses}
-\begin{frame}{ARIMA}
-    \begin{itemize}
-        \item \textbf{Objective:}
-        \item \textbf{Results:} 
-    \end{itemize}
+\section{Modern Portfolio Theory (MPT)}
+\begin{frame}{Modern Portfolio Theory (MPT) - Overview}
+  \begin{block}{Overview}
+    Modern Portfolio Theory (MPT), introduced by Harry Markowitz, is a framework for constructing a portfolio of assets such that the expected return is maximized for a given level of risk. It emphasizes diversification to reduce risk.
+  \end{block}
 \end{frame}
 
-
-
-\section{Theory & Analyses}
-\begin{frame}{GARCH}
+\begin{frame}{Modern Portfolio Theory (MPT) - Key Assumptions}
+  \begin{block}{Key Assumptions}
     \begin{itemize}
-        \item \textbf{Objective:} 
-        \item \textbf{Results:} 
+      \item Investors are rational and risk-averse.
+      \item Markets are efficient, and all investors have access to the same information.
+      \item Asset returns are normally distributed.
+      \item There are no transaction costs or taxes.
     \end{itemize}
+  \end{block}
 \end{frame}
 
-
-
-
-\section{Theory & Analyses}
-\begin{frame}{Monte Carlo Simulation}
+\begin{frame}{Step 1: Define Assets and Expected Returns}
+  \begin{block}{Expected Returns}
+    Identify the assets you want to include in the portfolio and estimate their expected returns (\(E(R_i)\)). This involves analyzing historical data, considering economic conditions, and using financial models.
+    \begin{equation*}
+      E(R_i) = \text{Expected return of asset } i
+    \end{equation*}
+    Example: 
     \begin{itemize}
-        \item \textbf{Objective:} 
-        \item \textbf{Results:} 
+      \item Asset A: \(E(R_A) = 10\%\)
+      \item Asset B: \(E(R_B) = 15\%\)
     \end{itemize}
+  \end{block}
 \end{frame}
 
+\begin{frame}{Step 2: Determine Asset Weights}
+  \begin{block}{Weights}
+    Decide on the proportion (\(w_i\)) of the total investment to allocate to each asset. The sum of the weights should equal 1.
+    \begin{equation*}
+      w_i = \text{Weight of asset } i
+    \end{equation*}
+    Example:
+    \begin{itemize}
+      \item Weight of Asset A: \(w_A = 60\%\)
+      \item Weight of Asset B: \(w_B = 40\%\)
+    \end{itemize}
+  \end{block}
+\end{frame}
 
+\begin{frame}{Step 3: Calculate Portfolio's Expected Return}
+  \begin{block}{Expected Return of Portfolio}
+    The expected return of the portfolio (\(E(R_p)\)) is the weighted sum of the expected returns of the individual assets.
+    \begin{equation*}
+      E(R_p) = \sum_{i=1}^{n} w_i E(R_i)
+    \end{equation*}
+    where:
+    \begin{itemize}
+      \item \( E(R_p) \) = Expected return of the portfolio
+      \item \( w_i \) = Weight of asset \( i \) in the portfolio
+      \item \( E(R_i) \) = Expected return of asset \( i \)
+    \end{itemize}
+    Example Calculation:
+    \begin{equation*}
+      E(R_p) = (0.60 \times 0.10) + (0.40 \times 0.15) = 0.12 \text{ or 12\%}
+    \end{equation*}
+  \end{block}
+\end{frame}
 
+\begin{frame}{Step 4: Calculate Covariances Between Assets}
+  \begin{block}{Covariance}
+    Covariance measures how two assets move together. A positive covariance means that the assets tend to move in the same direction, while a negative covariance means they move in opposite directions.
+    \begin{equation*}
+      \sigma_{ij} = \text{Cov}(R_i, R_j) = \mathbb{E}[(R_i - \mathbb{E}[R_i])(R_j - \mathbb{E}[R_j])]
+    \end{equation*}
+    Example:
+    \begin{itemize}
+      \item Covariance between Asset A and Asset B: \(\sigma_{AB} = 0.02\)
+    \end{itemize}
+  \end{block}
+\end{frame}
 
+\begin{frame}{Step 5: Calculate Portfolio's Variance (Risk)}
+  \begin{block}{Variance of Portfolio}
+    The variance (\(\sigma_p^2\)) of the portfolio's return is determined by the variances of the individual assets and the covariances between them.
+    \begin{equation*}
+      \sigma_p^2 = \sum_{i=1}^{n} \sum_{j=1}^{n} w_i w_j \sigma_{ij}
+    \end{equation*}
+    where:
+    \begin{itemize}
+      \item \( \sigma_p^2 \) = Variance of the portfolio's return
+      \item \( w_i \) = Weight of asset \( i \) in the portfolio
+      \item \( \sigma_{ij} \) = Covariance between asset \( i \) and asset \( j \)
+    \end{itemize}
+    Example Calculation:
+    \begin{equation*}
+      \sigma_p^2 = (0.60)^2 \times 0.04 + (0.40)^2 \times 0.09 + 2 \times 0.60 \times 0.40 \times 0.02 = 0.0384
+    \end{equation*}
+  \end{block}
+\end{frame}
 
+\begin{frame}{Step 6: Calculate Correlation Between Assets}
+  \begin{block}{Correlation}
+    Correlation is a standardized measure of covariance that ranges from -1 to 1.
+    \begin{equation*}
+      \rho_{ij} = \frac{\sigma_{ij}}{\sigma_i \sigma_j}
+    \end{equation*}
+    where:
+    \begin{itemize}
+      \item \( \rho_{ij} \) = Correlation coefficient between asset \( i \) and asset \( j \)
+      \item \( \sigma_{ij} \) = Covariance between asset \( i \) and asset \( j \)
+      \item \( \sigma_i \) = Standard deviation of asset \( i \)
+      \item \( \sigma_j \) = Standard deviation of asset \( j \)
+    \end{itemize}
+    Example:
+    \begin{itemize}
+      \item Correlation between Asset A and Asset B: \(\rho_{AB} = \frac{0.02}{\sqrt{0.04} \cdot \sqrt{0.09}} = 0.333\)
+    \end{itemize}
+  \end{block}
+\end{frame}
 
+\begin{frame}{Step 7: Optimize the Portfolio}
+  \begin{block}{Optimization}
+    Adjust the weights of the assets to maximize the portfolio's expected return for a given level of risk or to minimize risk for a given level of expected return. This is done by solving the optimization problem:
+    \begin{equation*}
+      \min \sigma_p^2 = \sum_{i=1}^{n} \sum_{j=1}^{n} w_i w_j \sigma_{ij}
+    \end{equation*}
+    subject to:
+    \begin{equation*}
+      \sum_{i=1}^{n} w_i = 1 \quad \text{and} \quad E(R_p) = \sum_{i=1}^{n} w_i E(R_i)
+    \end{equation*}
+    Example:
+    \begin{itemize}
+      \item Adjust weights \(w_i\) to find the optimal portfolio that minimizes risk for a given expected return.
+    \end{itemize}
+  \end{block}
+\end{frame}
 
+\begin{frame}{Step 8: Construct the Efficient Frontier}
+  \begin{block}{Efficient Frontier}
+    The efficient frontier represents the set of optimal portfolios that offer the highest expected return for a given level of risk. By solving the optimization problem repeatedly for different levels of expected return, you can plot the efficient frontier.
+    \begin{itemize}
+      \item Plot the portfolios on a graph with risk (standard deviation) on the x-axis and expected return on the y-axis.
+    \end{itemize}
+    Example:
+    \begin{itemize}
+      \item The curve shows the optimal portfolios, with points above the curve being unachievable and points below the curve being inefficient.
+    \end{itemize}
+  \end{block}
+\end{frame}
 
+\section{CAPM: Capital Asset Pricing Model}
+\begin{frame}{Transition from MPT to CAPM}
+  \begin{block}{From MPT to CAPM}
+    While Modern Portfolio Theory (MPT) focuses on the construction of optimal portfolios based on diversification and risk-return trade-offs, the Capital Asset Pricing Model (CAPM) builds on this by explaining the relationship between systematic risk and expected return for individual assets.
+    \begin{itemize}
+      \item MPT provides the foundation for understanding the benefits of diversification.
+      \item CAPM extends this by quantifying the expected return of an asset given its systematic risk.
+    \end{itemize}
+  \end{block}
+\end{frame}
 
+\begin{frame}{Capital Asset Pricing Model (CAPM) - Key Assumptions}
+  \begin{block}{Key Assumptions}
+    \begin{itemize}
+      \item Investors hold diversified portfolios.
+      \item Markets are efficient, and all investors have access to the same information.
+      \item There are no taxes or transaction costs.
+      \item The risk-free rate is constant.
+    \end{itemize}
+  \end{block}
+\end{frame}
 
+\begin{frame}{Step 1: Identify Risk-Free Rate}
+  \begin{block}{Risk-Free Rate (\(R_f\))}
+    The risk-free rate is the return on an investment with zero risk, typically represented by government bonds.
+    \begin{equation*}
+      R_f = \text{Risk-free rate}
+    \end{equation*}
+    Example:
+    \begin{itemize}
+      \item Assume the risk-free rate is 3\%.
+    \end{itemize}
+  \end{block}
+\end{frame}
 
+\begin{frame}{Step 2: Determine Market Return}
+  \begin{block}{Market Return (\(E(R_m)\))}
+    The expected return of the market is the average return of the market portfolio, which includes all investable assets.
+    \begin{equation*}
+      E(R_m) = \text{Expected return of the market}
+    \end{equation*}
+    Example:
+    \begin{itemize}
+      \item Assume the expected market return is 8\%.
+    \end{itemize}
+  \end{block}
+\end{frame}
 
+\begin{frame}{Step 3: Calculate Asset Beta}
+  \begin{block}{Beta (\(\beta\))}
+    Beta is a measure of an asset's volatility relative to the overall market. It indicates the asset's systematic risk.
+    \begin{equation*}
+      \beta_i = \frac{\text{Cov}(R_i, R_m)}{\sigma_m^2}
+    \end{equation*}
+    where:
+    \begin{itemize}
+      \item \( \text{Cov}(R_i, R_m) \) = Covariance of asset \( i \) with the market
+      \item \( \sigma_m^2 \) = Variance of the market returns
+    \end{itemize}
+    Example Calculation:
+    \begin{equation*}
+      \beta_i = \frac{0.015}{0.02} = 0.75
+    \end{equation*}
+  \end{block}
+\end{frame}
 
+\begin{frame}{Step 4: Calculate Expected Return Using CAPM Formula}
+  \begin{block}{CAPM Formula}
+    The CAPM formula calculates the expected return of an asset based on its systematic risk (beta).
+    \begin{equation*}
+      E(R_i) = R_f + \beta_i (E(R_m) - R_f)
+    \end{equation*}
+    where:
+    \begin{itemize}
+      \item \( E(R_i) \) = Expected return of asset \( i \)
+      \item \( R_f \) = Risk-free rate
+      \item \( \beta_i \) = Beta of asset \( i \)
+      \item \( E(R_m) \) = Expected return of the market
+    \end{itemize}
+    Example Calculation:
+    \begin{equation*}
+      E(R_i) = 3\% + 0.75 (8\% - 3\%) = 6.75\%
+    \end{equation*}
+  \end{block}
+\end{frame}
 
+\begin{frame}{Step 5: Plot the Security Market Line (SML)}
+  \begin{block}{Security Market Line (SML)}
+    The Security Market Line (SML) is a graphical representation of the CAPM. It plots the expected return of an asset against its beta.
+    \begin{equation*}
+      E(R_i) = R_f + \beta_i (E(R_m) - R_f)
+    \end{equation*}
+    \begin{itemize}
+      \item The y-intercept represents the risk-free rate (\(R_f\)).
+      \item The slope represents the market risk premium (\(E(R_m) - R_f\)).
+    \end{itemize}
+  \end{block}
+  \begin{block}{Explanation}
+    The SML illustrates the trade-off between risk and return for efficient portfolios. Assets plotted above the SML are considered undervalued, while those below the SML are considered overvalued.
+  \end{block}
+\end{frame}
 
+\begin{frame}{Step 6: Interpret the Results}
+  \begin{block}{Interpreting the CAPM}
+    Use the CAPM results to make informed investment decisions.
+    \begin{itemize}
+      \item Compare the expected return calculated by CAPM with the actual return of the asset.
+      \item Determine if the asset is fairly valued, undervalued, or overvalued based on its position relative to the SML.
+    \end{itemize}
+    Example:
+    \begin{itemize}
+      \item If the actual return of an asset is 8\% but the CAPM expected return is 6.75\%, the asset may be undervalued.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\section{Monte Carlo Simulation}
+\begin{frame}{Transition from CAPM to Monte Carlo Simulation}
+  \begin{block}{From CAPM to Monte Carlo Simulation}
+    While the Capital Asset Pricing Model (CAPM) helps in understanding the relationship between systematic risk and expected return, Monte Carlo Simulation provides a robust method for modeling the probability of different outcomes by incorporating randomness and uncertainty.
+    \begin{itemize}
+      \item CAPM gives a deterministic expected return for a given risk level.
+      \item Monte Carlo Simulation introduces stochastic processes to evaluate the range of possible outcomes, providing a more comprehensive risk assessment.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Monte Carlo Simulation - Formula}
+  \begin{block}{Formula}
+    \begin{equation*}
+      \text{E}(X) = \frac{1}{N} \sum_{i=1}^{N} f(X_i)
+    \end{equation*}
+    where:
+    \begin{itemize}
+      \item \( \text{E}(X) \) = Expected value of the outcome
+      \item \( N \) = Number of simulations
+      \item \( f(X_i) \) = Function of the simulated variable \( X_i \)
+    \end{itemize}
+  \end{block}
+  \begin{block}{Explanation}
+    Monte Carlo Simulation uses repeated random sampling to obtain numerical results. The function \( f(X_i) \) represents the process being simulated. \( \text{E}(X) \) is the average result of all simulations.
+  \end{block}
+\end{frame}
 
 \section{Conclusion}
 \begin{frame}{Conclusion}
     \begin{itemize}
-        \item \textbf{Future Directions:} We will explore optimal investment strategies tailored for first-time homebuyers to accumulate housing down payments, incorporating modern financial theories and data-driven insights.
-        \item Identified effective strategies include diversified portfolios, the application of MPT, and lifecycle investing to navigate the unique financial challenges faced by first-time homebuyers.
+        \item \textbf{Future Directions:} Explore optimal investment strategies tailored for first-time homebuyers to accumulate housing down payments, incorporating modern financial theories and data-driven insights.
+        \item Effective strategies include diversified portfolios, the application of MPT, and lifecycle investing to navigate the unique financial challenges faced by first-time homebuyers.
         \item Ongoing research will focus on refining these strategies and exploring their practical applications to further assist first-time homebuyers in achieving their homeownership goals.
     \end{itemize}
 \end{frame}
@@ -256,25 +498,24 @@
 \end{frame}
 
 \section{References}
-\begin{frame}{References}
+\begin{frame}{References (1/2)}
     \begin{itemize}
-        \item Federal Reserve Economic Data (FRED). (n.d.). Retrieved from \url{https://fred.stlouisfed.org/}
         \item Yahoo Finance. (n.d.). Retrieved from \url{https://finance.yahoo.com/}
         \item Robinhood. (n.d.). Retrieved from \url{https://robinhood.com/}
         \item Coinbase. (n.d.). Retrieved from \url{https://www.coinbase.com/}
         \item Investment Company Institute. (n.d.). Retrieved from \url{https://www.ici.org/}
-        \item Sharpe, W. F. (1966). Mutual Fund Performance. Journal of Business, 39(1), 119-138.
-        \item Markowitz, H. (1952). Portfolio Selection. Journal of Finance, 7(1), 77-91.
-        \item Merton, R. C. (1973). Theory of Rational Option Pricing. Bell Journal of Economics and Management Science, 4(1), 141-183.
-        \item National Center for Education Statistics. (2020). Student Loan Debt Statistics. Retrieved from \url{https://nces.ed.gov/}
-        \item Federal Reserve Bank of New York. (2020). Household Debt and Credit Report. Retrieved from \url{https://www.newyorkfed.org/microeconomics/hhdc.html}
-        \item U.S. Department of Housing and Urban Development. (2020). Housing Market Indicators. Retrieved from \url{https://www.huduser.gov/portal/datasets/hmi.html}
-        \item Betterment. (n.d.). Retrieved from \url{https://www.betterment.com/}
-        \item Wealthfront. (n.d.). Retrieved from \url{https://www.wealthfront.com/}
-        \item eToro. (n.d.). Retrieved from \url{https://www.etoro.com/}
-        \item ZuluTrade. (n.d.). Retrieved from \url{https://www.zulutrade.com/}
+        \item Sharpe, W. F. (1966). Mutual Fund Performance. \textit{Journal of Business, 39}(1), 119-138.
+        \item Markowitz, H. (1952). Portfolio Selection. \textit{Journal of Finance, 7}(1), 77-91.
+        \item Merton, R. C. (1973). Theory of Rational Option Pricing. \textit{Bell Journal of Economics and Management Science, 4}(1), 141-183.
+        \item Ulam, S. (1987). Adventures of a Mathematician. \textit{Charles Scribner's Sons}.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{References (2/2)}
+    \begin{itemize}
+        \item National Association of Realtors. (2023). 2023 Home Buyer and Seller Generational Trends. Retrieved from \url{https://www.nar.realtor/research-and-statistics/research-reports/home-buyer-and-seller-generational-trends}
+        \item Federal Reserve. (2023). Report on the Economic Well-Being of U.S. Households in 2023. Retrieved from \url{https://www.federalreserve.gov/publications/2023-economic-well-being-of-us-households-in-2023.htm}
     \end{itemize}
 \end{frame}
 
 \end{document}
-
