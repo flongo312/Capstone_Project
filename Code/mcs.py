@@ -1,25 +1,26 @@
-import numpy as np
 import matplotlib.pyplot as plt
 
-# Parameters for Monte Carlo simulation
-num_simulations = 1000
-num_days = 252  # 1 year of trading days
-drift = 0.001
-volatility = 0.02
+# Monte Carlo simulation
+def monte_carlo_simulation(mean_returns, cov_matrix, num_simulations, num_days, weights):
+    results = np.zeros((num_simulations, 3))
+    for i in range(num_simulations):
+        daily_returns = np.random.multivariate_normal(mean_returns, cov_matrix, num_days)
+        portfolio_returns = np.dot(daily_returns, weights)
+        sim_returns = np.sum(portfolio_returns)
+        sim_std = np.std(portfolio_returns)
+        results[i, 0] = sim_returns
+        results[i, 1] = sim_std
+        results[i, 2] = (sim_returns - risk_free_rate.mean() * num_days) / sim_std
+    return results
 
-# Simulate stock price paths
-np.random.seed(42)
-simulated_paths = np.zeros((num_days, num_simulations))
-simulated_paths[0] = 100  # Starting price
+num_simulations = 10000
+num_days = 252  # 1 year
 
-for t in range(1, num_days):
-    random_shocks = np.random.normal(loc=drift, scale=volatility, size=num_simulations)
-    simulated_paths[t] = simulated_paths[t-1] * np.exp(random_shocks)
+simulation_results = monte_carlo_simulation(mean_returns, cov_matrix, num_simulations, num_days, optimal_weights)
 
-# Plot the Monte Carlo simulation results
-plt.figure(figsize=(14, 7))
-plt.plot(simulated_paths, lw=0.5)
-plt.xlabel('Day')
-plt.ylabel('Simulated Stock Price')
-plt.title('Monte Carlo Simulation of Stock Prices')
+plt.hist(simulation_results[:, 0], bins=50, alpha=0.7, label='Simulated Portfolio Returns')
+plt.title('Monte Carlo Simulation of Portfolio Returns')
+plt.xlabel('Portfolio Return')
+plt.ylabel('Frequency')
+plt.legend()
 plt.show()

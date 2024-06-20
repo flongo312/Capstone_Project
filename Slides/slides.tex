@@ -119,74 +119,109 @@
     \end{itemize}
 \end{frame}
 
-\section{Time Value of Money (TVM)}
-\begin{frame}{Understanding Time Value of Money (TVM)}
-  \begin{block}{Objective}
-    To understand the concept that money available today is worth more than the same amount in the future due to its potential earning capacity.
-  \end{block}
-  \begin{block}{Key Concepts}
+\section{CAPM: Capital Asset Pricing Model}
+\begin{frame}{Capital Asset Pricing Model (CAPM) - Key Assumptions}
+  \begin{block}{Key Assumptions}
     \begin{itemize}
-      \item \textbf{Present Value (PV):} The current value of a future sum of money.
-      \item \textbf{Future Value (FV):} The value of a current sum of money at a future date, based on an assumed rate of growth.
-      \item \textbf{Discount Rate:} The rate used to discount future cash flows to their present value.
+      \item Investors hold diversified portfolios.
+      \item Markets are efficient, and all investors have access to the same information.
+      \item There are no taxes or transaction costs.
+      \item The risk-free rate is constant.
     \end{itemize}
   \end{block}
 \end{frame}
 
-\begin{frame}{Time Value of Money (TVM) - Formulas}
-  \begin{block}{Future Value Formula}
+\begin{frame}{Step 1: Identify Risk-Free Rate}
+  \begin{block}{Risk-Free Rate (\(R_f\))}
+    The risk-free rate is the return on an investment with zero risk, typically represented by government bonds.
     \begin{equation*}
-      FV = PV \times [1 + (i / n)]^{n \times t}
+      R_f = \text{Risk-free rate}
     \end{equation*}
-    where:
+    Example:
     \begin{itemize}
-      \item \( FV \) = Future Value
-      \item \( PV \) = Present Value
-      \item \( i \) = Interest rate per period
-      \item \( n \) = Number of compounding periods per year
-      \item \( t \) = Number of years
+      \item Assume the risk-free rate is 3\%.
     \end{itemize}
-  \end{block}
-  \begin{block}{Explanation}
-    This formula calculates the amount of money that an investment will grow to over a period of time when interest is compounded periodically. 
   \end{block}
 \end{frame}
 
-\begin{frame}{Time Value of Money (TVM) - Present Value Formula}
-  \begin{block}{Present Value Formula}
+\begin{frame}{Step 2: Determine Market Return}
+  \begin{block}{Market Return (\(E(R_m)\))}
+    The expected return of the market is the average return of the market portfolio, which includes all investable assets.
     \begin{equation*}
-      PV = \frac{FV}{[1 + (i / n)]^{n \times t}}
+      E(R_m) = \text{Expected return of the market}
     \end{equation*}
-    where:
+    Example:
     \begin{itemize}
-      \item \( PV \) = Present Value
-      \item \( FV \) = Future Value
-      \item \( i \) = Interest rate per period
-      \item \( n \) = Number of compounding periods per year
-      \item \( t \) = Number of years
+      \item Assume the expected market return is 8\%.
     \end{itemize}
-  \end{block}
-  \begin{block}{Explanation}
-    This formula determines the current worth of a sum of money to be received in the future, given a specific interest rate and compounding frequency.
   \end{block}
 \end{frame}
 
-\begin{frame}{Time Value of Money (TVM) - Continuous Compounding}
-  \begin{block}{Continuous Compounding Formula}
+\begin{frame}{Step 3: Calculate Asset Beta}
+  \begin{block}{Beta (\(\beta\))}
+    Beta is a measure of an asset's volatility relative to the overall market. It indicates the asset's systematic risk.
     \begin{equation*}
-      FV = PV \times e^{rt}
+      \beta_i = \frac{\text{Cov}(R_i, R_m)}{\sigma_m^2}
     \end{equation*}
     where:
     \begin{itemize}
-      \item \( FV \) = Future Value
-      \item \( PV \) = Present Value
-      \item \( e \) = Euler's number (approximately 2.71828)
-      \item \( r \) = Annual interest rate
-      \item \( t \) = Time in years
+      \item \( \text{Cov}(R_i, R_m) \) = Covariance of asset \( i \) with the market
+      \item \( \sigma_m^2 \) = Variance of the market returns
+    \end{itemize}
+    Example Calculation:
+    \begin{equation*}
+      \beta_i = \frac{0.015}{0.02} = 0.75
+    \end{equation*}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Step 4: Calculate Expected Return Using CAPM Formula}
+  \begin{block}{CAPM Formula}
+    The CAPM formula calculates the expected return of an asset based on its systematic risk (beta).
+    \begin{equation*}
+      E(R_i) = R_f + \beta_i (E(R_m) - R_f)
+    \end{equation*}
+    where:
+    \begin{itemize}
+      \item \( E(R_i) \) = Expected return of asset \( i \)
+      \item \( R_f \) = Risk-free rate
+      \item \( \beta_i \) = Beta of asset \( i \)
+      \item \( E(R_m) \) = Expected return of the market
+    \end{itemize}
+    Example Calculation:
+    \begin{equation*}
+      E(R_i) = 3\% + 0.75 (8\% - 3\%) = 6.75\%
+    \end{equation*}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Step 5: Plot the Security Market Line (SML)}
+  \begin{block}{Security Market Line (SML)}
+    The Security Market Line (SML) is a graphical representation of the CAPM. It plots the expected return of an asset against its beta.
+    \begin{equation*}
+      E(R_i) = R_f + \beta_i (E(R_m) - R_f)
+    \end{equation*}
+    \begin{itemize}
+      \item The y-intercept represents the risk-free rate (\(R_f\)).
+      \item The slope represents the market risk premium (\(E(R_m) - R_f\)).
     \end{itemize}
   \end{block}
   \begin{block}{Explanation}
-    This formula is used when interest is compounded continuously, as opposed to periodically.
+    The SML illustrates the trade-off between risk and return for efficient portfolios. Assets plotted above the SML are considered undervalued, while those below the SML are considered overvalued.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Step 6: Interpret the Results}
+  \begin{block}{Interpreting the CAPM}
+    Use the CAPM results to make informed investment decisions.
+    \begin{itemize}
+      \item Compare the expected return calculated by CAPM with the actual return of the asset.
+      \item Determine if the asset is fairly valued, undervalued, or overvalued based on its position relative to the SML.
+    \end{itemize}
+    Example:
+    \begin{itemize}
+      \item If the actual return of an asset is 8\% but the CAPM expected return is 6.75\%, the asset may be undervalued.
+    \end{itemize}
   \end{block}
 \end{frame}
 
@@ -337,128 +372,11 @@
   \end{block}
 \end{frame}
 
-\section{CAPM: Capital Asset Pricing Model}
-\begin{frame}{Transition from MPT to CAPM}
-  \begin{block}{From MPT to CAPM}
-    While Modern Portfolio Theory (MPT) focuses on the construction of optimal portfolios based on diversification and risk-return trade-offs, the Capital Asset Pricing Model (CAPM) builds on this by explaining the relationship between systematic risk and expected return for individual assets.
-    \begin{itemize}
-      \item MPT provides the foundation for understanding the benefits of diversification.
-      \item CAPM extends this by quantifying the expected return of an asset given its systematic risk.
-    \end{itemize}
-  \end{block}
-\end{frame}
-
-\begin{frame}{Capital Asset Pricing Model (CAPM) - Key Assumptions}
-  \begin{block}{Key Assumptions}
-    \begin{itemize}
-      \item Investors hold diversified portfolios.
-      \item Markets are efficient, and all investors have access to the same information.
-      \item There are no taxes or transaction costs.
-      \item The risk-free rate is constant.
-    \end{itemize}
-  \end{block}
-\end{frame}
-
-\begin{frame}{Step 1: Identify Risk-Free Rate}
-  \begin{block}{Risk-Free Rate (\(R_f\))}
-    The risk-free rate is the return on an investment with zero risk, typically represented by government bonds.
-    \begin{equation*}
-      R_f = \text{Risk-free rate}
-    \end{equation*}
-    Example:
-    \begin{itemize}
-      \item Assume the risk-free rate is 3\%.
-    \end{itemize}
-  \end{block}
-\end{frame}
-
-\begin{frame}{Step 2: Determine Market Return}
-  \begin{block}{Market Return (\(E(R_m)\))}
-    The expected return of the market is the average return of the market portfolio, which includes all investable assets.
-    \begin{equation*}
-      E(R_m) = \text{Expected return of the market}
-    \end{equation*}
-    Example:
-    \begin{itemize}
-      \item Assume the expected market return is 8\%.
-    \end{itemize}
-  \end{block}
-\end{frame}
-
-\begin{frame}{Step 3: Calculate Asset Beta}
-  \begin{block}{Beta (\(\beta\))}
-    Beta is a measure of an asset's volatility relative to the overall market. It indicates the asset's systematic risk.
-    \begin{equation*}
-      \beta_i = \frac{\text{Cov}(R_i, R_m)}{\sigma_m^2}
-    \end{equation*}
-    where:
-    \begin{itemize}
-      \item \( \text{Cov}(R_i, R_m) \) = Covariance of asset \( i \) with the market
-      \item \( \sigma_m^2 \) = Variance of the market returns
-    \end{itemize}
-    Example Calculation:
-    \begin{equation*}
-      \beta_i = \frac{0.015}{0.02} = 0.75
-    \end{equation*}
-  \end{block}
-\end{frame}
-
-\begin{frame}{Step 4: Calculate Expected Return Using CAPM Formula}
-  \begin{block}{CAPM Formula}
-    The CAPM formula calculates the expected return of an asset based on its systematic risk (beta).
-    \begin{equation*}
-      E(R_i) = R_f + \beta_i (E(R_m) - R_f)
-    \end{equation*}
-    where:
-    \begin{itemize}
-      \item \( E(R_i) \) = Expected return of asset \( i \)
-      \item \( R_f \) = Risk-free rate
-      \item \( \beta_i \) = Beta of asset \( i \)
-      \item \( E(R_m) \) = Expected return of the market
-    \end{itemize}
-    Example Calculation:
-    \begin{equation*}
-      E(R_i) = 3\% + 0.75 (8\% - 3\%) = 6.75\%
-    \end{equation*}
-  \end{block}
-\end{frame}
-
-\begin{frame}{Step 5: Plot the Security Market Line (SML)}
-  \begin{block}{Security Market Line (SML)}
-    The Security Market Line (SML) is a graphical representation of the CAPM. It plots the expected return of an asset against its beta.
-    \begin{equation*}
-      E(R_i) = R_f + \beta_i (E(R_m) - R_f)
-    \end{equation*}
-    \begin{itemize}
-      \item The y-intercept represents the risk-free rate (\(R_f\)).
-      \item The slope represents the market risk premium (\(E(R_m) - R_f\)).
-    \end{itemize}
-  \end{block}
-  \begin{block}{Explanation}
-    The SML illustrates the trade-off between risk and return for efficient portfolios. Assets plotted above the SML are considered undervalued, while those below the SML are considered overvalued.
-  \end{block}
-\end{frame}
-
-\begin{frame}{Step 6: Interpret the Results}
-  \begin{block}{Interpreting the CAPM}
-    Use the CAPM results to make informed investment decisions.
-    \begin{itemize}
-      \item Compare the expected return calculated by CAPM with the actual return of the asset.
-      \item Determine if the asset is fairly valued, undervalued, or overvalued based on its position relative to the SML.
-    \end{itemize}
-    Example:
-    \begin{itemize}
-      \item If the actual return of an asset is 8\% but the CAPM expected return is 6.75\%, the asset may be undervalued.
-    \end{itemize}
-  \end{block}
-\end{frame}
-
 \section{Monte Carlo Simulation}
-\begin{frame}{Transition from CAPM to Monte Carlo Simulation}
-  \begin{block}{From CAPM to Monte Carlo Simulation}
-    While the Capital Asset Pricing Model (CAPM) helps in understanding the relationship between systematic risk and expected return, Monte Carlo Simulation provides a robust method for modeling the probability of different outcomes by incorporating randomness and uncertainty.
+\begin{frame}{Transition from MPT to Monte Carlo Simulation}
+  \begin{block}{From MPT to Monte Carlo Simulation}
+    While the MPT helps in understanding.....(insert info here), Monte Carlo Simulation provides a robust method for modeling the probability of different outcomes by incorporating randomness and uncertainty.
     \begin{itemize}
-      \item CAPM gives a deterministic expected return for a given risk level.
       \item Monte Carlo Simulation introduces stochastic processes to evaluate the range of possible outcomes, providing a more comprehensive risk assessment.
     \end{itemize}
   \end{block}
