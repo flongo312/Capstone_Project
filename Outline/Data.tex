@@ -1,5 +1,4 @@
 \section{Data}
-
 \subsection{Data Sources}
 The financial data used in this research is sourced from Yahoo Finance, which includes comprehensive information on various securities such as stocks, cryptocurrencies, mutual funds, and ETFs. These data sources provide a rich dataset for analyzing the performance of different investment vehicles over time.
 
@@ -9,14 +8,15 @@ The data covers the period from September 7, 2014, to the present, with a daily 
 \subsection{Data Fields}
 The dataset includes the following fields:
 \begin{itemize}
-    \item \textbf{Open:} Price at the beginning of the trading day.
-    \item \textbf{High:} Peak price during the trading day.
-    \item \textbf{Low:} Lowest price during the trading day.
-    \item \textbf{Close:} Price at the end of the trading day.
-    \item \textbf{Adj Close:} Closing price adjusted for dividends, stock splits, etc.
-    \item \textbf{Volume:} Number of shares traded during a single trading day.
-    \item \textbf{Type:} Security type (e.g., stock, ETF, cryptocurrency).
+    \item \textbf{Open}: Price at the beginning of the trading day.
+    \item \textbf{High}: Peak price during the trading day.
+    \item \textbf{Low}: Lowest price during the trading day.
+    \item \textbf{Close}: Price at the end of the trading day.
+    \item \textbf{Adj Close}: Closing price adjusted for dividends, stock splits, etc.
+    \item \textbf{Volume}: Number of shares traded during a single trading day.
+    \item \textbf{Type}: Security type (e.g., stock, ETF, cryptocurrency).
 \end{itemize}
+
 These fields provide a comprehensive view of the daily trading activities and price movements of different securities, essential for the analysis of investment performance and strategy development.
 
 \subsection{Data Collection and Processing}
@@ -25,14 +25,17 @@ The data collection process involves using Python and the Yahoo Finance API to d
 \subsection{CAPM and Sharpe Ratio Calculation}
 For each security, the Capital Asset Pricing Model (CAPM) and Sharpe Ratio are calculated. The CAPM is used to estimate the expected return of each security, while the Sharpe Ratio measures the risk-adjusted return. The steps involved are:
 \begin{enumerate}
-    \item Calculate the average return of the market index (e.g., S&P 500).
+    \item Calculate the average return of the market index (e.g., a broad market index like the S\&P 500).
     \item Determine the risk-free rate (e.g., the yield on 10-year U.S. Treasury bonds).
-    \item Compute the beta (\(\beta\)) of each security by regressing its returns against the market returns.
+    \item Compute the beta ($\beta$) of each security by regressing its returns against the market returns.
     \item Use the CAPM formula to estimate the expected return for each security.
     \item Calculate the Sharpe Ratio using the formula:
-    \[ S = \frac{E(R_i) - R_f}{\sigma_i} \]
-    where \( E(R_i) \) is the expected return, \( R_f \) is the risk-free rate, and \( \sigma_i \) is the standard deviation of the security's excess return.
+    \[
+    S = \frac{E(R_i) - R_f}{\sigma_i}
+    \]
+    where \( E(R_i) \) is the expected return, \( R_f \) is the risk-free rate, and \( \sigma_i \) is the standard deviation of the security’s excess return.
 \end{enumerate}
+
 The securities are then ranked by their Sharpe Ratios to identify those with the best risk-adjusted returns.
 
 \subsection{Modern Portfolio Theory (MPT) Application}
