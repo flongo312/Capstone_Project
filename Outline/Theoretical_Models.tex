@@ -18,7 +18,7 @@ Beta ($\beta_i$) measures the volatility of an asset in relation to the market. 
 where \(\text{Cov}(R_i, R_m)\) is the covariance between the asset return \( R_i \) and the market return \( R_m \), and \( \sigma^2_m \) is the variance of the market return.
 
 \subsubsection{Security Market Line (SML)}
-The Security Market Line (SML) is a graphical representation of the Capital Asset Pricing Model (CAPM), showcasing the relationship between the expected return of an asset and its systematic risk, as measured by beta ($\beta_i$). The SML illustrates the expected return of a security at different levels of systematic risk. The equation of the SML is given by CAPM:
+The Security Market Line (SML) is a graphical representation of the Capital Asset Pricing Model (CAPM), showcasing the relationship between the expected return of an asset and its systematic risk, as measured by beta ($\beta_i$) \citep{wikiSML}. The SML illustrates the expected return of a security at different levels of systematic risk. The equation of the SML is given by CAPM:
 
 \[
 E(R_i) = R_f + \beta_i (E(R_m) - R_f)
@@ -52,7 +52,7 @@ The SML conveys several important theoretical implications:
 The SML is a fundamental concept in our next topic of modern portfolio theory, aiding investors in making informed decisions about asset allocation based on expected returns and systematic risks.
 
 \subsection{Modern Portfolio Theory}
-Modern Portfolio Theory provides a robust framework for constructing an optimal portfolio that maximizes expected return for a given level of risk. The expected return \( E(R_p) \) of a portfolio is the weighted sum of the expected returns of the individual assets:
+Modern Portfolio Theory provides a robust framework for constructing an optimal portfolio that maximizes expected return for a given level of risk. The expected return \( E(R_p) \) of a portfolio is the weighted sum of the expected returns of the individual assets \citep{markowitz1952portfolio}:
 
 \[
 E(R_p) = \sum_{i=1}^{n} w_i E(R_i)
@@ -67,7 +67,7 @@ where \( w_i \) is the weight of asset \( i \) in the portfolio, and \( E(R_i) \
 where \( \sigma_{ij} \) is the covariance between the returns of assets \( i \) and \( j \). This formulation allows for the identification of efficient portfolios that lie on the efficient frontier, representing the optimal trade-offs between risk and return.
 
 \subsubsection{Efficient Frontier and Optimal Portfolio}
-The efficient frontier is a concept from MPT that represents the set of optimal portfolios offering the highest expected return for a defined level of risk. The process of constructing the efficient frontier involves solving the following optimization problem:
+The efficient frontier is a concept from MPT that represents the set of optimal portfolios offering the highest expected return for a defined level of risk \citep{markowitz1952portfolio}. The process of constructing the efficient frontier involves solving the following optimization problem:
 
 \[
 \min \sum_{i=1}^{n} \sum_{j=1}^{n} w_i w_j \sigma_{ij}
@@ -90,7 +90,6 @@ E(R_p) = \sum_{i=1}^{n} w_i E(R_i)
 \label{fig:efficient_frontier}
 \end{figure}
 
-
 \subsection{Monte Carlo Simulation}
 Monte Carlo simulations are utilized to model the uncertainty and variability in investment returns over time. The simulation process involves generating random returns based on historical data and iterating this process to build a distribution of potential outcomes. The value of an investment at time \( i \) is given by:
 
@@ -98,7 +97,7 @@ Monte Carlo simulations are utilized to model the uncertainty and variability in
 X_i = X_{i-1} \times (1 + r_i)
 \]
 
-where \( X_i \) is the investment value at time \( i \) and \( r_i \) is the return for period \( i \). By running multiple simulations, we can estimate the expected value and variability of the investment portfolio, providing insights into the likelihood of achieving the desired down payment amount within the specified time horizon.
+where \( X_i \) is the investment value at time \( i \) and \( r_i \) is the return for period \( i \) \citep{boyle1977options}. By running multiple simulations, we can estimate the expected value and variability of the investment portfolio, providing insights into the likelihood of achieving the desired down payment amount within the specified time horizon.
 
 \subsubsection{Simulation Algorithm}
 The Monte Carlo simulation algorithm follows these steps:
@@ -127,4 +126,3 @@ These calculations provide a quantitative measure of the potential outcomes of t
 The theoretical models described above provide a structured approach to constructing and evaluating investment portfolios aimed at accumulating housing down payments. The Modern Portfolio Theory ensures that the portfolios are optimized for maximum returns at a given risk level, while the CAPM helps in understanding the risk-return trade-off specific to each asset. The Monte Carlo simulations add a layer of probabilistic analysis, offering insights into the range of possible outcomes and their associated probabilities.
 
 The implications for the business problem are significant. By employing these models, first-time homebuyers can design their own personalized investment strategies that cater to their unique risk tolerance and time horizons. This can lead to more effective savings plans, ultimately making homeownership more attainable.
-

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 #########################################################
 # Build the pdf Document with LaTeX
 #########################################################
@@ -8,8 +9,6 @@ echo "#-------------------------------------------------"
 echo ""
 echo "Building the pdf document with LaTeX..."
 echo ""
-
-cd Paper
 
 # Use pdflatex to compile the LaTeX file
 pdflatex Outline
@@ -22,21 +21,22 @@ pdflatex Outline
 # Just to be sure
 pdflatex Outline
 
-cd ..
-
 echo ""
 echo "Finished building the pdf document with LaTeX."
 echo ""
 echo "#-------------------------------------------------"
 echo ""
 
+echo ""
 echo "#-------------------------------------------------"
-echo "Moving Paper/Outline.pdf to FLongoOutline.pdf..."
+echo "Moving Outline/Outline.pdf to FLongoOutline.pdf..."
 
-mv Paper/Outline.pdf FLongoOutline.pdf
+mv Outline.pdf FLongoOutline.pdf
 
 echo "Done."
 echo "#-------------------------------------------------"
+
+
 
 #########################################################
 # End
