@@ -1,34 +1,4 @@
 \section{Empirical Specification}
-\subsection{Data Sources}
-The primary data source for this analysis is Yahoo Finance, which provides comprehensive financial data on various asset classes, including stocks, cryptocurrencies, mutual funds, and ETFs. The dataset spans from September 7, 2014, to the present, offering daily frequency data that captures market dynamics over an extended period.
-
-\subsection{Variable Definition}
-Key variables in this study include:
-\begin{itemize}
-    \item \textbf{Stock Prices}: Daily closing prices of selected stocks.
-    \item \textbf{Cryptocurrency Prices}: Daily closing prices of selected cryptocurrencies.
-    \item \textbf{Mutual Fund Prices}: Daily net asset values (NAVs) of selected mutual funds.
-    \item \textbf{ETF Prices}: Daily closing prices of selected ETFs.
-    \item \textbf{Risk-Free Rate}: The yield on a 10-year U.S. Treasury bond, representing the risk-free rate.
-    \item \textbf{Market Return}: The return on a broad market index, such as the S\&P 500.
-\end{itemize}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{|l|l|}
-\hline
-\textbf{Variable} & \textbf{Description} \\ \hline
-Stock Prices & Daily closing prices of selected stocks \\ \hline
-Cryptocurrency Prices & Daily closing prices of selected cryptocurrencies \\ \hline
-Mutual Fund Prices & Daily NAVs of selected mutual funds \\ \hline
-ETF Prices & Daily closing prices of selected ETFs \\ \hline
-Risk-Free Rate & Yield on a 10-year U.S. Treasury bond \\ \hline
-Market Return & Return on the S\&P 500 index \\ \hline
-\end{tabular}
-\caption{Variable Definitions and Transformations}
-\label{tab:variables}
-\end{table}
-
 \subsection{Model Implementation}
 The empirical analysis proceeds by implementing the theoretical models using the historical data. The process involves the following steps:
 \begin{enumerate}
@@ -39,7 +9,31 @@ The empirical analysis proceeds by implementing the theoretical models using the
     \item \textbf{Simulation of Investment Scenarios}: Using Monte Carlo simulations to model the accumulation of down payments over different investment horizons. Multiple scenarios are simulated to capture the range of possible outcomes.
 \end{enumerate}
 
-\subsubsection{Monte Carlo Simulation for Down Payment Accumulation}
+\subsection{CAPM and Sharpe Ratio Calculation}
+For each security, the Capital Asset Pricing Model (CAPM) and Sharpe Ratio are calculated. The CAPM is used to estimate the expected return of each security, while the Sharpe Ratio measures the risk-adjusted return. The steps involved are:
+\begin{enumerate}
+    \item Calculate the average return of the market index (e.g., a broad market index like the S\&P 500).
+    \item Determine the risk-free rate (e.g., the yield on 10-year U.S. Treasury bonds).
+    \item Compute the beta ($\beta$) of each security by regressing its returns against the market returns.
+    \item Use the CAPM formula to estimate the expected return for each security.
+    \item Calculate the Sharpe Ratio using the formula:
+    \[
+    S = \frac{E(R_i) - R_f}{\sigma_i}
+    \]
+    where \( E(R_i) \) is the expected return, \( R_f \) is the risk-free rate, and \( \sigma_i \) is the standard deviation of the security’s excess return.
+\end{enumerate}
+
+The securities are then ranked by their Sharpe Ratios to identify those with the best risk-adjusted returns.
+
+\subsection{Modern Portfolio Theory (MPT) Application}
+Using the ranked securities, portfolios are constructed for different age groups (5, 10, and 15 years from the average first-time homebuyer age of 35). Modern Portfolio Theory (MPT) is applied to optimize these portfolios, balancing the trade-off between risk and return. The steps include:
+\begin{enumerate}
+    \item Define the assets and their expected returns and covariances.
+    \item Determine the weights of the assets in the portfolio to maximize the expected return for a given level of risk.
+    \item Construct the efficient frontier to visualize the optimal portfolios.
+\end{enumerate}
+
+\subsection{Monte Carlo Simulation for Down Payment Accumulation}
 Monte Carlo simulations are conducted to assess the variability and uncertainty in the investment returns. This involves generating random returns based on historical distributions and running numerous simulations to build a probability distribution of potential outcomes. The simulation process helps in understanding the range of possible values for the investment portfolio and the likelihood of achieving the target down payment within the specified timeframe.
 
 \subsubsection{Simulation Process}
@@ -54,10 +48,8 @@ The simulation process involves the following steps:
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\linewidth]{investment_simulation_process.png}
-\caption{Investment Simulation Process for Monte Carlo Analysis}
+\includegraphics[width=0.5\textwidth]{investment_simulation_process.png}
+\caption{Investment Simulation Process for Monte Carlo Analysis. Source: \href{https://quantpedia.com/introduction-and-examples-of-monte-carlo-strategy-simulation/}{Quantpedia}}
 \label{fig:simulation_process}
 \end{figure}
 
-\subsubsection{Expected Value and Risk Analysis}
-The expected value and risk (standard deviation) of the simulated investment outcomes provide critical insights into the potential performance of different investment strategies. This analysis helps in identifying the strategies that offer the best balance between return and risk, tailored to the specific needs of first-time homebuyers.

@@ -1,6 +1,4 @@
-\section{Theoretical Model}
-This section delineates the theoretical underpinnings of the investment strategies proposed in this study, integrating key concepts from the Capital Asset Pricing Model (CAPM), Modern Portfolio Theory (MPT), and Monte Carlo simulations.
-
+\section{Theoretical Models}
 \subsection{Capital Asset Pricing Model (CAPM)}
 The Capital Asset Pricing Model (CAPM) is employed to determine the expected return on an asset based on its systematic risk, as measured by beta ($\beta_i$). The CAPM formula is:
 
@@ -19,7 +17,7 @@ Beta ($\beta_i$) measures the volatility of an asset in relation to the market. 
 
 where \(\text{Cov}(R_i, R_m)\) is the covariance between the asset return \( R_i \) and the market return \( R_m \), and \( \sigma^2_m \) is the variance of the market return.
 
-\subsection{Security Market Line (SML)}
+\subsubsection{Security Market Line (SML)}
 The Security Market Line (SML) is a graphical representation of the Capital Asset Pricing Model (CAPM), showcasing the relationship between the expected return of an asset and its systematic risk, as measured by beta ($\beta_i$). The SML illustrates the expected return of a security at different levels of systematic risk. The equation of the SML is given by CAPM:
 
 \[
@@ -44,14 +42,14 @@ The SML conveys several important theoretical implications:
     \item The intercept of the SML is the risk-free rate, \( R_f \), reflecting the return of a theoretically risk-free asset.
 \end{itemize}
 
-The SML is a fundamental concept in our next topic of modern portfolio theory, aiding investors in making informed decisions about asset allocation based on expected returns and systematic risks.
-
 \begin{figure}[h]
 \centering
-\includegraphics[width=\linewidth]{SML.png} 
-\caption{Security Market Line}
+\includegraphics[width=0.5\textwidth]{SML.png} 
+\caption{Security Market Line. Source: \href{https://en.wikipedia.org/wiki/Security_market_line}{Wikipedia}}
 \label{fig:sml}
 \end{figure}
+
+The SML is a fundamental concept in our next topic of modern portfolio theory, aiding investors in making informed decisions about asset allocation based on expected returns and systematic risks.
 
 \subsection{Modern Portfolio Theory}
 Modern Portfolio Theory provides a robust framework for constructing an optimal portfolio that maximizes expected return for a given level of risk. The expected return \( E(R_p) \) of a portfolio is the weighted sum of the expected returns of the individual assets:
@@ -87,10 +85,11 @@ E(R_p) = \sum_{i=1}^{n} w_i E(R_i)
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\linewidth]{efficient_frontier.png} 
-\caption{Efficient Frontier of Optimal Portfolios}
+\includegraphics[width=0.5\textwidth]{efficient_frontier.png} 
+\caption{Efficient Frontier of Optimal Portfolios. Source: \href{https://en.wikipedia.org/wiki/Efficient_frontier}{Wikipedia}}
 \label{fig:efficient_frontier}
 \end{figure}
+
 
 \subsection{Monte Carlo Simulation}
 Monte Carlo simulations are utilized to model the uncertainty and variability in investment returns over time. The simulation process involves generating random returns based on historical data and iterating this process to build a distribution of potential outcomes. The value of an investment at time \( i \) is given by:
@@ -127,5 +126,5 @@ These calculations provide a quantitative measure of the potential outcomes of t
 \subsection{Implications for the Business Problem}
 The theoretical models described above provide a structured approach to constructing and evaluating investment portfolios aimed at accumulating housing down payments. The Modern Portfolio Theory ensures that the portfolios are optimized for maximum returns at a given risk level, while the CAPM helps in understanding the risk-return trade-off specific to each asset. The Monte Carlo simulations add a layer of probabilistic analysis, offering insights into the range of possible outcomes and their associated probabilities.
 
-The implications for the business problem are significant. By employing these models, financial advisors can design personalized investment strategies that cater to the unique risk tolerance and time horizons of first-time homebuyers. This can lead to more effective savings plans, ultimately making homeownership more attainable.
+The implications for the business problem are significant. By employing these models, first-time homebuyers can design their own personalized investment strategies that cater to their unique risk tolerance and time horizons. This can lead to more effective savings plans, ultimately making homeownership more attainable.
 

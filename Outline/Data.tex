@@ -1,9 +1,9 @@
 \section{Data}
 \subsection{Data Sources}
-The financial data used in this research is sourced from Yahoo Finance, which includes comprehensive information on various securities such as stocks, cryptocurrencies, mutual funds, and ETFs. These data sources provide a rich dataset for analyzing the performance of different investment vehicles over time.
+The financial data used in this research is sourced from Yahoo Finance, which includes comprehensive information on roughly 150 securities consisting of stocks, cryptocurrencies, mutual funds, and ETFs. This data source provides a rich dataset for analyzing the performance of different investment vehicles over time.
 
 \subsection{Date Range}
-The data covers the period from September 7, 2014, to the present, with a daily frequency. This timeframe allows for the analysis of recent trends and the performance of different asset classes in various market conditions.
+The data covers the period from September 2014, to the present, with a daily frequency. This timeframe allows for the analysis of recent trends and the performance of different asset classes in various market conditions.
 
 \subsection{Data Fields}
 The dataset includes the following fields:
@@ -21,39 +21,6 @@ These fields provide a comprehensive view of the daily trading activities and pr
 
 \subsection{Data Collection and Processing}
 The data collection process involves using Python and the Yahoo Finance API to download historical price data for selected securities. The data is loaded into a DataFrame and indexed by date, ensuring that all securities are aligned temporally. This DataFrame serves as the basis for further calculations and analyses.
-
-\subsection{CAPM and Sharpe Ratio Calculation}
-For each security, the Capital Asset Pricing Model (CAPM) and Sharpe Ratio are calculated. The CAPM is used to estimate the expected return of each security, while the Sharpe Ratio measures the risk-adjusted return. The steps involved are:
-\begin{enumerate}
-    \item Calculate the average return of the market index (e.g., a broad market index like the S\&P 500).
-    \item Determine the risk-free rate (e.g., the yield on 10-year U.S. Treasury bonds).
-    \item Compute the beta ($\beta$) of each security by regressing its returns against the market returns.
-    \item Use the CAPM formula to estimate the expected return for each security.
-    \item Calculate the Sharpe Ratio using the formula:
-    \[
-    S = \frac{E(R_i) - R_f}{\sigma_i}
-    \]
-    where \( E(R_i) \) is the expected return, \( R_f \) is the risk-free rate, and \( \sigma_i \) is the standard deviation of the security’s excess return.
-\end{enumerate}
-
-The securities are then ranked by their Sharpe Ratios to identify those with the best risk-adjusted returns.
-
-\subsection{Modern Portfolio Theory (MPT) Application}
-Using the ranked securities, portfolios are constructed for different age groups (5, 10, and 15 years from the average first-time homebuyer age of 35). Modern Portfolio Theory (MPT) is applied to optimize these portfolios, balancing the trade-off between risk and return. The steps include:
-\begin{enumerate}
-    \item Define the assets and their expected returns and covariances.
-    \item Determine the weights of the assets in the portfolio to maximize the expected return for a given level of risk.
-    \item Construct the efficient frontier to visualize the optimal portfolios.
-\end{enumerate}
-
-\subsection{Monte Carlo Simulations}
-To test the robustness of the optimized portfolios, Monte Carlo simulations are performed. This involves simulating a large number of possible future outcomes based on the historical data and assessing the probability of achieving the target down payment within the specified timeframes. The steps are:
-\begin{enumerate}
-    \item Define the initial investment and annual contributions.
-    \item Generate random returns for the securities based on their historical distributions.
-    \item Simulate the portfolio growth over the investment horizon (5, 10, and 15 years).
-    \item Analyze the distribution of simulated outcomes to evaluate the likelihood of reaching the target down payment.
-\end{enumerate}
 
 \subsection{Data Limitations}
 While the dataset is comprehensive, there are limitations to consider. The data is limited to publicly traded securities, which may not capture the full range of investment opportunities available to first-time homebuyers. Additionally, the historical data may not fully account for future market conditions and economic events. These limitations will be addressed in the analysis and interpretation of the results.
