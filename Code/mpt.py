@@ -38,7 +38,7 @@ def negative_sharpe_ratio(weights, mean_returns, cov_matrix, risk_free_rate):
     return -(p_returns - risk_free_rate) / p_std
 
 # Function to perform portfolio optimization
-def optimize_portfolio(filtered_data, returns_data, risk_free_rate=0.03):
+def optimize_portfolio(filtered_data, returns_data, risk_free_rate=0.03, min_securities=10):
     tickers = filtered_data['Ticker']
     
     # Verify tickers are in returns data
@@ -59,8 +59,13 @@ def optimize_portfolio(filtered_data, returns_data, risk_free_rate=0.03):
 
     num_assets = len(tickers)
     args = (mean_returns, cov_matrix, risk_free_rate)
-    constraints = ({'type': 'eq', 'fun': lambda x: np.sum(x) - 1})
-    bound = (0.0, 1.0)
+    constraints = [{'type': 'eq', 'fun': lambda x: np.sum(x) - 1}]  # Sum of weights = 1
+
+    # Add constraints to ensure a minimum number of securities are included
+    constraints += [{'type': 'ineq', 'fun': lambda x: x[i]} for i in range(num_assets)]
+    constraints += [{'type': 'ineq', 'fun': lambda x: min_securities - np.sum(x > 1e-5)}]  # Minimum number of securities
+
+    bound = (0.0, 0.1)  # Ensure no single security has more than 10% weight
     bounds = tuple(bound for _ in range(num_assets))
 
     result = minimize(negative_sharpe_ratio, num_assets * [1. / num_assets,], args=args,

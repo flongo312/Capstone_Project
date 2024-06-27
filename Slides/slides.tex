@@ -22,33 +22,29 @@
     \titlepage
 \end{frame}
 
-\begin{frame}{Overview}
-    \tableofcontents
-\end{frame}
-
 \section{Introduction}
 \begin{frame}{Introduction}
     \begin{block}{Objective}
         Develop optimal investment strategies for first-time homebuyers to save for down payments.
     \end{block}
     \begin{block}{Research Question}
-        What are the most effective strategies for different age groups to save for down payments over 5, 10, and 15 years?
+        What are the optimal investment strategies for aspiring first-time homebuyers of various age cohorts to accumulate down payments over 5, 10, and 15-year investment horizons?
     \end{block}
     \begin{block}{Motivation}
-        Address the challenges posed by rising housing costs and assist diverse age groups in accelerating their path to homeownership.
+        Address the challenges posed by escalating housing costs and assist diverse age groups in expediting their path to homeownership.
     \end{block}
 \end{frame}
 
 \section{Financial Literacy: Essential Concepts}
 \begin{frame}{Essential Financial Concepts}
     \begin{block}{Stocks}
-        Equity investments representing ownership in a company.
+        Equity investments representing proprietorship in a company.
     \end{block}
     \begin{block}{Mutual Funds}
-        Investment vehicles that pool money from many investors to purchase a diversified portfolio of stocks, bonds, or other securities.
+        Investment vehicles that aggregate capital from numerous investors to purchase a diversified portfolio of stocks, bonds, or other securities.
     \end{block}
     \begin{block}{ETFs (Exchange-Traded Funds)}
-        Similar to mutual funds but traded on stock exchanges like individual stocks.
+        Analogous to mutual funds but traded on stock exchanges like individual stocks.
     \end{block}
 \end{frame}
 
@@ -56,53 +52,63 @@
 \begin{frame}{Typical First-time Homebuyer Profile}
     \begin{block}{Demographics}
         \begin{itemize}
-            \item \textbf{Average Age:} 35 years (2023)
-            \item \textbf{Median Income:} \$95,900 (2023)
-        \end{itemize}
-    \end{block}
-    \begin{block}{Marital Status}
-        \begin{itemize}
-            \item 59\% Married Couples
-            \item 19\% Single Females
-            \item 10\% Single Males
-            \item 9\% Unmarried Couples
-        \end{itemize}
-    \end{block}
-    \begin{block}{Financials}
-        \begin{itemize}
-            \item \textbf{Average Home Cost:} \$348,000 (2022)
-            \item \textbf{Down Payment Saved:} \$8,220
+            \item \textbf{Median Age:} 35 years (2024)\footnote{National Association of Realtors, 2024 Profile of Home Buyers and Sellers.}
+            \item \textbf{Median Household Income:} \$104,000 (2024)\footnote{Consumer Financial Protection Bureau, Market Snapshot: First-time Homebuyers, 2024.}
+            \item \textbf{Median Nationwide Home Cost:} \$416,100 (2024)\footnote{U.S. Department of Housing and Urban Development, 2024.}
         \end{itemize}
     \end{block}
 \end{frame}
 
 \section{Risk Tolerances and Investment Contributions}
 \begin{frame}{Investment Contributions by Age Group}
-    \begin{block}{Data Source}
-        Bureau of Labor Statistics (BLS), Federal Reserve
-    \end{block}
-    \begin{block}{Annual Income and Contributions}
+    \begin{block}{20-25 Years Old (15-Year Time Horizon)}
         \begin{itemize}
-            \item \textbf{20-25 years:} 
+            \item \textbf{Median Gross Income:} \$45,000\footnote{Bureau of Labor Statistics, 2024.}
+            \item \textbf{Annual Contribution:} 10\%\footnote{Federal Reserve, 2024.}
+            \item \textbf{Risk Tolerance (Beta):} 1.2\footnote{Morgan Stanley, 2024.}
+            \item \textbf{Equity Breakdown:}
             \begin{itemize}
-                \item Median income: \$45,000
-                \item Annual contribution: 10\% of income
-            \end{itemize}
-            \item \textbf{25-30 years:} 
-            \begin{itemize}
-                \item Median income: \$60,000
-                \item Annual contribution: 15\% of income
-            \end{itemize}
-            \item \textbf{30-35 years:} 
-            \begin{itemize}
-                \item Median income: \$80,000
-                \item Annual contribution: 20\% of income
+                \item Stocks: 50\%\footnote{Empower, 2024.}
+                \item Mutual Funds: 25\%\footnote{Charles Schwab, 2024.}
+                \item ETFs: 25\%\footnote{J.P. Morgan, 2024.}
             \end{itemize}
         \end{itemize}
     \end{block}
 \end{frame}
 
-\section{Data Import and Preparation}
+\begin{frame}{Investment Contributions by Age Group}
+    \begin{block}{25-30 Years Old (10-Year Time Horizon)}
+        \begin{itemize}
+            \item \textbf{Median Gross Income:} \$60,000\footnote{Bureau of Labor Statistics, 2024.}
+            \item \textbf{Annual Contribution:} 15\%\footnote{Federal Reserve, 2024.}
+            \item \textbf{Risk Tolerance (Beta):} 1.0\footnote{Morgan Stanley, 2024.}
+            \item \textbf{Equity Breakdown:}
+            \begin{itemize}
+                \item Stocks: 45\%\footnote{Morgan Stanley, 2024.}
+                \item Mutual Funds: 30\%\footnote{Charles Schwab, 2024.}
+                \item ETFs: 25\%\footnote{J.P. Morgan, 2024.}
+            \end{itemize}
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Investment Contributions by Age Group}
+    \begin{block}{30-35 Years Old (5-Year Time Horizon)}
+        \begin{itemize}
+            \item \textbf{Median Gross Income:} \$80,000\footnote{Bureau of Labor Statistics, 2024.}
+            \item \textbf{Annual Contribution:} 20\%\footnote{Federal Reserve, 2024.}
+            \item \textbf{Risk Tolerance (Beta):} 0.8\footnote{Morgan Stanley, 2024.}
+            \item \textbf{Equity Breakdown:}
+            \begin{itemize}
+                \item Stocks: 40\%\footnote{Empower, 2024.}
+                \item Mutual Funds: 35\%\footnote{Charles Schwab, 2024.}
+                \item ETFs: 25\%\footnote{J.P. Morgan, 2024.}
+            \end{itemize}
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\section{Data Import}
 \begin{frame}{Data Sources}
     \begin{block}{Primary Source}
         \textbf{Yahoo Finance (YFinance)}
@@ -110,32 +116,23 @@
             \item Comprehensive financial data on stocks, mutual funds, and ETFs.
         \end{itemize}
     \end{block}
+
     \begin{block}{Data Coverage}
         \textbf{Date Range:} 10/24/2012 to present (daily frequency)
     \end{block}
-\end{frame}
 
-\begin{frame}{Data Snapshot}
-    \begin{figure}
-        \centering
-        \includegraphics[width=\textwidth]{data_snapshot.png}
-    \end{figure}
-\end{frame}
-
-\begin{frame}[fragile]{Data Import and Preparation}
-    \begin{block}{Loading Data}
-        \begin{verbatim}
-# import yfinance as yf
-
-# Download data from Yahoo Finance
-tickers = ['AAPL', 'MSFT', 'GOOG', 'AMZN',.....]
-data = yf.download(tickers, start='2012-10-24', 
-end='2024-06-26')
-# Save data to CSV
-data.to_csv('yfinance_data.csv')
-# Load data from CSV
-data = pd.read_csv('yfinance_data.csv', index_col='Date')
-        \end{verbatim}
+    \begin{block}{Data Fields}
+        \begin{multicols}{2}
+        \begin{itemize}
+            \item Open
+            \item High
+            \item Low
+            \item Close
+            \item Adj Close
+            \item Volume
+            \item Type
+        \end{itemize}
+        \end{multicols}
     \end{block}
 \end{frame}
 
@@ -154,7 +151,7 @@ data = pd.read_csv('yfinance_data.csv', index_col='Date')
         \end{figure}
 \end{frame}
 
-\section{CAPM and Sharpe Ratio}
+\section{CAPM}
 \begin{frame}{Capital Asset Pricing Model (CAPM)}
     \begin{block}{Formula} 
         \begin{equation*}
@@ -176,8 +173,7 @@ data = pd.read_csv('yfinance_data.csv', index_col='Date')
     \begin{block}{Market Return Calculation}
         \begin{verbatim}
 # Market return (e.g., S&P 500)
-market = yf.download('^GSPC', start='2012-10-24', 
-end='2024-09-26')
+market = yf.download('^GSPC', start='2012-10-24', end='2024-09-26')
 market_returns = market['Adj Close'].pct_change().dropna()
 
 # Calculate beta for each stock
@@ -200,69 +196,48 @@ market_return = 0.08
 capm_returns = {}
 for ticker in tickers:
     capm_returns[ticker] = risk_free_rate + beta[ticker] * 
-    (market_return - risk-free-rate)
+    (market_return - risk-free_rate)
         \end{verbatim}
     \end{block}
 \end{frame}
 
-\begin{frame}{Sharpe Ratio}
-    \begin{block}{Purpose}
-        Measures investment performance adjusted for risk.
-    \end{block}
-    \begin{block}{Formula}
-        \begin{equation*}
-            S = \frac{E(R_i) - R_f}{\sigma_i}
-        \end{equation*}
-    \end{block}
-    \begin{block}{Components}
+\begin{frame}{Actual Return vs. CAPM Expected Return (5 Year Time Horizon)}
+    \centering
+    \includegraphics[height=0.8\textheight]{actual_vs_capm_5_years.png}
+\end{frame}
+
+\begin{frame}{Actual Return vs. CAPM Expected Return (10 Year Time Horizon)}
+    \centering
+    \includegraphics[height=0.8\textheight]{actual_vs_capm_10_years.png}
+\end{frame}
+
+\begin{frame}{Actual Return vs. CAPM Expected Return (15 Year Time Horizon)}
+    \centering
+    \includegraphics[height=0.8\textheight]{actual_vs_capm_15_years.png}
+\end{frame}
+
+\section{New Filtered Data}
+\begin{frame}{Resulting Filtered Data Generated (For Each Time Horizon)}
+    \begin{block}{Data Fields}
+        \begin{multicols}{2}
         \begin{itemize}
-            \item \(E(R_i)\): Expected return
-            \item \(R_f\): Risk-free rate
-            \item \(\sigma_i\): Std. deviation of excess return
+            \item Ticker
+            \item Beta
+            \item CAPM
+            \item Predicted Return
+            \item Actual Return
+            \item Volatility
+            \item Sharpe Ratio
+            \item Type
         \end{itemize}
+        \end{multicols}
     \end{block}
 \end{frame}
-
-\section{Sharpe Ratio Calculation}
-\begin{frame}[fragile]{Calculating the Sharpe Ratio}
-    \begin{block}{Formula and Calculation}
-        \begin{verbatim}
-# Sharpe Ratio Calculation
-def sharpe_ratio(expected_return, risk_free_rate, stddev):
-    return (expected_return - risk_free_rate) / stddev
-
-# Example Calculation
-expected_return = 0.0675  # Example from CAPM
-risk_free_rate = 0.03
-stddev = 0.1  # Example standard deviation
-
-sharpe = sharpe_ratio(expected_return, risk_free_rate,
-stddev)
-print(f'Sharpe Ratio: {sharpe}')
-        \end{verbatim}
-    \end{block}
-\end{frame}
-
-\begin{frame}{Security Market Line (SML)}
-    \centering
-    \includegraphics[height=0.8\textheight]{capm_vs_sharpe_5_years.png}
-\end{frame}
-
-\begin{frame}{Security Market Line (SML)}
-    \centering
-    \includegraphics[height=0.8\textheight]{capm_vs_sharpe_10_years.png}
-\end{frame}
-
-\begin{frame}{Security Market Line (SML)}
-    \centering
-    \includegraphics[height=0.8\textheight]{capm_vs_sharpe_15_years.png}
-\end{frame}
-
 
 \section{Modern Portfolio Theory (MPT)}
 \begin{frame}{Modern Portfolio Theory (MPT)}
     \begin{block}{Overview}
-        Framework for constructing a portfolio to maximize return for a given level of risk.\footnote{Markowitz, H. (1952). Portfolio Selection. \textit{The Journal of Finance}, 7(1), 77-91.}
+        A framework for constructing a portfolio to maximize return for a given level of risk.\footnote{Markowitz, H. (1952). Portfolio Selection. \textit{The Journal of Finance}, 7(1), 77-91.}
     \end{block}
     \begin{block}{Formulas}
             \begin{equation*}
@@ -282,7 +257,6 @@ print(f'Sharpe Ratio: {sharpe}')
     \end{block}
 \end{frame}
 
-
 \section{Portfolio Optimization}
 \begin{frame}{Optimize the Portfolio}
     \begin{block}{Objective}
@@ -300,34 +274,28 @@ print(f'Sharpe Ratio: {sharpe}')
     \end{block}
 \end{frame}
 
-\begin{frame}[fragile]{Defining the Optimization Function}
-    \begin{block}{Sharpe Ratio Optimization}
+
+\begin{frame}[fragile]{Setting Up the Optimization}
+    \begin{block}{Bounds and Optimization Process}
         \scriptsize
         \begin{verbatim}
-# Define the objective function to minimize
-def sharpe_ratio(weights, returns, risk_free_rate=0.03):
-    portfolio_return = np.sum(returns.mean() * weights) * 252
-    portfolio_stddev = np.sqrt(np.dot(weights.T, 
-                                      np.dot(returns.cov() * 252, weights)))
-    return - (portfolio_return - risk_free_rate) / portfolio_stddev
+# Bounds to ensure diversification
+bounds = tuple((0.0, 0.1) for _ in range(num_assets))
 
-# Initial guess for weights
-num_assets = len(tickers)
-init_guess = num_assets * [1. / num_assets,]
-
-# Constraints and bounds
-constraints = ({'type': 'eq', 'fun': lambda weights: np.sum(weights) - 1})
-bounds = tuple((0, 1) for asset in range(num_assets))
-
-# Optimize
-opt_results = minimize(sharpe_ratio, init_guess, 
-                       args=(returns,), method='SLSQP', bounds=bounds, 
-                       constraints=constraints)
+# Optimize the portfolio
+result = minimize(negative_sharpe_ratio, init_guess, 
+                  args=(mean_returns, cov_matrix, risk_free_rate), 
+                  method='SLSQP', bounds=bounds, constraints=constraints)
         \end{verbatim}
     \end{block}
+    \begin{block}{Explanation}
+        \scriptsize
+        \begin{itemize}
+            \item \textbf{Bounds}: Limit the weight of any single asset to a maximum of 10% to ensure diversification.
+            \item \textbf{Optimization}: Use the SLSQP method to find the optimal weights that maximize the Sharpe ratio by minimizing its negative.
+        \end{itemize}
+    \end{block}
 \end{frame}
-
-
 
 \begin{frame}{Optimal Portfolio (5 Years)}
     \centering
@@ -344,11 +312,10 @@ opt_results = minimize(sharpe_ratio, init_guess,
     \includegraphics[height=0.8\textheight]{optimal_portfolio_15_years.png}
 \end{frame}
 
-
 \section{Results Interpretation}
 \begin{frame}{Results Interpretation}
     \begin{block}{Findings}
-        Through this analysis using the Capital Asset Pricing Model (CAPM) alongside the Sharpe Ratio for calculating risk-adjusted return, and Modern Portfolio Theory (MPT), we successfully identified the optimal weights for the selected securities. The analysis revealed that diversification across different asset classes and strategic allocation can significantly enhance the potential for accumulating sufficient down payments over varying time horizons.
+        Through this analysis using the Capital Asset Pricing Model (CAPM) and Modern Portfolio Theory (MPT), we successfully identified the optimal weights for the selected securities. The analysis revealed that diversification across different asset classes and strategic allocation can significantly enhance the potential for accumulating sufficient down payments over varying time horizons.
     \end{block}
     \begin{block}{Implications}
         These findings underscore the importance of tailored investment strategies for different age groups and income levels. By leveraging these models, first-time homebuyers can make informed decisions that align with their financial goals and risk tolerance.
@@ -358,7 +325,7 @@ opt_results = minimize(sharpe_ratio, init_guess,
 \section{Future Work and Limitations}
 \begin{frame}{Future Work and Limitations}
     \begin{block}{Future Work}
-        In future research, I plan to incorporate Monte Carlo Simulation to forecast future trends for the optimized portfolio using Modern Portfolio Theory. This will provide a more robust understanding of potential investment outcomes under various market conditions.
+        In future research, I plan to incorporate Monte Carlo Simulations to forecast future trends for the optimized portfolio. This will provide a more robust understanding of potential investment outcomes under various market conditions.
     \end{block}
     \begin{block}{Limitations}
         This study's limitations include the assumption of constant risk-free rates and market returns, as well as the exclusion of transaction costs and taxes. Future work should aim to address these limitations to enhance the model's accuracy and applicability.
@@ -378,16 +345,10 @@ opt_results = minimize(sharpe_ratio, init_guess,
 \begin{frame}{References (1/2)}
     \begin{block}{}
         \begin{itemize}
-            \item Yahoo Finance. (n.d.). Retrieved from \url{https://finance.yahoo.com/}
-            \item Robinhood. (n.d.). Retrieved from \url{https://robinhood.com/}
-            \item Investment Company Institute. (n.d.). Retrieved from \url{https://www.ici.org/}
-        \end{itemize}
-    \end{block}
-    \begin{block}{}
-        \begin{itemize}
-            \item Sharpe, W. F. (1966). Mutual Fund Performance. \textit{Journal of Business, 39}(1), 119-138. DOI: 10.1086/294846
-            \item Markowitz, H. (1952). Portfolio Selection. \textit{Journal of Finance, 7}(1), 77-91. DOI: 10.2307/2975974
             \item Boyle, P. P. (1977). Options: A Monte Carlo Approach. \textit{Journal of Financial Economics, 4}(3), 323-338. DOI: 10.1016/0304-405X(77)90005-8
+            \item Federal Reserve. (2023). Report on the Economic Well-Being of U.S. Households in 2023. Retrieved from \url{https://www.federalreserve.gov/publications/2023-economic-well-being-of-us-households-in-2023.htm}
+            \item Investment Company Institute. (n.d.). Retrieved from \url{https://www.ici.org/}
+            \item Markowitz, H. (1952). Portfolio Selection. \textit{Journal of Finance, 7}(1), 77-91. DOI: 10.2307/2975974
         \end{itemize}
     \end{block}
 \end{frame}
@@ -395,9 +356,12 @@ opt_results = minimize(sharpe_ratio, init_guess,
 \begin{frame}{References (2/2)}
     \begin{block}{}
         \begin{itemize}
+            \item Morgan Stanley. (2024). Risk Tolerance Report. Retrieved from \url{https://www.morganstanley.com/}
             \item National Association of Realtors. (2023). 2023 Home Buyer and Seller Generational Trends. Retrieved from \url{https://www.nar.realtor/research-and-statistics/research-reports/home-buyer-and-seller-generational-trends}
-            \item Federal Reserve. (2023). Report on the Economic Well-Being of U.S. Households in 2023. Retrieved from \url{https://www.federalreserve.gov/publications/2023-economic-well-being-of-us-households-in-2023.htm}
-            \item Bureau of Labor Statistics (BLS). (2023). Income and Expenditures. Retrieved from \url{https://www.bls.gov/income-and-expenditures.htm}
+            \item Sharpe, W. F. (1964). Capital Asset Prices: A Theory of Market Equilibrium under Conditions of Risk. \textit{The Journal of Finance, 19}(3), 425-442. DOI: 10.2307/2975974
+            \item Sharpe, W. F. (1966). Mutual Fund Performance. \textit{Journal of Business, 39}(1), 119-138. DOI: 10.1086/294846
+            \item U.S. Department of Housing and Urban Development. (2024). Housing Market Analysis. Retrieved from \url{https://www.hud.gov/}
+            \item Yahoo Finance. (n.d.). Retrieved from \url{https://finance.yahoo.com/}
         \end{itemize}
     \end{block}
 \end{frame}

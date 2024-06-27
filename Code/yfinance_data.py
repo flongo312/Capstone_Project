@@ -95,9 +95,12 @@ print(f"Data saved to {output_file}")
 figure_directory = '/Users/frank/Desktop/Project/Figures'
 os.makedirs(figure_directory, exist_ok=True)
 
+# Filter out the 'Indices' type
+filtered_data = combined_data[combined_data['Type'] != 'Indices']
+
 # Histogram: Count of Securities by Type in the dataset
 plt.figure(figsize=(10, 6))
-sns.countplot(x='Type', data=combined_data.drop_duplicates(subset=['Ticker']), palette='viridis')
+sns.countplot(x='Type', data=filtered_data.drop_duplicates(subset=['Ticker']), palette='viridis')
 plt.title('Count of Securities by Type')
 plt.xlabel('Security Type')
 plt.ylabel('Count')
@@ -128,24 +131,5 @@ plt.legend()
 plt.grid(True, linestyle='--', alpha=0.7)
 plt.savefig(os.path.join(figure_directory, 'cumulative_returns_by_type.png'))
 plt.close()
-
-# Create a snapshot of the head of the data
-snapshot_head = combined_data.head(10)
-
-# Plot the snapshot data
-fig, ax = plt.subplots(figsize=(12, 4))
-ax.axis('tight')
-ax.axis('off')
-table = ax.table(cellText=snapshot_head.values, colLabels=snapshot_head.columns, cellLoc='center', loc='center')
-table.auto_set_font_size(False)
-table.set_fontsize(10)
-table.auto_set_column_width(col=list(range(len(snapshot_head.columns))))
-
-# Save the snapshot table as a PNG image
-snapshot_image_file = os.path.join(figure_directory, 'data_snapshot.png')
-plt.savefig(snapshot_image_file, bbox_inches='tight', pad_inches=0.1)
-plt.close()
-
-print(f"Snapshot table saved as image to {snapshot_image_file}")
 
 print(f"Visualizations saved in {figure_directory}")
