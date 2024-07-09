@@ -2,137 +2,160 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import os
+import statsmodels.api as sm
 
 # Define the directory to save figures
 figure_directory = '/Users/frank/Desktop/Project/Figures'
 os.makedirs(figure_directory, exist_ok=True)
 
-# Load the dataset
+# Load and prepare data
 file_path = '/Users/frank/Desktop/Project/Data/yfinance_data.csv'
 data = pd.read_csv(file_path)
-
-# Convert the 'Date' column to datetime format
 data['Date'] = pd.to_datetime(data['Date'])
 
-# Filter data by type
-stocks_data = data[data['Type'] == 'Stocks']
-etfs_data = data[data['Type'] == 'ETFs']
-mutual_funds_data = data[data['Type'] == 'Mutual Funds']
-market_data = data[data['Ticker'] == '^GSPC']
+# Filter and pivot data
+def filter_data_by_type(data, type_name):
+    return data[data['Type'] == type_name]
 
-# Pivot the data to get daily closing prices for each type
 def pivot_data(data):
     return data.pivot(index='Date', columns='Ticker', values='Adj Close')
+
+stocks_data = filter_data_by_type(data, 'Stocks')
+etfs_data = filter_data_by_type(data, 'ETFs')
+mutual_funds_data = filter_data_by_type(data, 'Mutual Funds')
 
 stocks_data_pivot = pivot_data(stocks_data)
 etfs_data_pivot = pivot_data(etfs_data)
 mutual_funds_data_pivot = pivot_data(mutual_funds_data)
 
-# Calculate daily returns for each type
+# Calculate daily returns
 def calculate_returns(data_pivot):
     return data_pivot.pct_change().dropna()
 
 stocks_returns = calculate_returns(stocks_data_pivot)
 etfs_returns = calculate_returns(etfs_data_pivot)
 mutual_funds_returns = calculate_returns(mutual_funds_data_pivot)
-market_data.set_index('Date', inplace=True)
-market_returns = market_data['Adj Close'].pct_change().dropna()
 
-# Calculate actual annualized return
-def calculate_annualized_return(data_pivot):
-    if len(data_pivot) < 2:
-        return None  # Or you can return 0 or some other value
-    cumulative_return = (data_pivot.iloc[-1] / data_pivot.iloc[0]) - 1
-    annualized_return = (1 + cumulative_return) ** (252 / len(data_pivot)) - 1
-    return annualized_return
+# Load Fama-French factors
+def load_fama_french_data(file_path):
+    ff_factors = pd.read_csv(file_path, skiprows=3)
+    ff_factors.columns = ['Date', 'Mkt-RF', 'SMB', 'HML', 'RF']
+    ff_factors = ff_factors[:-1]
+    ff_factors['Date'] = pd.to_datetime(ff_factors['Date'], format='%Y%m%d')
+    ff_factors.set_index('Date', inplace=True)
+    return ff_factors
 
-# Calculate annualized standard deviation (volatility)
-def calculate_annualized_std(data_pivot):
-    return data_pivot.pct_change().std() * np.sqrt(252)
+ff_factors_path = '/Users/frank/Desktop/Project/Data/F-F_Research_Data_Factors_daily.CSV'
+ff_factors = load_fama_french_data(ff_factors_path)
 
-stocks_actual_return = calculate_annualized_return(stocks_data_pivot)
-etfs_actual_return = calculate_annualized_return(etfs_data_pivot)
-mutual_funds_actual_return = calculate_annualized_return(mutual_funds_data_pivot)
+# Align indices
+def align_indices(*dataframes):
+    common_index = dataframes[0].index
+    for df in dataframes[1:]:
+        common_index = common_index.intersection(df.index)
+    return [df.loc[common_index] for df in dataframes]
 
-stocks_volatility = calculate_annualized_std(stocks_data_pivot)
-etfs_volatility = calculate_annualized_std(etfs_data_pivot)
-mutual_funds_volatility = calculate_annualized_std(mutual_funds_data_pivot)
+stocks_returns, etfs_returns, mutual_funds_returns, ff_factors = align_indices(
+    stocks_returns, etfs_returns, mutual_funds_returns, ff_factors)
 
-# Merge returns with market returns
-def merge_with_market(returns, market_returns):
-    return returns.join(market_returns.rename('Market_Return'), how='inner')
+# Calculate annualized return and excess returns
+def calculate_annualized_metrics(data_pivot, rf_column):
+    returns = data_pivot.pct_change().dropna()
+    rf_column_aligned = rf_column.loc[returns.index]  # Align the rf_column with returns
+    excess_returns = returns.sub(rf_column_aligned.values, axis=0)
+    annualized_return = (1 + returns.mean()) ** 252 - 1
+    return annualized_return, excess_returns
 
-combined_stocks_data = merge_with_market(stocks_returns, market_returns)
-combined_etfs_data = merge_with_market(etfs_returns, market_returns)
-combined_mutual_funds_data = merge_with_market(mutual_funds_returns, market_returns)
+stocks_actual_return, stocks_excess_returns = calculate_annualized_metrics(stocks_data_pivot, ff_factors['RF'])
+etfs_actual_return, etfs_excess_returns = calculate_annualized_metrics(etfs_data_pivot, ff_factors['RF'])
+mutual_funds_actual_return, mutual_funds_excess_returns = calculate_annualized_metrics(mutual_funds_data_pivot, ff_factors['RF'])
 
-# Ensure combined data and market returns have matching indices
-def align_indices(combined_data, market_returns):
-    common_index = combined_data.index.intersection(market_returns.index)
-    return combined_data.loc[common_index], market_returns.loc[common_index]
+# Calculate Fama-French metrics using excess returns
+def calculate_fama_french_metrics(asset_excess_returns, fama_french_factors):
+    market_excess = fama_french_factors['Mkt-RF']
+    smb = fama_french_factors['SMB']
+    hml = fama_french_factors['HML']
 
-combined_stocks_data, aligned_market_returns = align_indices(combined_stocks_data, market_returns)
-combined_etfs_data, aligned_market_returns = align_indices(combined_etfs_data, aligned_market_returns)
-combined_mutual_funds_data, aligned_market_returns = align_indices(combined_mutual_funds_data, aligned_market_returns)
-
-# Further ensure both dataframes have the same length
-def ensure_same_length(combined_data, market_returns):
-    min_length = min(len(combined_data), len(market_returns))
-    return combined_data.iloc[:min_length], market_returns.iloc[:min_length]
-
-combined_stocks_data, aligned_market_returns = ensure_same_length(combined_stocks_data, aligned_market_returns)
-combined_etfs_data, aligned_market_returns = ensure_same_length(combined_etfs_data, aligned_market_returns)
-combined_mutual_funds_data, aligned_market_returns = ensure_same_length(combined_mutual_funds_data, aligned_market_returns)
-
-# Calculate beta, CAPM predicted return, actual return, and standard deviation using CAPM
-risk_free_rate = 0.03 / 252  # Daily risk-free rate
-
-def calculate_metrics(combined_data, actual_returns, volatilities, market_return, risk_free_rate):
-    betas = {}
-    capm_returns = {}
-    sharpe_ratios = {}
-    market_premium = market_return.mean() - risk_free_rate
-
-    for ticker in combined_data.columns[:-1]:  # Exclude 'Market_Return'
-        asset_return = combined_data[ticker]
-        covariance = np.cov(asset_return, market_return)[0, 1]
-        market_variance = np.var(market_return)
-        beta = covariance / market_variance
-        betas[ticker] = beta
-        capm_return = risk_free_rate + beta * market_premium
-        capm_returns[ticker] = capm_return * 252  # Annualize the return
-        sharpe_ratio = (actual_returns[ticker] - (risk_free_rate * 252)) / volatilities[ticker]
-        sharpe_ratios[ticker] = sharpe_ratio
-
-        # Debug prints
-        print(f"{ticker} - Beta: {beta:.2f}, CAPM Return: {capm_returns[ticker]:.2f}, Sharpe Ratio: {sharpe_ratios[ticker]:.2f}")
-
-    results = pd.DataFrame({
-        'Ticker': list(betas.keys()),
-        'Beta': list(betas.values()),
-        'CAPM Predicted Return': list(capm_returns.values()),
-        'Actual Return': list(actual_returns),
-        'Volatility': list(volatilities),
-        'Sharpe Ratio': list(sharpe_ratios.values())
+    X = pd.DataFrame({
+        'Market': market_excess,
+        'SMB': smb,
+        'HML': hml
     })
-    
-    return results
+    X = sm.add_constant(X)
 
-stocks_capm_results = calculate_metrics(combined_stocks_data, stocks_actual_return, stocks_volatility, aligned_market_returns, risk_free_rate)
-etfs_capm_results = calculate_metrics(combined_etfs_data, etfs_actual_return, etfs_volatility, aligned_market_returns, risk_free_rate)
-mutual_funds_capm_results = calculate_metrics(combined_mutual_funds_data, mutual_funds_actual_return, mutual_funds_volatility, aligned_market_returns, risk_free_rate)
+    metrics = {}
+    for ticker in asset_excess_returns.columns:
+        y = asset_excess_returns[ticker]
+        model = sm.OLS(y, X).fit()
+        metrics[ticker] = model.params
 
-# Add Type column
+    return pd.DataFrame(metrics).T
+
+stocks_fama_french_metrics = calculate_fama_french_metrics(stocks_excess_returns, ff_factors)
+etfs_fama_french_metrics = calculate_fama_french_metrics(etfs_excess_returns, ff_factors)
+mutual_funds_fama_french_metrics = calculate_fama_french_metrics(mutual_funds_excess_returns, ff_factors)
+
+# Calculate additional metrics
+def calculate_additional_metrics(asset_returns, benchmark_returns, beta):
+    alpha = asset_returns.mean() - (beta * benchmark_returns.mean())
+    return alpha
+
+# Assuming 'market_returns' is the benchmark
+market_returns = ff_factors['Mkt-RF'] + ff_factors['RF']
+
+stocks_alpha = calculate_additional_metrics(stocks_returns, market_returns, stocks_fama_french_metrics['Market'])
+etfs_alpha = calculate_additional_metrics(etfs_returns, market_returns, etfs_fama_french_metrics['Market'])
+mutual_funds_alpha = calculate_additional_metrics(mutual_funds_returns, market_returns, mutual_funds_fama_french_metrics['Market'])
+
+# Merge metrics into final DataFrame
+def merge_metrics(asset_returns, fama_french_metrics, actual_return, alpha, rf_column):
+    capm_results = pd.DataFrame({
+        'Ticker': asset_returns.columns,
+        'Beta': fama_french_metrics['Market'],
+        'SMB': fama_french_metrics['SMB'],
+        'HML': fama_french_metrics['HML'],
+        'CAPM Predicted Return': (rf_column + fama_french_metrics['Market'] * (asset_returns.mean() - rf_column)).mean() * 252,
+        'Actual Return': actual_return,
+        'Alpha': alpha,
+        'Sharpe Ratio': (actual_return - rf_column.mean() * 252) / (asset_returns.std() * np.sqrt(252))
+    })
+    return capm_results
+
+stocks_capm_results = merge_metrics(stocks_returns, stocks_fama_french_metrics, stocks_actual_return, stocks_alpha, ff_factors['RF'])
+etfs_capm_results = merge_metrics(etfs_returns, etfs_fama_french_metrics, etfs_actual_return, etfs_alpha, ff_factors['RF'])
+mutual_funds_capm_results = merge_metrics(mutual_funds_returns, mutual_funds_fama_french_metrics, mutual_funds_actual_return, mutual_funds_alpha, ff_factors['RF'])
+
 stocks_capm_results['Type'] = 'Stocks'
 etfs_capm_results['Type'] = 'ETFs'
 mutual_funds_capm_results['Type'] = 'Mutual Funds'
 
-# Combine all results into a single DataFrame
-combined_capm_results = pd.concat([
-    stocks_capm_results,
-    etfs_capm_results,
-    mutual_funds_capm_results
-])
+combined_capm_results = pd.concat([stocks_capm_results, etfs_capm_results, mutual_funds_capm_results])
+
+# Add VaR and CVaR
+def add_risk_metrics(results, var, cvar):
+    results['VaR'] = var
+    results['CVaR'] = cvar
+    return results
+
+def calculate_var(returns, confidence_level=0.95):
+    return np.percentile(returns, (1 - confidence_level) * 100)
+
+def calculate_cvar(returns, confidence_level=0.95):
+    var = calculate_var(returns, confidence_level)
+    return returns[returns <= var].mean()
+
+stocks_var = stocks_returns.apply(calculate_var, confidence_level=0.95)
+stocks_cvar = stocks_returns.apply(calculate_cvar, confidence_level=0.95)
+etfs_var = etfs_returns.apply(calculate_var, confidence_level=0.95)
+etfs_cvar = etfs_returns.apply(calculate_cvar, confidence_level=0.95)
+mutual_funds_var = mutual_funds_returns.apply(calculate_var, confidence_level=0.95)
+mutual_funds_cvar = mutual_funds_returns.apply(calculate_cvar, confidence_level=0.95)
+
+stocks_capm_results = add_risk_metrics(stocks_capm_results, stocks_var, stocks_cvar)
+etfs_capm_results = add_risk_metrics(etfs_capm_results, etfs_var, etfs_cvar)
+mutual_funds_capm_results = add_risk_metrics(mutual_funds_capm_results, mutual_funds_var, mutual_funds_cvar)
+
+combined_capm_results = pd.concat([stocks_capm_results, etfs_capm_results, mutual_funds_capm_results])
 
 # Define beta ranges for different investment horizons
 beta_ranges = {
@@ -141,101 +164,178 @@ beta_ranges = {
     '15_years': (1.0, 1.2)
 }
 
-top_n = 40  # Number of top securities
+top_n = 40  # Number of top portfolios
 
-# Apply the beta filtering
-def filter_top_securities(combined_data, beta_range, top_n):
-    filtered_data = combined_data[
-        (combined_data['Beta'] >= beta_range[0]) & 
-        (combined_data['Beta'] <= beta_range[1])
-    ].copy()
-    top_securities = filtered_data.nsmallest(top_n, 'Beta')
-    return top_securities
+# Calculate portfolio-level betas
+def calculate_portfolio_betas(combined_data, beta_range):
+    portfolio_betas = combined_data[(combined_data['Beta'] >= beta_range[0]) & 
+                                    (combined_data['Beta'] <= beta_range[1])]
+    return portfolio_betas
 
-filtered_data_5_years = filter_top_securities(combined_capm_results, beta_ranges['5_years'], top_n)
-filtered_data_10_years = filter_top_securities(combined_capm_results, beta_ranges['10_years'], top_n)
-filtered_data_15_years = filter_top_securities(combined_capm_results, beta_ranges['15_years'], top_n)
+filtered_portfolios_5_years = calculate_portfolio_betas(combined_capm_results, beta_ranges['5_years'])
+filtered_portfolios_10_years = calculate_portfolio_betas(combined_capm_results, beta_ranges['10_years'])
+filtered_portfolios_15_years = calculate_portfolio_betas(combined_capm_results, beta_ranges['15_years'])
 
-# Save the filtered results to CSV files
-output_file_path_5_years = '/Users/frank/Desktop/Project/Data/filtered_top_securities_5_years.csv'
-output_file_path_10_years = '/Users/frank/Desktop/Project/Data/filtered_top_securities_10_years.csv'
-output_file_path_15_years = '/Users/frank/Desktop/Project/Data/filtered_top_securities_15_years.csv'
+# Composite Score for Multi-Criteria Filtering
+def calculate_composite_score(data, weights):
+    score = (data['Beta'] * weights['Beta'] +
+             data['Sharpe Ratio'] * weights['Sharpe Ratio'] +
+             data['Alpha'] * weights['Alpha'])
+    return score
 
-filtered_data_5_years.to_csv(output_file_path_5_years, index=False)
-filtered_data_10_years.to_csv(output_file_path_10_years, index=False)
-filtered_data_15_years.to_csv(output_file_path_15_years, index=False)
+# Define weights for the metrics
+weights = {
+    'Beta': 0.25,
+    'Sharpe Ratio': 0.35,
+    'Alpha': 0.4
+}
 
-# Double Bar Plot: Actual Returns vs. CAPM Predicted Returns
-def plot_actual_vs_capm(filtered_data, title, file_name):
-    # Sort the data by CAPM Predicted Return for better readability
-    filtered_data = filtered_data.sort_values(by='CAPM Predicted Return', ascending=False)
-    
+combined_capm_results['Composite Score'] = calculate_composite_score(combined_capm_results, weights)
+
+# Filter top N assets based on composite score
+def filter_top_assets_by_composite_score(data, top_n):
+    top_assets = data.nlargest(top_n, 'Composite Score')
+    return top_assets
+
+top_assets_5_years = filter_top_assets_by_composite_score(filtered_portfolios_5_years, top_n)
+top_assets_10_years = filter_top_assets_by_composite_score(filtered_portfolios_10_years, top_n)
+top_assets_15_years = filter_top_assets_by_composite_score(filtered_portfolios_15_years, top_n)
+
+# Save the top assets based on composite score to CSV files
+output_file_path_top_assets_5_years = '/Users/frank/Desktop/Project/Data/top_assets_composite_score_5_years.csv'
+output_file_path_top_assets_10_years = '/Users/frank/Desktop/Project/Data/top_assets_composite_score_10_years.csv'
+output_file_path_top_assets_15_years = '/Users/frank/Desktop/Project/Data/top_assets_composite_score_15_years.csv'
+
+top_assets_5_years.to_csv(output_file_path_top_assets_5_years, index=False)
+top_assets_10_years.to_csv(output_file_path_top_assets_10_years, index=False)
+top_assets_15_years.to_csv(output_file_path_top_assets_15_years, index=False)
+
+# Scatter Plot: Actual Return vs. CAPM Predicted Return
+def plot_scatter_actual_vs_capm(filtered_data, title, file_name):
     fig, ax = plt.subplots(figsize=(16, 12))
-
-    bar_width = 0.35
-    index = np.arange(len(filtered_data))
-
+    
     type_colors = {
         'Stocks': 'tab:blue',
         'ETFs': 'tab:green',
         'Mutual Funds': 'tab:orange'
     }
-
-    capm_bar = ax.bar(index - bar_width/2, filtered_data['CAPM Predicted Return'], bar_width, label='CAPM Predicted Return', color='b', alpha=0.7)
-    actual_bar = ax.bar(index + bar_width/2, filtered_data['Actual Return'], bar_width, label='Actual Return', color='w', edgecolor='black', hatch='//', alpha=0.7)
-
-    # Set colors based on security type
-    for bar, ticker in zip(capm_bar, filtered_data['Ticker']):
-        bar.set_color(type_colors[filtered_data.loc[filtered_data['Ticker'] == ticker, 'Type'].values[0]])
-    for bar, ticker in zip(actual_bar, filtered_data['Ticker']):
-        bar.set_edgecolor('black')
-
-    # Add data labels on each bar
-    for i in range(len(filtered_data)):
-        ax.text(index[i] - bar_width/2, filtered_data['CAPM Predicted Return'].iloc[i], f'{filtered_data["CAPM Predicted Return"].iloc[i]:.2f}', 
-                ha='center', va='bottom', fontsize=10, rotation=45)
-        ax.text(index[i] + bar_width/2, filtered_data['Actual Return'].iloc[i], f'{filtered_data["Actual Return"].iloc[i]:.2f}', 
-                ha='center', va='bottom', fontsize=10, rotation=45)
-
-    ax.set_xlabel('Securities', fontsize=18)
-    ax.set_ylabel('Return', fontsize=18)
-    ax.set_title(title, fontsize=22)
-    ax.set_xticks(index)
-    ax.set_xticklabels(filtered_data['Ticker'], rotation=90, ha='center', fontsize=10)
-
-    # Adjust y-axis to improve readability
-    ax.set_ylim([min(filtered_data['Actual Return'].min(), filtered_data['CAPM Predicted Return'].min()) * 0.95, 
-                 max(filtered_data['Actual Return'].max(), filtered_data['CAPM Predicted Return'].max()) * 1.05])
-
-    # Add grid lines for better readability
-    ax.yaxis.grid(True, linestyle='--', alpha=0.7)
-
-    # Add legend for security types and actual return pattern
-    type_legend_handles = [plt.Rectangle((0, 0), 1, 1, color=color, alpha=0.7) for color in type_colors.values()]
-    type_labels = type_colors.keys()
-    type_legend = plt.legend(type_legend_handles, type_labels, title='Security Types', fontsize=14, title_fontsize=16, loc='upper right')
-    hatch_handle = plt.Rectangle((0, 0), 1, 1, color='w', edgecolor='black', hatch='//', alpha=0.7)
-    hatch_legend_handles = [plt.Line2D([0], [0], color='b', lw=4, alpha=0.7), hatch_handle]
-    plt.legend(handles=hatch_legend_handles, labels=['CAPM Predicted Return', 'Actual Return'], fontsize=14, loc='upper left')
     
-    ax.add_artist(type_legend)
-
+    for t in filtered_data['Type'].unique():
+        subset = filtered_data[filtered_data['Type'] == t]
+        ax.scatter(subset['CAPM Predicted Return'], subset['Actual Return'], label=t, alpha=0.7)
+    
+    ax.plot([filtered_data['CAPM Predicted Return'].min(), filtered_data['CAPM Predicted Return'].max()],
+            [filtered_data['CAPM Predicted Return'].min(), filtered_data['CAPM Predicted Return'].max()], 
+            ls="--", c=".3")
+    
+    ax.set_xlabel('CAPM Predicted Return', fontsize=18)
+    ax.set_ylabel('Actual Return', fontsize=18)
+    ax.set_title(title, fontsize=22)
+    
+    ax.legend(title='Security Types', fontsize=14, title_fontsize=16)
+    
     plt.tight_layout()
     plt.savefig(os.path.join(figure_directory, file_name), dpi=300)
     plt.close()
-    print(f"Bar plot saved as: {os.path.join(figure_directory, file_name)}")
+    print(f"Scatter plot saved as: {os.path.join(figure_directory, file_name)}")
+
+# Bar Plot: Alpha of Top Assets
+def plot_alpha_bar(filtered_data, title, file_name):
+    fig, ax = plt.subplots(figsize=(16, 12))
+    
+    filtered_data = filtered_data.sort_values(by='Alpha', ascending=False)
+    
+    ax.bar(filtered_data['Ticker'], filtered_data['Alpha'], color='b', alpha=0.7)
+    
+    ax.set_xlabel('Securities', fontsize=18)
+    ax.set_ylabel('Alpha', fontsize=18)
+    ax.set_title(title, fontsize=22)
+    ax.set_xticklabels(filtered_data['Ticker'], rotation=90, ha='center', fontsize=10)
+    
+    plt.tight_layout()
+    plt.savefig(os.path.join(figure_directory, file_name), dpi=300)
+    plt.close()
+    print(f"Alpha bar plot saved as: {os.path.join(figure_directory, file_name)}")
+
+# Bar Plot: Sharpe Ratios of Top Assets
+def plot_sharpe_ratio_bar(filtered_data, title, file_name):
+    fig, ax = plt.subplots(figsize=(16, 12))
+    
+    filtered_data = filtered_data.sort_values(by='Sharpe Ratio', ascending=False)
+    
+    ax.bar(filtered_data['Ticker'], filtered_data['Sharpe Ratio'], color='g', alpha=0.7)
+    
+    ax.set_xlabel('Securities', fontsize=18)
+    ax.set_ylabel('Sharpe Ratio', fontsize=18)
+    ax.set_title(title, fontsize=22)
+    ax.set_xticklabels(filtered_data['Ticker'], rotation=90, ha='center', fontsize=10)
+    
+    plt.tight_layout()
+    plt.savefig(os.path.join(figure_directory, file_name), dpi=300)
+    plt.close()
+    print(f"Sharpe ratio bar plot saved as: {os.path.join(figure_directory, file_name)}")
+
+# Box Plot: VaR and CVaR
+def plot_var_cvar_box(filtered_data, title, file_name):
+    fig, ax = plt.subplots(figsize=(16, 12))
+    
+    data_to_plot = [filtered_data['VaR'], filtered_data['CVaR']]
+    ax.boxplot(data_to_plot, labels=['VaR', 'CVaR'])
+    
+    ax.set_title(title, fontsize=22)
+    
+    plt.tight_layout()
+    plt.savefig(os.path.join(figure_directory, file_name), dpi=300)
+    plt.close()
+    print(f"VaR and CVaR box plot saved as: {os.path.join(figure_directory, file_name)}")
 
 # Plot for each time horizon
-plot_actual_vs_capm(filtered_data_5_years, 
+plot_scatter_actual_vs_capm(top_assets_5_years, 
                     'Actual Return vs. CAPM Predicted Return (5 Years)', 
                     'actual_vs_capm_5_years.png')
 
-plot_actual_vs_capm(filtered_data_10_years, 
+plot_alpha_bar(top_assets_5_years, 
+                    'Alpha of Top Assets (5 Years)', 
+                    'alpha_top_assets_5_years.png')
+
+plot_sharpe_ratio_bar(top_assets_5_years, 
+                    'Sharpe Ratio of Top Assets (5 Years)', 
+                    'sharpe_ratio_top_assets_5_years.png')
+
+plot_var_cvar_box(top_assets_5_years, 
+                    'VaR and CVaR of Top Assets (5 Years)', 
+                    'var_cvar_top_assets_5_years.png')
+
+plot_scatter_actual_vs_capm(top_assets_10_years, 
                     'Actual Return vs. CAPM Predicted Return (10 Years)', 
                     'actual_vs_capm_10_years.png')
 
-plot_actual_vs_capm(filtered_data_15_years, 
+plot_alpha_bar(top_assets_10_years, 
+                    'Alpha of Top Assets (10 Years)', 
+                    'alpha_top_assets_10_years.png')
+
+plot_sharpe_ratio_bar(top_assets_10_years, 
+                    'Sharpe Ratio of Top Assets (10 Years)', 
+                    'sharpe_ratio_top_assets_10_years.png')
+
+plot_var_cvar_box(top_assets_10_years, 
+                    'VaR and CVaR of Top Assets (10 Years)', 
+                    'var_cvar_top_assets_10_years.png')
+
+plot_scatter_actual_vs_capm(top_assets_15_years, 
                     'Actual Return vs. CAPM Predicted Return (15 Years)', 
                     'actual_vs_capm_15_years.png')
+
+plot_alpha_bar(top_assets_15_years, 
+                    'Alpha of Top Assets (15 Years)', 
+                    'alpha_top_assets_15_years.png')
+
+plot_sharpe_ratio_bar(top_assets_15_years, 
+                    'Sharpe Ratio of Top Assets (15 Years)', 
+                    'sharpe_ratio_top_assets_15_years.png')
+
+plot_var_cvar_box(top_assets_15_years, 
+                    'VaR and CVaR of Top Assets (15 Years)', 
+                    'var_cvar_top_assets_15_years.png')
 
 print("Visualizations completed and saved.")
