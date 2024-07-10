@@ -4,33 +4,31 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
+from tqdm import tqdm
 
-# Define the list of securities organized by type, including major indices and relevant cryptocurrencies
+# Define the list of securities organized by type, excluding those that IPO'd after 2009
 securities = {
     'Stocks': [
-        'AAPL', 'TSLA', 'AMZN', 'GOOGL', 'NVDA', 'META', 'AMD', 'BAC', 
-        'MSFT', 'NFLX', 'JPM', 'V', 'DIS', 'CSCO', 
-        'XOM', 'PFE', 'KO', 'PEP', 'INTC', 'CRM', 'T', 'MRK', 'WMT', 
-        'NKE', 'GE', 'COST', 'MCD', 'SBUX', 'IBM', 'WFC', 'UNH', 'ORCL', 
-        'QCOM', 'AVGO', 'TM', 'ADBE', 'TXN', 'HON', 'MO', 'MDT', 'SPG', 
-        'AXP', 'GS', 'LMT', 'BMY', 'BLK'
+        'AAPL', 'AMZN', 'GOOGL', 'NVDA', 'BAC', 'MSFT', 'JPM', 'DIS', 
+        'CSCO', 'XOM', 'PFE', 'KO', 'PEP', 'INTC', 'T', 'MRK', 'WMT', 
+        'NKE', 'GE', 'MCD', 'IBM', 'WFC', 'UNH', 'ORCL', 'QCOM', 'TM', 
+        'TXN', 'HON', 'MO', 'MDT', 'SPG', 'AXP', 'GS', 'LMT', 'BMY', 'BLK'
     ],
     'ETFs': [
-        'SPY', 'QQQ', 'IWM', 'GLD', 'EEM', 'VOO', 'XLF', 'TQQQ', 'DIA', 
-        'LQD', 'IVV', 'VTI', 'XLK', 'VNQ', 'HYG', 'XLV', 'XLE', 'XLY', 
-        'XLP', 'XLU', 'GDX', 'XLI', 'IWF', 'IWB', 'IJH', 'IYR', 'VUG', 
-        'IJR', 'IWN', 'EFA', 'VWO', 'SHY', 'USO', 'TLT', 'VGK', 'XOP', 
-        'IEFA', 'IEMG', 'PFF', 'EWT', 'EWJ', 'IWC', 'VB', 'SCHX', 'VIG', 
-        'SCHF', 'EZU', 'IGV', 'VCSH', 'SPDW'
+        'SPY', 'QQQ', 'IWM', 'GLD', 'EEM', 'XLF', 'DIA', 'LQD', 
+        'IVV', 'XLK', 'VNQ', 'HYG', 'XLV', 'XLE', 'XLY', 
+        'XLP', 'XLU', 'GDX', 'XLI', 'IWF', 'IWB', 'IJH', 'IYR', 
+        'IJR', 'IWN', 'EFA', 'VWO', 'SHY', 'USO', 'TLT', 'VGK', 
+        'XOP', 'EWT', 'EWJ', 'VB'
     ],
     'Mutual Funds': [
-        'VFIAX', 'VTSAX', 'FXAIX', 'FCNTX', 'AGTHX', 'TRBCX', 'VBTLX', 
-        'SWPPX', 'VWELX', 'DODGX', 'VIGAX', 'PRGFX', 'VWIAX', 'DFELX', 
-        'VIMAX', 'VPCCX', 'VEIPX', 'VWINX', 'VTIAX', 'PTTRX', 'POAGX', 
-        'RPMGX', 'VWUAX', 'FAGIX', 'VGHAX', 'FFIDX', 'FBGRX', 'FSPTX', 
-        'FDGRX', 'VWNDX', 'JATTX', 'SGENX', 'RWMFX', 'PRHSX', 'FLPSX', 
-        'FBALX', 'FAIRX', 'VGSLX', 'VDIGX', 'MGVAX', 'PRWCX', 'PARNX', 
-        'PRNHX', 'RYVPX', 'SWHGX', 'VHCAX', 'VSEQX'
+        'VFIAX', 'VTSAX', 'FXAIX', 'FCNTX', 'AGTHX', 'TRBCX', 
+        'VWELX', 'DODGX', 'PRGFX', 'VWIAX', 
+        'VEIPX', 'VWINX', 'PTTRX', 'POAGX', 'RPMGX', 'VWUAX', 
+        'FAGIX', 'VGHAX', 'FFIDX', 'FBGRX', 'FSPTX', 'FDGRX', 
+        'VWNDX', 'JATTX', 'SGENX', 'RWMFX', 'PRHSX', 'FLPSX', 
+        'FBALX', 'FAIRX', 'VGSLX', 'VDIGX', 'MGVAX', 'PRWCX', 
+        'PARNX', 'PRNHX', 'RYVPX', 'SWHGX'
     ],
     'Indices': [
         '^GSPC',  # S&P 500
@@ -38,6 +36,9 @@ securities = {
         '^IXIC'   # NASDAQ Composite
     ]
 }
+
+# Define the end date
+end_date = '2014-11-11'
 
 # Function to fetch the earliest available date for each ticker
 def get_earliest_date(ticker):
@@ -47,26 +48,26 @@ def get_earliest_date(ticker):
 
 # Get the earliest common start date
 earliest_dates = []
-for category, tickers in securities.items():
-    for ticker in tickers:
+for category, tickers in tqdm(securities.items(), desc='Categories'):
+    for ticker in tqdm(tickers, desc=f'Tickers in {category}', leave=False):
         earliest_dates.append(get_earliest_date(ticker))
 
 common_start_date = max(earliest_dates).tz_localize(None)  # Remove timezone information
 
 print(f"Earliest common start date: {common_start_date}")
 
-# Function to fetch data starting from the earliest common date
-def fetch_data(ticker, start_date, security_type):
-    data = yf.download(ticker, start=start_date)
+# Function to fetch data starting from the earliest common date up to a given end date
+def fetch_data(ticker, start_date, end_date, security_type):
+    data = yf.download(ticker, start=start_date, end=end_date)
     data['Ticker'] = ticker
     data['Type'] = security_type
     return data
 
-# Fetch data for all tickers from the common start date
+# Fetch data for all tickers from the common start date up to the end date
 data_frames = []
-for category, tickers in securities.items():
-    for ticker in tickers:
-        data = fetch_data(ticker, common_start_date, category)
+for category, tickers in tqdm(securities.items(), desc='Categories'):
+    for ticker in tqdm(tickers, desc=f'Tickers in {category}', leave=False):
+        data = fetch_data(ticker, common_start_date, end_date, category)
         data_frames.append(data)
 
 # Combine all data into a single DataFrame
@@ -76,8 +77,8 @@ combined_data = pd.concat(data_frames)
 combined_data.reset_index(inplace=True)
 combined_data.set_index(['Date', 'Ticker'], inplace=True)
 
-# Create a complete date range from the common start date to the latest date in the data
-common_dates = pd.date_range(start=common_start_date, end=combined_data.index.get_level_values('Date').max())
+# Create a complete date range from the common start date to the end date
+common_dates = pd.date_range(start=common_start_date, end=end_date)
 combined_data = combined_data.unstack(level='Ticker').reindex(common_dates).stack(level='Ticker').sort_index()
 
 # Ensure the Date column is labeled correctly
