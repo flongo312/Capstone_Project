@@ -1,7 +1,6 @@
+import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
 import os
 
 # Configuration
@@ -97,7 +96,7 @@ market_returns = market_index_pivot.pct_change().dropna()
 # Print sizes of returns DataFrames
 print(f"Size of stocks_returns: {stocks_returns.shape}")
 print(f"Size of etfs_returns: {etfs_returns.shape}")
-print(f"Size of mutual_funds_returns: {mutual_funds_returns.shape}")
+print (f"Size of mutual_funds_returns: {mutual_funds_returns.shape}")
 print(f"Size of market_returns: {market_returns.shape}")
 
 # Ensure we have valid data
@@ -184,13 +183,21 @@ print("Filtered Combined Results Columns after adding Composite Score:",
       filtered_combined_7_5_years.columns,
       filtered_combined_10_years.columns)
 
+# Rank assets by composite score within each horizon
+filtered_combined_5_years['Rank'] = filtered_combined_5_years['Composite Score 5 Years'].rank(method='first', ascending=False)
+filtered_combined_7_5_years['Rank'] = filtered_combined_7_5_years['Composite Score 7.5 Years'].rank(method='first', ascending=False)
+filtered_combined_10_years['Rank'] = filtered_combined_10_years['Composite Score 10 Years'].rank(method='first', ascending=False)
+
 # Filter top securities for each horizon
 def filter_top_assets_by_composite_score(data, score_column, top_n):
-    top_assets = data.nlargest(top_n, score_column)
+    top_assets = data.nsmallest(top_n, 'Rank')
     return top_assets
 
 filtered_top_securities_5_years = filter_top_assets_by_composite_score(filtered_combined_5_years, 'Composite Score 5 Years', top_n)
+filtered_combined_7_5_years = filtered_combined_7_5_years[~filtered_combined_7_5_years['Ticker'].isin(filtered_top_securities_5_years['Ticker'])]
 filtered_top_securities_7_5_years = filter_top_assets_by_composite_score(filtered_combined_7_5_years, 'Composite Score 7.5 Years', top_n)
+filtered_combined_10_years = filtered_combined_10_years[~filtered_combined_10_years['Ticker'].isin(filtered_top_securities_5_years['Ticker'])]
+filtered_combined_10_years = filtered_combined_10_years[~filtered_combined_10_years['Ticker'].isin(filtered_top_securities_7_5_years['Ticker'])]
 filtered_top_securities_10_years = filter_top_assets_by_composite_score(filtered_combined_10_years, 'Composite Score 10 Years', top_n)
 
 # Save the top assets based on composite score to CSV files
@@ -198,99 +205,53 @@ filtered_top_securities_5_years.to_csv(output_file_path_top_assets_5_years, inde
 filtered_top_securities_7_5_years.to_csv(output_file_path_top_assets_7_5_years, index=False)
 filtered_top_securities_10_years.to_csv(output_file_path_top_assets_10_years, index=False)
 
-# Combined bar plot for Composite Score
-def plot_composite_score_bar(filtered_data_5_years, filtered_data_7_5_years, filtered_data_10_years, title, file_name, top_n):
+# Function to plot top assets by composite score for a given horizon
+def plot_top_assets_by_composite_score(filtered_data, score_column, title, file_name, top_n):
+    # Sort by the composite score and select the top N
+    top_assets = filtered_data.sort_values(by=score_column, ascending=False).head(top_n)
+    
+    # Define a more appealing color palette
+    colors = plt.cm.viridis(np.linspace(0, 1, top_n))
+    
+    # Plotting
     fig, ax = plt.subplots(figsize=(16, 12))
     
-    filtered_data_5_years = filtered_data_5_years.sort_values(by='Composite Score 5 Years', ascending=False)
-    filtered_data_7_5_years = filtered_data_7_5_years.sort_values(by='Composite Score 7.5 Years', ascending=False)
-    filtered_data_10_years = filtered_data_10_years.sort_values(by='Composite Score 10 Years', ascending=False)
+    bars = ax.bar(top_assets['Ticker'], top_assets[score_column], color=colors, edgecolor='grey')
+    
+    ax.set_xlabel('Securities', fontsize=24, fontweight='bold')
+    ax.set_ylabel('Composite Score', fontsize=24, fontweight='bold')
+    ax.set_title(title, fontsize=28, fontweight='bold')
+    ax.set_xticks(np.arange(len(top_assets)))
+    ax.set_xticklabels(top_assets['Ticker'], rotation=45, ha='right', fontsize=20)
+    ax.tick_params(axis='y', labelsize=20)  # Adjust the y-axis tick labels size
 
-    # Bar width
-    bar_width = 0.25
+    # Add data labels
+    for bar in bars:
+        height = bar.get_height()
+        ax.text(bar.get_x() + bar.get_width() / 2, height, f'{height:.2f}', ha='center', va='bottom', fontsize=18, fontweight='bold', color='black')
 
-    # Set positions of bar on X axis
-    r1 = np.arange(len(filtered_data_5_years))
-    r2 = [x + bar_width for x in r1]
-    r3 = [x + bar_width for x in r2]
-
-    ax.bar(r1, filtered_data_5_years['Composite Score 5 Years'], color='b', width=bar_width, edgecolor='grey', label='5 Years')
-    ax.bar(r2, filtered_data_7_5_years['Composite Score 7.5 Years'], color='g', width=bar_width, edgecolor='grey', label='7.5 Years')
-    ax.bar(r3, filtered_data_10_years['Composite Score 10 Years'], color='r', width=bar_width, edgecolor='grey', label='10 Years')
-
-    ax.set_xlabel('Securities', fontsize=18)
-    ax.set_ylabel('Composite Score', fontsize=18)
-    ax.set_title(title, fontsize=22)
-    ax.set_xticks([r + bar_width for r in range(len(filtered_data_5_years))])
-    ax.set_xticklabels(filtered_data_5_years['Ticker'], rotation=90, ha='center', fontsize=10)
+    # Style the grid
+    plt.grid(True, which='both', linestyle='--', linewidth=0.5, alpha=0.7)
     
-    plt.legend()
-    plt.tight_layout()
-    plt.savefig(file_name, dpi=300)
-    plt.close()
-    print(f"Composite Score bar plot saved as: {file_name}")
-
-# Improved scatter plot: Sharpe Ratio vs. CAPM Predicted Return
-def plot_scatter_sharpe_vs_capm(filtered_data, title, file_name, colors=None):
-    fig, ax = plt.subplots(figsize=(16, 12))
-    
-    if colors is None:
-        colors = {
-            'Stocks': 'tab:blue',
-            'ETFs': 'tab:green',
-            'Mutual Funds': 'tab:orange'
-        }
-    
-    for t in filtered_data['Type'].unique():
-        subset = filtered_data[filtered_data['Type'] == t]
-        if not subset.empty:
-            ax.scatter(subset['CAPM Predicted Return'], subset['Sharpe Ratio'], label=t, alpha=0.7, s=100, color=colors[t])
-            sns.regplot(x='CAPM Predicted Return', y='Sharpe Ratio', data=subset, ax=ax, scatter=False, color=colors[t], line_kws={"linestyle": "--"})
-    
-    for i, row in filtered_data.iterrows():
-        ax.annotate(row['Ticker'], (row['CAPM Predicted Return'], row['Sharpe Ratio']), fontsize=9, alpha=0.75)
-    
-    ax.set_xlabel('CAPM Predicted Return', fontsize=18)
-    ax.set_ylabel('Sharpe Ratio', fontsize=18)
-    ax.set_title(title, fontsize=22)
-    
-    handles, labels = ax.get_legend_handles_labels()
-    if handles:
-        ax.legend(title='Security Types', fontsize=14, title_fontsize=16)
+    # Set background color
+    ax.set_facecolor('#f9f9f9')
     
     plt.tight_layout()
     plt.savefig(file_name, dpi=300)
     plt.close()
-    print(f"Scatter plot saved as: {file_name}")
+    print(f"{title} bar plot saved as: {file_name}")
 
-# Improved Sharpe Ratio Distribution Plot
-def plot_sharpe_ratio_distribution(data, title, file_name, bins=30, color='blue'):
-    plt.figure(figsize=(16, 12))
-    sns.histplot(data['Sharpe Ratio'], kde=True, bins=bins, color=color)
-    plt.title(title, fontsize=22)
-    plt.xlabel('Sharpe Ratio', fontsize=18)
-    plt.ylabel('Frequency', fontsize=18)
-    plt.axvline(data['Sharpe Ratio'].mean(), color='r', linestyle='--', label=f'Mean: {data["Sharpe Ratio"].mean():.2f}')
-    plt.axvline(data['Sharpe Ratio'].median(), color='g', linestyle='--', label=f'Median: {data["Sharpe Ratio"].median():.2f}')
-    plt.legend()
-    plt.tight_layout()
-    plt.savefig(file_name, dpi=300)
-    plt.close()
-    print(f"Sharpe Ratio distribution plot saved as: {file_name}")
+# Example usage for each time horizon
+plot_top_assets_by_composite_score(filtered_top_securities_5_years, 'Composite Score 5 Years', 
+                                   'Top Assets by Composite Score - 5 Years', 
+                                   os.path.join(figure_directory, 'top_assets_composite_score_5_years.png'), top_n=top_n)
 
-# Plot Composite Score Bar
-plot_composite_score_bar(filtered_top_securities_5_years, filtered_top_securities_7_5_years, filtered_top_securities_10_years, 
-                         'Top Assets by Composite Score', 
-                         os.path.join(figure_directory, 'top_assets_composite_score_bar.png'), top_n=top_n)
+plot_top_assets_by_composite_score(filtered_top_securities_7_5_years, 'Composite Score 7.5 Years', 
+                                   'Top Assets by Composite Score - 7.5 Years', 
+                                   os.path.join(figure_directory, 'top_assets_composite_score_7_5_years.png'), top_n=top_n)
 
-# Plot Scatter Plot
-plot_scatter_sharpe_vs_capm(combined_capm_results, 
-                    'Sharpe Ratio vs. CAPM Predicted Return', 
-                    os.path.join(figure_directory, 'sharpe_vs_capm_scatter.png'))
-
-# Plot Sharpe Ratio Distribution
-plot_sharpe_ratio_distribution(combined_capm_results, 
-                               'Distribution of Sharpe Ratios', 
-                               os.path.join(figure_directory, 'sharpe_ratio_distribution.png'))
+plot_top_assets_by_composite_score(filtered_top_securities_10_years, 'Composite Score 10 Years', 
+                                   'Top Assets by Composite Score - 10 Years', 
+                                   os.path.join(figure_directory, 'top_assets_composite_score_10_years.png'), top_n=top_n)
 
 print("Visualizations completed and saved.")

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.9)  27 JUN 2024 03:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.9)  10 JUL 2024 21:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -998,7 +998,7 @@ File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count367
 \l__pdf_internal_box=\box128
 )
-(./slides.aux)
+No file slides.aux.
 \openout1 = `slides.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -1019,7 +1019,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1077,8 +1076,6 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 19.
-
-(./slides.out) (./slides.out)
 \@outlinefile=\write5
 \openout5 = `slides.out'.
 
@@ -1128,7 +1125,7 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 36--36
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 40--40
  [][][][]  
  []
 
@@ -1140,28 +1137,16 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 [2
 
 ]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 49--49
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 58--58
  [][][][]  
  []
 
-
-Overfull \hbox (201.23251pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[3
-
-]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 60--60
- [][][][]  
- []
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 60.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 60.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
 
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1171,14 +1156,31 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[4
+[3
 
 {/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 77--77
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 107--107
  [][][][]  
  []
 
+
+Overfull \hbox (201.23251pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[4
+
+]
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 114--114
+ [][][][]  
+ []
+
+<histogram_security_count.png, id=144, 1011.78pt x 578.16pt>
+File: histogram_security_count.png Graphic file (type png)
+<use histogram_security_count.png>
+Package pdftex.def Info: histogram_security_count.png  used on input line 114.
+(pdftex.def)             Requested size: 342.2953pt x 195.60138pt.
 
 Overfull \hbox (201.23251pt too wide) has occurred while \output is active
  [][][][]  
@@ -1186,11 +1188,17 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 
 [5
 
-]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 93--93
+ <./histogram_security_count.png>]
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 121--121
  [][][][]  
  []
 
+<cumulative_returns_by_type.png, id=154, 1156.32pt x 650.43pt>
+File: cumulative_returns_by_type.png Graphic file (type png)
+<use cumulative_returns_by_type.png>
+Package pdftex.def Info: cumulative_returns_by_type.png  used on input line 121
+.
+(pdftex.def)             Requested size: 342.2953pt x 192.54015pt.
 
 Overfull \hbox (201.23251pt too wide) has occurred while \output is active
  [][][][]  
@@ -1198,8 +1206,8 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 
 [6
 
-]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 109--109
+ <./cumulative_returns_by_type.png>]
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 146--146
  [][][][]  
  []
 
@@ -1211,7 +1219,7 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 [7
 
 ]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 137--137
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 158--158
  [][][][]  
  []
 
@@ -1223,57 +1231,31 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 [8
 
 ]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 140--140
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 176--176
  [][][][]  
  []
 
-\openout4 = `slides.vrb'.
 
-
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 145--145
- [][][][]  
- []
-
-(./slides.vrb
-<histogram_security_count.png, id=287, 722.7pt x 433.62pt>
-File: histogram_security_count.png Graphic file (type png)
-<use histogram_security_count.png>
-Package pdftex.def Info: histogram_security_count.png  used on input line 4.
-(pdftex.def)             Requested size: 342.2953pt x 205.37614pt.
-)
 Overfull \hbox (201.23251pt too wide) has occurred while \output is active
  [][][][]  
  []
 
 [9
 
- <./histogram_security_count.png>]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 147--147
+]
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 193--193
  [][][][]  
  []
 
-\openout4 = `slides.vrb'.
 
-
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 152--152
- [][][][]  
- []
-
-(./slides.vrb
-<cumulative_returns_by_type.png, id=298, 1011.78pt x 578.16pt>
-File: cumulative_returns_by_type.png Graphic file (type png)
-<use cumulative_returns_by_type.png>
-Package pdftex.def Info: cumulative_returns_by_type.png  used on input line 4.
-(pdftex.def)             Requested size: 342.2953pt x 195.60138pt.
-)
 Overfull \hbox (201.23251pt too wide) has occurred while \output is active
  [][][][]  
  []
 
 [10
 
- <./cumulative_returns_by_type.png>]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 170--170
+]
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 211--211
  [][][][]  
  []
 
@@ -1285,59 +1267,64 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 [11
 
 ]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 172--172
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 221--221
  [][][][]  
  []
 
-\openout4 = `slides.vrb'.
+<top_assets_composite_score_5_years.png, id=302, 1156.32pt x 867.24pt>
+File: top_assets_composite_score_5_years.png Graphic file (type png)
+<use top_assets_composite_score_5_years.png>
+Package pdftex.def Info: top_assets_composite_score_5_years.png  used on input 
+line 221.
+(pdftex.def)             Requested size: 308.06367pt x 231.04817pt.
 
-
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 186--186
- [][][][]  
+Overfull \vbox (2.57079pt too high) detected at line 221
  []
 
-(./slides.vrb
-Overfull \hbox (42.86678pt too wide) in paragraph at lines 13--13
-[]\OT1/cmtt/m/n/10.95 market = yf.download('^GSPC', start='2012-10-24', end='20
-24-09-26')[] 
- []
 
-)
 Overfull \hbox (201.23251pt too wide) has occurred while \output is active
  [][][][]  
  []
 
 [12
 
-]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 188--188
+ <./top_assets_composite_score_5_years.png>]
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 228--228
  [][][][]  
  []
 
-\openout4 = `slides.vrb'.
+<top_assets_composite_score_7_5_years.png, id=311, 1156.32pt x 867.24pt>
+File: top_assets_composite_score_7_5_years.png Graphic file (type png)
+<use top_assets_composite_score_7_5_years.png>
+Package pdftex.def Info: top_assets_composite_score_7_5_years.png  used on inpu
+t line 228.
+(pdftex.def)             Requested size: 308.06367pt x 231.04817pt.
 
-
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 202--202
- [][][][]  
+Overfull \vbox (2.57079pt too high) detected at line 228
  []
 
-(./slides.vrb)
+
 Overfull \hbox (201.23251pt too wide) has occurred while \output is active
  [][][][]  
  []
 
 [13
 
-]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 207--207
+ <./top_assets_composite_score_7_5_years.png>]
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 236--236
  [][][][]  
  []
 
-<actual_vs_capm_5_years.png, id=384, 1156.32pt x 867.24pt>
-File: actual_vs_capm_5_years.png Graphic file (type png)
-<use actual_vs_capm_5_years.png>
-Package pdftex.def Info: actual_vs_capm_5_years.png  used on input line 207.
-(pdftex.def)             Requested size: 278.12236pt x 208.60147pt.
+<top_assets_composite_score_10_years.png, id=321, 1156.32pt x 867.24pt>
+File: top_assets_composite_score_10_years.png Graphic file (type png)
+<use top_assets_composite_score_10_years.png>
+Package pdftex.def Info: top_assets_composite_score_10_years.png  used on input
+ line 236.
+(pdftex.def)             Requested size: 308.06367pt x 231.04817pt.
+
+Overfull \vbox (2.57079pt too high) detected at line 236
+ []
+
 
 Overfull \hbox (201.23251pt too wide) has occurred while \output is active
  [][][][]  
@@ -1345,16 +1332,11 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 
 [14
 
- <./actual_vs_capm_5_years.png>]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 212--212
+ <./top_assets_composite_score_10_years.png>]
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 269--269
  [][][][]  
  []
 
-<actual_vs_capm_10_years.png, id=394, 1156.32pt x 867.24pt>
-File: actual_vs_capm_10_years.png Graphic file (type png)
-<use actual_vs_capm_10_years.png>
-Package pdftex.def Info: actual_vs_capm_10_years.png  used on input line 212.
-(pdftex.def)             Requested size: 278.12236pt x 208.60147pt.
 
 Overfull \hbox (201.23251pt too wide) has occurred while \output is active
  [][][][]  
@@ -1362,16 +1344,11 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 
 [15
 
- <./actual_vs_capm_10_years.png>]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 217--217
+]
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 285--285
  [][][][]  
  []
 
-<actual_vs_capm_15_years.png, id=403, 1156.32pt x 867.24pt>
-File: actual_vs_capm_15_years.png Graphic file (type png)
-<use actual_vs_capm_15_years.png>
-Package pdftex.def Info: actual_vs_capm_15_years.png  used on input line 217.
-(pdftex.def)             Requested size: 278.12236pt x 208.60147pt.
 
 Overfull \hbox (201.23251pt too wide) has occurred while \output is active
  [][][][]  
@@ -1379,8 +1356,8 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 
 [16
 
- <./actual_vs_capm_15_years.png>]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 235--235
+]
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 296--296
  [][][][]  
  []
 
@@ -1392,10 +1369,16 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 [17
 
 ]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 258--258
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 303--303
  [][][][]  
  []
 
+<optimal_portfolio_5_years.png, id=425, 999.735pt x 714.67pt>
+File: optimal_portfolio_5_years.png Graphic file (type png)
+<use optimal_portfolio_5_years.png>
+Package pdftex.def Info: optimal_portfolio_5_years.png  used on input line 303.
+
+(pdftex.def)             Requested size: 291.80731pt x 208.60147pt.
 
 Overfull \hbox (201.23251pt too wide) has occurred while \output is active
  [][][][]  
@@ -1403,11 +1386,17 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 
 [18
 
-]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 275--275
+ <./optimal_portfolio_5_years.png>]
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 310--310
  [][][][]  
  []
 
+<optimal_portfolio_7_5_years.png, id=434, 989.6975pt x 714.67pt>
+File: optimal_portfolio_7_5_years.png Graphic file (type png)
+<use optimal_portfolio_7_5_years.png>
+Package pdftex.def Info: optimal_portfolio_7_5_years.png  used on input line 31
+0.
+(pdftex.def)             Requested size: 288.87752pt x 208.60147pt.
 
 Overfull \hbox (201.23251pt too wide) has occurred while \output is active
  [][][][]  
@@ -1415,36 +1404,29 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 
 [19
 
-]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 278--278
+ <./optimal_portfolio_7_5_years.png>]
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 317--317
  [][][][]  
  []
 
-\openout4 = `slides.vrb'.
+<optimal_portfolio_10_years.png, id=444, 1003.75pt x 714.67pt>
+File: optimal_portfolio_10_years.png Graphic file (type png)
+<use optimal_portfolio_10_years.png>
+Package pdftex.def Info: optimal_portfolio_10_years.png  used on input line 317
+.
+(pdftex.def)             Requested size: 292.97923pt x 208.60147pt.
 
-
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 298--298
- [][][][]  
- []
-
-(./slides.vrb)
 Overfull \hbox (201.23251pt too wide) has occurred while \output is active
  [][][][]  
  []
 
 [20
 
-]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 303--303
+ <./optimal_portfolio_10_years.png>]
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 338--338
  [][][][]  
  []
 
-<optimal_portfolio_5_years.png, id=539, 1003.75pt x 714.67pt>
-File: optimal_portfolio_5_years.png Graphic file (type png)
-<use optimal_portfolio_5_years.png>
-Package pdftex.def Info: optimal_portfolio_5_years.png  used on input line 303.
-
-(pdftex.def)             Requested size: 292.97923pt x 208.60147pt.
 
 Overfull \hbox (201.23251pt too wide) has occurred while \output is active
  [][][][]  
@@ -1452,17 +1434,17 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 
 [21
 
- <./optimal_portfolio_5_years.png>]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 308--308
+]
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 346--346
  [][][][]  
  []
 
-<optimal_portfolio_10_years.png, id=548, 1003.75pt x 714.67pt>
-File: optimal_portfolio_10_years.png Graphic file (type png)
-<use optimal_portfolio_10_years.png>
-Package pdftex.def Info: optimal_portfolio_10_years.png  used on input line 308
-.
-(pdftex.def)             Requested size: 292.97923pt x 208.60147pt.
+<cumulative_returns_comparison.png, id=485, 1110.1475pt x 676.5275pt>
+File: cumulative_returns_comparison.png Graphic file (type png)
+<use cumulative_returns_comparison.png>
+Package pdftex.def Info: cumulative_returns_comparison.png  used on input line 
+346.
+(pdftex.def)             Requested size: 308.06367pt x 187.73343pt.
 
 Overfull \hbox (201.23251pt too wide) has occurred while \output is active
  [][][][]  
@@ -1470,17 +1452,17 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 
 [22
 
- <./optimal_portfolio_10_years.png>]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 313--313
+ <./cumulative_returns_comparison.png>]
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 353--353
  [][][][]  
  []
 
-<optimal_portfolio_15_years.png, id=557, 1003.75pt x 714.67pt>
-File: optimal_portfolio_15_years.png Graphic file (type png)
-<use optimal_portfolio_15_years.png>
-Package pdftex.def Info: optimal_portfolio_15_years.png  used on input line 313
+<cumulative_returns_summary.png, id=494, 1171.37625pt x 821.0675pt>
+File: cumulative_returns_summary.png Graphic file (type png)
+<use cumulative_returns_summary.png>
+Package pdftex.def Info: cumulative_returns_summary.png  used on input line 353
 .
-(pdftex.def)             Requested size: 292.97923pt x 208.60147pt.
+(pdftex.def)             Requested size: 308.06367pt x 215.92809pt.
 
 Overfull \hbox (201.23251pt too wide) has occurred while \output is active
  [][][][]  
@@ -1488,8 +1470,8 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 
 [23
 
- <./optimal_portfolio_15_years.png>]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 323--323
+ <./cumulative_returns_summary.png>]
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 365--365
  [][][][]  
  []
 
@@ -1501,7 +1483,7 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 [24
 
 ]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 333--333
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 380--380
  [][][][]  
  []
 
@@ -1513,7 +1495,7 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 [25
 
 ]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 343--343
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 397--397
  [][][][]  
  []
 
@@ -1525,7 +1507,7 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 [26
 
 ]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 354--354
+Overfull \hbox (201.23251pt too wide) in paragraph at lines 410--410
  [][][][]  
  []
 
@@ -1535,18 +1517,6 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
  []
 
 [27
-
-]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 367--367
- [][][][]  
- []
-
-
-Overfull \hbox (201.23251pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[28
 
 ]
 \tf@nav=\write6
@@ -1563,41 +1533,44 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-Package rerunfilecheck Info: File `slides.out' has not changed.
-(rerunfilecheck)             Checksum: 1DB52E23FA011DC920BABD4FA670E250;2032.
+
+
+Package rerunfilecheck Warning: File `slides.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `slides.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  3AC9E8F11F8F57D222EB6D49F0F7BC34;1634.
  ) 
 Here is how much of TeX's memory you used:
- 35298 strings out of 474116
- 847615 string characters out of 5743683
- 1943187 words of memory out of 5000000
- 56932 multiletter control sequences out of 15000+600000
- 570485 words of font info for 83 fonts, out of 8000000 for 9000
+ 35199 strings out of 474116
+ 845775 string characters out of 5743683
+ 1944187 words of memory out of 5000000
+ 56857 multiletter control sequences out of 15000+600000
+ 568298 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,15n,123p,727b,841s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,123p,727b,725s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
-usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
-sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
-l/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
-exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
-ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive
-/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
-2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
-024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/202
-4/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2024/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2024/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2024/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2024/texmf
--dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2024/te
-xmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on slides.pdf (28 pages, 2556173 bytes).
+></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
+l/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
+exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texl
+ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texliv
+e/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/
+2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/20
+24/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2024
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2024/
+texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on slides.pdf (27 pages, 2692018 bytes).
 PDF statistics:
- 795 PDF objects out of 1000 (max. 8388607)
- 474 compressed objects within 5 object streams
- 69 named destinations out of 1000 (max. 500000)
- 1319 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 687 PDF objects out of 1000 (max. 8388607)
+ 397 compressed objects within 4 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 1119 words of extra memory for PDF output out of 10000 (max. 10000000)
 

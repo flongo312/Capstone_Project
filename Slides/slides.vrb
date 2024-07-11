@@ -1,20 +1,6 @@
-\frametitle{Setting Up the Optimization}
-\begin{block}{Bounds and Optimization Process}
-        \scriptsize
-        \begin{verbatim}
-# Bounds to ensure diversification
-bounds = tuple((0.0, 0.1) for _ in range(num_assets))
-
-# Optimize the portfolio
-result = minimize(negative_sharpe_ratio, init_guess,
-                  args=(mean_returns, cov_matrix, risk_free_rate),
-                  method='SLSQP', bounds=bounds, constraints=constraints)
-        \end{verbatim}
-    \end{block}
-    \begin{block}{Explanation}
-        \scriptsize
-        \begin{itemize}
-            \item \textbf{Bounds}: Limit the weight of any single asset to a maximum of 10% to ensure diversification.
-            \item \textbf{Optimization}: Use the SLSQP method to find the optimal weights that maximize the Sharpe ratio by minimizing its negative.
-        \end{itemize}
-    \end{block}
+\frametitle{Visualizing Returns Distribution}
+\begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{cumulative_returns_by_type.png}
+        \caption{Cumulative Returns by Type}
+    \end{figure}

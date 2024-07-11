@@ -38,7 +38,7 @@ securities = {
 }
 
 # Define the end date
-end_date = '2014-11-11'
+end_date = '2014-11-10'
 
 # Function to fetch the earliest available date for each ticker
 def get_earliest_date(ticker):
@@ -92,6 +92,7 @@ combined_data.to_csv(output_file, index=False)
 print(f"Data saved to {output_file}")
 
 # Data Exploration and Visualization
+
 # Set up the output directory for figures
 figure_directory = '/Users/frank/Desktop/Project/Figures'
 os.makedirs(figure_directory, exist_ok=True)
@@ -99,15 +100,24 @@ os.makedirs(figure_directory, exist_ok=True)
 # Filter out the 'Indices' type
 filtered_data = combined_data[combined_data['Type'] != 'Indices']
 
+# Use a colorblind-friendly palette
+colorblind_palette = sns.color_palette("colorblind")
+
+# Set a consistent style
+sns.set(style="whitegrid", palette=colorblind_palette, font_scale=1.4)
+
 # Histogram: Count of Securities by Type in the dataset
-plt.figure(figsize=(10, 6))
-sns.countplot(x='Type', data=filtered_data.drop_duplicates(subset=['Ticker']), palette='viridis')
-plt.title('Count of Securities by Type')
-plt.xlabel('Security Type')
-plt.ylabel('Count')
+plt.figure(figsize=(14, 8))
+ax = sns.countplot(x='Type', data=filtered_data.drop_duplicates(subset=['Ticker']), palette=colorblind_palette)
+plt.title('Distribution of Securities by Type', fontsize=24, weight='bold')
+plt.xlabel('Type of Security', fontsize=20, weight='bold')
+plt.ylabel('Number of Securities', fontsize=20, weight='bold')
+plt.xticks(rotation=45, fontsize=18)
+plt.yticks(fontsize=18)
 plt.grid(True, linestyle='--', alpha=0.7)
-for p in plt.gca().patches:
-    plt.gca().annotate(f'\n{p.get_height()}', (p.get_x() + 0.3, p.get_height()), ha='center', va='top', color='white', size=10)
+for p in ax.patches:
+    ax.annotate(f'{p.get_height()}', (p.get_x() + p.get_width() / 2., p.get_height()), ha='center', va='baseline', color='black', fontsize=22, weight='bold')
+plt.tight_layout()
 plt.savefig(os.path.join(figure_directory, 'histogram_security_count.png'))
 plt.close()
 
@@ -122,14 +132,17 @@ combined_data['Daily Return'] = combined_data.groupby('Ticker')['Adj Close'].pct
 cumulative_returns_by_type = combined_data.groupby(['Date', 'Type'])['Daily Return'].mean().unstack().fillna(0)
 cumulative_returns_by_type = (1 + cumulative_returns_by_type).cumprod()
 
-plt.figure(figsize=(14, 8))
+plt.figure(figsize=(16, 9))
 for column in cumulative_returns_by_type.columns:
-    plt.plot(cumulative_returns_by_type.index, cumulative_returns_by_type[column], label=column)
-plt.title('Cumulative Returns by Security Type')
-plt.xlabel('Date')
-plt.ylabel('Cumulative Return')
-plt.legend()
+    plt.plot(cumulative_returns_by_type.index, cumulative_returns_by_type[column] * 100 - 100, label=column, linewidth=2.5)
+plt.title('Cumulative Returns Over Time by Security Type', fontsize=24, weight='bold')
+plt.xlabel('Date', fontsize=20, weight='bold')
+plt.ylabel('Cumulative Return (%)', fontsize=20, weight='bold')
+plt.legend(title='Security Type', fontsize=16, title_fontsize=18, loc='upper left')
+plt.xticks(fontsize=18)
+plt.yticks(fontsize=18)
 plt.grid(True, linestyle='--', alpha=0.7)
+plt.tight_layout()
 plt.savefig(os.path.join(figure_directory, 'cumulative_returns_by_type.png'))
 plt.close()
 

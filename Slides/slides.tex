@@ -22,31 +22,29 @@
     \titlepage
 \end{frame}
 
+
+
+
+
 \section{Introduction}
 \begin{frame}{Introduction}
     \begin{block}{Objective}
         Develop optimal investment strategies for first-time homebuyers to save for down payments.
     \end{block}
     \begin{block}{Research Question}
-        What are the optimal investment strategies for aspiring first-time homebuyers of various age cohorts to accumulate down payments over 5, 10, and 15-year investment horizons?
+        What are the optimal investment strategies for aspiring first-time homebuyers of various age cohorts to accumulate down payments over 5, 7.5, and 10-year investment horizons?
     \end{block}
     \begin{block}{Motivation}
-        Address the challenges posed by escalating housing costs and assist diverse age groups in expediting their path to homeownership.
+        Address the challenges posed by escalating housing costs and help diverse age groups achieve homeownership faster.
     \end{block}
 \end{frame}
 
-\section{Financial Literacy: Essential Concepts}
-\begin{frame}{Essential Financial Concepts}
-    \begin{block}{Stocks}
-        Equity investments representing proprietorship in a company.
-    \end{block}
-    \begin{block}{Mutual Funds}
-        Investment vehicles that aggregate capital from numerous investors to purchase a diversified portfolio of stocks, bonds, or other securities.
-    \end{block}
-    \begin{block}{ETFs (Exchange-Traded Funds)}
-        Analogous to mutual funds but traded on stock exchanges like individual stocks.
-    \end{block}
-\end{frame}
+
+
+
+
+
+
 
 \section{Typical First-time Homebuyer Profile}
 \begin{frame}{Typical First-time Homebuyer Profile}
@@ -54,73 +52,45 @@
         \begin{itemize}
             \item \textbf{Median Age:} 35 years (2024)\footnote{National Association of Realtors, 2024 Profile of Home Buyers and Sellers.}
             \item \textbf{Median Household Income:} \$104,000 (2024)\footnote{Consumer Financial Protection Bureau, Market Snapshot: First-time Homebuyers, 2024.}
-            \item \textbf{Median Nationwide Home Cost:} \$416,100 (2024)\footnote{U.S. Department of Housing and Urban Development, 2024.}
+            \item \textbf{Median Nationwide Home Price:} \$416,100 (2024)\footnote{U.S. Department of Housing and Urban Development, 2024.}
         \end{itemize}
     \end{block}
 \end{frame}
 
-\section{Risk Tolerances and Investment Contributions}
-\begin{frame}{Investment Contributions by Age Group}
-    \begin{block}{20-25 Years Old (15-Year Time Horizon)}
-        \begin{itemize}
-            \item \textbf{Median Gross Income:} \$45,000\footnote{Bureau of Labor Statistics, 2024.}
-            \item \textbf{Annual Contribution:} 10\%\footnote{Federal Reserve, 2024.}
-            \item \textbf{Risk Tolerance (Beta):} 1.2\footnote{Morgan Stanley, 2024.}
-            \item \textbf{Equity Breakdown:}
-            \begin{itemize}
-                \item Stocks: 50\%\footnote{Empower, 2024.}
-                \item Mutual Funds: 25\%\footnote{Charles Schwab, 2024.}
-                \item ETFs: 25\%\footnote{J.P. Morgan, 2024.}
-            \end{itemize}
-        \end{itemize}
-    \end{block}
-\end{frame}
 
-\begin{frame}{Investment Contributions by Age Group}
-    \begin{block}{25-30 Years Old (10-Year Time Horizon)}
-        \begin{itemize}
-            \item \textbf{Median Gross Income:} \$60,000\footnote{Bureau of Labor Statistics, 2024.}
-            \item \textbf{Annual Contribution:} 15\%\footnote{Federal Reserve, 2024.}
-            \item \textbf{Risk Tolerance (Beta):} 1.0\footnote{Morgan Stanley, 2024.}
-            \item \textbf{Equity Breakdown:}
-            \begin{itemize}
-                \item Stocks: 45\%\footnote{Morgan Stanley, 2024.}
-                \item Mutual Funds: 30\%\footnote{Charles Schwab, 2024.}
-                \item ETFs: 25\%\footnote{J.P. Morgan, 2024.}
-            \end{itemize}
-        \end{itemize}
-    \end{block}
-\end{frame}
 
-\begin{frame}{Investment Contributions by Age Group}
-    \begin{block}{30-35 Years Old (5-Year Time Horizon)}
-        \begin{itemize}
-            \item \textbf{Median Gross Income:} \$80,000\footnote{Bureau of Labor Statistics, 2024.}
-            \item \textbf{Annual Contribution:} 20\%\footnote{Federal Reserve, 2024.}
-            \item \textbf{Risk Tolerance (Beta):} 0.8\footnote{Morgan Stanley, 2024.}
-            \item \textbf{Equity Breakdown:}
-            \begin{itemize}
-                \item Stocks: 40\%\footnote{Empower, 2024.}
-                \item Mutual Funds: 35\%\footnote{Charles Schwab, 2024.}
-                \item ETFs: 25\%\footnote{J.P. Morgan, 2024.}
-            \end{itemize}
-        \end{itemize}
-    \end{block}
-\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Data Import}
 \begin{frame}{Data Sources}
-    \begin{block}{Primary Source}
+    \begin{block}{Primary Sources}
         \textbf{Yahoo Finance (YFinance)}
         \begin{itemize}
-            \item Comprehensive financial data on stocks, mutual funds, and ETFs.
+            \item Financial data for stocks, mutual funds, and ETFs.
         \end{itemize}
     \end{block}
-
     \begin{block}{Data Coverage}
-        \textbf{Date Range:} 10/24/2012 to present (daily frequency)
+        \textbf{YFinance Data}
+        \begin{itemize}
+            \item \textbf{Date Range:} 2011-05-04 to 2014-11-07 (daily frequency)
+        \end{itemize}
+        \textbf{Hindsight Data}
+        \begin{itemize}
+            \item \textbf{Date Range:} 2011-05-04 to 2024-07-9 (daily frequency)
+        \end{itemize}
     \end{block}
-
     \begin{block}{Data Fields}
         \begin{multicols}{2}
         \begin{itemize}
@@ -136,20 +106,25 @@
     \end{block}
 \end{frame}
 
-\section{Exploratory Data Analysis}
-\begin{frame}[fragile]{Visualizing Security Count}
+\begin{frame}{Distribution of Security Types}
     \begin{figure}
         \centering
-        \includegraphics[width=\textwidth]{histogram_security_count.png}
+        \includegraphics[width=\linewidth]{histogram_security_count.png}
     \end{figure}
 \end{frame}
 
-\begin{frame}[fragile]{Visualizing Returns Distribution}
-        \begin{figure}
-            \centering
-            \includegraphics[width=\textwidth]{cumulative_returns_by_type.png}
-        \end{figure}
+\begin{frame}{Cumulative Returns by Type}
+    \begin{figure}
+        \centering
+        \includegraphics[width=\linewidth]{cumulative_returns_by_type.png}
+    \end{figure}
 \end{frame}
+
+
+
+
+
+
 
 \section{CAPM}
 \begin{frame}{Capital Asset Pricing Model (CAPM)}
@@ -159,80 +134,116 @@
         \end{equation*}
         \footnote{Sharpe, W. F. (1964). Capital asset prices: A theory of market equilibrium under conditions of risk. \textit{The Journal of Finance}, 19(3), 425-442.}
     \end{block}
-    \begin{block}{Assumptions}
+    \begin{block}{Explanation of Variables}
         \begin{itemize}
-            \item Diversified portfolios
-            \item Efficient markets
-            \item No taxes or transaction costs
-            \item Constant risk-free rate
+            \item \( E(R_i) \): Expected return of the investment
+            \item \( R_f \): Risk-free rate of return
+            \item \( \beta_i \): Beta of the investment, a measure of its volatility relative to the market
+            \item \( E(R_m) \): Expected return of the market
+            \item \( E(R_m) - R_f \): Market risk premium, the additional return expected from the market above the risk-free rate
         \end{itemize}
     \end{block}
 \end{frame}
 
-\begin{frame}[fragile]{Calculating Beta}
-    \begin{block}{Market Return Calculation}
-        \begin{verbatim}
-# Market return (e.g., S&P 500)
-market = yf.download('^GSPC', start='2012-10-24', end='2024-09-26')
-market_returns = market['Adj Close'].pct_change().dropna()
 
-# Calculate beta for each stock
-beta = {}
-for ticker in tickers:
-    cov_matrix = np.cov(returns[ticker], market_returns)
-    beta[ticker] = cov_matrix[0, 1] / cov_matrix[1, 1]
-        \end{verbatim}
-    \end{block}
-\end{frame}
 
-\begin{frame}[fragile]{Calculating Expected Return using CAPM}
-    \begin{block}{Expected Return Calculation}
-        \begin{verbatim}
-# Assuming a risk-free rate of 3% and market return of 8%
-risk_free_rate = 0.03
-market_return = 0.08
-
-# Calculate expected return for each stock
-capm_returns = {}
-for ticker in tickers:
-    capm_returns[ticker] = risk_free_rate + beta[ticker] * 
-    (market_return - risk-free_rate)
-        \end{verbatim}
-    \end{block}
-\end{frame}
-
-\begin{frame}{Actual Return vs. CAPM Expected Return (5 Year Time Horizon)}
-    \centering
-    \includegraphics[height=0.8\textheight]{actual_vs_capm_5_years.png}
-\end{frame}
-
-\begin{frame}{Actual Return vs. CAPM Expected Return (10 Year Time Horizon)}
-    \centering
-    \includegraphics[height=0.8\textheight]{actual_vs_capm_10_years.png}
-\end{frame}
-
-\begin{frame}{Actual Return vs. CAPM Expected Return (15 Year Time Horizon)}
-    \centering
-    \includegraphics[height=0.8\textheight]{actual_vs_capm_15_years.png}
-\end{frame}
-
-\section{New Filtered Data}
-\begin{frame}{Resulting Filtered Data Generated (For Each Time Horizon)}
-    \begin{block}{Data Fields}
-        \begin{multicols}{2}
+\begin{frame}{Composite Score Technique}
+    \begin{block}{Composite Score Technique}
         \begin{itemize}
-            \item Ticker
-            \item Beta
-            \item CAPM
-            \item Predicted Return
-            \item Actual Return
-            \item Volatility
-            \item Sharpe Ratio
-            \item Type
+            \item Combines Beta, CAPM Predicted Return, Actual Return, and Sharpe Ratio into a single score.
+            \item Metrics are normalized and weighted for importance.
+            \item Identifies assets offering best risk-adjusted returns over specified time horizons.
         \end{itemize}
-        \end{multicols}
     \end{block}
 \end{frame}
+
+
+\begin{frame}{30-35 Years Old (5-Year Time Horizon)}
+    \begin{block}{Assigned Metrics and Weights}
+        \begin{itemize}
+            \item Beta: 0.20
+            \item Sharpe Ratio: 0.30
+            \item CAPM Predicted Return: 0.20
+            \item Actual Returns: 0.30
+        \end{itemize}
+    \end{block}
+    \begin{block}{Assigned Constraints}
+        \begin{itemize}
+            \item Sharpe Ratio greater than 75th percentile.
+            \item Beta less than 1.5.
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{25-30 Years Old (7.5-Year Time Horizon)}
+    \begin{block}{Assigned Metrics and Weights}
+        \begin{itemize}
+            \item Beta: 0.20
+            \item Sharpe Ratio: 0.25
+            \item CAPM Predicted Return: 0.25
+            \item Actual Returns: 0.30
+        \end{itemize}
+    \end{block}
+    \begin{block}{Assigned Constraints}
+        \begin{itemize}
+            \item Sharpe Ratio greater than 50th percentile.
+            \item Beta less than 2.0.
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\section{Risk Tolerances and Investment Contributions}
+\begin{frame}{20-25 Years Old (10-Year Time Horizon)}
+    \begin{block}{Assigned Metrics and Weights}
+        \begin{itemize}
+            \item Beta: 0.15
+            \item Sharpe Ratio: 0.25
+            \item CAPM Predicted Return: 0.25
+            \item Actual Returns: 0.35
+        \end{itemize}
+    \end{block}
+    \begin{block}{Assigned Constraints}
+        \begin{itemize}
+            \item Sharpe Ratio greater than 25th percentile.
+            \item Beta less than 2.5.
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
+
+
+\begin{frame}{Top Assets by Composite Score (5 Years)}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\linewidth]{top_assets_composite_score_5_years.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Top Assets by Composite Score (7.5 Years)}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\linewidth]{top_assets_composite_score_7_5_years.png}
+    \end{figure}
+\end{frame}
+
+\section{Composite Scores}
+\begin{frame}{Top Assets by Composite Score (10 Years)}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\linewidth]{top_assets_composite_score_10_years.png}
+    \end{figure}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
 
 \section{Modern Portfolio Theory (MPT)}
 \begin{frame}{Modern Portfolio Theory (MPT)}
@@ -240,9 +251,9 @@ for ticker in tickers:
         A framework for constructing a portfolio to maximize return for a given level of risk.\footnote{Markowitz, H. (1952). Portfolio Selection. \textit{The Journal of Finance}, 7(1), 77-91.}
     \end{block}
     \begin{block}{Formulas}
-            \begin{equation*}
-                \sigma_p^2 = \sum_{i=1}^{n} \sum_{j=1}^{n} w_i w_j \sigma_{ij}
-            \end{equation*}
+        \begin{equation*}
+            \sigma_p^2 = \sum_{i=1}^{n} \sum_{j=1}^{n} w_i w_j \sigma_{ij}
+        \end{equation*}
     \end{block}
     \begin{block}{Definitions}
         \begin{multicols}{2}
@@ -257,7 +268,6 @@ for ticker in tickers:
     \end{block}
 \end{frame}
 
-\section{Portfolio Optimization}
 \begin{frame}{Optimize the Portfolio}
     \begin{block}{Objective}
         Adjust the weights of the assets to maximize the portfolio's expected return for a given level of risk or to minimize risk for a given level of expected return.
@@ -274,43 +284,90 @@ for ticker in tickers:
     \end{block}
 \end{frame}
 
-
-\begin{frame}[fragile]{Setting Up the Optimization}
-    \begin{block}{Bounds and Optimization Process}
-        \scriptsize
-        \begin{verbatim}
-# Bounds to ensure diversification
-bounds = tuple((0.0, 0.1) for _ in range(num_assets))
-
-# Optimize the portfolio
-result = minimize(negative_sharpe_ratio, init_guess, 
-                  args=(mean_returns, cov_matrix, risk_free_rate), 
-                  method='SLSQP', bounds=bounds, constraints=constraints)
-        \end{verbatim}
-    \end{block}
-    \begin{block}{Explanation}
-        \scriptsize
+\begin{frame}{Optimal Portfolio Calculation}
+    \begin{block}{Methodology}
+        The optimal weights for the portfolios over different time horizons (5 years, 7.5 years, and 10 years) were calculated using the following steps:
         \begin{itemize}
-            \item \textbf{Bounds}: Limit the weight of any single asset to a maximum of 10% to ensure diversification.
-            \item \textbf{Optimization}: Use the SLSQP method to find the optimal weights that maximize the Sharpe ratio by minimizing its negative.
+            \item Historical returns and covariance matrices of the assets were computed.
+            \item The optimization problem was solved using numerical methods to find the weights that minimize the portfolio variance for a given expected return.
+            \item Constraints were applied to ensure that the sum of the weights equals 1 and that all weights are non-negative.
         \end{itemize}
     \end{block}
 \end{frame}
 
 \begin{frame}{Optimal Portfolio (5 Years)}
-    \centering
-    \includegraphics[height=0.8\textheight]{optimal_portfolio_5_years.png}
+    \begin{figure}
+        \centering
+        \includegraphics[height=0.8\textheight]{optimal_portfolio_5_years.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Optimal Portfolio (7.5 Years)}
+    \begin{figure}
+        \centering
+        \includegraphics[height=0.8\textheight]{optimal_portfolio_7_5_years.png}
+    \end{figure}
 \end{frame}
 
 \begin{frame}{Optimal Portfolio (10 Years)}
-    \centering
-    \includegraphics[height=0.8\textheight]{optimal_portfolio_10_years.png}
+    \begin{figure}
+        \centering
+        \includegraphics[height=0.8\textheight]{optimal_portfolio_10_years.png}
+    \end{figure}
 \end{frame}
 
-\begin{frame}{Optimal Portfolio (15 Years)}
-    \centering
-    \includegraphics[height=0.8\textheight]{optimal_portfolio_15_years.png}
+
+
+
+
+\section{Performance Analysis of Investment Portfolios}
+\begin{frame}
+\frametitle{Performance Analysis of Investment Portfolios}
+    \begin{block}{Data Sources}
+        \begin{itemize}
+            \item Historical market data for S\&P 500 and portfolio constituents.
+            \item Optimal weights for each horizon portfolio.
+        \end{itemize}
+    \end{block}
+    \begin{block}{Methodology}
+        \begin{itemize}
+            \item Calculate cumulative returns for each portfolio and compare against the S\&P 500.
+            \item Visualize the performance using cumulative return charts.
+        \end{itemize}
+    \end{block}
 \end{frame}
+
+
+\begin{frame}{Cumulative Returns Comparison}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\textwidth]{cumulative_returns_comparison.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Summary of Cumulative Returns}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\textwidth]{cumulative_returns_summary.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Analysis and Insights}
+    \begin{block}{Key Observations}
+        \begin{itemize}
+            \item All horizon portfolios outperformed the S\&P 500 benchmark over the observed period.
+            \item The 5-year horizon portfolio performed well with a return of 441.66%.
+            \item The 7.5-year horizon portfolio achieved the highest cumulative return of 454.96%.
+            \item The 10-year horizon portfolio lagged behind the others with a return of 314.81%.
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
+
+
+
 
 \section{Results Interpretation}
 \begin{frame}{Results Interpretation}
@@ -318,30 +375,16 @@ result = minimize(negative_sharpe_ratio, init_guess,
         Through this analysis using the Capital Asset Pricing Model (CAPM) and Modern Portfolio Theory (MPT), we successfully identified the optimal weights for the selected securities. The analysis revealed that diversification across different asset classes and strategic allocation can significantly enhance the potential for accumulating sufficient down payments over varying time horizons.
     \end{block}
     \begin{block}{Implications}
-        These findings underscore the importance of tailored investment strategies for different age groups and income levels. By leveraging these models, first-time homebuyers can make informed decisions that align with their financial goals and risk tolerance.
+        These findings underscore the importance of tailored investment strategies for different age groups purchasing a home for the first time. By leveraging these models, first-time homebuyers can make informed decisions that align with their financial goals and risk tolerance.
     \end{block}
 \end{frame}
 
-\section{Future Work and Limitations}
-\begin{frame}{Future Work and Limitations}
-    \begin{block}{Future Work}
-        In future research, I plan to incorporate Monte Carlo Simulations to forecast future trends for the optimized portfolio. This will provide a more robust understanding of potential investment outcomes under various market conditions.
-    \end{block}
-    \begin{block}{Limitations}
-        This study's limitations include the assumption of constant risk-free rates and market returns, as well as the exclusion of transaction costs and taxes. Future work should aim to address these limitations to enhance the model's accuracy and applicability.
-    \end{block}
-\end{frame}
 
-\begin{frame}{Q\&A}
-    \begin{block}{Questions and Clarifications}
-        Please feel free to ask for any clarifications or additional details regarding the presented research and findings.
-    \end{block}
-    \vspace{1cm}
-    \begin{center}
-        \Large \textbf{Thank you for your attention!}
-    \end{center}
-\end{frame}
 
+
+
+
+\section{References}
 \begin{frame}{References (1/2)}
     \begin{block}{}
         \begin{itemize}
@@ -365,5 +408,11 @@ result = minimize(negative_sharpe_ratio, init_guess,
         \end{itemize}
     \end{block}
 \end{frame}
+
+
+
+
+
+
 
 \end{document}
