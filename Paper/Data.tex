@@ -1,17 +1,26 @@
 \section{Data}
+\subsection{Data Sources}
+The financial data used in this research is sourced from Yahoo Finance \citep{yfinance}, which includes comprehensive information on roughly 150 securities consisting of stocks, cryptocurrencies, mutual funds, and ETFs. This data source provides a rich dataset for analyzing the performance of different investment vehicles over time.
+
+\subsection{Date Range}
+The data covers the period from September 2014, to the present, with a daily frequency. This timeframe allows for the analysis of recent trends and the performance of different asset classes in various market conditions.
+
+\subsection{Data Fields}
+The dataset includes the following fields:
 \begin{itemize}
-    \item \textbf{Data Sources:} The financial data used in this research is sourced from Yahoo Finance, which includes comprehensive information on stocks, cryptocurrency, mutual funds, and ETFs.
-    \item \textbf{Date Range:} 9/7/2014 to present (daily frequency)
-    \item \textbf{Data Fields:}
-    \begin{itemize}
-        \item \textbf{Open:} Price at the beginning of the trading day
-        \item \textbf{High:} Peak price during the trading day
-        \item \textbf{Low:} Lowest price during the trading day
-        \item \textbf{Close:} Price at the end of the trading day
-        \item \textbf{Adj Close:} Closing price adjusted for dividends, stock splits, etc.
-        \item \textbf{Volume:} Number of shares traded during a single trading day
-        \item \textbf{Type:} Security type
-    \end{itemize}
+    \item \textbf{Open}: Price at the beginning of the trading day.
+    \item \textbf{High}: Peak price during the trading day.
+    \item \textbf{Low}: Lowest price during the trading day.
+    \item \textbf{Close}: Price at the end of the trading day.
+    \item \textbf{Adj Close}: Closing price adjusted for dividends, stock splits, etc.
+    \item \textbf{Volume}: Number of shares traded during a single trading day.
+    \item \textbf{Type}: Security type (e.g., stock, ETF, cryptocurrency).
 \end{itemize}
 
+These fields provide a comprehensive view of the daily trading activities and price movements of different securities, essential for the analysis of investment performance and strategy development.
 
+\subsection{Data Collection and Processing}
+The data collection process involves using Python and the Yahoo Finance API to download historical price data for selected securities \citep{yfinance}. The data is loaded into a DataFrame and indexed by date, ensuring that all securities are aligned temporally. This DataFrame serves as the basis for further calculations and analyses.
+
+\subsection{Data Limitations}
+While the dataset is comprehensive, there are limitations to consider. The data is limited to publicly traded securities, which may not capture the full range of investment opportunities available to first-time homebuyers. Additionally, the historical data may not fully account for future market conditions and economic events. These limitations will be addressed in the analysis and interpretation of the results.

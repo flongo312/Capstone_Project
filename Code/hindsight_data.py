@@ -8,36 +8,44 @@ from tqdm import tqdm
 # Define the list of securities organized by type, excluding those that IPO'd after 2009
 securities = {
     'Stocks': [
-        'AAPL', 'AMZN', 'GOOGL', 'NVDA', 'BAC', 'MSFT', 'JPM', 'DIS', 
-        'CSCO', 'XOM', 'PFE', 'KO', 'PEP', 'INTC', 'T', 'MRK', 'WMT', 
-        'NKE', 'GE', 'MCD', 'IBM', 'WFC', 'UNH', 'ORCL', 'QCOM', 'TM', 
-        'TXN', 'HON', 'MO', 'MDT', 'SPG', 'AXP', 'GS', 'LMT', 'BMY', 'BLK'
+        'AAPL', 'AMZN', 'GOOGL', 'NVDA', 'AMD', 'BAC', 
+        'MSFT', 'NFLX', 'JPM', 'DIS', 'CSCO', 
+        'XOM', 'PFE', 'KO', 'PEP', 'INTC', 'CRM', 'T', 'MRK', 'WMT', 
+        'NKE', 'GE', 'COST', 'MCD', 'SBUX', 'IBM', 'WFC', 'UNH', 'ORCL', 
+        'QCOM', 'AVGO', 'TM', 'ADBE', 'TXN', 'HON', 'MO', 'MDT', 'SPG', 
+        'AXP', 'GS', 'LMT', 'BMY', 'BLK', 'CAT', 'BA', 'ABT', 
+        'JCI', 'F', 'DE', 'LLY', 'CVX', 'PG', 'SO', 'D', 'DUK', 
+        'NEE', 'CL', 'JNJ', 'EMR', 'KMB', 'USB', 'FDX', 'GD', 'LHX',
+        'BK', 'STT', 'SCHW', 'TROW', 'AMP', 'BEN', 'TGT', 
+        'BBY', 'DG', 'ROST', 'TJX', 'M', 'JWN', 'BKNG', 'MAR', 
+        'DAL', 'UAL', 'AAL', 'ALK', 
+        'PENN', 'MGM', 'WYNN', 'LVS', 'BYD', 'MLCO', 
+        'CCL', 'RCL', 'AIG', 'TRV', 'ALL', 'CB', 'MET', 'PRU', 'LNC', 
+        'UNM', 'AFL', 'PFG', 'PNW', 'ETR', 
+        'PPL', 'NRG', 'AES', 'XEL', 'WEC', 'CNP', 'CMS', 'NI', 'DTE', 
+        'EVRG', 'ATO', 'SRE', 'PCG', 'AEE', 'LNT', 'AEP', 'ED'
     ],
     'ETFs': [
-        'SPY', 'QQQ', 'IWM', 'GLD', 'EEM', 'XLF', 'DIA', 'LQD', 
-        'IVV', 'XLK', 'VNQ', 'HYG', 'XLV', 'XLE', 'XLY', 
-        'XLP', 'XLU', 'GDX', 'XLI', 'IWF', 'IWB', 'IJH', 'IYR', 
-        'IJR', 'IWN', 'EFA', 'VWO', 'SHY', 'USO', 'TLT', 'VGK', 
-        'XOP', 'EWT', 'EWJ', 'VB'
+        'SPY', 'QQQ', 'IWM', 'GLD', 'EEM', 'XLF', 'DIA', 
+        'IVV', 'XLK', 'XLV', 'XLE', 'XLY', 
+        'XLU', 'XLI', 'IWF', 'IWB', 'IYR', 'VUG', 
+        'IJR', 'IWN', 'SHY', 'TLT', 'XOP', 
+        'PFF', 'EWT', 'EWJ', 'IWC', 'VB', 
+        'EZU', 'SPDW', 'VTI', 'VEU', 'BND', 'VWO', 
+        'VNQ', 'VIG', 'VYM', 'IJH', 'IVW', 'EFG'
     ],
     'Mutual Funds': [
-        'VFIAX', 'VTSAX', 'FXAIX', 'FCNTX', 'AGTHX', 'TRBCX', 
-        'VWELX', 'DODGX', 'PRGFX', 'VWIAX', 
-        'VEIPX', 'VWINX', 'PTTRX', 'POAGX', 'RPMGX', 'VWUAX', 
-        'FAGIX', 'VGHAX', 'FFIDX', 'FBGRX', 'FSPTX', 'FDGRX', 
-        'VWNDX', 'JATTX', 'SGENX', 'RWMFX', 'PRHSX', 'FLPSX', 
-        'FBALX', 'FAIRX', 'VGSLX', 'VDIGX', 'MGVAX', 'PRWCX', 
-        'PARNX', 'PRNHX', 'RYVPX', 'SWHGX'
+        'VEIPX', 'VWUAX', 'FAGIX', 'FFIDX', 'FBGRX', 'FDGRX', 
+        'JATTX', 'RWMFX', 'PRHSX', 'VGSLX', 'VDIGX', 'MGVAX', 
+        'PARNX', 'PRNHX', 'VHCAX', 'AEPGX', 'NEWFX'
     ],
     'Indices': [
-        '^GSPC',  # S&P 500
-        '^DJI',   # Dow Jones Industrial Average
-        '^IXIC'   # NASDAQ Composite
+        '^GSPC'  # S&P 500
     ]
 }
 
 # Define the start and end dates
-start_date = '2011-05-04'
+start_date = '2009-11-13'
 end_date = pd.Timestamp.now().strftime('%Y-%m-%d')
 
 # Function to fetch data starting from the start date up to the end date
