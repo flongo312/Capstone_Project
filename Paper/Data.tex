@@ -1,26 +1,52 @@
 \section{Data}
 \subsection{Data Sources}
-The financial data used in this research is sourced from Yahoo Finance \citep{yfinance}, which includes comprehensive information on roughly 150 securities consisting of stocks, cryptocurrencies, mutual funds, and ETFs. This data source provides a rich dataset for analyzing the performance of different investment vehicles over time.
+The financial data used in this research is sourced from Yahoo Finance, which includes comprehensive information on roughly 150 securities consisting of stocks, mutual funds, and ETFs. This data source provides a rich dataset for analyzing the performance of different investment vehicles over time.
+
+\subsection{Data Processing}
+Data processing was conducted using several Python scripts:
+\begin{itemize}
+    \item \texttt{yfinance\_data.py}: Collects and processes financial data from Yahoo Finance, ensuring data is clean and adjusted for corporate actions such as stock splits and dividends.
+    \item \texttt{hindsight\_data.py} and \texttt{hindsight.py}: Handle historical financial data and perform hindsight analysis to simulate past investment scenarios.
+    \item \texttt{init\_filtering.py}: Filters the initial dataset to remove anomalies and irrelevant data points.
+\end{itemize}
+
+\subsection{Data Robustness}
+To ensure the robustness of our data, several steps were taken:
+\begin{itemize}
+    \item Data Cleaning: Removed anomalies and adjusted for corporate actions such as stock splits and dividends.
+    \item Handling Missing Values: Employed interpolation and other statistical methods to handle missing data points.
+    \item Outlier Detection: Used statistical techniques to detect and handle outliers, ensuring they do not skew the results.
+\end{itemize}
 
 \subsection{Date Range}
-The data covers the period from September 2014, to the present, with a daily frequency. This timeframe allows for the analysis of recent trends and the performance of different asset classes in various market conditions.
+The data covers the period from May 2011 to November 2014 for daily frequency and further hindsight data from May 2011 to July 2024. This timeframe allows for the analysis of recent trends and the performance of different asset classes in various market conditions.
 
 \subsection{Data Fields}
 The dataset includes the following fields:
 \begin{itemize}
-    \item \textbf{Open}: Price at the beginning of the trading day.
-    \item \textbf{High}: Peak price during the trading day.
-    \item \textbf{Low}: Lowest price during the trading day.
-    \item \textbf{Close}: Price at the end of the trading day.
-    \item \textbf{Adj Close}: Closing price adjusted for dividends, stock splits, etc.
-    \item \textbf{Volume}: Number of shares traded during a single trading day.
-    \item \textbf{Type}: Security type (e.g., stock, ETF, cryptocurrency).
+    \item Open: Price at the beginning of the trading day.
+    \item High: Peak price during the trading day.
+    \item Low: Lowest price during the trading day.
+    \item Close: Price at the end of the trading day.
+    \item Adj Close: Closing price adjusted for dividends, stock splits, etc.
+    \item Volume: Number of shares traded during a single trading day.
+    \item Type: Security type (e.g., stock, ETF).
 \end{itemize}
 
 These fields provide a comprehensive view of the daily trading activities and price movements of different securities, essential for the analysis of investment performance and strategy development.
 
+\section{Methodology}
 \subsection{Data Collection and Processing}
-The data collection process involves using Python and the Yahoo Finance API to download historical price data for selected securities \citep{yfinance}. The data is loaded into a DataFrame and indexed by date, ensuring that all securities are aligned temporally. This DataFrame serves as the basis for further calculations and analyses.
+The financial data for this study were obtained from Yahoo Finance, covering a period from September 2014 to July 2024. The dataset includes daily prices and trading volumes for a range of securities. Data preprocessing involved cleaning the dataset to remove anomalies and adjusting for corporate actions like stock splits and dividends.
+
+\subsection{Model Implementation}
+The empirical analysis involved several steps:
+1. \textbf{Data Cleaning and Preparation:} Ensured the data was error-free and adjusted for stock splits and dividends.
+2. \textbf{Calculation of Daily Returns:} Daily returns were computed as the percentage change in closing prices.
+3. \textbf{Estimation of Expected Returns and Variances:} Using historical data, expected returns and variances for each asset were estimated.
+4. \textbf{Portfolio Optimization:} Applied Modern Portfolio Theory using quadratic programming to construct efficient portfolios.
+5. \textbf{Simulation of Investment Scenarios:} Conducted Monte Carlo simulations to model the accumulation of down payments over different investment horizons.
+
 
 \subsection{Data Limitations}
 While the dataset is comprehensive, there are limitations to consider. The data is limited to publicly traded securities, which may not capture the full range of investment opportunities available to first-time homebuyers. Additionally, the historical data may not fully account for future market conditions and economic events. These limitations will be addressed in the analysis and interpretation of the results.
