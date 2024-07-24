@@ -1,4 +1,5 @@
 \documentclass[10pt]{article}
+\usepackage{setspace}
 \usepackage{amssymb,amsmath}
 \usepackage{pifont}
 \usepackage{graphicx}
@@ -21,6 +22,7 @@
 \date{\today}
 
 \begin{document}
+\doublespace
 
 \maketitle
 
@@ -45,6 +47,9 @@
 \section{Introduction and Motivation}
 \input{Introduction.tex}
 
+\section{Literature Review}
+\input{Literature.tex}
+
 \section{Theory}
 \input{Theory.tex}
 
@@ -60,14 +65,15 @@
 \section{Conclusions}
 \input{Conclusions.tex}
 
-\section*{Acknowledgements}
-I would like to thank...
+\section*{Acknowledgments}
+\input{Thanks.tex}
 
 \section*{Appendix}
 \input{Appendix.tex}
 \input{Data-Appendix.tex}
+
+\section*{Notation}
 \input{Notation.tex}
-\input{Thanks.tex}
 
 \bibliographystyle{plainnat}
 \bibliography{References}

@@ -10,12 +10,6 @@ The empirical analysis proceeds by implementing the theoretical models using the
     \item Simulation of Investment Scenarios: Using Monte Carlo simulations to model the accumulation of down payments over different investment horizons. Multiple scenarios are simulated to capture the range of possible outcomes.
 \end{enumerate}
 
-The implementation of the above steps is done using the following Python scripts:
-\begin{itemize}
-    \item \texttt{mpt.py}: For implementing Modern Portfolio Theory and portfolio optimization.
-    \item \texttt{mcs.py}: For performing Monte Carlo simulations to model the uncertainty and variability in investment returns.
-\end{itemize}
-
 \subsection{CAPM and Sharpe Ratio Calculation}
 For each security, the Capital Asset Pricing Model (CAPM) and Sharpe Ratio are calculated. The CAPM is used to estimate the expected return of each security, while the Sharpe Ratio measures the risk-adjusted return. The steps involved are:
 \begin{enumerate}
@@ -25,10 +19,11 @@ For each security, the Capital Asset Pricing Model (CAPM) and Sharpe Ratio are c
     \item Use the CAPM formula to estimate the expected return for each security.
     \item Calculate the Sharpe Ratio using the formula:
     \begin{equation}
-    S = \frac{E(Ri) - Rf}{\sigma_i}
+        \text{Sharpe Ratio} = \frac{E(R_i) - R_f}{\sigma_i}
     \end{equation}
-    where $E(Ri)$ is the expected return, $Rf$ is the risk-free rate, and $\sigma_i$ is the standard deviation of the security’s excess return.
+    where $E(R_i)$ is the expected return of the security, $R_f$ is the risk-free rate, and $\sigma_i$ is the standard deviation of the security’s excess return.
 \end{enumerate}
+
 The securities are then ranked by their Sharpe Ratios to identify those with the best risk-adjusted returns.
 
 \subsection{Modern Portfolio Theory (MPT) Application}
@@ -52,18 +47,4 @@ The simulation process involves the following steps:
     \item Analyze the distribution to determine the probability of achieving the down payment target.
 \end{enumerate}
 
-
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.5\textwidth]{investment_simulation_process.png}
-\caption{Investment Simulation Process for Monte Carlo Analysis. Source: \href{https://quantpedia.com/introduction-and-examples-of-monte-carlo-strategy-simulation/}{Quantpedia}}
-\label{fig:simulation_process}
-\end{figure}
-
-
-
-
-
-
-
+\newpage

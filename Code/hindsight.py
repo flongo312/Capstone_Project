@@ -1,3 +1,23 @@
+import subprocess
+import sys
+import os
+
+# Function to install packages
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+# List of required packages
+required_packages = [
+    "pandas", "numpy", "matplotlib"
+]
+
+# Install missing packages
+for package in required_packages:
+    try:
+        __import__(package)
+    except ImportError:
+        install(package)
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -16,8 +36,18 @@ colors = {
     'brown': '#A52A2A'
 }
 
+# Get the directory of the script
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Define data and figures paths
+data_path = os.path.join(script_dir, '../Data')
+figures_path = os.path.join(script_dir, '../Figures')
+
+# Ensure the directories exist
+os.makedirs(data_path, exist_ok=True)
+os.makedirs(figures_path, exist_ok=True)
+
 # Load the data files
-data_path = '/Users/frank/Desktop/Project/Data'
 hindsight_data = pd.read_csv(f'{data_path}/hindsight_data.csv')
 
 # Ensure the Date column is properly formatted
@@ -54,9 +84,6 @@ actual_cum_returns_10_years = (1 + actual_returns_10_years).cumprod()
 # Calculate cumulative returns for S&P 500
 sp500_data = hindsight_data[hindsight_data['Ticker'] == '^GSPC'].copy()
 sp500_data.loc[:, 'Cumulative Return'] = (1 + sp500_data['Daily Return']).cumprod()
-
-# Directory to save the figures
-figures_path = '/Users/frank/Desktop/Project/Figures'
 
 # Plot cumulative returns comparison
 plt.figure(figsize=(16, 10))

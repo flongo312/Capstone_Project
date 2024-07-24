@@ -1,7 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.9)  23 JUL 2024 00:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.9)  24 JUL 2024 03:25
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **Paper.tex
 (./Paper.tex
@@ -23,6 +22,9 @@ File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -403,7 +405,7 @@ Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS)
 Package: courier 2020/03/25 PSNFSS-v9.3 (WaS) 
 )
 LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 1
-4.
+5.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
@@ -440,50 +442,49 @@ File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count292
 \l__pdf_internal_box=\box56
 )
-No file Paper.aux.
+(./Paper.aux)
 \openout1 = `Paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 23.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 24.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
-23.
-(/usr/local/texlive/2024/texmf-dist/tex/latex/txfonts/omltxmi.fd
+24.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 24.
 LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 
-23.
-
+24.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 24.
 LaTeX Font Info:    Trying to load font information for OMX+txex on input line 
-23.
+24.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 24.
 LaTeX Font Info:    Trying to load font information for U+txexa on input line 2
-3.
+4.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -507,7 +508,9 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 23.
+Package hyperref Info: Link coloring OFF on input line 24.
+
+(./Paper.out) (./Paper.out)
 \@outlinefile=\write3
 \openout3 = `Paper.out'.
 
@@ -547,54 +550,54 @@ Package hyperref Info: Link coloring OFF on input line 23.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
-26.
+28.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
-26.
+28.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
-26.
+28.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Trying to load font information for U+txsya on input line 2
-6.
+8.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyb on input line 2
-6.
+8.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for OT1+txr on input line 2
-6.
+8.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 2
-6.
+8.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 2
-6.
+8.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-26.
+28.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
@@ -603,165 +606,372 @@ File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-(./Introduction.tex) (./Theory.tex [2]
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 2
-2.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ppl.fd
-File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-)
-<SML.png, id=22, 432.11438pt x 353.06906pt>
-File: SML.png Graphic file (type png)
-<use SML.png>
-Package pdftex.def Info: SML.png  used on input line 31.
-(pdftex.def)             Requested size: 216.81pt x 177.14825pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Package natbib Warning: Citation `markowitz1952portfolio' on page 3 undefined o
-n input line 39.
-
-[3]
-
-Package natbib Warning: Citation `markowitz1952portfolio' on page 4 undefined o
-n input line 54.
-
-<efficient_frontier.png, id=42, 326.72063pt x 179.92218pt>
-File: efficient_frontier.png Graphic file (type png)
-<use efficient_frontier.png>
-Package pdftex.def Info: efficient_frontier.png  used on input line 72.
-(pdftex.def)             Requested size: 216.81pt x 119.39417pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Package natbib Warning: Citation `boyle1977options' on page 4 undefined on inpu
-t line 84.
-
-[4
+(./Introduction.tex [2] [3]) (./Literature.tex [4]) (./Theory.tex
+<../Figures/SML.png, id=248, 432.11438pt x 353.06906pt>
+File: ../Figures/SML.png Graphic file (type png)
+<use ../Figures/SML.png>
+Package pdftex.def Info: ../Figures/SML.png  used on input line 21.
+(pdftex.def)             Requested size: 260.17465pt x 212.58652pt.
+ [5
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.85 
-      <./SML.png>] [5
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.113 
-       <./efficient_frontier.png>]) (./Data.tex
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 8.
+l.29     \item A
+                ll securities, when correctly priced, should lie on the SML. <.
+./Figures/SML.png>]
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 2
+9.
 
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [6])
-(./Empirical-Model.tex [7] [8]
-<investment_simulation_process.png, id=104, 754.82pt x 501.875pt>
-File: investment_simulation_process.png Graphic file (type png)
-<use investment_simulation_process.png>
-Package pdftex.def Info: investment_simulation_process.png  used on input line 
-59.
-(pdftex.def)             Requested size: 216.81pt x 144.15392pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (./Results.tex
-
-LaTeX Warning: Reference `performance-comparison' on page 9 undefined on input 
-line 2.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ppl.fd
+File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
+)
+<../Figures/efficient_frontier.png, id=260, 326.72063pt x 179.92218pt>
+File: ../Figures/efficient_frontier.png Graphic file (type png)
+<use ../Figures/efficient_frontier.png>
+Package pdftex.def Info: ../Figures/efficient_frontier.png  used on input line 
+61.
+(pdftex.def)             Requested size: 260.17465pt x 143.27629pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9]
-
-LaTeX Warning: Reference `fig:security-count' on page 10 undefined on input lin
-e 26.
-
-
-LaTeX Warning: Reference `fig:optimal-portfolio-5-years' on page 10 undefined o
-n input line 26.
-
-
-LaTeX Warning: Reference `fig:top-assets-10-years' on page 10 undefined on inpu
-t line 26.
+[6]
+<../Figures/investment_simulation_process.png, id=270, 754.82pt x 501.875pt>
+File: ../Figures/investment_simulation_process.png Graphic file (type png)
+<use ../Figures/investment_simulation_process.png>
+Package pdftex.def Info: ../Figures/investment_simulation_process.png  used on 
+input line 77.
+(pdftex.def)             Requested size: 260.17465pt x 172.98624pt.
 
 
-LaTeX Warning: Reference `fig:top-assets-7-5-years' on page 10 undefined on inp
-ut line 26.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.82 \newpage
+              <../Figures/efficient_frontier.png>]) (./Data.tex
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 9.
 
 
-LaTeX Warning: Reference `fig:top-assets-5-years' on page 10 undefined on input
- line 26.
-
-
-LaTeX Warning: Reference `fig:cumulative-returns' on page 10 undefined on input
- line 26.
-
-) (./Conclusions.tex [10
+(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+) [8
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.4 
-    
+l.17     \item D
+                ata Cleaning: Removed anomalies and adjusted for corporate a...
+ <../Figures/investment_simulation_process.png>] [9] [10
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.4 
-     <./investment_simulation_process.png>]) (./Appendix.tex)
-(./Data-Appendix.tex [11]) (./Notation.tex) (./Thanks.tex)
+l.60 \newpage
+             ]) (./Empirical-Model.tex [11] [12] [13]) (./Results.tex
+<../Figures/optimal_portfolio_10_years.png, id=332, 993.7125pt x 714.7503pt>
+File: ../Figures/optimal_portfolio_10_years.png Graphic file (type png)
+<use ../Figures/optimal_portfolio_10_years.png>
+Package pdftex.def Info: ../Figures/optimal_portfolio_10_years.png  used on inp
+ut line 10.
+(pdftex.def)             Requested size: 346.89732pt x 249.51198pt.
+<../Figures/optimal_portfolio_7_5_years.png, id=333, 994.4352pt x 714.7503pt>
+File: ../Figures/optimal_portfolio_7_5_years.png Graphic file (type png)
+<use ../Figures/optimal_portfolio_7_5_years.png>
+Package pdftex.def Info: ../Figures/optimal_portfolio_7_5_years.png  used on in
+put line 17.
+(pdftex.def)             Requested size: 346.89732pt x 249.33748pt.
+<../Figures/optimal_portfolio_5_years.png, id=334, 986.4855pt x 714.7503pt>
+File: ../Figures/optimal_portfolio_5_years.png Graphic file (type png)
+<use ../Figures/optimal_portfolio_5_years.png>
+Package pdftex.def Info: ../Figures/optimal_portfolio_5_years.png  used on inpu
+t line 24.
+(pdftex.def)             Requested size: 346.89732pt x 251.34422pt.
+<../Figures/top_assets_composite_score_10_years.png, id=338, 1156.32pt x 867.24
+pt>
+File: ../Figures/top_assets_composite_score_10_years.png Graphic file (type png
+)
+<use ../Figures/top_assets_composite_score_10_years.png>
+Package pdftex.def Info: ../Figures/top_assets_composite_score_10_years.png  us
+ed on input line 34.
+(pdftex.def)             Requested size: 346.89732pt x 260.17401pt.
+<../Figures/top_assets_composite_score_7_5_years.png, id=339, 1156.32pt x 867.2
+4pt>
+File: ../Figures/top_assets_composite_score_7_5_years.png Graphic file (type pn
+g)
+<use ../Figures/top_assets_composite_score_7_5_years.png>
+Package pdftex.def Info: ../Figures/top_assets_composite_score_7_5_years.png  u
+sed on input line 41.
+(pdftex.def)             Requested size: 346.89732pt x 260.17401pt.
+<../Figures/top_assets_composite_score_5_years.png, id=340, 1156.32pt x 867.24p
+t>
+File: ../Figures/top_assets_composite_score_5_years.png Graphic file (type png)
+
+<use ../Figures/top_assets_composite_score_5_years.png>
+Package pdftex.def Info: ../Figures/top_assets_composite_score_5_years.png  use
+d on input line 48.
+(pdftex.def)             Requested size: 346.89732pt x 260.17401pt.
+<../Figures/final_portfolio_values_distribution_5_years.png, id=344, 1011.78pt 
+x 578.16pt>
+File: ../Figures/final_portfolio_values_distribution_5_years.png Graphic file (
+type png)
+<use ../Figures/final_portfolio_values_distribution_5_years.png>
+Package pdftex.def Info: ../Figures/final_portfolio_values_distribution_5_years
+.png  used on input line 58.
+(pdftex.def)             Requested size: 346.89732pt x 198.23033pt.
+ [14
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.61 \end{figure}
+                  <../Figures/optimal_portfolio_10_years.png>] [15
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.61 \end{figure}
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.61 \end{figure}
+                  <../Figures/optimal_portfolio_7_5_years.png> <../Figures/opti
+mal_portfolio_5_years.png>] [16
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.61 \end{figure}
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.61 \end{figure}
+                  <../Figures/top_assets_composite_score_10_years.png> <../Figu
+res/top_assets_composite_score_7_5_years.png>]
+<../Figures/final_portfolio_values_distribution_7_5_years.png, id=368, 1011.78p
+t x 578.16pt>
+File: ../Figures/final_portfolio_values_distribution_7_5_years.png Graphic file
+ (type png)
+<use ../Figures/final_portfolio_values_distribution_7_5_years.png>
+Package pdftex.def Info: ../Figures/final_portfolio_values_distribution_7_5_yea
+rs.png  used on input line 65.
+(pdftex.def)             Requested size: 346.89732pt x 198.23033pt.
+<../Figures/final_portfolio_values_distribution_10_years.png, id=369, 1011.78pt
+ x 578.16pt>
+File: ../Figures/final_portfolio_values_distribution_10_years.png Graphic file 
+(type png)
+<use ../Figures/final_portfolio_values_distribution_10_years.png>
+Package pdftex.def Info: ../Figures/final_portfolio_values_distribution_10_year
+s.png  used on input line 72.
+(pdftex.def)             Requested size: 346.89732pt x 198.23033pt.
+<../Figures/cumulative_returns_over_time_5_years.png, id=373, 1011.78pt x 578.1
+6pt>
+File: ../Figures/cumulative_returns_over_time_5_years.png Graphic file (type pn
+g)
+<use ../Figures/cumulative_returns_over_time_5_years.png>
+Package pdftex.def Info: ../Figures/cumulative_returns_over_time_5_years.png  u
+sed on input line 82.
+(pdftex.def)             Requested size: 346.89732pt x 198.23033pt.
+ [17
+pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.85 \end{figure}
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.85 \end{figure}
+                  <../Figures/top_assets_composite_score_5_years.png> <../Figur
+es/final_portfolio_values_distribution_5_years.png>] [18
+pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.85 \end{figure}
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.85 \end{figure}
+                  <../Figures/final_portfolio_values_distribution_7_5_years.png
+> <../Figures/final_portfolio_values_distribution_10_years.png>]
+<../Figures/cumulative_returns_over_time_7_5_years.png, id=389, 1011.78pt x 578
+.16pt>
+File: ../Figures/cumulative_returns_over_time_7_5_years.png Graphic file (type 
+png)
+<use ../Figures/cumulative_returns_over_time_7_5_years.png>
+Package pdftex.def Info: ../Figures/cumulative_returns_over_time_7_5_years.png 
+ used on input line 89.
+(pdftex.def)             Requested size: 346.89732pt x 198.23033pt.
+<../Figures/cumulative_returns_over_time_10_years.png, id=390, 1011.78pt x 578.
+16pt>
+File: ../Figures/cumulative_returns_over_time_10_years.png Graphic file (type p
+ng)
+<use ../Figures/cumulative_returns_over_time_10_years.png>
+Package pdftex.def Info: ../Figures/cumulative_returns_over_time_10_years.png  
+used on input line 96.
+(pdftex.def)             Requested size: 346.89732pt x 198.23033pt.
+<../Figures/cumulative_returns_summary.png, id=392, 1170.0513pt x 821.7099pt>
+File: ../Figures/cumulative_returns_summary.png Graphic file (type png)
+<use ../Figures/cumulative_returns_summary.png>
+Package pdftex.def Info: ../Figures/cumulative_returns_summary.png  used on inp
+ut line 106.
+(pdftex.def)             Requested size: 346.89732pt x 243.61853pt.
+ [19
+pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.109 \end{figure}
+                  
+pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.109 \end{figure}
+                   <../Figures/cumulative_returns_over_time_5_years.png> <../Fi
+gures/cumulative_returns_over_time_7_5_years.png>]
+<../Figures/cumulative_returns_comparison.png, id=404, 1110.0672pt x 676.4472pt
+>
+File: ../Figures/cumulative_returns_comparison.png Graphic file (type png)
+<use ../Figures/cumulative_returns_comparison.png>
+Package pdftex.def Info: ../Figures/cumulative_returns_comparison.png  used on 
+input line 116.
+(pdftex.def)             Requested size: 346.89732pt x 211.38924pt.
+ [20
+pdfTeX warning (ext4): destination with the same identifier (name{figure.15}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.119 \end{figure}
+                  
+pdfTeX warning (ext4): destination with the same identifier (name{figure.16}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.119 \end{figure}
+                   <../Figures/cumulative_returns_over_time_10_years.png> <../F
+igures/cumulative_returns_summary.png>]
+<../Figures/cumulative_returns_by_type.png, id=413, 1156.32pt x 650.43pt>
+File: ../Figures/cumulative_returns_by_type.png Graphic file (type png)
+<use ../Figures/cumulative_returns_by_type.png>
+Package pdftex.def Info: ../Figures/cumulative_returns_by_type.png  used on inp
+ut line 126.
+(pdftex.def)             Requested size: 346.89732pt x 195.1305pt.
+<../Figures/histogram_security_count.png, id=415, 1011.78pt x 578.16pt>
+File: ../Figures/histogram_security_count.png Graphic file (type png)
+<use ../Figures/histogram_security_count.png>
+Package pdftex.def Info: ../Figures/histogram_security_count.png  used on input
+ line 136.
+(pdftex.def)             Requested size: 346.89732pt x 198.23033pt.
+ [21
+pdfTeX warning (ext4): destination with the same identifier (name{figure.17}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.139 \end{figure}
+                  
+pdfTeX warning (ext4): destination with the same identifier (name{figure.18}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.139 \end{figure}
+                   <../Figures/cumulative_returns_comparison.png> <../Figures/c
+umulative_returns_by_type.png>] [22
+pdfTeX warning (ext4): destination with the same identifier (name{figure.19}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.141 \newpage
+               <../Figures/histogram_security_count.png>]) (./Conclusions.tex
+[23]) (./Thanks.tex [24]) (./Appendix.tex
+File: ../Figures/SML.png Graphic file (type png)
+<use ../Figures/SML.png>
+Package pdftex.def Info: ../Figures/SML.png  used on input line 7.
+(pdftex.def)             Requested size: 346.89732pt x 283.45229pt.
+File: ../Figures/investment_simulation_process.png Graphic file (type png)
+<use ../Figures/investment_simulation_process.png>
+Package pdftex.def Info: ../Figures/investment_simulation_process.png  used on 
+input line 14.
+(pdftex.def)             Requested size: 346.89732pt x 230.65086pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ../Figures/efficient_frontier.png Graphic file (type png)
+<use ../Figures/efficient_frontier.png>
+Package pdftex.def Info: ../Figures/efficient_frontier.png  used on input line 
+21.
+(pdftex.def)             Requested size: 346.89732pt x 191.03232pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[25
+pdfTeX warning (ext4): destination with the same identifier (name{figure.20}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.26 \newpage
+             ]) (./Data-Appendix.tex [26
+pdfTeX warning (ext4): destination with the same identifier (name{figure.21}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.9     \item A
+               djusting for corporate actions like stock splits and dividend...
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.22}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.9     \item A
+               djusting for corporate actions like stock splits and dividend...
+] [27]) (./Notation.tex [28])
 No file Paper.bbl.
-
-Package natbib Warning: There were undefined citations.
-
-[12] (./Paper.aux)
+(./Paper.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
+Package rerunfilecheck Info: File `Paper.out' has not changed.
+(rerunfilecheck)             Checksum: 7CF1EFCB13C699239D635CA5CBB5B410;9293.
+ )
+(\end occurred inside a group at level 1)
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `Paper.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Paper.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  18E5098B5BB29038EC928AD6E4BBD608;7949.
- ) 
+### semi simple group (level 1) entered at line 25 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 12107 strings out of 474116
- 180147 string characters out of 5743683
+ 12379 strings out of 474116
+ 189153 string characters out of 5743683
  1935187 words of memory out of 5000000
- 34118 multiletter control sequences out of 15000+600000
- 600094 words of font info for 140 fonts, out of 8000000 for 9000
+ 34344 multiletter control sequences out of 15000+600000
+ 601956 words of font info for 142 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,79p,640b,503s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-/usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/
-local/texlive/2024/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/loca
-l/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texliv
-e/2024/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2024/
-texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2024/texmf-d
-ist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Paper.pdf (12 pages, 304276 bytes).
+ 75i,8n,79p,640b,666s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathpazo/fp
+lmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathpazo/fplmri.
+pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></us
+r/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local
+/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texliv
+e/2024/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on Paper.pdf (28 pages, 3486209 bytes).
 PDF statistics:
- 221 PDF objects out of 1000 (max. 8388607)
- 185 compressed objects within 2 object streams
- 104 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 529 PDF objects out of 1000 (max. 8388607)
+ 442 compressed objects within 5 object streams
+ 137 named destinations out of 1000 (max. 500000)
+ 544 words of extra memory for PDF output out of 10000 (max. 10000000)
 

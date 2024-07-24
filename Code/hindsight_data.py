@@ -1,9 +1,32 @@
+import subprocess
+import sys
+
+# Function to install packages
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+# List of required packages
+required_packages = [
+    "yfinance", "pandas", "numpy", "matplotlib", "seaborn", "tqdm"
+]
+
+# Install missing packages
+for package in required_packages:
+    try:
+        __import__(package)
+    except ImportError:
+        install(package)
+
 import yfinance as yf
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from tqdm import tqdm
+import os
+
+# Get the directory of the script
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Define the list of securities organized by type, excluding those that IPO'd after 2009
 securities = {
@@ -77,8 +100,12 @@ combined_data = combined_data.unstack(level='Ticker').reindex(common_dates).stac
 combined_data.reset_index(inplace=True)
 combined_data.rename(columns={'level_0': 'Date'}, inplace=True)
 
+# Ensure the Data directory exists
+data_directory = os.path.join(script_dir, '../Data')
+os.makedirs(data_directory, exist_ok=True)
+
 # Save to CSV
-output_file = "/Users/frank/Desktop/Project/Data/hindsight_data.csv"
+output_file = os.path.join(data_directory, "hindsight_data.csv")
 combined_data.to_csv(output_file, index=False)
 
 print(f"Data saved to {output_file}")

@@ -1,3 +1,22 @@
+import subprocess
+import sys
+
+# Function to install packages
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+# List of required packages
+required_packages = [
+    "yfinance", "pandas", "numpy", "matplotlib", "seaborn", "tqdm"
+]
+
+# Install missing packages
+for package in required_packages:
+    try:
+        __import__(package)
+    except ImportError:
+        install(package)
+
 import yfinance as yf
 import pandas as pd
 import numpy as np
@@ -5,6 +24,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 from tqdm import tqdm
+
+# Get the directory of the script
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Define the list of securities organized by type, excluding those with data starting after 2010
 securities = {
@@ -100,8 +122,12 @@ combined_data = combined_data.unstack(level='Ticker').reindex(common_dates).stac
 combined_data.reset_index(inplace=True)
 combined_data.rename(columns={'level_0': 'Date'}, inplace=True)
 
+# Ensure the Data directory exists
+data_directory = os.path.join(script_dir, '../Data')
+os.makedirs(data_directory, exist_ok=True)
+
 # Save to CSV
-output_file = "/Users/frank/Desktop/Project/Data/yfinance_data.csv"
+output_file = os.path.join(data_directory, "yfinance_data.csv")
 combined_data.to_csv(output_file, index=False)
 
 print(f"Data saved to {output_file}")
@@ -109,7 +135,7 @@ print(f"Data saved to {output_file}")
 # Data Exploration and Visualization
 
 # Set up the output directory for figures
-figure_directory = '/Users/frank/Desktop/Project/Figures'
+figure_directory = os.path.join(script_dir, '../Figures')
 os.makedirs(figure_directory, exist_ok=True)
 
 # Filter out the 'Indices' type

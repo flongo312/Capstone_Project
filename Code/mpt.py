@@ -1,3 +1,22 @@
+import subprocess
+import sys
+
+# Function to install packages
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+# List of required packages
+required_packages = [
+    "pandas", "numpy", "matplotlib", "squarify", "scipy"
+]
+
+# Install missing packages
+for package in required_packages:
+    try:
+        __import__(package)
+    except ImportError:
+        install(package)
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -53,13 +72,16 @@ ticker_info = {
 }
 
 
+# Get the directory of the script
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
 # Load the top assets based on composite score from the saved CSV files
-filtered_top_securities_5_years = pd.read_csv('/Users/frank/Desktop/Project/Data/top_assets_composite_score_5_years.csv')
-filtered_top_securities_7_5_years = pd.read_csv('/Users/frank/Desktop/Project/Data/top_assets_composite_score_7_5_years.csv')
-filtered_top_securities_10_years = pd.read_csv('/Users/frank/Desktop/Project/Data/top_assets_composite_score_10_years.csv')
+filtered_top_securities_5_years = pd.read_csv(os.path.join(script_dir, '../Data/top_assets_composite_score_5_years.csv'))
+filtered_top_securities_7_5_years = pd.read_csv(os.path.join(script_dir, '../Data/top_assets_composite_score_7_5_years.csv'))
+filtered_top_securities_10_years = pd.read_csv(os.path.join(script_dir, '../Data/top_assets_composite_score_10_years.csv'))
 
 # Load the returns data
-returns_data_path = '/Users/frank/Desktop/Project/Data/yfinance_data.csv'
+returns_data_path = os.path.join(script_dir, '../Data/yfinance_data.csv')
 returns_data = pd.read_csv(returns_data_path)
 returns_data['Date'] = pd.to_datetime(returns_data['Date'])
 returns_data.set_index('Date', inplace=True)
@@ -145,9 +167,9 @@ optimal_weights_7_5_years = optimize_portfolio(filtered_top_securities_7_5_years
 optimal_weights_10_years = optimize_portfolio(filtered_top_securities_10_years, historical_returns, market_returns)
 
 # Save the optimal weights to CSV files
-optimal_weights_path_5_years = '/Users/frank/Desktop/Project/Data/optimal_weights_5_years.csv'
-optimal_weights_path_7_5_years = '/Users/frank/Desktop/Project/Data/optimal_weights_7_5_years.csv'
-optimal_weights_path_10_years = '/Users/frank/Desktop/Project/Data/optimal_weights_10_years.csv'
+optimal_weights_path_5_years = os.path.join(script_dir, '../Data/optimal_weights_5_years.csv')
+optimal_weights_path_7_5_years = os.path.join(script_dir, '../Data/optimal_weights_7_5_years.csv')
+optimal_weights_path_10_years = os.path.join(script_dir, '../Data/optimal_weights_10_years.csv')
 
 if not optimal_weights_5_years.empty:
     optimal_weights_5_years.to_csv(optimal_weights_path_5_years, index=False)
@@ -232,7 +254,7 @@ def plot_treemap_like(data, title, filename):
     print(f"{title} plot saved as: {filename}")
 
 # Define the directory to save figures
-figure_directory = '/Users/frank/Desktop/Project/Figures'
+figure_directory = os.path.join(script_dir, '../Figures')
 os.makedirs(figure_directory, exist_ok=True)
 
 # Plotting treemap-like visualizations

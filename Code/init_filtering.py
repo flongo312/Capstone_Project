@@ -1,15 +1,37 @@
+import subprocess
+import sys
+
+# Function to install packages
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+# List of required packages
+required_packages = [
+    "pandas", "numpy", "matplotlib", "seaborn"
+]
+
+# Install missing packages
+for package in required_packages:
+    try:
+        __import__(package)
+    except ImportError:
+        install(package)
+
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import os
 
+# Get the directory of the script
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
 # Configuration
-figure_directory = '/Users/frank/Desktop/Project/Figures'
-data_file_path = '/Users/frank/Desktop/Project/Data/yfinance_data.csv'
-output_file_path_top_assets_5_years = '/Users/frank/Desktop/Project/Data/top_assets_composite_score_5_years.csv'
-output_file_path_top_assets_7_5_years = '/Users/frank/Desktop/Project/Data/top_assets_composite_score_7_5_years.csv'
-output_file_path_top_assets_10_years = '/Users/frank/Desktop/Project/Data/top_assets_composite_score_10_years.csv'
-top_n = 20  # Number of top portfolios
+figure_directory = os.path.join(script_dir, '../Figures')
+data_file_path = os.path.join(script_dir, '../Data/yfinance_data.csv')
+output_file_path_top_assets_5_years = os.path.join(script_dir, '../Data/top_assets_composite_score_5_years.csv')
+output_file_path_top_assets_7_5_years = os.path.join(script_dir, '../Data/top_assets_composite_score_7_5_years.csv')
+output_file_path_top_assets_10_years = os.path.join(script_dir, '../Data/top_assets_composite_score_10_years.csv')
+top_n = 20  
 
 # Create directory if it does not exist
 os.makedirs(figure_directory, exist_ok=True)
@@ -223,7 +245,7 @@ def plot_top_assets_by_composite_score(filtered_data, score_column, title, file_
     ax.set_title(title, fontsize=28, fontweight='bold')
     ax.set_xticks(np.arange(len(top_assets)))
     ax.set_xticklabels(top_assets['Ticker'], rotation=45, ha='right', fontsize=20)
-    ax.tick_params(axis='y', labelsize=20)  # Adjust the y-axis tick labels size
+    ax.tick_params(axis='y', labelsize=20)  
 
     # Add data labels
     for bar in bars:

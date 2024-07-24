@@ -1,7 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.9)  10 JUL 2024 21:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.9)  24 JUL 2024 03:25
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **slides.tex
 (./slides.tex
@@ -998,7 +997,7 @@ File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count367
 \l__pdf_internal_box=\box128
 )
-No file slides.aux.
+(./slides.aux)
 \openout1 = `slides.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -1019,6 +1018,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1076,6 +1076,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 19.
+
+(./slides.out) (./slides.out)
 \@outlinefile=\write5
 \openout5 = `slides.out'.
 
@@ -1176,10 +1178,11 @@ Overfull \hbox (201.23251pt too wide) in paragraph at lines 114--114
  [][][][]  
  []
 
-<histogram_security_count.png, id=144, 1011.78pt x 578.16pt>
-File: histogram_security_count.png Graphic file (type png)
-<use histogram_security_count.png>
-Package pdftex.def Info: histogram_security_count.png  used on input line 114.
+<../Figures/histogram_security_count.png, id=181, 1011.78pt x 578.16pt>
+File: ../Figures/histogram_security_count.png Graphic file (type png)
+<use ../Figures/histogram_security_count.png>
+Package pdftex.def Info: ../Figures/histogram_security_count.png  used on input
+ line 114.
 (pdftex.def)             Requested size: 342.2953pt x 195.60138pt.
 
 Overfull \hbox (201.23251pt too wide) has occurred while \output is active
@@ -1188,16 +1191,16 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 
 [5
 
- <./histogram_security_count.png>]
+ <../Figures/histogram_security_count.png>]
 Overfull \hbox (201.23251pt too wide) in paragraph at lines 121--121
  [][][][]  
  []
 
-<cumulative_returns_by_type.png, id=154, 1156.32pt x 650.43pt>
-File: cumulative_returns_by_type.png Graphic file (type png)
-<use cumulative_returns_by_type.png>
-Package pdftex.def Info: cumulative_returns_by_type.png  used on input line 121
-.
+<../Figures/cumulative_returns_by_type.png, id=191, 1156.32pt x 650.43pt>
+File: ../Figures/cumulative_returns_by_type.png Graphic file (type png)
+<use ../Figures/cumulative_returns_by_type.png>
+Package pdftex.def Info: ../Figures/cumulative_returns_by_type.png  used on inp
+ut line 121.
 (pdftex.def)             Requested size: 342.2953pt x 192.54015pt.
 
 Overfull \hbox (201.23251pt too wide) has occurred while \output is active
@@ -1206,7 +1209,7 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 
 [6
 
- <./cumulative_returns_by_type.png>]
+ <../Figures/cumulative_returns_by_type.png>]
 Overfull \hbox (201.23251pt too wide) in paragraph at lines 146--146
  [][][][]  
  []
@@ -1271,11 +1274,13 @@ Overfull \hbox (201.23251pt too wide) in paragraph at lines 221--221
  [][][][]  
  []
 
-<top_assets_composite_score_5_years.png, id=302, 1156.32pt x 867.24pt>
-File: top_assets_composite_score_5_years.png Graphic file (type png)
-<use top_assets_composite_score_5_years.png>
-Package pdftex.def Info: top_assets_composite_score_5_years.png  used on input 
-line 221.
+<../Figures/top_assets_composite_score_5_years.png, id=337, 1156.32pt x 867.24p
+t>
+File: ../Figures/top_assets_composite_score_5_years.png Graphic file (type png)
+
+<use ../Figures/top_assets_composite_score_5_years.png>
+Package pdftex.def Info: ../Figures/top_assets_composite_score_5_years.png  use
+d on input line 221.
 (pdftex.def)             Requested size: 308.06367pt x 231.04817pt.
 
 Overfull \vbox (2.57079pt too high) detected at line 221
@@ -1288,16 +1293,18 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 
 [12
 
- <./top_assets_composite_score_5_years.png>]
+ <../Figures/top_assets_composite_score_5_years.png>]
 Overfull \hbox (201.23251pt too wide) in paragraph at lines 228--228
  [][][][]  
  []
 
-<top_assets_composite_score_7_5_years.png, id=311, 1156.32pt x 867.24pt>
-File: top_assets_composite_score_7_5_years.png Graphic file (type png)
-<use top_assets_composite_score_7_5_years.png>
-Package pdftex.def Info: top_assets_composite_score_7_5_years.png  used on inpu
-t line 228.
+<../Figures/top_assets_composite_score_7_5_years.png, id=346, 1156.32pt x 867.2
+4pt>
+File: ../Figures/top_assets_composite_score_7_5_years.png Graphic file (type pn
+g)
+<use ../Figures/top_assets_composite_score_7_5_years.png>
+Package pdftex.def Info: ../Figures/top_assets_composite_score_7_5_years.png  u
+sed on input line 228.
 (pdftex.def)             Requested size: 308.06367pt x 231.04817pt.
 
 Overfull \vbox (2.57079pt too high) detected at line 228
@@ -1310,16 +1317,18 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 
 [13
 
- <./top_assets_composite_score_7_5_years.png>]
+ <../Figures/top_assets_composite_score_7_5_years.png>]
 Overfull \hbox (201.23251pt too wide) in paragraph at lines 236--236
  [][][][]  
  []
 
-<top_assets_composite_score_10_years.png, id=321, 1156.32pt x 867.24pt>
-File: top_assets_composite_score_10_years.png Graphic file (type png)
-<use top_assets_composite_score_10_years.png>
-Package pdftex.def Info: top_assets_composite_score_10_years.png  used on input
- line 236.
+<../Figures/top_assets_composite_score_10_years.png, id=356, 1156.32pt x 867.24
+pt>
+File: ../Figures/top_assets_composite_score_10_years.png Graphic file (type png
+)
+<use ../Figures/top_assets_composite_score_10_years.png>
+Package pdftex.def Info: ../Figures/top_assets_composite_score_10_years.png  us
+ed on input line 236.
 (pdftex.def)             Requested size: 308.06367pt x 231.04817pt.
 
 Overfull \vbox (2.57079pt too high) detected at line 236
@@ -1332,7 +1341,7 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 
 [14
 
- <./top_assets_composite_score_10_years.png>]
+ <../Figures/top_assets_composite_score_10_years.png>]
 Overfull \hbox (201.23251pt too wide) in paragraph at lines 269--269
  [][][][]  
  []
@@ -1373,12 +1382,12 @@ Overfull \hbox (201.23251pt too wide) in paragraph at lines 303--303
  [][][][]  
  []
 
-<optimal_portfolio_5_years.png, id=425, 999.735pt x 714.67pt>
-File: optimal_portfolio_5_years.png Graphic file (type png)
-<use optimal_portfolio_5_years.png>
-Package pdftex.def Info: optimal_portfolio_5_years.png  used on input line 303.
-
-(pdftex.def)             Requested size: 291.80731pt x 208.60147pt.
+<../Figures/optimal_portfolio_5_years.png, id=458, 986.4855pt x 714.7503pt>
+File: ../Figures/optimal_portfolio_5_years.png Graphic file (type png)
+<use ../Figures/optimal_portfolio_5_years.png>
+Package pdftex.def Info: ../Figures/optimal_portfolio_5_years.png  used on inpu
+t line 303.
+(pdftex.def)             Requested size: 287.90988pt x 208.60147pt.
 
 Overfull \hbox (201.23251pt too wide) has occurred while \output is active
  [][][][]  
@@ -1386,17 +1395,17 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 
 [18
 
- <./optimal_portfolio_5_years.png>]
+ <../Figures/optimal_portfolio_5_years.png>]
 Overfull \hbox (201.23251pt too wide) in paragraph at lines 310--310
  [][][][]  
  []
 
-<optimal_portfolio_7_5_years.png, id=434, 989.6975pt x 714.67pt>
-File: optimal_portfolio_7_5_years.png Graphic file (type png)
-<use optimal_portfolio_7_5_years.png>
-Package pdftex.def Info: optimal_portfolio_7_5_years.png  used on input line 31
-0.
-(pdftex.def)             Requested size: 288.87752pt x 208.60147pt.
+<../Figures/optimal_portfolio_7_5_years.png, id=467, 994.4352pt x 714.7503pt>
+File: ../Figures/optimal_portfolio_7_5_years.png Graphic file (type png)
+<use ../Figures/optimal_portfolio_7_5_years.png>
+Package pdftex.def Info: ../Figures/optimal_portfolio_7_5_years.png  used on in
+put line 310.
+(pdftex.def)             Requested size: 290.23003pt x 208.60147pt.
 
 Overfull \hbox (201.23251pt too wide) has occurred while \output is active
  [][][][]  
@@ -1404,17 +1413,17 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 
 [19
 
- <./optimal_portfolio_7_5_years.png>]
+ <../Figures/optimal_portfolio_7_5_years.png>]
 Overfull \hbox (201.23251pt too wide) in paragraph at lines 317--317
  [][][][]  
  []
 
-<optimal_portfolio_10_years.png, id=444, 1003.75pt x 714.67pt>
-File: optimal_portfolio_10_years.png Graphic file (type png)
-<use optimal_portfolio_10_years.png>
-Package pdftex.def Info: optimal_portfolio_10_years.png  used on input line 317
-.
-(pdftex.def)             Requested size: 292.97923pt x 208.60147pt.
+<../Figures/optimal_portfolio_10_years.png, id=477, 993.7125pt x 714.7503pt>
+File: ../Figures/optimal_portfolio_10_years.png Graphic file (type png)
+<use ../Figures/optimal_portfolio_10_years.png>
+Package pdftex.def Info: ../Figures/optimal_portfolio_10_years.png  used on inp
+ut line 317.
+(pdftex.def)             Requested size: 290.0191pt x 208.60147pt.
 
 Overfull \hbox (201.23251pt too wide) has occurred while \output is active
  [][][][]  
@@ -1422,7 +1431,7 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 
 [20
 
- <./optimal_portfolio_10_years.png>]
+ <../Figures/optimal_portfolio_10_years.png>]
 Overfull \hbox (201.23251pt too wide) in paragraph at lines 338--338
  [][][][]  
  []
@@ -1439,12 +1448,13 @@ Overfull \hbox (201.23251pt too wide) in paragraph at lines 346--346
  [][][][]  
  []
 
-<cumulative_returns_comparison.png, id=485, 1110.1475pt x 676.5275pt>
-File: cumulative_returns_comparison.png Graphic file (type png)
-<use cumulative_returns_comparison.png>
-Package pdftex.def Info: cumulative_returns_comparison.png  used on input line 
-346.
-(pdftex.def)             Requested size: 308.06367pt x 187.73343pt.
+<../Figures/cumulative_returns_comparison.png, id=517, 1110.0672pt x 676.4472pt
+>
+File: ../Figures/cumulative_returns_comparison.png Graphic file (type png)
+<use ../Figures/cumulative_returns_comparison.png>
+Package pdftex.def Info: ../Figures/cumulative_returns_comparison.png  used on 
+input line 346.
+(pdftex.def)             Requested size: 308.06367pt x 187.72148pt.
 
 Overfull \hbox (201.23251pt too wide) has occurred while \output is active
  [][][][]  
@@ -1452,17 +1462,17 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 
 [22
 
- <./cumulative_returns_comparison.png>]
+ <../Figures/cumulative_returns_comparison.png>]
 Overfull \hbox (201.23251pt too wide) in paragraph at lines 353--353
  [][][][]  
  []
 
-<cumulative_returns_summary.png, id=494, 1171.37625pt x 821.0675pt>
-File: cumulative_returns_summary.png Graphic file (type png)
-<use cumulative_returns_summary.png>
-Package pdftex.def Info: cumulative_returns_summary.png  used on input line 353
-.
-(pdftex.def)             Requested size: 308.06367pt x 215.92809pt.
+<../Figures/cumulative_returns_summary.png, id=526, 1170.0513pt x 821.7099pt>
+File: ../Figures/cumulative_returns_summary.png Graphic file (type png)
+<use ../Figures/cumulative_returns_summary.png>
+Package pdftex.def Info: ../Figures/cumulative_returns_summary.png  used on inp
+ut line 353.
+(pdftex.def)             Requested size: 308.06367pt x 216.3478pt.
 
 Overfull \hbox (201.23251pt too wide) has occurred while \output is active
  [][][][]  
@@ -1470,7 +1480,7 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 
 [23
 
- <./cumulative_returns_summary.png>]
+ <../Figures/cumulative_returns_summary.png>]
 Overfull \hbox (201.23251pt too wide) in paragraph at lines 365--365
  [][][][]  
  []
@@ -1533,21 +1543,14 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-Package rerunfilecheck Warning: File `slides.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `slides.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  3AC9E8F11F8F57D222EB6D49F0F7BC34;1634.
+Package rerunfilecheck Info: File `slides.out' has not changed.
+(rerunfilecheck)             Checksum: 3AC9E8F11F8F57D222EB6D49F0F7BC34;1634.
  ) 
 Here is how much of TeX's memory you used:
- 35199 strings out of 474116
- 845775 string characters out of 5743683
+ 35218 strings out of 474116
+ 846780 string characters out of 5743683
  1944187 words of memory out of 5000000
- 56857 multiletter control sequences out of 15000+600000
+ 56870 multiletter control sequences out of 15000+600000
  568298 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,123p,727b,725s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1567,10 +1570,10 @@ e/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/
 24/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2024
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2024/
 texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on slides.pdf (27 pages, 2692018 bytes).
+Output written on slides.pdf (27 pages, 2765621 bytes).
 PDF statistics:
- 687 PDF objects out of 1000 (max. 8388607)
- 397 compressed objects within 4 object streams
+ 719 PDF objects out of 1000 (max. 8388607)
+ 428 compressed objects within 5 object streams
  65 named destinations out of 1000 (max. 500000)
- 1119 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1199 words of extra memory for PDF output out of 10000 (max. 10000000)
 

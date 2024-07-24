@@ -1,27 +1,141 @@
 \section{Results}
-The empirical analysis revealed significant findings. Table \ref{performance-comparison} compares the performance of our optimal portfolios against the S\&P 500 over different horizons.
 
-\begin{table}[h!]
-\centering
-\begin{tabular}{lccc}
-\hline
-Horizon & Optimal Portfolio Return & S\&P 500 Return & Difference \\
-\hline
-5 Years & 441.66\% & 375.45\% & 66.21\% \\
-7.5 Years & 454.96\% & 389.22\% & 65.74\% \\
-10 Years & 314.81\% & 298.54\% & 16.27\% \\
-\hline
-\end{tabular}
-\caption{Performance Comparison of Optimal Portfolios and S\&P 500}
-\label{performance-comparison}
-\end{table}
+This section presents the results of the analysis, including the performance of the optimal portfolios over 5, 7.5, and 10-year horizons. The results are visualized using various figures and tables.
 
-\subsection{Scenario Analysis}
-A scenario analysis was conducted to assess how different economic conditions (e.g., recession, boom, interest rate changes) impact the optimal investment strategies. This analysis provides practical insights into the resilience of the strategies under various economic scenarios.
+\subsection{Optimal Portfolios}
+Figures \ref{fig:optimal_portfolio_10y}, \ref{fig:optimal_portfolio_7_5y}, and \ref{fig:optimal_portfolio_5y} illustrate the composition of the optimal portfolios for 10, 7.5, and 5-year horizons, respectively.
 
-\subsection{Sensitivity Analysis}
-A sensitivity analysis was performed to understand how changes in key assumptions (e.g., risk-free rate, market return) affect the outcomes of the investment strategies. This analysis provides insights into the robustness of our findings under different economic conditions.
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../Figures/optimal_portfolio_10_years.png}
+    \caption{Optimal Portfolio for 10 Years}
+    \label{fig:optimal_portfolio_10y}
+\end{figure}
 
-\subsection{Visual Explanations}
-Figures \ref{fig:security-count}, \ref{fig:optimal-portfolio-5-years}, \ref{fig:top-assets-10-years}, \ref{fig:top-assets-7-5-years}, \ref{fig:top-assets-5-years}, and \ref{fig:cumulative-returns} provide visual representations of the distribution of security types, optimal portfolios, top assets by composite score, and cumulative returns by security type. Each chart includes detailed explanations to help readers understand the implications of the visual data.
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../Figures/optimal_portfolio_7_5_years.png}
+    \caption{Optimal Portfolio for 7.5 Years}
+    \label{fig:optimal_portfolio_7_5y}
+\end{figure}
 
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../Figures/optimal_portfolio_5_years.png}
+    \caption{Optimal Portfolio for 5 Years}
+    \label{fig:optimal_portfolio_5y}
+\end{figure}
+
+\subsection{Top Assets by Composite Score}
+Figures \ref{fig:top_assets_10y}, \ref{fig:top_assets_7_5y}, and \ref{fig:top_assets_5y} show the top assets by composite score for 10, 7.5, and 5-year horizons, respectively.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../Figures/top_assets_composite_score_10_years.png}
+    \caption{Top Assets by Composite Score (10 Years)}
+    \label{fig:top_assets_10y}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../Figures/top_assets_composite_score_7_5_years.png}
+    \caption{Top Assets by Composite Score (7.5 Years)}
+    \label{fig:top_assets_7_5y}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../Figures/top_assets_composite_score_5_years.png}
+    \caption{Top Assets by Composite Score (5 Years)}
+    \label{fig:top_assets_5y}
+\end{figure}
+
+\subsection{Distribution of Final Portfolio Values}
+Figures \ref{fig:final_portfolio_values_5y}, \ref{fig:final_portfolio_values_7_5y}, and \ref{fig:final_portfolio_values_10y} show the distribution of final portfolio values for 5, 7.5, and 10-year investment horizons, respectively.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../Figures/final_portfolio_values_distribution_5_years.png}
+    \caption{Distribution of Final Portfolio Values (5 Years)}
+    \label{fig:final_portfolio_values_5y}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../Figures/final_portfolio_values_distribution_7_5_years.png}
+    \caption{Distribution of Final Portfolio Values (7.5 Years)}
+    \label{fig:final_portfolio_values_7_5y}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../Figures/final_portfolio_values_distribution_10_years.png}
+    \caption{Distribution of Final Portfolio Values (10 Years)}
+    \label{fig:final_portfolio_values_10y}
+\end{figure}
+
+\subsection{Cumulative Returns Over Time}
+Figures \ref{fig:cumulative_returns_5y}, \ref{fig:cumulative_returns_7_5y}, and \ref{fig:cumulative_returns_10y} illustrate the cumulative returns over time for 5, 7.5, and 10-year investment horizons, respectively.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../Figures/cumulative_returns_over_time_5_years.png}
+    \caption{Cumulative Returns Over Time (5 Years)}
+    \label{fig:cumulative_returns_5y}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../Figures/cumulative_returns_over_time_7_5_years.png}
+    \caption{Cumulative Returns Over Time (7.5 Years)}
+    \label{fig:cumulative_returns_7_5y}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../Figures/cumulative_returns_over_time_10_years.png}
+    \caption{Cumulative Returns Over Time (10 Years)}
+    \label{fig:cumulative_returns_10y}
+\end{figure}
+
+\subsection{Cumulative Returns Summary}
+Figure \ref{fig:cumulative_returns_summary} summarizes the cumulative returns for the actual portfolios over the investment horizons compared to the S\&P 500.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../Figures/cumulative_returns_summary.png}
+    \caption{Cumulative Returns Summary (2011-2024)}
+    \label{fig:cumulative_returns_summary}
+\end{figure}
+
+\subsection{Cumulative Returns Comparison}
+Figure \ref{fig:cumulative_returns_comparison} compares the cumulative returns of actual portfolios against the S\&P 500 benchmark.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../Figures/cumulative_returns_comparison.png}
+    \caption{Cumulative Returns Comparison of Actual Portfolios vs. S\&P 500}
+    \label{fig:cumulative_returns_comparison}
+\end{figure}
+
+\subsection{Cumulative Returns by Security Type}
+Figure \ref{fig:cumulative_returns_by_type} illustrates the cumulative returns over time by security type.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../Figures/cumulative_returns_by_type.png}
+    \caption{Cumulative Returns Over Time by Security Type}
+    \label{fig:cumulative_returns_by_type}
+\end{figure}
+
+\subsection{Distribution of Securities by Type}
+Figure \ref{fig:distribution_of_securities} shows the distribution of the securities by type.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../Figures/histogram_security_count.png}
+    \caption{Distribution of Securities by Type}
+    \label{fig:distribution_of_securities}
+\end{figure}
+
+\newpage

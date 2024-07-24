@@ -1,4 +1,5 @@
 \section{Data}
+
 \subsection{Data Sources}
 The financial data used in this research is sourced from Yahoo Finance, which includes comprehensive information on roughly 150 securities consisting of stocks, mutual funds, and ETFs. This data source provides a rich dataset for analyzing the performance of different investment vehicles over time.
 
@@ -35,18 +36,25 @@ The dataset includes the following fields:
 
 These fields provide a comprehensive view of the daily trading activities and price movements of different securities, essential for the analysis of investment performance and strategy development.
 
-\section{Methodology}
-\subsection{Data Collection and Processing}
-The financial data for this study were obtained from Yahoo Finance, covering a period from September 2014 to July 2024. The dataset includes daily prices and trading volumes for a range of securities. Data preprocessing involved cleaning the dataset to remove anomalies and adjusting for corporate actions like stock splits and dividends.
+\subsection{Summary Statistics}
+Summary statistics for the dataset are presented in Table \ref{tab:summary-stats}. These statistics were generated using the \texttt{../Data/summary\_stats.csv} file produced by the Python scripts.
 
-\subsection{Model Implementation}
-The empirical analysis involved several steps:
-1. \textbf{Data Cleaning and Preparation:} Ensured the data was error-free and adjusted for stock splits and dividends.
-2. \textbf{Calculation of Daily Returns:} Daily returns were computed as the percentage change in closing prices.
-3. \textbf{Estimation of Expected Returns and Variances:} Using historical data, expected returns and variances for each asset were estimated.
-4. \textbf{Portfolio Optimization:} Applied Modern Portfolio Theory using quadratic programming to construct efficient portfolios.
-5. \textbf{Simulation of Investment Scenarios:} Conducted Monte Carlo simulations to model the accumulation of down payments over different investment horizons.
+\begin{table}[h!]
+\centering
+\begin{tabular}{lccccccc}
+\hline
+Statistic & Mean & Std. Dev. & Min & 25\% & 50\% & 75\% & Max \\
+\hline
+Open & ... & ... & ... & ... & ... & ... & ... \\
+High & ... & ... & ... & ... & ... & ... & ... \\
+Low & ... & ... & ... & ... & ... & ... & ... \\
+Close & ... & ... & ... & ... & ... & ... & ... \\
+Adj Close & ... & ... & ... & ... & ... & ... & ... \\
+Volume & ... & ... & ... & ... & ... & ... & ... \\
+\hline
+\end{tabular}
+\caption{Summary Statistics of the Dataset}
+\label{tab:summary-stats}
+\end{table}
 
-
-\subsection{Data Limitations}
-While the dataset is comprehensive, there are limitations to consider. The data is limited to publicly traded securities, which may not capture the full range of investment opportunities available to first-time homebuyers. Additionally, the historical data may not fully account for future market conditions and economic events. These limitations will be addressed in the analysis and interpretation of the results.
+\newpage
