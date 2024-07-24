@@ -106,7 +106,6 @@ plt.legend(fontsize=20, loc='upper left')
 plt.grid(True, linestyle='--', linewidth=0.5)
 plt.tight_layout(pad=3)
 plt.savefig(f'{figures_path}/cumulative_returns_comparison.png', bbox_inches='tight')
-plt.show()
 
 # Create a simplified comparison table summarizing cumulative returns
 final_returns = {
@@ -137,4 +136,3 @@ for bar in bars:
     plt.text(width + 5, bar.get_y() + bar.get_height()/2, f'{width:.2f}%', va='center', ha='left', fontsize=20)
 
 plt.savefig(f'{figures_path}/cumulative_returns_summary.png', bbox_inches='tight')
-plt.show()

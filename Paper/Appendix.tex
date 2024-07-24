@@ -1,26 +1,58 @@
 \appendix
+\section{Data Appendix}
 
-\section{Additional Figures}
+\subsection{Summary of Data Sources}
+The financial data utilized in this study were obtained from Yahoo Finance, which provides comprehensive information on a range of securities including stocks, mutual funds, and ETFs.
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{../Figures/SML.png}
-    \caption{Security Market Line}
-    \label{fig:SML_appendix}
-\end{figure}
+\subsection{Data Cleaning and Processing Details}
+Detailed steps taken to clean and process the data include:
+\begin{itemize}
+    \item Adjusting for corporate actions like stock splits and dividends to maintain consistency in price data.
+    \item Interpolating missing values to handle gaps in the dataset.
+    \item Detecting and handling outliers to prevent skewed results.
+\end{itemize}
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{../Figures/investment_simulation_process.png}
-    \caption{Investment Simulation Process for Monte Carlo Analysis}
-    \label{fig:investment_simulation_appendix}
-\end{figure}
+\subsection{Python Scripts for Data Processing}
+Several Python scripts were developed to automate data collection and processing:
+\begin{itemize}
+    \item \texttt{yfinance\_data.py}: Collects and processes financial data from Yahoo Finance.
+    \item \texttt{hindsight\_data.py}: Handles historical financial data for hindsight analysis.
+    \item \texttt{init\_filtering.py}: Filters the initial dataset to remove anomalies and irrelevant data points.
+\end{itemize}
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{../Figures/efficient_frontier.png}
-    \caption{Efficient Frontier}
-    \label{fig:efficient_frontier_appendix}
-\end{figure}
+\subsection{Variable Definitions}
+The key variables used in the analysis are defined as follows:
+\begin{itemize}
+    \item \textbf{Open}: The price at the beginning of the trading day.
+    \item \textbf{High}: The highest price during the trading day.
+    \item \textbf{Low}: The lowest price during the trading day.
+    \item \textbf{Close}: The price at the end of the trading day.
+    \item \textbf{Adj Close}: The closing price adjusted for dividends, stock splits, etc.
+    \item \textbf{Volume}: The number of shares traded during the trading day.
+    \item \textbf{Type}: The type of security (e.g., stock, ETF).
+    \item \textbf{Ticker}	Beta	CAPM Predicted Return	Sharpe Ratio	Actual Returns	Type	Composite Score 5 Years	Rank
+\end{itemize}
+
+\subsection{Summary Statistics}
+Summary statistics for the dataset are presented in Table \ref{tab:summary-stats}. These statistics were generated using the \texttt{../Data/summary\_stats.csv} file produced by the Python scripts.
+
+\begin{table}[h!]
+\centering
+\scriptsize
+\begin{tabular}{lccccccc}
+\hline
+Statistic & \begin{tabular}[c]{@{}c@{}}Mean Final \\ Portfolio Value (\$)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Median Final \\ Portfolio Value (\$)\end{tabular} & \begin{tabular}[c]{@{}c@{}}10th Percentile Final \\ Portfolio Value (\$)\end{tabular} & \begin{tabular}[c]{@{}c@{}}90th Percentile Final \\ Portfolio Value (\$)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Total Percentage \\ Yield (\%)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Annual Percentage \\ Yield (\%)\end{tabular} \\
+\hline
+10-Year Horizon & 283094.44 & 265864.65 & 171232.59 & 420935.51 & 2730.94 & 39.70 \\
+7.5-Year Horizon & 180745.35 & 173433.88 & 116972.91 & 256760.32 & 1707.45 & 47.10 \\
+5-Year Horizon & 101559.42 & 98327.18 & 67062.20 & 139233.79 & 915.59 & 58.98 \\
+\hline
+\end{tabular}
+\caption{Summary Statistics of the Dataset}
+\label{tab:summary-stats}
+\end{table}
+
+
+
 
 \newpage
