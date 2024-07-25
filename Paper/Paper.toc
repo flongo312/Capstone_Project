@@ -33,20 +33,20 @@
 \contentsline {subsection}{\numberline {6.1}Initial Data Analysis}{15}{subsection.6.1}%
 \contentsline {subsubsection}{\numberline {6.1.1}Distribution of Securities by Type}{15}{subsubsection.6.1.1}%
 \contentsline {subsubsection}{\numberline {6.1.2}Cumulative Returns by Security Type}{15}{subsubsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.2}Optimal Portfolios}{16}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}Top Assets by Composite Score}{16}{subsubsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.3}Optimal Portfolios Composition}{17}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Comparison with Hindsight Data}{20}{subsection.6.4}%
-\contentsline {subsubsection}{\numberline {6.4.1}Cumulative Returns Comparison}{20}{subsubsection.6.4.1}%
-\contentsline {subsubsection}{\numberline {6.4.2}Cumulative Returns Summary}{20}{subsubsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.5}Monte Carlo Simulation for Future Forecasting}{21}{subsection.6.5}%
-\contentsline {subsubsection}{\numberline {6.5.1}Distribution of Final Portfolio Values}{21}{subsubsection.6.5.1}%
-\contentsline {subsubsection}{\numberline {6.5.2}Cumulative Returns Over Time}{23}{subsubsection.6.5.2}%
-\contentsline {subsection}{\numberline {6.6}Summary Statistics}{25}{subsection.6.6}%
-\contentsline {section}{\numberline {7}Conclusions}{26}{section.7}%
-\contentsline {section}{\numberline {A}Data Appendix}{27}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Summary of Data Sources}{27}{subsection.A.1}%
-\contentsline {subsection}{\numberline {A.2}Data Cleaning and Processing Details}{27}{subsection.A.2}%
-\contentsline {subsection}{\numberline {A.3}Python Scripts for Data Processing}{27}{subsection.A.3}%
-\contentsline {subsection}{\numberline {A.4}Variable Definitions}{27}{subsection.A.4}%
-\contentsline {section}{\numberline {B}Acknowledgments}{29}{appendix.B}%
+\contentsline {subsection}{\numberline {6.2}Optimal Portfolios}{15}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Top Assets by Composite Score}{15}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Optimal Portfolios Composition}{18}{subsubsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.3}Comparison with Hindsight Data}{18}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Cumulative Returns Comparison}{18}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}Cumulative Returns Summary}{20}{subsubsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.4}Monte Carlo Simulation for Future Forecasting}{21}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}Distribution of Final Portfolio Values}{21}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2}Cumulative Returns Over Time}{21}{subsubsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.5}Summary Statistics}{24}{subsection.6.5}%
+\contentsline {section}{\numberline {7}Conclusions}{25}{section.7}%
+\contentsline {section}{\numberline {A}Data Appendix}{26}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Summary of Data Sources}{26}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Data Cleaning and Processing Details}{26}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}Python Scripts for Data Processing}{26}{subsection.A.3}%
+\contentsline {subsection}{\numberline {A.4}Variable Definitions}{26}{subsection.A.4}%
+\contentsline {section}{\numberline {B}Acknowledgments}{28}{appendix.B}%

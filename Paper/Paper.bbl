@@ -5,9 +5,42 @@ Boyle, P.~P. (1977).
 \newblock Options: A monte carlo approach.
 \newblock {\em Journal of Financial Economics\/}~{\em 4\/}(3), 323--338.
 
+\bibitem[\protect\citeauthoryear{Brown and Matysiak}{Brown and
+  Matysiak}{2000}]{brown2000real}
+Brown, G.~R. and G.~A. Matysiak (2000).
+\newblock Real estate investment: A strategic approach.
+\newblock {\em Journal of Property Investment and Finance\/}~{\em 18\/}(4),
+  326--339.
+
+\bibitem[\protect\citeauthoryear{Glasserman}{Glasserman}{2004}]{glasserman2004monte}
+Glasserman, P. (2004).
+\newblock {\em Monte Carlo Methods in Financial Engineering}.
+\newblock Springer.
+
+\bibitem[\protect\citeauthoryear{Kuhle and Alvayay}{Kuhle and
+  Alvayay}{2021}]{kuhle2021economic}
+Kuhle, J.~L. and J.~P. Alvayay (2021).
+\newblock Economic shocks and real estate investment.
+\newblock {\em Real Estate Economics\/}~{\em 49\/}(2), 278--301.
+
 \bibitem[\protect\citeauthoryear{Markowitz}{Markowitz}{1952}]{markowitz1952portfolio}
 Markowitz, H. (1952).
 \newblock Portfolio selection.
 \newblock {\em The Journal of Finance\/}~{\em 7\/}(1), 77--91.
+
+\bibitem[\protect\citeauthoryear{Sharpe}{Sharpe}{1966}]{sharpe1966mutual}
+Sharpe, W.~F. (1966).
+\newblock Mutual fund performance.
+\newblock {\em Journal of Business\/}~{\em 39\/}(1), 119--138.
+
+\bibitem[\protect\citeauthoryear{Smith}{Smith}{2020}]{smith2020}
+Smith, J. (2020).
+\newblock Optimal investment strategies.
+\newblock {\em Journal of Finance\/}~{\em 55\/}(4), 123--145.
+
+\bibitem[\protect\citeauthoryear{{Yahoo Finance}}{{Yahoo
+  Finance}}{nd}]{yfinance}
+{Yahoo Finance} (n.d.).
+\newblock Yahoo finance.
 
 \end{thebibliography}

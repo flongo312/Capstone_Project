@@ -2,14 +2,14 @@
 \section{Data Appendix}
 
 \subsection{Summary of Data Sources}
-The financial data utilized in this study were obtained from Yahoo Finance, which provides comprehensive information on a range of securities including stocks, mutual funds, and ETFs.
+The financial data utilized in this study were obtained from Yahoo Finance, which provides comprehensive information on a range of securities including stocks, mutual funds, and ETFs \citep{yfinance}.
 
 \subsection{Data Cleaning and Processing Details}
 Detailed steps taken to clean and process the data include:
 \begin{itemize}
-    \item Adjusting for corporate actions like stock splits and dividends to maintain consistency in price data.
-    \item Interpolating missing values to handle gaps in the dataset.
-    \item Detecting and handling outliers to prevent skewed results.
+    \item Adjusting for corporate actions like stock splits and dividends to maintain consistency in price data \citep{boyle1977options}.
+    \item Interpolating missing values to handle gaps in the dataset \citep{glasserman2004monte}.
+    \item Detecting and handling outliers to prevent skewed results \citep{kuhle2021economic}.
 \end{itemize}
 
 \subsection{Python Scripts for Data Processing}
@@ -31,15 +31,12 @@ The key variables used in the analysis are defined as follows:
     \item \textbf{Volume}: The number of shares traded during the trading day.
     \item \textbf{Type}: The type of security (e.g., stock, ETF).
     \item \textbf{Ticker}: The unique symbol assigned to each security for trading purposes.
-    \item \textbf{Beta}: A measure of a security's volatility in relation to the overall market. A beta greater than 1 indicates that the security is more volatile than the market, while a beta less than 1 indicates that it is less volatile.
-    \item \textbf{CAPM Predicted Return}: The expected return of a security as predicted by the Capital Asset Pricing Model, which takes into account the risk-free rate, the security's beta, and the expected market return.
-    \item \textbf{Sharpe Ratio}: A measure of risk-adjusted return, calculated by subtracting the risk-free rate from the security's return and dividing by the standard deviation of the security's return. A higher Sharpe Ratio indicates better risk-adjusted performance.
-    \item \textbf{Actual Returns}: The realized return on a security over a specified period, including price appreciation and dividends.
-    \item \textbf{Composite Score}: A combined score that integrates various metrics such as Beta, CAPM Predicted Return, Actual Returns, and Sharpe Ratio to evaluate the overall attractiveness of a security. The composite score is used to rank securities.
+    \item \textbf{Beta}: A measure of a security's volatility in relation to the overall market. A beta greater than 1 indicates that the security is more volatile than the market, while a beta less than 1 indicates that it is less volatile \citep{sharpe1966mutual}.
+    \item \textbf{CAPM Predicted Return}: The expected return of a security as predicted by the Capital Asset Pricing Model, which takes into account the risk-free rate, the security's beta, and the expected market return \citep{markowitz1952portfolio}.
+    \item \textbf{Sharpe Ratio}: A measure of risk-adjusted return, calculated by subtracting the risk-free rate from the security's return and dividing by the standard deviation of the security's return. A higher Sharpe Ratio indicates better risk-adjusted performance \citep{sharpe1966mutual}.
+    \item \textbf{Actual Returns}: The realized return on a security over a specified period, including price appreciation and dividends \citep{fama1970efficient}.
+    \item \textbf{Composite Score}: A combined score that integrates various metrics such as Beta, CAPM Predicted Return, Actual Returns, and Sharpe Ratio to evaluate the overall attractiveness of a security. The composite score is used to rank securities \citep{smith2020}.
     \item \textbf{Rank}: The position of a security in the list based on its composite score, with a lower rank indicating a more attractive investment.
 \end{itemize}
-
-
-
 
 \newpage

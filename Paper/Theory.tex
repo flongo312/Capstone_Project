@@ -4,13 +4,13 @@
 The Capital Asset Pricing Model (CAPM) is employed to determine the expected return on an asset based on its systematic risk, as measured by beta ($\beta_i$). The CAPM formula is:
 
 \begin{equation}
-E(Ri) = Rf + \beta_i(E(Rm) - Rf)
+E(R_i) = R_f + \beta_i(E(R_m) - R_f)
 \end{equation}
 
 \subsubsection{Beta Calculation}
 Beta ($\beta_i$) measures the volatility of an asset in relation to the market. It is calculated as:
 \begin{equation}
-\beta_i = \frac{Cov(Ri, Rm)}{\sigma^2_m}
+\beta_i = \frac{Cov(R_i, R_m)}{\sigma^2_m}
 \end{equation}
 
 \subsubsection{Security Market Line (SML)}
@@ -27,14 +27,14 @@ The Security Market Line (SML) is a graphical representation of the CAPM, showca
 The SML conveys several important theoretical implications:
 \begin{itemize}
     \item All securities, when correctly priced, should lie on the SML.
-    \item The slope of the SML is the market risk premium, $E(Rm) - Rf$, representing the additional return expected from holding a market portfolio instead of risk-free assets.
-    \item The intercept of the SML is the risk-free rate, $Rf$, reflecting the return of a theoretically risk-free asset.
+    \item The slope of the SML is the market risk premium, $E(R_m) - R_f$, representing the additional return expected from holding a market portfolio instead of risk-free assets.
+    \item The intercept of the SML is the risk-free rate, $R_f$, reflecting the return of a theoretically risk-free asset.
 \end{itemize}
 
 \subsection{Modern Portfolio Theory (MPT)}
-Modern Portfolio Theory provides a robust framework for constructing an optimal portfolio that maximizes expected return for a given level of risk. The expected return E(Rp) of a portfolio is the weighted sum of the expected returns of the individual assets:
+Modern Portfolio Theory provides a robust framework for constructing an optimal portfolio that maximizes expected return for a given level of risk. The expected return $E(R_p)$ of a portfolio is the weighted sum of the expected returns of the individual assets:
 \begin{equation}
-E(Rp) = \sum_{i=1}^n w_iE(R_i)
+E(R_p) = \sum_{i=1}^n w_iE(R_i)
 \end{equation}
 
 \subsubsection{Efficient Frontier and Optimal Portfolio}
@@ -53,7 +53,7 @@ subject to:
 and
 
 \begin{equation}
-E(Rp) = \sum_{i=1}^n w_iE(R_i)
+E(R_p) = \sum_{i=1}^n w_iE(R_i)
 \end{equation}
 
 \begin{figure}[h!]
@@ -64,13 +64,13 @@ E(Rp) = \sum_{i=1}^n w_iE(R_i)
 \end{figure}
 
 \subsection{Monte Carlo Simulation}
-Monte Carlo simulations are utilized to model the uncertainty and variability in investment returns over time. The simulation process involves generating random returns based on historical data and iterating this process to build a distribution of potential outcomes. The value of an investment at time i is given by:
+Monte Carlo simulations are utilized to model the uncertainty and variability in investment returns over time. The simulation process involves generating random returns based on historical data and iterating this process to build a distribution of potential outcomes. The value of an investment at time $i$ is given by:
 
 \begin{equation}
 X_i = X_{i-1} \times (1 + r_i)
 \end{equation}
 
-where $X_i$ is the investment value at time i and $r_i$ is the return for period i. By running multiple simulations, we can estimate the expected value and variability of the investment portfolio, providing insights into the likelihood of achieving the desired down payment amount within the specified time horizon.
+where $X_i$ is the investment value at time $i$ and $r_i$ is the return for period $i$. By running multiple simulations, we can estimate the expected value and variability of the investment portfolio, providing insights into the likelihood of achieving the desired down payment amount within the specified time horizon.
 
 \begin{figure}[h!]
     \centering

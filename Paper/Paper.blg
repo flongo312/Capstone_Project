@@ -3,49 +3,54 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Paper.aux
 The style file: chicago.bst
 Database file #1: References.bib
+Warning--entry type for "yfinance" isn't style-file defined
+--line 34 of file References.bib
+Warning--I didn't find a database entry for "nar"
+Warning--I didn't find a database entry for "fed2023"
+Warning--I didn't find a database entry for "bls2023"
 Warning--I didn't find a database entry for "sharpe1964capital"
-Warning--I didn't find a database entry for "glasserman2004monte"
-Warning--I didn't find a database entry for "brown2000real"
-Warning--I didn't find a database entry for "kuhle2021economic"
-You've used 2 entries,
+Warning--I didn't find a database entry for "fama1970efficient"
+Warning--I didn't find a database entry for "shiller1992stock"
+Warning--I didn't find a database entry for "jones1992investments"
+You've used 8 entries,
             2861 wiz_defined-function locations,
-            631 strings with 5145 characters,
-and the built_in function-call counts, 1159 in all, are:
-= -- 102
-> -- 52
+            674 strings with 5778 characters,
+and the built_in function-call counts, 4734 in all, are:
+= -- 413
+> -- 260
 < -- 0
-+ -- 12
-- -- 20
-* -- 92
-:= -- 217
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 12
-chr.to.int$ -- 2
-cite$ -- 2
-duplicate$ -- 36
-empty$ -- 87
-format.name$ -- 20
-if$ -- 207
++ -- 68
+- -- 100
+* -- 378
+:= -- 883
+add.period$ -- 23
+call.type$ -- 8
+change.case$ -- 49
+chr.to.int$ -- 8
+cite$ -- 8
+duplicate$ -- 141
+empty$ -- 330
+format.name$ -- 108
+if$ -- 851
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 2
-newline$ -- 13
-num.names$ -- 20
-pop$ -- 6
+missing$ -- 8
+newline$ -- 42
+num.names$ -- 80
+pop$ -- 32
 preamble$ -- 1
-purify$ -- 24
+purify$ -- 98
 quote$ -- 0
-skip$ -- 35
+skip$ -- 148
 stack$ -- 0
-substring$ -- 84
-swap$ -- 12
+substring$ -- 304
+swap$ -- 46
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 40
+type$ -- 150
 warning$ -- 0
-while$ -- 24
+while$ -- 92
 width$ -- 0
-write$ -- 28
-(There were 4 warnings)
+write$ -- 104
+(There were 8 warnings)
