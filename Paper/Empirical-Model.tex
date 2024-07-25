@@ -1,50 +1,68 @@
 \section{Empirical Specification}
 
 \subsection{Model Implementation}
-The empirical analysis proceeds by implementing the theoretical models using the historical data. The process involves the following steps:
-\begin{enumerate}
-    \item Data Cleaning and Preparation: Ensuring the data is free from errors, outliers, and missing values. Adjustments are made for stock splits and dividends to maintain consistency in the price data.
-    \item Calculation of Daily Returns: Daily returns are computed as the percentage change in closing prices, which serves as the basis for further analysis.
-    \item Estimation of Expected Returns and Variances: Using historical data, the expected returns and variances for each asset are estimated. These estimates are inputs for the portfolio optimization process.
-    \item Portfolio Optimization: Applying Modern Portfolio Theory to construct efficient portfolios that maximize expected return for a given level of risk. The optimization problem is solved using quadratic programming.
-    \item Simulation of Investment Scenarios: Using Monte Carlo simulations to model the accumulation of down payments over different investment horizons. Multiple scenarios are simulated to capture the range of possible outcomes.
-\end{enumerate}
+The empirical analysis involves a systematic approach to evaluating and optimizing investment strategies using historical data. The process is outlined as follows:
 
-\subsection{CAPM and Sharpe Ratio Calculation}
-For each security, the Capital Asset Pricing Model (CAPM) and Sharpe Ratio are calculated. The CAPM is used to estimate the expected return of each security, while the Sharpe Ratio measures the risk-adjusted return. The steps involved are:
+\subsubsection{Data Collection and Preparation}
+Data is collected from Yahoo Finance, covering a comprehensive range of securities, including stocks, ETFs, and mutual funds. The data spans from May 2011 to November 2014, with daily updates until July 2024. The data is cleaned and adjusted for corporate actions like stock splits and dividends using the \texttt{yfinance\_data.py} script to ensure consistency.
+
+\subsubsection{CAPM and Sharpe Ratio Calculation}
+Each security's risk and return profile is assessed using the Capital Asset Pricing Model (CAPM) and Sharpe Ratio. The process involves:
 \begin{enumerate}
-    \item Calculate the average return of the market index (e.g., a broad market index like the S\&P 500).
-    \item Determine the risk-free rate (e.g., the yield on 10-year U.S. Treasury bonds).
-    \item Compute the beta ($\beta$) of each security by regressing its returns against the market returns.
-    \item Use the CAPM formula to estimate the expected return for each security.
-    \item Calculate the Sharpe Ratio using the formula:
+    \item Calculating the average return of the market index (e.g., S\&P 500).
+    \item Determining the risk-free rate (e.g., 10-year U.S. Treasury bonds yield).
+    \item Computing the beta (\(\beta\)) of each security:
+    \begin{equation}
+        \beta_i = \frac{\text{Cov}(R_i, R_m)}{\text{Var}(R_m)}
+    \end{equation}
+    \item Estimating the expected return using the CAPM formula:
+    \begin{equation}
+        E(R_i) = R_f + \beta_i (E(R_m) - R_f)
+    \end{equation}
+    \item Calculating the Sharpe Ratio:
     \begin{equation}
         \text{Sharpe Ratio} = \frac{E(R_i) - R_f}{\sigma_i}
     \end{equation}
-    where $E(R_i)$ is the expected return of the security, $R_f$ is the risk-free rate, and $\sigma_i$ is the standard deviation of the security’s excess return.
 \end{enumerate}
+This analysis is performed using the \texttt{init\_filtering.py} script.
 
-The securities are then ranked by their Sharpe Ratios to identify those with the best risk-adjusted returns.
+\subsubsection{Composite Score Calculation}
+Securities are ranked based on a composite score that integrates multiple metrics:
+\begin{equation}
+    \text{Composite Score} = w_{\beta} \beta + w_{\text{Sharpe}} \text{Sharpe Ratio} + w_{\text{CAPM}} E(R_i) + w_{\text{Actual}} \text{Actual Returns}
+\end{equation}
+Weights are assigned to each metric to reflect their importance in the ranking process.
 
-\subsection{Modern Portfolio Theory (MPT) Application}
-Using the ranked securities, portfolios are constructed for different age groups (5, 7.5, and 10 years from the average first-time homebuyer age of 35). Modern Portfolio Theory (MPT) is applied to optimize these portfolios, balancing the trade-off between risk and return. The steps include:
+\subsubsection{Modern Portfolio Theory (MPT) Application}
+Using the ranked securities, portfolios are optimized for different investment horizons (5, 7.5, and 10 years) using Modern Portfolio Theory (MPT). The optimization involves solving the following quadratic programming problem:
+\begin{align}
+    \text{Maximize } & \quad \mathbf{w}^T \mathbf{\mu} - \frac{\lambda}{2} \mathbf{w}^T \mathbf{\Sigma} \mathbf{w} \\
+    \text{subject to} & \quad \sum_{i} w_i = 1 \\
+    & \quad w_i \geq 0 \quad \forall i
+\end{align}
+where \(\mathbf{w}\) is the vector of asset weights, \(\mathbf{\mu}\) is the vector of expected returns, \(\mathbf{\Sigma}\) is the covariance matrix of returns, and \(\lambda\) is the risk aversion parameter. This process is implemented using the \texttt{mpt.py} script.
+
+\subsubsection{Gathering Hindsight Data}
+Historical performance data from 2009 to the present is gathered and processed to evaluate the robustness of the optimized portfolios. This step uses the \texttt{hindsight\_data.py} script to ensure that the data aligns by common dates and covers all relevant securities.
+
+\subsubsection{Comparison with Hindsight Data}
+The optimized portfolios are compared against actual historical performance using the hindsight data. The comparison includes calculating the cumulative returns of the portfolios and benchmarking them against the S\&P 500 index. This step is performed using the \texttt{hindsight.py} script.
+
+\subsubsection{Monte Carlo Simulation for Future Forecasting}
+Monte Carlo simulations are conducted to forecast the performance of the optimized portfolios from today onward. The simulation process involves:
 \begin{enumerate}
-    \item Define the assets and their expected returns and covariances.
-    \item Determine the weights of the assets in the portfolio to maximize the expected return for a given level of risk.
-    \item Construct the efficient frontier to visualize the optimal portfolios.
+    \item Defining initial investment amounts and annual contributions.
+    \item Generating random returns based on historical distributions.
+    \item Calculating portfolio values at each time step:
+    \begin{equation}
+        V_t = V_{t-1} \times (1 + R_t) + C
+    \end{equation}
+    \item Running multiple iterations to build a probability distribution of outcomes.
+    \item Applying economic shocks to simulate real-world scenarios:
+    \begin{equation}
+        V_t = V_t \times (1 + \text{Shock Intensity})
+    \end{equation}
 \end{enumerate}
-
-\subsection{Monte Carlo Simulation for Down Payment Accumulation}
-Monte Carlo simulations are conducted to assess the variability and uncertainty in the investment returns. This involves generating random returns based on historical distributions and running numerous simulations to build a probability distribution of potential outcomes. The simulation process helps in understanding the range of possible values for the investment portfolio and the likelihood of achieving the target down payment within the specified timeframe.
-
-\subsubsection{Simulation Process}
-The simulation process involves the following steps:
-\begin{enumerate}
-    \item Define the initial investment amount and the annual contribution based on age-specific income data.
-    \item Generate a series of random returns for each asset in the portfolio using historical return distributions.
-    \item Compute the investment value at each time step by applying the generated returns.
-    \item Repeat the simulation for a large number of iterations to obtain a distribution of possible outcomes.
-    \item Analyze the distribution to determine the probability of achieving the down payment target.
-\end{enumerate}
+This comprehensive simulation is implemented using the \texttt{mcs.py} script, providing insights into the potential future performance of the portfolios.
 
 \newpage

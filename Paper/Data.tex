@@ -1,21 +1,5 @@
-\subsection{Data Sources}
+\section{Data}
 The financial data used in this research is sourced from Yahoo Finance, which includes comprehensive information on roughly 150 securities consisting of stocks, mutual funds, and ETFs. This data source provides a rich dataset for analyzing the performance of different investment vehicles over time.
-
-\subsection{Data Processing}
-Data processing was conducted using several Python scripts:
-\begin{itemize}
-    \item \texttt{yfinance\_data.py}: Collects and processes financial data from Yahoo Finance, ensuring data is clean and adjusted for corporate actions such as stock splits and dividends.
-    \item \texttt{hindsight\_data.py} and \texttt{hindsight.py}: Handle historical financial data and perform hindsight analysis to simulate past investment scenarios.
-    \item \texttt{init\_filtering.py}: Filters the initial dataset to remove anomalies and irrelevant data points.
-\end{itemize}
-
-\subsection{Data Robustness}
-To ensure the robustness of our data, several steps were taken:
-\begin{itemize}
-    \item Data Cleaning: Removed anomalies and adjusted for corporate actions such as stock splits and dividends.
-    \item Handling Missing Values: Employed interpolation and other statistical methods to handle missing data points.
-    \item Outlier Detection: Used statistical techniques to detect and handle outliers, ensuring they do not skew the results.
-\end{itemize}
 
 \subsection{Date Range}
 The data covers the period from May 2011 to November 2014 for daily frequency and further hindsight data from May 2011 to July 2024. This timeframe allows for the analysis of recent trends and the performance of different asset classes in various market conditions.
