@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.9)  25 JUL 2024 00:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.9)  25 JUL 2024 16:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -610,77 +610,63 @@ al/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}] (./Abstract.tex) [2] (
 \tf@toc=\write4
 \openout4 = `Paper.toc'.
 
- [4] (./Introduction.tex
-
-Package natbib Warning: Citation `nar' on page 5 undefined on input line 8.
-
-
-Package natbib Warning: Citation `fed2023' on page 5 undefined on input line 8.
-
-
-
-Package natbib Warning: Citation `bls2023' on page 5 undefined on input line 8.
-
-
-[5]) (./Literature.tex
-
-Package natbib Warning: Citation `sharpe1964capital' on page 6 undefined on inp
-ut line 3.
-
-
-Package natbib Warning: Citation `sharpe1964capital' on page 6 undefined on inp
-ut line 11.
-
-[6]) (./Data.tex
+ [4] (./Introduction.tex [5]) (./Literature.tex [6] [7] [8]) (./Data.tex
 LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 1
 0.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ppl.fd
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-) [7] [8]) (./Theory.tex
-<../Figures/SML.png, id=331, 432.11438pt x 353.06906pt>
+) [9])
+(./Theory.tex
+<../Figures/SML.png, id=419, 432.11438pt x 353.06906pt>
 File: ../Figures/SML.png Graphic file (type png)
 <use ../Figures/SML.png>
-Package pdftex.def Info: ../Figures/SML.png  used on input line 21.
+Package pdftex.def Info: ../Figures/SML.png  used on input line 38.
 (pdftex.def)             Requested size: 281.85587pt x 230.30566pt.
- [9
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.30     \item T
-                he slope of the SML is the market risk premium, $E(R_m) - R_...
- <../Figures/SML.png>]
-<../Figures/efficient_frontier.png, id=343, 326.72063pt x 179.92218pt>
-File: ../Figures/efficient_frontier.png Graphic file (type png)
-<use ../Figures/efficient_frontier.png>
-Package pdftex.def Info: ../Figures/efficient_frontier.png  used on input line 
-61.
-(pdftex.def)             Requested size: 281.85587pt x 155.21599pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[10]
-<../Figures/investment_simulation_process.png, id=353, 754.82pt x 501.875pt>
-File: ../Figures/investment_simulation_process.png Graphic file (type png)
-<use ../Figures/investment_simulation_process.png>
-Package pdftex.def Info: ../Figures/investment_simulation_process.png  used on 
-input line 77.
-(pdftex.def)             Requested size: 281.85587pt x 187.39856pt.
- [11
+[10] [11
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.62     \item $
+                E(R_i)$ is the expected return of the investment. <../Figures/S
+ML.png>]
+
+Package natbib Warning: Citation `jones1992investments' on page 12 undefined on
+ input line 85.
+
+[12]
+<../Figures/efficient_frontier.png, id=450, 326.72063pt x 179.92218pt>
+File: ../Figures/efficient_frontier.png Graphic file (type png)
+<use ../Figures/efficient_frontier.png>
+Package pdftex.def Info: ../Figures/efficient_frontier.png  used on input line 
+128.
+(pdftex.def)             Requested size: 281.85587pt x 155.21599pt.
+ [13
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.82 \newpage
-             
+l.134 
+       <../Figures/efficient_frontier.png>]
+<../Figures/investment_simulation_process.png, id=465, 754.82pt x 501.875pt>
+File: ../Figures/investment_simulation_process.png Graphic file (type png)
+<use ../Figures/investment_simulation_process.png>
+Package pdftex.def Info: ../Figures/investment_simulation_process.png  used on 
+input line 153.
+(pdftex.def)             Requested size: 281.85587pt x 187.39856pt.
+ [14
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.82 \newpage
-              <../Figures/efficient_frontier.png> <../Figures/investment_simula
-tion_process.png>]) (./Empirical-Model.tex
+l.159 
+       <../Figures/investment_simulation_process.png>] [15])
+(./Empirical-Model.tex
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 7.
 
 
@@ -688,43 +674,23 @@ LaTeX Font Info:    Trying to load font information for T1+pcr on input line 7.
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 
-Package natbib Warning: Citation `sharpe1964capital' on page 12 undefined on in
-put line 10.
-
-
-Package natbib Warning: Citation `fama1970efficient' on page 12 undefined on in
-put line 12.
-
-
-Package natbib Warning: Citation `shiller1992stock' on page 12 undefined on inp
-ut line 13.
-
-
-Package natbib Warning: Citation `jones1992investments' on page 12 undefined on
+Package natbib Warning: Citation `jones1992investments' on page 16 undefined on
  input line 30.
 
-[12]
-
-Package natbib Warning: Citation `bls2023' on page 13 undefined on input line 4
-6.
-
-
-Package natbib Warning: Citation `nar' on page 13 undefined on input line 49.
-
-[13] [14]) (./Results.tex
-<../Figures/histogram_security_count.png, id=410, 1011.78pt x 578.16pt>
+[16] [17] [18]) (./Results.tex
+<../Figures/histogram_security_count.png, id=525, 1011.78pt x 578.16pt>
 File: ../Figures/histogram_security_count.png Graphic file (type png)
 <use ../Figures/histogram_security_count.png>
 Package pdftex.def Info: ../Figures/histogram_security_count.png  used on input
  line 12.
 (pdftex.def)             Requested size: 375.80544pt x 214.74512pt.
-<../Figures/cumulative_returns_by_type.png, id=412, 1156.32pt x 650.43pt>
+<../Figures/cumulative_returns_by_type.png, id=527, 1156.32pt x 650.43pt>
 File: ../Figures/cumulative_returns_by_type.png Graphic file (type png)
 <use ../Figures/cumulative_returns_by_type.png>
 Package pdftex.def Info: ../Figures/cumulative_returns_by_type.png  used on inp
 ut line 22.
 (pdftex.def)             Requested size: 375.80544pt x 211.38724pt.
-<../Figures/top_assets_composite_score_10_years.png, id=418, 1156.32pt x 867.24
+<../Figures/top_assets_composite_score_10_years.png, id=533, 1156.32pt x 867.24
 pt>
 File: ../Figures/top_assets_composite_score_10_years.png Graphic file (type png
 )
@@ -732,7 +698,7 @@ File: ../Figures/top_assets_composite_score_10_years.png Graphic file (type png
 Package pdftex.def Info: ../Figures/top_assets_composite_score_10_years.png  us
 ed on input line 36.
 (pdftex.def)             Requested size: 375.80544pt x 281.84967pt.
-<../Figures/top_assets_composite_score_7_5_years.png, id=419, 1156.32pt x 867.2
+<../Figures/top_assets_composite_score_7_5_years.png, id=534, 1156.32pt x 867.2
 4pt>
 File: ../Figures/top_assets_composite_score_7_5_years.png Graphic file (type pn
 g)
@@ -740,7 +706,7 @@ g)
 Package pdftex.def Info: ../Figures/top_assets_composite_score_7_5_years.png  u
 sed on input line 43.
 (pdftex.def)             Requested size: 375.80544pt x 281.84967pt.
-<../Figures/top_assets_composite_score_5_years.png, id=420, 1156.32pt x 867.24p
+<../Figures/top_assets_composite_score_5_years.png, id=535, 1156.32pt x 867.24p
 t>
 File: ../Figures/top_assets_composite_score_5_years.png Graphic file (type png)
 
@@ -748,13 +714,13 @@ File: ../Figures/top_assets_composite_score_5_years.png Graphic file (type png)
 Package pdftex.def Info: ../Figures/top_assets_composite_score_5_years.png  use
 d on input line 50.
 (pdftex.def)             Requested size: 375.80544pt x 281.84967pt.
- [15
+ [19
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.56 
-      <../Figures/histogram_security_count.png>] [16
+      <../Figures/histogram_security_count.png>] [20
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -767,7 +733,7 @@ s been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.56 
       <../Figures/cumulative_returns_by_type.png> <../Figures/top_assets_compos
-ite_score_10_years.png>] [17
+ite_score_10_years.png>] [21
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -781,44 +747,44 @@ s been already used, duplicate ignored
 l.56 
       <../Figures/top_assets_composite_score_7_5_years.png> <../Figures/top_ass
 ets_composite_score_5_years.png>]
-<../Figures/optimal_portfolio_10_years.png, id=449, 995.1579pt x 714.7503pt>
+<../Figures/optimal_portfolio_10_years.png, id=565, 995.1579pt x 714.7503pt>
 File: ../Figures/optimal_portfolio_10_years.png Graphic file (type png)
 <use ../Figures/optimal_portfolio_10_years.png>
 Package pdftex.def Info: ../Figures/optimal_portfolio_10_years.png  used on inp
 ut line 62.
 (pdftex.def)             Requested size: 375.80544pt x 269.91748pt.
-<../Figures/optimal_portfolio_7_5_years.png, id=450, 994.4352pt x 714.7503pt>
+<../Figures/optimal_portfolio_7_5_years.png, id=566, 994.4352pt x 714.7503pt>
 File: ../Figures/optimal_portfolio_7_5_years.png Graphic file (type png)
 <use ../Figures/optimal_portfolio_7_5_years.png>
 Package pdftex.def Info: ../Figures/optimal_portfolio_7_5_years.png  used on in
 put line 69.
 (pdftex.def)             Requested size: 375.80544pt x 270.11378pt.
-<../Figures/optimal_portfolio_5_years.png, id=451, 997.326pt x 714.7503pt>
+<../Figures/optimal_portfolio_5_years.png, id=567, 997.326pt x 714.7503pt>
 File: ../Figures/optimal_portfolio_5_years.png Graphic file (type png)
 <use ../Figures/optimal_portfolio_5_years.png>
 Package pdftex.def Info: ../Figures/optimal_portfolio_5_years.png  used on inpu
 t line 76.
 (pdftex.def)             Requested size: 375.80544pt x 269.32854pt.
-<../Figures/cumulative_returns_comparison.png, id=453, 1109.3445pt x 677.1699pt
+<../Figures/cumulative_returns_comparison.png, id=569, 1109.3445pt x 677.1699pt
 >
 File: ../Figures/cumulative_returns_comparison.png Graphic file (type png)
 <use ../Figures/cumulative_returns_comparison.png>
 Package pdftex.def Info: ../Figures/cumulative_returns_comparison.png  used on 
 input line 90.
 (pdftex.def)             Requested size: 375.80544pt x 229.39777pt.
-<../Figures/cumulative_returns_summary.png, id=455, 1158.4881pt x 822.4326pt>
+<../Figures/cumulative_returns_summary.png, id=571, 1158.4881pt x 822.4326pt>
 File: ../Figures/cumulative_returns_summary.png Graphic file (type png)
 <use ../Figures/cumulative_returns_summary.png>
 Package pdftex.def Info: ../Figures/cumulative_returns_summary.png  used on inp
 ut line 100.
 (pdftex.def)             Requested size: 375.80544pt x 266.78546pt.
- [18
+ [22
 pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.103 \end{figure}
-                   <../Figures/optimal_portfolio_10_years.png>] [19
+                   <../Figures/optimal_portfolio_10_years.png>] [23
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -831,12 +797,7 @@ as been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.103 \end{figure}
                    <../Figures/optimal_portfolio_7_5_years.png> <../Figures/opt
-imal_portfolio_5_years.png>]
-
-Package natbib Warning: Citation `fama1970efficient' on page 20 undefined on in
-put line 105.
-
-[20
+imal_portfolio_5_years.png>] [24
 pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -850,7 +811,7 @@ as been already used, duplicate ignored
 l.106 
        <../Figures/cumulative_returns_comparison.png> <../Figures/cumulative_re
 turns_summary.png>]
-<../Figures/final_portfolio_values_distribution_5_years.png, id=484, 1011.78pt 
+<../Figures/final_portfolio_values_distribution_5_years.png, id=601, 1011.78pt 
 x 578.16pt>
 File: ../Figures/final_portfolio_values_distribution_5_years.png Graphic file (
 type png)
@@ -858,7 +819,7 @@ type png)
 Package pdftex.def Info: ../Figures/final_portfolio_values_distribution_5_years
 .png  used on input line 114.
 (pdftex.def)             Requested size: 375.80544pt x 214.74512pt.
-<../Figures/final_portfolio_values_distribution_7_5_years.png, id=485, 1011.78p
+<../Figures/final_portfolio_values_distribution_7_5_years.png, id=602, 1011.78p
 t x 578.16pt>
 File: ../Figures/final_portfolio_values_distribution_7_5_years.png Graphic file
  (type png)
@@ -866,7 +827,7 @@ File: ../Figures/final_portfolio_values_distribution_7_5_years.png Graphic file
 Package pdftex.def Info: ../Figures/final_portfolio_values_distribution_7_5_yea
 rs.png  used on input line 121.
 (pdftex.def)             Requested size: 375.80544pt x 214.74512pt.
-<../Figures/final_portfolio_values_distribution_10_years.png, id=486, 1011.78pt
+<../Figures/final_portfolio_values_distribution_10_years.png, id=603, 1011.78pt
  x 578.16pt>
 File: ../Figures/final_portfolio_values_distribution_10_years.png Graphic file 
 (type png)
@@ -874,7 +835,7 @@ File: ../Figures/final_portfolio_values_distribution_10_years.png Graphic file
 Package pdftex.def Info: ../Figures/final_portfolio_values_distribution_10_year
 s.png  used on input line 128.
 (pdftex.def)             Requested size: 375.80544pt x 214.74512pt.
-<../Figures/cumulative_returns_over_time_5_years.png, id=490, 1011.78pt x 578.1
+<../Figures/cumulative_returns_over_time_5_years.png, id=607, 1011.78pt x 578.1
 6pt>
 File: ../Figures/cumulative_returns_over_time_5_years.png Graphic file (type pn
 g)
@@ -882,7 +843,7 @@ g)
 Package pdftex.def Info: ../Figures/cumulative_returns_over_time_5_years.png  u
 sed on input line 138.
 (pdftex.def)             Requested size: 375.80544pt x 214.74512pt.
-<../Figures/cumulative_returns_over_time_7_5_years.png, id=491, 1011.78pt x 578
+<../Figures/cumulative_returns_over_time_7_5_years.png, id=608, 1011.78pt x 578
 .16pt>
 File: ../Figures/cumulative_returns_over_time_7_5_years.png Graphic file (type 
 png)
@@ -890,7 +851,7 @@ png)
 Package pdftex.def Info: ../Figures/cumulative_returns_over_time_7_5_years.png 
  used on input line 145.
 (pdftex.def)             Requested size: 375.80544pt x 214.74512pt.
-<../Figures/cumulative_returns_over_time_10_years.png, id=492, 1011.78pt x 578.
+<../Figures/cumulative_returns_over_time_10_years.png, id=609, 1011.78pt x 578.
 16pt>
 File: ../Figures/cumulative_returns_over_time_10_years.png Graphic file (type p
 ng)
@@ -903,14 +864,14 @@ Overfull \hbox (14.63985pt too wide) in paragraph at lines 165--174
  [][] 
  []
 
-[21
+[25
 pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.176 \end{table}
                   <../Figures/final_portfolio_values_distribution_5_years.png>]
-[22
+[26
 pdfTeX warning (ext4): destination with the same identifier (name{figure.15}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -923,7 +884,7 @@ as been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.176 \end{table}
                   <../Figures/final_portfolio_values_distribution_7_5_years.png
-> <../Figures/final_portfolio_values_distribution_10_years.png>] [23
+> <../Figures/final_portfolio_values_distribution_10_years.png>] [27
 pdfTeX warning (ext4): destination with the same identifier (name{figure.17}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -936,12 +897,7 @@ as been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.176 \end{table}
                   <../Figures/cumulative_returns_over_time_5_years.png> <../Fig
-ures/cumulative_returns_over_time_7_5_years.png>]
-
-Package natbib Warning: Citation `fama1970efficient' on page 24 undefined on in
-put line 178.
-
-[24
+ures/cumulative_returns_over_time_7_5_years.png>] [28
 pdfTeX warning (ext4): destination with the same identifier (name{figure.19}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -954,35 +910,30 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
                                                   \__shipout_drop_firstpage_...
 l.180 \newpage
                <../Figures/cumulative_returns_over_time_10_years.png>])
-(./Conclusions.tex [25]) (./Appendix.tex [26]
-
-Package natbib Warning: Citation `fama1970efficient' on page 27 undefined on in
-put line 37.
-
-[27]) (./Thanks.tex [28]) (./Paper.bbl)
+(./Conclusions.tex [29]) (./Appendix.tex [30] [31]) (./Paper.bbl [32])
 
 Package natbib Warning: There were undefined citations.
 
-[29] (./Paper.aux)
+[33] (./Paper.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `Paper.out' has not changed.
-(rerunfilecheck)             Checksum: E6C1B22634AAF36083EBBF12B9CF3AAC;10140.
+(rerunfilecheck)             Checksum: 7DB6D426F55DD0F235412129472081F5;11414.
  )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 23 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12423 strings out of 474116
- 190220 string characters out of 5743683
+ 12509 strings out of 474116
+ 192202 string characters out of 5743683
  1937187 words of memory out of 5000000
- 34382 multiletter control sequences out of 15000+600000
+ 34441 multiletter control sequences out of 15000+600000
  610546 words of font info for 163 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,14n,79p,727b,655s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,14n,79p,784b,728s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathpazo/fp
@@ -992,10 +943,10 @@ fb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb><
 al/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texl
 ive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/202
 4/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Paper.pdf (29 pages, 3489384 bytes).
+Output written on Paper.pdf (33 pages, 3503119 bytes).
 PDF statistics:
- 637 PDF objects out of 1000 (max. 8388607)
- 546 compressed objects within 6 object streams
- 138 named destinations out of 1000 (max. 500000)
- 512 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 766 PDF objects out of 1000 (max. 8388607)
+ 670 compressed objects within 7 object streams
+ 168 named destinations out of 1000 (max. 500000)
+ 552 words of extra memory for PDF output out of 10000 (max. 10000000)
 

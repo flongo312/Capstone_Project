@@ -4,53 +4,47 @@ The top-level auxiliary file: Paper.aux
 The style file: chicago.bst
 Database file #1: References.bib
 Warning--entry type for "yfinance" isn't style-file defined
---line 34 of file References.bib
-Warning--I didn't find a database entry for "nar"
-Warning--I didn't find a database entry for "fed2023"
-Warning--I didn't find a database entry for "bls2023"
-Warning--I didn't find a database entry for "sharpe1964capital"
-Warning--I didn't find a database entry for "fama1970efficient"
-Warning--I didn't find a database entry for "shiller1992stock"
+--line 93 of file References.bib
 Warning--I didn't find a database entry for "jones1992investments"
-You've used 8 entries,
+You've used 27 entries,
             2861 wiz_defined-function locations,
-            674 strings with 5778 characters,
-and the built_in function-call counts, 4734 in all, are:
-= -- 413
-> -- 260
+            787 strings with 8478 characters,
+and the built_in function-call counts, 17441 in all, are:
+= -- 1530
+> -- 1093
 < -- 0
-+ -- 68
-- -- 100
-* -- 378
-:= -- 883
-add.period$ -- 23
-call.type$ -- 8
-change.case$ -- 49
-chr.to.int$ -- 8
-cite$ -- 8
-duplicate$ -- 141
-empty$ -- 330
-format.name$ -- 108
-if$ -- 851
++ -- 310
+- -- 404
+* -- 1500
+:= -- 3189
+add.period$ -- 80
+call.type$ -- 27
+change.case$ -- 176
+chr.to.int$ -- 27
+cite$ -- 27
+duplicate$ -- 481
+empty$ -- 1140
+format.name$ -- 460
+if$ -- 3180
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 8
-newline$ -- 42
-num.names$ -- 80
-pop$ -- 32
+missing$ -- 29
+newline$ -- 137
+num.names$ -- 270
+pop$ -- 112
 preamble$ -- 1
-purify$ -- 98
+purify$ -- 341
 quote$ -- 0
-skip$ -- 148
+skip$ -- 518
 stack$ -- 0
-substring$ -- 304
-swap$ -- 46
+substring$ -- 1087
+swap$ -- 156
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 150
+type$ -- 510
 warning$ -- 0
-while$ -- 92
+while$ -- 304
 width$ -- 0
-write$ -- 104
-(There were 8 warnings)
+write$ -- 351
+(There were 2 warnings)

@@ -1139,16 +1139,16 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 [2
 
 ]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 58--58
+Overfull \hbox (201.23251pt too wide) ipt too wide) in paragraph at lines 47--47
  [][][][]  
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
 
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1161,37 +1161,33 @@ Overfull \hbox (201.23251pt too wide) has occurred while \output is active
 [3
 
 {/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+)
+Runaway argument?
+{itemize> </multicols> \end {block> </frame> \par <frame>{Distributio\ETC.
+! File ended while scanning use of \frame.
+<inserted text> 
+                \par 
+<*> slides.tex
+              
+? 
 
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 107--107
- [][][][]  
- []
+*
+! Emergency stop.
+<*> 
+    
+End of file on the terminal!
 
-
-Overfull \hbox (201.23251pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[4
-
-]
-Overfull \hbox (201.23251pt too wide) in paragraph at lines 114--114
- [][][][]  
- []
-
-<../Figures/histogram_security_count.png, id=181, 1011.78pt x 578.16pt>
-File: ../Figures/histogram_security_count.png Graphic file (type png)
-<use ../Figures/histogram_security_count.png>
-Package pdftex.def Info: ../Figures/histogram_security_count.png  used on input
- line 114.
-(pdftex.def)             Requested size: 342.2953pt x 195.60138pt.
-
-Overfull \hbox (201.23251pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[5
-
- <../Figures/histogram_security_count.png>]
+ 
+Here is how much of TeX's memory you used:
+ 34916 strings out of 474116
+ 836273 string characters out of 5743683
+ 1938187 words of memory out of 5000000
+ 56636 multiletter control sequences out of 15000+600000
+ 567439 words of font info for 71 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 128i,15n,123p,727b,725s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!
+y_count.png>]
 Overfull \hbox (201.23251pt too wide) in paragraph at lines 121--121
  [][][][]  
  []

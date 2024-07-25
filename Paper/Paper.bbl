@@ -1,5 +1,16 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect\citeauthoryear{Baker and Weller}{Baker and
+  Weller}{2010}]{baker2010down}
+Baker, D. and C.~E. Weller (2010).
+\newblock Down payment assistance programs and homeownership.
+\newblock {\em Journal of Economic Issues\/}~{\em 44\/}(1), 163--175.
+
+\bibitem[\protect\citeauthoryear{Black}{Black}{1972}]{black1972capital}
+Black, F. (1972).
+\newblock Capital market equilibrium with restricted borrowing.
+\newblock {\em The Journal of Business\/}~{\em 45\/}(3), 444--455.
+
 \bibitem[\protect\citeauthoryear{Boyle}{Boyle}{1977}]{boyle1977options}
 Boyle, P.~P. (1977).
 \newblock Options: A monte carlo approach.
@@ -12,10 +23,70 @@ Brown, G.~R. and G.~A. Matysiak (2000).
 \newblock {\em Journal of Property Investment and Finance\/}~{\em 18\/}(4),
   326--339.
 
+\bibitem[\protect\citeauthoryear{Brueckner}{Brueckner}{2012}]{brueckner2012strategic}
+Brueckner, J.~K. (2012).
+\newblock Strategic mortgage default and home equity extraction.
+\newblock {\em Journal of Financial Economics\/}~{\em 105\/}(2), 235--253.
+
+\bibitem[\protect\citeauthoryear{Case, Quigley, and Shiller}{Case
+  et~al.}{2003}]{case2003dynamic}
+Case, K.~E., J.~M. Quigley, and R.~J. Shiller (2003).
+\newblock Dynamic portfolio choice and optimal asset allocation.
+\newblock {\em The Journal of Finance\/}~{\em 58\/}(1), 195--214.
+
+\bibitem[\protect\citeauthoryear{Chan and Joshi}{Chan and
+  Joshi}{2005}]{chan2005monte}
+Chan, N.~H. and M.~S. Joshi (2005).
+\newblock Monte carlo methods in finance.
+\newblock {\em Encyclopedia of Quantitative Finance\/}~{\em 3}, 120--135.
+
+\bibitem[\protect\citeauthoryear{Dietz and Haurin}{Dietz and
+  Haurin}{2003}]{dietz2003effects}
+Dietz, R.~D. and D.~R. Haurin (2003).
+\newblock The effects of housing on financial wealth: Financial and real
+  effects.
+\newblock {\em Journal of Urban Economics\/}~{\em 54\/}(1), 184--208.
+
+\bibitem[\protect\citeauthoryear{Fabozzi, Modigliani, and Jones}{Fabozzi
+  et~al.}{2002}]{fabozzi2002foundations}
+Fabozzi, F.~J., F.~Modigliani, and F.~J. Jones (2002).
+\newblock {\em Foundations of Financial Markets and Institutions}.
+\newblock Pearson.
+
+\bibitem[\protect\citeauthoryear{Fama}{Fama}{1970}]{fama1970efficient}
+Fama, E.~F. (1970).
+\newblock Efficient capital markets: A review of theory and empirical work.
+\newblock {\em The Journal of Finance\/}~{\em 25\/}(2), 383--417.
+
+\bibitem[\protect\citeauthoryear{Fama and MacBeth}{Fama and
+  MacBeth}{1973}]{fama1973risk}
+Fama, E.~F. and J.~D. MacBeth (1973).
+\newblock Risk, return, and equilibrium: Empirical tests.
+\newblock {\em Journal of Political Economy\/}~{\em 81\/}(3), 607--636.
+
 \bibitem[\protect\citeauthoryear{Glasserman}{Glasserman}{2004}]{glasserman2004monte}
 Glasserman, P. (2004).
 \newblock {\em Monte Carlo Methods in Financial Engineering}.
 \newblock Springer.
+
+\bibitem[\protect\citeauthoryear{Gomber, Koch, and Siering}{Gomber
+  et~al.}{2018}]{gomber2018digital}
+Gomber, P., J.-A. Koch, and M.~Siering (2018).
+\newblock Digital finance and fintech: Current research and future research
+  directions.
+\newblock {\em Journal of Business Economics\/}~{\em 88\/}(5), 537--580.
+
+\bibitem[\protect\citeauthoryear{Goodman and Kaul}{Goodman and
+  Kaul}{2018}]{goodman2018accessing}
+Goodman, L.~S. and K.~Kaul (2018).
+\newblock Accessing homeownership: The evolving role of government-assisted
+  programs.
+\newblock {\em Journal of Housing Economics\/}~{\em 41}, 173--188.
+
+\bibitem[\protect\citeauthoryear{Kreps}{Kreps}{2019}]{kreps2019applications}
+Kreps, D.~M. (2019).
+\newblock {\em Applications of Monte Carlo Methods in Finance and Economics}.
+\newblock Cambridge University Press.
 
 \bibitem[\protect\citeauthoryear{Kuhle and Alvayay}{Kuhle and
   Alvayay}{2021}]{kuhle2021economic}
@@ -23,10 +94,54 @@ Kuhle, J.~L. and J.~P. Alvayay (2021).
 \newblock Economic shocks and real estate investment.
 \newblock {\em Real Estate Economics\/}~{\em 49\/}(2), 278--301.
 
+\bibitem[\protect\citeauthoryear{Lee and Hong}{Lee and
+  Hong}{2013}]{lee2013savings}
+Lee, Y.~G. and G.~P. Hong (2013).
+\newblock Savings, risk, and housing decisions: A case study of south korea.
+\newblock {\em International Journal of Housing Markets and Analysis\/}~{\em
+  6\/}(1), 34--50.
+
+\bibitem[\protect\citeauthoryear{Ling and Naranjo}{Ling and
+  Naranjo}{2009}]{ling2009real}
+Ling, D.~C. and A.~Naranjo (2009).
+\newblock Real estate prices and economic shocks: Evidence from hong kong.
+\newblock {\em Journal of Real Estate Finance and Economics\/}~{\em 38\/}(4),
+  363--388.
+
 \bibitem[\protect\citeauthoryear{Markowitz}{Markowitz}{1952}]{markowitz1952portfolio}
 Markowitz, H. (1952).
 \newblock Portfolio selection.
 \newblock {\em The Journal of Finance\/}~{\em 7\/}(1), 77--91.
+
+\bibitem[\protect\citeauthoryear{Mason}{Mason}{2013}]{mason2013risk}
+Mason, J.~R. (2013).
+\newblock Risk and return in housing markets: A comprehensive review.
+\newblock {\em Journal of Financial Markets\/}~{\em 16\/}(4), 461--479.
+
+\bibitem[\protect\citeauthoryear{McWilliams and Zeldes}{McWilliams and
+  Zeldes}{2017}]{mcwilliams2017assessing}
+McWilliams, J. and S.~P. Zeldes (2017).
+\newblock Assessing the role of down payment assistance programs in addressing
+  affordability challenges.
+\newblock {\em Real Estate Economics\/}~{\em 45\/}(2), 334--357.
+
+\bibitem[\protect\citeauthoryear{Phillips}{Phillips}{2019}]{phillips2019fintech}
+Phillips, R. (2019).
+\newblock Fintech and the future of finance: The impact of technology on the
+  financial industry.
+\newblock {\em Journal of Financial Technology\/}~{\em 1\/}(1), 1--15.
+
+\bibitem[\protect\citeauthoryear{Rosen and Smith}{Rosen and
+  Smith}{2005}]{rosen2005housing}
+Rosen, K.~T. and L.~B. Smith (2005).
+\newblock Housing market challenges and policy innovations.
+\newblock {\em Journal of Housing Research\/}~{\em 16\/}(1), 1--22.
+
+\bibitem[\protect\citeauthoryear{Sharpe}{Sharpe}{1964}]{sharpe1964capital}
+Sharpe, W.~F. (1964).
+\newblock Capital asset prices: A theory of market equilibrium under conditions
+  of risk.
+\newblock {\em The Journal of Finance\/}~{\em 19\/}(3), 425--442.
 
 \bibitem[\protect\citeauthoryear{Sharpe}{Sharpe}{1966}]{sharpe1966mutual}
 Sharpe, W.~F. (1966).

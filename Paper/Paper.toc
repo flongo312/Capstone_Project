@@ -6,47 +6,52 @@
 \contentsline {subsubsection}{\numberline {2.1.1}Markowitz's Modern Portfolio Theory}{6}{subsubsection.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.1.2}Sharpe's Capital Asset Pricing Model}{6}{subsubsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.2}Monte Carlo Simulations}{6}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Monte Carlo in Portfolio Management}{6}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.1}Monte Carlo in Portfolio Management}{7}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Monte Carlo in Real Estate Investments}{7}{subsubsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.3}Gaps in the Literature}{7}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Data}{7}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Date Range}{7}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Data Fields}{7}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Theoretical Models}{9}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Capital Asset Pricing Model (CAPM)}{9}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Beta Calculation}{9}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Security Market Line (SML)}{9}{subsubsection.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.3}Theoretical Implications}{9}{subsubsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.2}Modern Portfolio Theory (MPT)}{10}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Efficient Frontier and Optimal Portfolio}{10}{subsubsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.3}Monte Carlo Simulation}{10}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Empirical Specification}{12}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Model Implementation}{12}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}Data Collection and Preparation}{12}{subsubsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.2}CAPM and Sharpe Ratio Calculation}{12}{subsubsection.5.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.3}Composite Score Calculation}{13}{subsubsection.5.1.3}%
-\contentsline {subsubsection}{\numberline {5.1.4}Modern Portfolio Theory (MPT) Application}{13}{subsubsection.5.1.4}%
-\contentsline {subsubsection}{\numberline {5.1.5}Gathering Hindsight Data}{13}{subsubsection.5.1.5}%
-\contentsline {subsubsection}{\numberline {5.1.6}Comparison with Hindsight Data}{13}{subsubsection.5.1.6}%
-\contentsline {subsubsection}{\numberline {5.1.7}Monte Carlo Simulation for Future Forecasting}{13}{subsubsection.5.1.7}%
-\contentsline {section}{\numberline {6}Results}{15}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Initial Data Analysis}{15}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Distribution of Securities by Type}{15}{subsubsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.2}Cumulative Returns by Security Type}{15}{subsubsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.2}Optimal Portfolios}{15}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}Top Assets by Composite Score}{15}{subsubsection.6.2.1}%
-\contentsline {subsubsection}{\numberline {6.2.2}Optimal Portfolios Composition}{18}{subsubsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.3}Comparison with Hindsight Data}{18}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Cumulative Returns Comparison}{18}{subsubsection.6.3.1}%
-\contentsline {subsubsection}{\numberline {6.3.2}Cumulative Returns Summary}{20}{subsubsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.4}Monte Carlo Simulation for Future Forecasting}{21}{subsection.6.4}%
-\contentsline {subsubsection}{\numberline {6.4.1}Distribution of Final Portfolio Values}{21}{subsubsection.6.4.1}%
-\contentsline {subsubsection}{\numberline {6.4.2}Cumulative Returns Over Time}{21}{subsubsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.5}Summary Statistics}{24}{subsection.6.5}%
-\contentsline {section}{\numberline {7}Conclusions}{25}{section.7}%
-\contentsline {section}{\numberline {A}Data Appendix}{26}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Summary of Data Sources}{26}{subsection.A.1}%
-\contentsline {subsection}{\numberline {A.2}Data Cleaning and Processing Details}{26}{subsection.A.2}%
-\contentsline {subsection}{\numberline {A.3}Python Scripts for Data Processing}{26}{subsection.A.3}%
-\contentsline {subsection}{\numberline {A.4}Variable Definitions}{26}{subsection.A.4}%
-\contentsline {section}{\numberline {B}Acknowledgments}{28}{appendix.B}%
+\contentsline {subsection}{\numberline {2.3}Investment Strategies for First-Time Homebuyers}{7}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Risk Management in Homeownership Savings}{7}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Role of Financial Technology in Homeownership Savings}{8}{subsubsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.4}Gaps in the Literature}{8}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Data}{9}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Date Range}{9}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Data Fields}{9}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Theoretical Models}{10}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Capital Asset Pricing Model (CAPM)}{10}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Beta Calculation}{10}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Security Market Line (SML)}{10}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Theoretical Implications}{11}{subsubsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.2}Sharpe Ratio}{11}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Interpretation}{12}{subsubsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.3}Composite Score Calculation}{12}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Modern Portfolio Theory (MPT)}{12}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Efficient Frontier and Optimal Portfolio}{13}{subsubsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.5}Monte Carlo Simulation}{14}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Empirical Specification}{16}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Model Implementation}{16}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Data Collection and Preparation}{16}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}CAPM and Sharpe Ratio Calculation}{16}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}Composite Score Calculation}{17}{subsubsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.4}Modern Portfolio Theory (MPT) Application}{17}{subsubsection.5.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.5}Gathering Hindsight Data}{17}{subsubsection.5.1.5}%
+\contentsline {subsubsection}{\numberline {5.1.6}Comparison with Hindsight Data}{17}{subsubsection.5.1.6}%
+\contentsline {subsubsection}{\numberline {5.1.7}Monte Carlo Simulation for Future Forecasting}{17}{subsubsection.5.1.7}%
+\contentsline {section}{\numberline {6}Results}{19}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Initial Data Analysis}{19}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Distribution of Securities by Type}{19}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Cumulative Returns by Security Type}{19}{subsubsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.2}Optimal Portfolios}{19}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Top Assets by Composite Score}{19}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Optimal Portfolios Composition}{22}{subsubsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.3}Comparison with Hindsight Data}{22}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Cumulative Returns Comparison}{22}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}Cumulative Returns Summary}{24}{subsubsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.4}Monte Carlo Simulation for Future Forecasting}{25}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}Distribution of Final Portfolio Values}{25}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2}Cumulative Returns Over Time}{25}{subsubsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.5}Summary Statistics}{28}{subsection.6.5}%
+\contentsline {section}{\numberline {7}Conclusions}{29}{section.7}%
+\contentsline {section}{\numberline {A}Data Appendix}{30}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Summary of Data Sources}{30}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Data Cleaning and Processing Details}{30}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}Python Scripts for Data Processing}{30}{subsection.A.3}%
+\contentsline {subsection}{\numberline {A.4}Variable Definitions}{30}{subsection.A.4}%

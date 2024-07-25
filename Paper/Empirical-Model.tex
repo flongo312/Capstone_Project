@@ -7,10 +7,10 @@ The empirical analysis involves a systematic approach to evaluating and optimizi
 Data is collected from Yahoo Finance, covering a comprehensive range of securities, including stocks, ETFs, and mutual funds. The data spans from May 2011 to November 2014, with daily updates until July 2024. The data is cleaned and adjusted for corporate actions like stock splits and dividends using the \texttt{yfinance\_data.py} script to ensure consistency \citep{yfinance}.
 
 \subsubsection{CAPM and Sharpe Ratio Calculation}
-Each security's risk and return profile is assessed using the Capital Asset Pricing Model (CAPM) \citep{sharpe1964capital} and Sharpe Ratio \citep{sharpe1966mutual}. The process involves:
+Each security's risk and return profile is assessed using the Capital Asset Pricing Model (CAPM) and Sharpe Ratio \citep{sharpe1966mutual}. The process involves:
 \begin{enumerate}
-    \item Calculating the average return of the market index (e.g., S\&P 500) \citep{fama1970efficient}.
-    \item Determining the risk-free rate (e.g., 10-year U.S. Treasury bonds yield) \citep{shiller1992stock}.
+    \item Calculating the average return of the market index (e.g., S\&P 500).
+    \item Determining the risk-free rate (e.g., 10-year U.S. Treasury bonds yield).
     \item Computing the beta (\(\beta\)) of each security:
     \begin{equation}
         \beta_i = \frac{\text{Cov}(R_i, R_m)}{\text{Var}(R_m)}
@@ -43,10 +43,10 @@ Using the ranked securities, portfolios are optimized for different investment h
 where \(\mathbf{w}\) is the vector of asset weights, \(\mathbf{\mu}\) is the vector of expected returns, \(\mathbf{\Sigma}\) is the covariance matrix of returns, and \(\lambda\) is the risk aversion parameter. This process is implemented using the \texttt{mpt.py} script.
 
 \subsubsection{Gathering Hindsight Data}
-Historical performance data from 2009 to the present is gathered and processed to evaluate the robustness of the optimized portfolios. This step uses the \texttt{hindsight\_data.py} script to ensure that the data aligns by common dates and covers all relevant securities \citep{bls2023}.
+Historical performance data from 2009 to the present is gathered and processed to evaluate the robustness of the optimized portfolios. This step uses the \texttt{hindsight\_data.py} script to ensure that the data aligns by common dates and covers all relevant securities.
 
 \subsubsection{Comparison with Hindsight Data}
-The optimized portfolios are compared against actual historical performance using the hindsight data. The comparison includes calculating the cumulative returns of the portfolios and benchmarking them against the S\&P 500 index \citep{nar}. This step is performed using the \texttt{hindsight.py} script.
+The optimized portfolios are compared against actual historical performance using the hindsight data. The comparison includes calculating the cumulative returns of the portfolios and benchmarking them against the S\&P 500 index. This step is performed using the \texttt{hindsight.py} script.
 
 \subsubsection{Monte Carlo Simulation for Future Forecasting}
 Monte Carlo simulations are conducted to forecast the performance of the optimized portfolios from today onward \citep{glasserman2004monte}. The simulation process involves:
