@@ -1,7 +1,5 @@
 \section{Data}
-The financial data used in this research is sourced from Yahoo Finance \citep{yfinance}, which includes comprehensive information on roughly 150 securities consisting of stocks, mutual funds, and ETFs. This data source provides a rich dataset for analyzing the performance of different investment vehicles over time.
-
-The data covers the period from May 2011 to November 2014 for daily frequency and further hindsight data from May 2011 to July 2024. This timeframe allows for the analysis of recent trends and the performance of different asset classes in various market conditions.
+The financial data used in this research is sourced from Yahoo Finance \citep{yfinance}, which includes comprehensive information on roughly 150 securities consisting of stocks, mutual funds, and ETFs. The historical data (where we assume for this analysis current day is November 7th, 2014) covers the period from November 13th, 2009 to November 7th, 2014 at daily frequency. Also included is hindsight data (since it isn't actually November 7th, 2014) from November 13th, 2009 to July 23rd, 2024. This timeframe allows for the analysis of recent trends and the performance of different asset classes in various market conditions.
 
 The dataset includes the following fields:
 \begin{itemize}
@@ -13,10 +11,5 @@ The dataset includes the following fields:
     \item Volume: Number of shares traded during a single trading day.
     \item Type: Security type (e.g., stock, ETF).
 \end{itemize}
-
-\subsubsection{Gathering Hindsight Data}
-Historical performance data from 2009 to the present is gathered and processed to evaluate the robustness of the optimized portfolios. This step uses the \texttt{hindsight\_data.py} script to ensure that the data aligns by common dates and covers all relevant securities.
-
-These fields provide a comprehensive view of the daily trading activities and price movements of different securities, essential for the analysis of investment performance and strategy development.
 
 \newpage

@@ -11,23 +11,19 @@
 \end{figure}
 
 \subsubsection{Cumulative Returns by Security Type}
-Figure \ref{fig:cumulative_returns_by_type} illustrates the cumulative returns over time by security type.
 
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{../Figures/cumulative_returns_by_type.png}
     \caption{Cumulative Returns Over Time by Security Type}
     \label{fig:cumulative_returns_by_type}
+    \subcaption The majority of the securities analyzed are stocks, followed by ETFs and mutual funds. Stocks exhibit the highest cumulative return over time, indicating a higher potential for long-term growth compared to ETFs and mutual funds.
 \end{figure}
 
 \newpage
 
-\textbf The majority of the securities analyzed are stocks, followed by ETFs and mutual funds. Stocks exhibit the highest cumulative return over time, indicating a higher potential for long-term growth compared to ETFs and mutual funds \citep{markowitz1952portfolio}.
-
 \subsection{Optimal Portfolios}
 
-\subsubsection{Top Assets by Composite Score}
-Figures \ref{fig:top_assets_10y}, \ref{fig:top_assets_7_5y}, and \ref{fig:top_assets_5y} show the top assets by composite score for 10, 7.5, and 5-year horizons, respectively.
 
 \begin{figure}[!htbp]
     \centering
@@ -50,10 +46,11 @@ Figures \ref{fig:top_assets_10y}, \ref{fig:top_assets_7_5y}, and \ref{fig:top_as
     \label{fig:top_assets_5y}
 \end{figure}
 
-\textbf{Interpretation:} These figures highlight the top assets selected for each investment horizon based on their composite scores, indicating their suitability for different investment periods \citep{sharpe1966mutual}.
+
+\newpage
 
 \subsubsection{Optimal Portfolios Composition}
-Figures \ref{fig:optimal_portfolio_10y}, \ref{fig:optimal_portfolio_7_5y}, and \ref{fig:optimal_portfolio_5y} illustrate the composition of the optimal portfolios for 10, 7.5, and 5-year horizons, respectively.
+
 
 \begin{figure}[!htbp]
     \centering
@@ -76,12 +73,11 @@ Figures \ref{fig:optimal_portfolio_10y}, \ref{fig:optimal_portfolio_7_5y}, and \
     \label{fig:optimal_portfolio_5y}
 \end{figure}
 
-\textbf{Interpretation:} These figures show the composition of the optimal portfolios, emphasizing long-term growth for the 10-year horizon, balanced growth and risk for the 7.5-year horizon, and more conservative assets for the 5-year horizon.
+
+\newpage
 
 \subsection{Comparison with Hindsight Data}
 
-\subsubsection{Cumulative Returns Comparison}
-Figure \ref{fig:cumulative_returns_comparison} compares the cumulative returns of actual portfolios against the S\&P 500 benchmark.
 
 \begin{figure}[!htbp]
     \centering
@@ -91,21 +87,22 @@ Figure \ref{fig:cumulative_returns_comparison} compares the cumulative returns o
 \end{figure}
 
 \subsubsection{Cumulative Returns Summary}
-Figure \ref{fig:cumulative_returns_summary} summarizes the cumulative returns for the actual portfolios over the investment horizons compared to the S\&P 500.
 
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{../Figures/cumulative_returns_summary.png}
-    \caption{Cumulative Returns Summary 2011-05-04 to 2024-07-10}
+    \caption{Cumulative Returns Summary from 2011-05-04 to 2024-07-10}
     \label{fig:cumulative_returns_summary}
 \end{figure}
 
-\textbf{Interpretation:} The optimized portfolios consistently outperform the S\&P 500 benchmark, demonstrating the effectiveness of the optimization strategy \citep{sharpe1966mutual}. The 10-year horizon portfolio exhibits the highest cumulative return, followed by the 7.5-year and 5-year horizons. These results highlight the advantage of long-term investing \citep{fama1970efficient}.
+
+
+
+\newpage
+
 
 \subsection{Monte Carlo Simulation for Future Forecasting}
 
-\subsubsection{Distribution of Final Portfolio Values}
-Figures \ref{fig:final_portfolio_values_5y}, \ref{fig:final_portfolio_values_7_5y}, and \ref{fig:final_portfolio_values_10y} illustrate the distribution of final portfolio values for 5, 7.5, and 10-year investment horizons, respectively.
 
 \begin{figure}[!htbp]
     \centering
@@ -129,7 +126,6 @@ Figures \ref{fig:final_portfolio_values_5y}, \ref{fig:final_portfolio_values_7_5
 \end{figure}
 
 \subsubsection{Cumulative Returns Over Time}
-Figures \ref{fig:cumulative_returns_5y}, \ref{fig:cumulative_returns_7_5y}, and \ref{fig:cumulative_returns_10y} show the cumulative returns over time for 5, 7.5, and 10-year investment horizons, respectively.
 
 \begin{figure}[!htbp]
     \centering
@@ -152,10 +148,10 @@ Figures \ref{fig:cumulative_returns_5y}, \ref{fig:cumulative_returns_7_5y}, and 
     \label{fig:cumulative_returns_10y}
 \end{figure}
 
-\textbf{Interpretation:} The Monte Carlo simulations reveal the range of possible outcomes for the portfolios over different horizons. The 5-year horizon shows greater variability, while the 10-year horizon indicates higher and more stable returns. These results underscore the benefits of long-term investment strategies \citep{glasserman2004monte}.
+
+
 
 \subsection{Monte Carlo Forecast Summary}
-Summary statistics for the dataset are presented in Table \ref{tab:summary-stats}. These statistics were generated using the \texttt{../Data/summary\_stats.csv} file produced by the Python scripts.
 
 \begin{table}[h!]
 \centering
@@ -171,6 +167,6 @@ Statistic & \begin{tabular}[c]{@{}c@{}}Mean Final \\ Portfolio Value (\$)\end{ta
 \end{tabular}
 \end{table}
 
-\textbf{Interpretation:} Table \ref{tab:summary-stats} provides a detailed summary of the statistical outcomes for each investment horizon. The mean and median final portfolio values give insights into the expected performance, while the 10th and 90th percentile values offer a perspective on the range of potential outcomes. The total and annual percentage yields reflect the overall return potential of the portfolios over their respective horizons \citep{fama1970efficient}.
+\textbf Provides a detailed summary of the statistical outcomes for each investment horizon. The mean and median final portfolio values give insights into the expected performance, while the 10th and 90th percentile values offer a perspective on the range of potential outcomes. The total and annual percentage yields reflect the overall return potential of the portfolios over their respective horizons.
 
 \newpage

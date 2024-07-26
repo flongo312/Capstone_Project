@@ -1,31 +1,53 @@
 \section{Literature Review}
-\subsection{Foundational Theories}
 
-\subsubsection{Markowitz's Modern Portfolio Theory}
-Markowitz's Modern Portfolio Theory \citep{markowitz1952portfolio} introduced the concept of portfolio optimization, emphasizing the trade-off between risk and return. The theory suggests that investors can achieve optimal portfolios by diversifying their investments across different assets, thereby reducing risk without sacrificing expected returns. Markowitz's efficient frontier illustrates the set of optimal portfolios that offer the highest expected return for a given level of risk. 
+\subsection{Portfolio Selection by Harry Markowitz (1952)}
 
-\subsubsection{Sharpe's Capital Asset Pricing Model}
-Sharpe's Capital Asset Pricing Model \citep{sharpe1964capital} extends the notion of risk by introducing systematic and unsystematic risk. The model posits that the expected return on an asset is a function of its sensitivity to market movements (beta), the risk-free rate, and the market risk premium. Sharpe's work was pivotal in differentiating between diversifiable (unsystematic) risk and non-diversifiable (systematic) risk, providing a framework for understanding how different types of risk impact asset pricing and returns.
+\subsubsection{Key Findings}
+In "Portfolio Selection," Harry Markowitz introduced the concept of Modern Portfolio Theory (MPT), which fundamentally changed the way investors approach portfolio construction. Markowitz emphasized the trade-off between risk and return, proposing that investors should diversify their investments across various assets to minimize risk without sacrificing expected returns. The main contribution of this paper is the efficient frontier, which represents the set of portfolios that offer the highest expected return for a given level of risk. The efficient frontier helps investors identify the optimal asset allocation that maximizes returns for a specific risk level.
 
-\subsection{Monte Carlo Simulations}
-Monte Carlo simulations have become a critical tool in financial modeling, providing a method for assessing the impact of risk and uncertainty in investment strategies. Boyle \citep{boyle1977options} introduced the Monte Carlo approach to option pricing, and since then, its applications have expanded across various fields of finance. 
+\begin{quote}
+\textit{"An investor should diversify to achieve maximum return for a given level of risk, leading to the creation of the efficient frontier."} \citep{markowitz1952portfolio}.
+\end{quote}
 
-\subsubsection{Portfolio Management}
-Monte Carlo simulations are used to model the behavior of investment portfolios under a wide range of possible future scenarios. This method involves generating a large number of random samples from the probability distributions of asset returns and analyzing the resulting portfolio performance. Studies by \citet{glasserman2004monte} and \citet{chan2005monte} have demonstrated how Monte Carlo simulations can provide insights into the risk and return profiles of different investment strategies, helping investors to better understand the potential outcomes and make more informed decisions.
+Markowitz's work introduced the concept of mean-variance optimization, where the expected return of a portfolio is calculated as the weighted sum of the expected returns of individual assets, and the risk is measured as the variance of portfolio returns. This approach allows investors to construct portfolios that either maximize expected return for a given level of risk or minimize risk for a given level of expected return.
 
-\subsubsection{Real Estate Investments}
-In the context of real estate, Monte Carlo simulations have been used to evaluate the risk and return of property investments. For example, Brown and Matysiak \citep{brown2000real} employed Monte Carlo methods to assess the uncertainty in real estate portfolio returns, while Kuhle and Alvayay \citep{kuhle2021economic} used simulations to analyze the impact of economic shocks on real estate prices. These applications illustrate the versatility of Monte Carlo simulations in addressing the unique risks associated with real estate investments. Additional studies by \citet{case2003dynamic} and \citet{ling2009real} have also highlighted the effectiveness of Monte Carlo simulations in real estate valuation and risk management.
+\subsubsection{Implications for This Study}
+Markowitz's findings are fundamental to this study as they provide the basis for constructing diversified investment portfolios aimed at accumulating down payments for housing. By applying the principles of MPT, this study seeks to identify optimal asset allocations that maximize returns while managing risk over different investment horizons. The efficient frontier concept is used to determine the set of optimal portfolios that offer the highest expected return for a specified risk level, helping first-time homebuyers to achieve their financial goals more effectively.
 
-\subsection{Investment Strategies for First-Time Homebuyers}
-Research has shown that first-time homebuyers face unique financial challenges and require tailored investment strategies. Studies by \citet{brueckner2012strategic} and \citet{dietz2003effects} underscore the importance of customized financial planning in achieving homeownership goals. \citet{lee2013savings} explore the role of savings behavior and financial literacy in homeownership attainment. Additionally, \citet{goodman2018accessing} and \citet{mcwilliams2017assessing} discuss the impact of macroeconomic factors and housing policies on first-time homebuyers.
+\subsubsection{Critiques}
+Despite its groundbreaking contributions, MPT has faced criticism for its reliance on historical data to estimate future returns and risks, which may not always be accurate. Additionally, the assumption of normally distributed returns has been questioned, as real-world financial returns often exhibit skewness and kurtosis. Some critics argue that MPT does not account for extreme events and tail risks, which can significantly impact portfolio performance. Furthermore, the model's reliance on mean-variance optimization may not fully capture investors' preferences and risk tolerances, leading to suboptimal investment decisions.
 
-\subsubsection{Risk Management in Homeownership Savings}
-Managing risk is crucial for first-time homebuyers aiming to save for a down payment. \citet{baker2010down} examine the effectiveness of different saving strategies under varying economic conditions, while \citet{mason2013risk} provide insights into the role of insurance and financial products in mitigating risks associated with homeownership savings. \citet{rosen2005housing} discuss the implications of housing market volatility on savings strategies and home affordability.
+\subsection{Capital Asset Prices: A Theory of Market Equilibrium under Conditions of Risk by William F. Sharpe (1964)}
 
-\subsubsection{Role of Financial Technology in Homeownership Savings}
-The advent of financial technology has transformed the way individuals save and invest. \citet{phillips2019fintech} explore the impact of fintech solutions on personal savings rates and investment behaviors, highlighting the potential benefits for first-time homebuyers. \citet{gomber2018digital} discuss how digital platforms and robo-advisors can enhance financial planning and investment management for aspiring homeowners.
+\subsubsection{Key Findings}
+In his seminal paper, William F. Sharpe introduced the Capital Asset Pricing Model (CAPM), which provides a framework to determine the expected return of an asset based on its systematic risk, as measured by beta. The model posits that the expected return on an asset is a function of the risk-free rate, the asset's beta, and the market risk premium. Sharpe also developed the Sharpe Ratio, a measure of risk-adjusted return, which helps investors understand how much excess return they are receiving for the extra volatility endured.
 
-\subsection{Gaps in the Literature}
-Despite the extensive research on investment strategies, there remains a need for tailored approaches that address the specific financial goals and constraints of first-time homebuyers. This paper seeks to fill this gap by developing and evaluating optimal investment strategies that cater to the unique needs of aspiring homeowners across different age cohorts and investment horizons. This includes considering factors such as income levels, regional housing market conditions, and the integration of alternative investment vehicles like REITs and cryptocurrencies.
+\begin{quote}
+\textit{"The expected return on a security is linearly related to its beta, reflecting its sensitivity to market movements."} \citep{sharpe1964capital}.
+\end{quote}
+
+
+\subsubsection{Implications for This Study}
+Sharpe's CAPM and Sharpe Ratio are crucial for assessing the risk and return profiles of individual securities within the portfolios analyzed in this study. By evaluating the beta and risk-adjusted returns, this study can better understand the performance of different assets and optimize the investment strategies accordingly. The CAPM provides a systematic approach to estimating the expected returns of assets based on their systematic risk, while the Sharpe Ratio helps in comparing the performance of investments on a risk-adjusted basis.
+
+\subsubsection{Critiques}
+The CAPM has been criticized for its assumption of a single-period investment horizon and the use of a single market index to represent the entire market. Additionally, the model's reliance on beta as the sole measure of risk has been questioned, as it does not account for other factors that may influence asset returns. Empirical studies have shown that other variables, such as size and value factors, also play a significant role in explaining asset returns, leading to the development of multi-factor models. Moreover, the CAPM's assumption of a frictionless market and homogeneous expectations among investors may not hold true in real-world scenarios.
+
+\subsection{Options: A Monte Carlo Approach by Phelim P. Boyle (1977)}
+
+\subsubsection{Key Findings}
+Phelim P. Boyle's paper introduced the use of Monte Carlo methods for option pricing, providing a robust tool to model the uncertainty and variability in financial investments. Monte Carlo simulations generate a large number of random samples from the probability distributions of asset returns, allowing investors to assess the impact of risk and uncertainty on their portfolios. This method has since been widely adopted for various financial applications, including risk management, portfolio optimization, and scenario analysis.
+
+\begin{quote}
+\textit{"Monte Carlo simulations enable the modeling of complex financial instruments and the assessment of risk and return in uncertain environments."} \citep{boyle1977options}.
+\end{quote}
+
+The Monte Carlo simulation process involves generating random returns based on historical data and iterating this process to build a distribution of potential outcomes. By running multiple simulations, investors can estimate the expected value and variability of the investment portfolio, providing insights into the likelihood of achieving their financial goals.
+
+\subsubsection{Implications for This Study}
+Boyle's Monte Carlo methods are integral to this study for forecasting the performance of optimized portfolios under various market conditions. By simulating different scenarios, this study aims to estimate the range of potential outcomes and assess the likelihood of achieving the desired down payment amount within the specified time horizon. The use of Monte Carlo simulations allows for a comprehensive analysis of the potential risks and returns associated with different investment strategies, providing valuable insights for first-time homebuyers.
+
+\subsubsection{Critiques}
+One critique of Monte Carlo simulations is their computational intensity, which can be demanding for large-scale applications. Additionally, the accuracy of the results is heavily dependent on the quality of the input data and the assumptions made about the probability distributions of asset returns. Some critics argue that Monte Carlo methods may not fully capture the complexities of financial markets, such as changing market conditions and behavioral factors. Moreover, the reliance on historical data may not accurately predict future market behavior, leading to potential misestimations of risk and return.
 
 \newpage

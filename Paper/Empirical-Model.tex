@@ -1,14 +1,14 @@
 \section{Empirical Specification}
 
 \subsection{Model Implementation}
-The empirical analysis involves a systematic approach to evaluating and optimizing investment strategies using historical data. The data is cleaned and adjusted for corporate actions like stock splits and dividends using the \texttt{yfinance\_data.py} script to ensure consistency \citep{yfinance}.
+The empirical analysis involves a systematic approach to evaluating and optimizing investment strategies using historical data. The data is cleaned and adjusted for corporate actions like stock splits and dividends using the \texttt{yfinance\_data.py} script to ensure consistency, resulting in the creation of a file named \texttt{yfinance\_data.csv}.
 
 \subsubsection{CAPM and Sharpe Ratio Calculation}
-Each security's risk and return profile is assessed using the Capital Asset Pricing Model (CAPM) and Sharpe Ratio \citep{sharpe1966mutual}. This analysis below is performed using the \texttt{init\_filtering.py} script.
+Each security's risk and return profile is assessed using the Capital Asset Pricing Model (CAPM) and Sharpe Ratio. This analysis is performed using the \texttt{init\_filtering.py} script.
 \begin{enumerate}
     \item Calculating the average return of the market index (e.g., S\&P 500).
     \item Determining the risk-free rate (e.g., 10-year U.S. Treasury bonds yield).
-    \item Computing the beta (\(\beta\)) of each security:
+    \item Computing the beta (\(\beta_i\)) of each security:
     \begin{equation}
         \beta_i = \frac{\text{Cov}(R_i, R_m)}{\text{Var}(R_m)}
     \end{equation}
@@ -27,39 +27,31 @@ Securities are ranked based on a composite score that integrates multiple metric
 \begin{equation}
     \text{Composite Score} = w_{\beta} \beta + w_{\text{Sharpe}} \text{Sharpe Ratio} + w_{\text{CAPM}} E(R_i) + w_{\text{Actual}} \text{Actual Returns}
 \end{equation}
-Weights are assigned to each metric to reflect their importance in the ranking process.
+Weights are assigned to each metric to reflect their importance in the ranking process. A file is then produced for each time horizon with the ranked securities in order, named \texttt{top\_assets\_composite\_score.csv}.
 
 \subsubsection{Modern Portfolio Theory (MPT) Application}
-Using the ranked securities, portfolios are optimized for different investment horizons (5, 7.5, and 10 years) using Modern Portfolio Theory (MPT) \citep{markowitz1952portfolio}. The optimization involves solving the following quadratic programming problem:
+Using the ranked securities, portfolios are optimized for different investment horizons (5, 7.5, and 10 years) using Modern Portfolio Theory (MPT). The optimization involves solving the following quadratic programming problem:
 \begin{align}
     \text{Maximize } & \quad \mathbf{w}^T \mathbf{\mu} - \frac{\lambda}{2} \mathbf{w}^T \mathbf{\Sigma} \mathbf{w} \\
     \text{subject to} & \quad \sum_{i} w_i = 1 \\
     & \quad w_i \geq 0 \quad \forall i
 \end{align}
-where \(\mathbf{w}\) is the vector of asset weights, \(\mathbf{\mu}\) is the vector of expected returns, \(\mathbf{\Sigma}\) is the covariance matrix of returns, and \(\lambda\) is the risk aversion parameter. This process is implemented using the \texttt{mpt.py} script.
+where \(\mathbf{w}\) is the vector of asset weights, \(\mathbf{\mu}\) is the vector of expected returns, \(\mathbf{\Sigma}\) is the covariance matrix of returns, and \(\lambda\) is the risk aversion parameter. This process is implemented using the \texttt{mpt.py} script to produce a data file for each time horizon named \texttt{optimal\_weights.csv}.
 
-\subsubsection{C?}
-The optimized portfolios are compared against actual historical performance using the hindsight data. The comparison includes calculating the cumulative returns of the portfolios and benchmarking them against the S\&P 500 index. This step is performed using the \texttt{hindsight.py} script.
+\subsubsection{Performance Comparison}
+The optimized portfolios are compared against actual historical performance using the hindsight data created by \texttt{hindsight\_data.py}. The comparison includes calculating the cumulative returns of the portfolios and benchmarking them against the S\&P 500 index. This step is performed using the \texttt{hindsight.py} script to create a data file named \texttt{hindsight\_data.csv}.
 
 \subsubsection{Monte Carlo Simulation for Future Forecasting}
-Monte Carlo simulations were conducted to forecast the performance of the optimized portfolios \citep{glasserman2004monte}. This comprehensive simulation is implemented using the \texttt{mcs.py} script, providing insights into the potential future performance of the portfolios \citep{brown2000real, kuhle2021economic}.
+Monte Carlo simulations are conducted to forecast the performance of the optimized portfolios. This comprehensive simulation is implemented using the \texttt{mcs.py} script, providing insights into the potential future performance of the portfolios.
 \begin{enumerate}
     \item Defining initial investment amounts and annual contributions.
-    \vspace{-0.15em}
     \item Generating random returns based on historical distributions.
-    \vspace{-0.15em}
     \item Calculating portfolio values at each time step:
-    \vspace{-0.15em}
     \begin{equation}
-    
         V_t = V_{t-1} \times (1 + R_t) + C
-        
     \end{equation}
-    \vspace{-0.15em}
     \item Running multiple iterations to build a probability distribution of outcomes.
-    \vspace{-0.15em}
     \item Applying economic shocks to simulate real-world scenarios:
-    \vspace{-0.15em}
     \begin{equation}
         V_t = V_t \times (1 + \text{Shock Intensity})
     \end{equation}
