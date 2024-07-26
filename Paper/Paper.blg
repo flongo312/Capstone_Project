@@ -5,46 +5,45 @@ The style file: chicago.bst
 Database file #1: References.bib
 Warning--entry type for "yfinance" isn't style-file defined
 --line 93 of file References.bib
-Warning--I didn't find a database entry for "jones1992investments"
-You've used 27 entries,
+You've used 24 entries,
             2861 wiz_defined-function locations,
-            787 strings with 8478 characters,
-and the built_in function-call counts, 17441 in all, are:
-= -- 1530
-> -- 1093
+            771 strings with 8077 characters,
+and the built_in function-call counts, 15746 in all, are:
+= -- 1403
+> -- 980
 < -- 0
-+ -- 310
-- -- 404
-* -- 1500
-:= -- 3189
-add.period$ -- 80
-call.type$ -- 27
-change.case$ -- 176
-chr.to.int$ -- 27
-cite$ -- 27
-duplicate$ -- 481
-empty$ -- 1140
-format.name$ -- 460
-if$ -- 3180
++ -- 280
+- -- 366
+* -- 1360
+:= -- 2861
+add.period$ -- 71
+call.type$ -- 24
+change.case$ -- 158
+chr.to.int$ -- 24
+cite$ -- 24
+duplicate$ -- 427
+empty$ -- 1024
+format.name$ -- 418
+if$ -- 2877
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 29
-newline$ -- 137
-num.names$ -- 270
-pop$ -- 112
+missing$ -- 24
+newline$ -- 122
+num.names$ -- 240
+pop$ -- 93
 preamble$ -- 1
-purify$ -- 341
+purify$ -- 303
 quote$ -- 0
-skip$ -- 518
+skip$ -- 465
 stack$ -- 0
-substring$ -- 1087
-swap$ -- 156
+substring$ -- 1002
+swap$ -- 140
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 510
+type$ -- 470
 warning$ -- 0
-while$ -- 304
+while$ -- 276
 width$ -- 0
-write$ -- 351
-(There were 2 warnings)
+write$ -- 312
+(There was 1 warning)

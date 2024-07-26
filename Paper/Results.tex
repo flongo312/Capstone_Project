@@ -1,11 +1,7 @@
 \section{Results}
-
-This section presents the results of the analysis, including the performance of the optimal portfolios over 5, 7.5, and 10-year horizons. The results are visualized using various figures and tables, organized to follow the empirical specification process.
-
-\subsection{Initial Data Analysis}
+\subsection{Exploratory Data Analysis}
 
 \subsubsection{Distribution of Securities by Type}
-Figure \ref{fig:distribution_of_securities} shows the distribution of the securities by type.
 
 \begin{figure}[!htbp]
     \centering
@@ -24,7 +20,9 @@ Figure \ref{fig:cumulative_returns_by_type} illustrates the cumulative returns o
     \label{fig:cumulative_returns_by_type}
 \end{figure}
 
-\textbf{Interpretation:} The majority of the securities analyzed are stocks, followed by ETFs and mutual funds. Stocks exhibit the highest cumulative return over time, indicating a higher potential for long-term growth compared to ETFs and mutual funds \citep{markowitz1952portfolio}.
+\newpage
+
+\textbf The majority of the securities analyzed are stocks, followed by ETFs and mutual funds. Stocks exhibit the highest cumulative return over time, indicating a higher potential for long-term growth compared to ETFs and mutual funds \citep{markowitz1952portfolio}.
 
 \subsection{Optimal Portfolios}
 
@@ -156,7 +154,7 @@ Figures \ref{fig:cumulative_returns_5y}, \ref{fig:cumulative_returns_7_5y}, and 
 
 \textbf{Interpretation:} The Monte Carlo simulations reveal the range of possible outcomes for the portfolios over different horizons. The 5-year horizon shows greater variability, while the 10-year horizon indicates higher and more stable returns. These results underscore the benefits of long-term investment strategies \citep{glasserman2004monte}.
 
-\subsection{Summary Statistics}
+\subsection{Monte Carlo Forecast Summary}
 Summary statistics for the dataset are presented in Table \ref{tab:summary-stats}. These statistics were generated using the \texttt{../Data/summary\_stats.csv} file produced by the Python scripts.
 
 \begin{table}[h!]
@@ -171,8 +169,6 @@ Statistic & \begin{tabular}[c]{@{}c@{}}Mean Final \\ Portfolio Value (\$)\end{ta
 5-Year Horizon & 101559.42 & 98327.18 & 67062.20 & 139233.79 & 915.59 & 58.98 \\
 \hline
 \end{tabular}
-\caption{Summary Statistics of the Dataset}
-\label{tab:summary-stats}
 \end{table}
 
 \textbf{Interpretation:} Table \ref{tab:summary-stats} provides a detailed summary of the statistical outcomes for each investment horizon. The mean and median final portfolio values give insights into the expected performance, while the 10th and 90th percentile values offer a perspective on the range of potential outcomes. The total and annual percentage yields reflect the overall return potential of the portfolios over their respective horizons \citep{fama1970efficient}.

@@ -4,22 +4,6 @@
 \subsection{Summary of Data Sources}
 The financial data utilized in this study were obtained from Yahoo Finance, which provides comprehensive information on a range of securities including stocks, mutual funds, and ETFs \citep{yfinance}.
 
-\subsection{Data Cleaning and Processing Details}
-Detailed steps taken to clean and process the data include:
-\begin{itemize}
-    \item Adjusting for corporate actions like stock splits and dividends to maintain consistency in price data \citep{boyle1977options}.
-    \item Interpolating missing values to handle gaps in the dataset \citep{glasserman2004monte}.
-    \item Detecting and handling outliers to prevent skewed results \citep{kuhle2021economic}.
-\end{itemize}
-
-\subsection{Python Scripts for Data Processing}
-Several Python scripts were developed to automate data collection and processing:
-\begin{itemize}
-    \item \texttt{yfinance\_data.py}: Collects and processes financial data from Yahoo Finance.
-    \item \texttt{hindsight\_data.py}: Handles historical financial data for hindsight analysis.
-    \item \texttt{init\_filtering.py}: Filters the initial dataset to remove anomalies and irrelevant data points.
-\end{itemize}
-
 \subsection{Variable Definitions}
 The key variables used in the analysis are defined as follows:
 \begin{itemize}

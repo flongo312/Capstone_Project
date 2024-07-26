@@ -1,13 +1,10 @@
 \section{Empirical Specification}
 
 \subsection{Model Implementation}
-The empirical analysis involves a systematic approach to evaluating and optimizing investment strategies using historical data. The process is outlined as follows:
-
-\subsubsection{Data Collection and Preparation}
-Data is collected from Yahoo Finance, covering a comprehensive range of securities, including stocks, ETFs, and mutual funds. The data spans from May 2011 to November 2014, with daily updates until July 2024. The data is cleaned and adjusted for corporate actions like stock splits and dividends using the \texttt{yfinance\_data.py} script to ensure consistency \citep{yfinance}.
+The empirical analysis involves a systematic approach to evaluating and optimizing investment strategies using historical data. The data is cleaned and adjusted for corporate actions like stock splits and dividends using the \texttt{yfinance\_data.py} script to ensure consistency \citep{yfinance}.
 
 \subsubsection{CAPM and Sharpe Ratio Calculation}
-Each security's risk and return profile is assessed using the Capital Asset Pricing Model (CAPM) and Sharpe Ratio \citep{sharpe1966mutual}. The process involves:
+Each security's risk and return profile is assessed using the Capital Asset Pricing Model (CAPM) and Sharpe Ratio \citep{sharpe1966mutual}. This analysis below is performed using the \texttt{init\_filtering.py} script.
 \begin{enumerate}
     \item Calculating the average return of the market index (e.g., S\&P 500).
     \item Determining the risk-free rate (e.g., 10-year U.S. Treasury bonds yield).
@@ -24,10 +21,9 @@ Each security's risk and return profile is assessed using the Capital Asset Pric
         \text{Sharpe Ratio} = \frac{E(R_i) - R_f}{\sigma_i}
     \end{equation}
 \end{enumerate}
-This analysis is performed using the \texttt{init\_filtering.py} script.
 
 \subsubsection{Composite Score Calculation}
-Securities are ranked based on a composite score that integrates multiple metrics \citep{jones1992investments}:
+Securities are ranked based on a composite score that integrates multiple metrics:
 \begin{equation}
     \text{Composite Score} = w_{\beta} \beta + w_{\text{Sharpe}} \text{Sharpe Ratio} + w_{\text{CAPM}} E(R_i) + w_{\text{Actual}} \text{Actual Returns}
 \end{equation}
@@ -42,27 +38,31 @@ Using the ranked securities, portfolios are optimized for different investment h
 \end{align}
 where \(\mathbf{w}\) is the vector of asset weights, \(\mathbf{\mu}\) is the vector of expected returns, \(\mathbf{\Sigma}\) is the covariance matrix of returns, and \(\lambda\) is the risk aversion parameter. This process is implemented using the \texttt{mpt.py} script.
 
-\subsubsection{Gathering Hindsight Data}
-Historical performance data from 2009 to the present is gathered and processed to evaluate the robustness of the optimized portfolios. This step uses the \texttt{hindsight\_data.py} script to ensure that the data aligns by common dates and covers all relevant securities.
-
-\subsubsection{Comparison with Hindsight Data}
+\subsubsection{C?}
 The optimized portfolios are compared against actual historical performance using the hindsight data. The comparison includes calculating the cumulative returns of the portfolios and benchmarking them against the S\&P 500 index. This step is performed using the \texttt{hindsight.py} script.
 
 \subsubsection{Monte Carlo Simulation for Future Forecasting}
-Monte Carlo simulations are conducted to forecast the performance of the optimized portfolios from today onward \citep{glasserman2004monte}. The simulation process involves:
+Monte Carlo simulations were conducted to forecast the performance of the optimized portfolios \citep{glasserman2004monte}. This comprehensive simulation is implemented using the \texttt{mcs.py} script, providing insights into the potential future performance of the portfolios \citep{brown2000real, kuhle2021economic}.
 \begin{enumerate}
     \item Defining initial investment amounts and annual contributions.
+    \vspace{-0.15em}
     \item Generating random returns based on historical distributions.
+    \vspace{-0.15em}
     \item Calculating portfolio values at each time step:
+    \vspace{-0.15em}
     \begin{equation}
+    
         V_t = V_{t-1} \times (1 + R_t) + C
+        
     \end{equation}
+    \vspace{-0.15em}
     \item Running multiple iterations to build a probability distribution of outcomes.
+    \vspace{-0.15em}
     \item Applying economic shocks to simulate real-world scenarios:
+    \vspace{-0.15em}
     \begin{equation}
         V_t = V_t \times (1 + \text{Shock Intensity})
     \end{equation}
 \end{enumerate}
-This comprehensive simulation is implemented using the \texttt{mcs.py} script, providing insights into the potential future performance of the portfolios \citep{brown2000real, kuhle2021economic}.
 
 \newpage
