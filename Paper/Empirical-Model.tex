@@ -36,7 +36,7 @@ Using the ranked securities, portfolios are optimized for different investment h
     \text{subject to} & \quad \sum_{i} w_i = 1 \\
     & \quad w_i \geq 0 \quad \forall i
 \end{align}
-where \(\mathbf{w}\) is the vector of asset weights, \(\mathbf{\mu}\) is the vector of expected returns, \(\mathbf{\Sigma}\) is the covariance matrix of returns, and \(\lambda\) is the risk aversion parameter. This process is implemented using the \texttt{mpt.py} script to produce a data file for each time horizon named \texttt{optimal\_weights.csv}.
+where \(\mathbf{w}\) is the vector of asset weights, \(\mathbf{\mu}\) is the vector of expected returns, \(\mathbf{\Sigma}\) is the covariance matrix of returns, and \(\lambda\) is the risk aversion parameter. This process is implemented using the \texttt{mpt.py} script, which produces a data file for each time horizon named \texttt{optimal\_weights.csv}.
 
 \subsubsection{Performance Comparison}
 The optimized portfolios are compared against actual historical performance using the hindsight data created by \texttt{hindsight\_data.py}. The comparison includes calculating the cumulative returns of the portfolios and benchmarking them against the S\&P 500 index. This step is performed using the \texttt{hindsight.py} script to create a data file named \texttt{hindsight\_data.csv}.

@@ -83,27 +83,27 @@ actual_cum_returns_10_years = (1 + actual_returns_10_years).cumprod()
 
 # Calculate cumulative returns for S&P 500
 sp500_data = hindsight_data[hindsight_data['Ticker'] == '^GSPC'].copy()
-sp500_data.loc[:, 'Cumulative Return'] = (1 + sp500_data['Daily Return']).cumprod()
+sp500_data['Cumulative Return'] = (1 + sp500_data['Daily Return']).cumprod()
 
 # Plot cumulative returns comparison
-plt.figure(figsize=(16, 10))
+plt.figure(figsize=(20, 12))
 
 # S&P 500 cumulative returns using hindsight data
-plt.plot(sp500_data.index, sp500_data['Cumulative Return'], label='S&P 500 (Benchmark)', color=colors['black'], linewidth=2, linestyle='-', zorder=10)
+plt.plot(sp500_data.index, sp500_data['Cumulative Return'] * 100 - 100, label='S&P 500 (Benchmark)', color=colors['black'], linewidth=2.5, linestyle='-', zorder=10)
 
 # Actual cumulative returns for different horizons
-plt.plot(actual_cum_returns_5_years.index, actual_cum_returns_5_years, color=colors['cyan'], label='Actual 5-Year Horizon Portfolio', linestyle='-', linewidth=2)
-plt.plot(actual_cum_returns_7_5_years.index, actual_cum_returns_7_5_years, color=colors['purple'], label='Actual 7.5-Year Horizon Portfolio', linestyle='-', linewidth=2)
-plt.plot(actual_cum_returns_10_years.index, actual_cum_returns_10_years, color=colors['orange'], label='Actual 10-Year Horizon Portfolio', linestyle='-', linewidth=2)
+plt.plot(actual_cum_returns_5_years.index, actual_cum_returns_5_years * 100 - 100, color=colors['cyan'], label='Actual 5-Year Horizon Portfolio', linestyle='-', linewidth=2.5)
+plt.plot(actual_cum_returns_7_5_years.index, actual_cum_returns_7_5_years * 100 - 100, color=colors['purple'], label='Actual 7.5-Year Horizon Portfolio', linestyle='-', linewidth=2.5)
+plt.plot(actual_cum_returns_10_years.index, actual_cum_returns_10_years * 100 - 100, color=colors['orange'], label='Actual 10-Year Horizon Portfolio', linestyle='-', linewidth=2.5)
 
 # Improve readability and professionalism
-plt.title('Cumulative Returns Comparison of Actual Portfolios vs. S&P 500', fontsize=24)
-plt.xlabel('Date', fontsize=22)
-plt.ylabel('Cumulative Return (%)', fontsize=22)  
-plt.yticks(np.arange(0, 5.1, step=0.5), [f'{int(x*100)}%' for x in np.arange(0, 5.1, step=0.5)], fontsize=20)
-plt.xticks(rotation=45, fontsize=20)
-plt.legend(fontsize=20, loc='upper left')
-plt.grid(True, linestyle='--', linewidth=0.5)
+plt.title('Cumulative Returns Comparison of Actual Portfolios vs. S&P 500', fontsize=32)
+plt.xlabel('Date', fontsize=28)
+plt.ylabel('Cumulative Return (%)', fontsize=28)
+plt.xticks(rotation=45, fontsize=24)
+plt.yticks(fontsize=24)
+plt.legend(fontsize=24, loc='upper left')
+plt.grid(True, linestyle='--', linewidth=0.75)
 plt.tight_layout(pad=3)
 plt.savefig(f'{figures_path}/cumulative_returns_comparison.png', bbox_inches='tight')
 
@@ -119,20 +119,20 @@ final_returns = {
 comparison_table = pd.DataFrame(final_returns, index=[pd.to_datetime('2024-07-10')])
 comparison_table_transposed = comparison_table.T
 
-plt.figure(figsize=(16, 12))
+plt.figure(figsize=(20, 14))
 bars = plt.barh(comparison_table_transposed.index, comparison_table_transposed[pd.to_datetime('2024-07-10')], color=[
     colors['black'], colors['cyan'], colors['purple'], colors['orange']
 ], alpha=0.7)
-plt.xlabel('Cumulative Return (%)', fontsize=22)
-plt.title('Cumulative Returns Summary 2011-05-04 to 2024-07-10', fontsize=24)
-plt.grid(True, linestyle='--', linewidth=0.5)
-plt.yticks(fontsize=20)
-plt.xticks(fontsize=20)
+plt.xlabel('Cumulative Return (%)', fontsize=28)
+plt.title('Cumulative Returns Summary', fontsize=32)
+plt.grid(True, linestyle='--', linewidth=0.75)
+plt.yticks(fontsize=24)
+plt.xticks(fontsize=24)
 plt.tight_layout(pad=3)
 
 # Add labels to each bar
 for bar in bars:
     width = bar.get_width()
-    plt.text(width + 5, bar.get_y() + bar.get_height()/2, f'{width:.2f}%', va='center', ha='left', fontsize=20)
+    plt.text(width + 5, bar.get_y() + bar.get_height()/2, f'{width:.2f}%', va='center', ha='left', fontsize=24)
 
 plt.savefig(f'{figures_path}/cumulative_returns_summary.png', bbox_inches='tight')

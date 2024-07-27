@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Paper.aux
+The style file: chicago.bst
+Database file #1: References.bib
+Warning--entry type for "NAR2023" isn't style-file defined
+--line 12 of file References.bib
+Warning--entry type for "yfinance" isn't style-file defined
+--line 109 of file References.bib
+You've used 6 entries,
+            2861 wiz_defined-function locations,
+            649 strings with 5549 characters,
+and the built_in function-call counts, 3146 in all, are:
+= -- 275
+> -- 156
+< -- 0
++ -- 36
+- -- 60
+* -- 223
+:= -- 606
+add.period$ -- 17
+call.type$ -- 6
+change.case$ -- 36
+chr.to.int$ -- 6
+cite$ -- 6
+duplicate$ -- 99
+empty$ -- 224
+format.name$ -- 60
+if$ -- 556
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 3
+newline$ -- 32
+num.names$ -- 60
+pop$ -- 22
+preamble$ -- 1
+purify$ -- 72
+quote$ -- 0
+skip$ -- 103
+stack$ -- 0
+substring$ -- 189
+swap$ -- 33
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 120
+warning$ -- 0
+while$ -- 66
+width$ -- 0
+write$ -- 78
+(There were 2 warnings)

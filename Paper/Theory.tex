@@ -39,17 +39,18 @@ The Security Market Line (SML) is a graphical representation of the CAPM, showca
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=0.6\textwidth]{../Figures/SML.png}
-    \caption{Security Market Line ????Source: Wikipedia????}
+    \caption{Security Market Line \citep{wikipediaSML}}
     \label{fig:SML}
 \subcaption{The Security Market Line (SML) plots the expected return of an asset against its beta, showing that higher systematic risk (beta) correlates with higher expected returns. Correctly priced securities should lie on the SML. The slope represents the market risk premium ($E(R_m) - R_f$), while the intercept is the risk-free rate ($R_f$).}
 
 \end{figure}
 
 
+\newpage
 
 
 \subsection{Sharpe Ratio}
-The Sharpe Ratio, developed by William F. Sharpe, is a measure of risk-adjusted return. The Sharpe Ratio provides a way to compare the performance of investments while considering the risk taken. A higher Sharpe Ratio indicates better risk-adjusted performance, meaning the investment provides higher returns for each unit of risk taken. It is calculated as follows:
+The Sharpe Ratio is a measure of risk-adjusted return, providing a way to compare the performance of investments while considering the risk taken. A higher Sharpe Ratio indicates better risk-adjusted performance, meaning the investment provides higher returns for each unit of risk taken. It is calculated as follows:
 
 \begin{equation}
 \text{Sharpe Ratio} = \frac{E(R_i) - R_f}{\sigma_i}
@@ -81,7 +82,7 @@ where:
 
 
 \subsection{Modern Portfolio Theory (MPT)}
-Modern Portfolio Theory (MPT), developed by Harry Markowitz, \citep{markowitz1952portfolio} provides a robust framework for constructing an optimal portfolio that maximizes expected return for a given level of risk. The expected return $E(R_p)$ of a portfolio is the weighted sum of the expected returns of the individual assets:
+Modern Portfolio Theory (MPT) provides a robust framework for constructing an optimal portfolio that maximizes expected return for a given level of risk. The expected return $E(R_p)$ of a portfolio is the weighted sum of the expected returns of the individual assets:
 
 \begin{equation}
 E(R_p) = \sum_{i=1}^n w_iE(R_i)
@@ -124,12 +125,8 @@ where:
     \includegraphics[width=0.6\textwidth]{../Figures/efficient_frontier.png}
     \caption{Efficient Frontier}
     \label{fig:efficient_frontier}
-    \subcaption This figure shows the efficient frontier, which illustrates the optimal portfolios that offer the maximum expected return for a given level of risk. Portfolios that lie below the efficient frontier are sub-optimal because they do not provide enough return for the level of risk taken.
+    \subcaption{This figure shows the efficient frontier, illustrating optimal portfolios that offer the highest expected return for a given level of risk. Portfolios below the efficient frontier are sub-optimal as they do not provide sufficient return for the risk taken.}
 \end{figure}
-
-
-
-
 
 
 \subsection{Monte Carlo Simulation}
@@ -152,7 +149,7 @@ where:
     \includegraphics[width=0.6\textwidth]{../Figures/investment_simulation_process.png}
     \caption{Investment Simulation Process for Monte Carlo Analysis}
     \label{fig:investment_simulation}
-    \subcaption The diagram shows how random returns are generated and used to project the future value of an investment over multiple iterations, creating a range of possible outcomes and helping to understand the potential risks and returns.
+    \subcaption{The diagram illustrates the generation of random returns used to project the future value of an investment over multiple iterations, creating a range of possible outcomes to understand potential risks and returns.}
 \end{figure}
 
 

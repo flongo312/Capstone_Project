@@ -8,11 +8,6 @@ echo "BASE_DIR is $BASE_DIR"
 echo "Listing contents of BASE_DIR:"
 ls "$BASE_DIR"
 
-# Create and activate a virtual environment
-echo "Setting up the virtual environment..."
-python3 -m venv "$BASE_DIR/venv"
-source "$BASE_DIR/venv/bin/activate"
-
 # Navigate to the Code directory and run Python scripts
 cd "$BASE_DIR/Code"
 
@@ -54,30 +49,6 @@ else
     exit 1
 fi
 
-# Navigate to the Slides directory and compile the slides
-cd "$BASE_DIR/Slides" || { echo "Failed to navigate to $BASE_DIR/Slides"; exit 1; }
-echo "Current directory: $(pwd)"
-
-echo "Compiling slides.tex..."
-pdflatex slides.tex || { echo "First compilation of slides.tex failed"; exit 1; }
-pdflatex slides.tex || { echo "Second compilation of slides.tex failed"; exit 1; }
-
-# Check if the slides.pdf was successfully created
-if [ -f "slides.pdf" ]; then
-    echo "Slides compiled successfully."
-else
-    echo "Error compiling slides.tex"
-    exit 1
-fi
-
 echo "All scripts and LaTeX compilation executed successfully."
-
-# Deactivate the virtual environment
-deactivate
-
-# Remove the virtual environment
-echo "Removing virtual environment..."
-rm -rf "$BASE_DIR/venv"
-echo "Virtual environment removed."
 
 echo "DoWork.sh completed successfully."

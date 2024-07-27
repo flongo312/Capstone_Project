@@ -5,15 +5,15 @@ Boyle, P.~P. (1977).
 \newblock Options: A monte carlo approach.
 \newblock {\em Journal of Financial Economics\/}~{\em 4\/}(3), 323--338.
 
-\bibitem[\protect\citeauthoryear{Fama}{Fama}{1970}]{fama1970efficient}
-Fama, E.~F. (1970).
-\newblock Efficient capital markets: A review of theory and empirical work.
-\newblock {\em The Journal of Finance\/}~{\em 25\/}(2), 383--417.
-
 \bibitem[\protect\citeauthoryear{Markowitz}{Markowitz}{1952}]{markowitz1952portfolio}
 Markowitz, H. (1952).
 \newblock Portfolio selection.
 \newblock {\em The Journal of Finance\/}~{\em 7\/}(1), 77--91.
+
+\bibitem[\protect\citeauthoryear{{National Association of Realtors}}{{National
+  Association of Realtors}}{2023}]{NAR2023}
+{National Association of Realtors} (2023).
+\newblock 2023 home buyers and sellers generational trends report.
 
 \bibitem[\protect\citeauthoryear{Sharpe}{Sharpe}{1964}]{sharpe1964capital}
 Sharpe, W.~F. (1964).
@@ -21,15 +21,12 @@ Sharpe, W.~F. (1964).
   of risk.
 \newblock {\em The Journal of Finance\/}~{\em 19\/}(3), 425--442.
 
-\bibitem[\protect\citeauthoryear{Sharpe}{Sharpe}{1966}]{sharpe1966mutual}
-Sharpe, W.~F. (1966).
-\newblock Mutual fund performance.
-\newblock {\em Journal of Business\/}~{\em 39\/}(1), 119--138.
-
-\bibitem[\protect\citeauthoryear{Smith}{Smith}{2020}]{smith2020}
-Smith, J. (2020).
-\newblock Optimal investment strategies.
-\newblock {\em Journal of Finance\/}~{\em 55\/}(4), 123--145.
+\bibitem[\protect\citeauthoryear{{Wikipedia contributors}}{{Wikipedia
+  contributors}}{2024}]{wikipediaSML}
+{Wikipedia contributors} (2024).
+\newblock {Security Market Line --- Wikipedia, The Free Encyclopedia}.
+\newblock \url{https://en.wikipedia.org/wiki/Security_market_line}.
+\newblock [Online; accessed 23-July-2024].
 
 \bibitem[\protect\citeauthoryear{{Yahoo Finance}}{{Yahoo
   Finance}}{nd}]{yfinance}
